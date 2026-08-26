@@ -1,0 +1,19 @@
+# Dependencies & build
+node_modules/
+dist/
+.next/
+out/
+
+# Secrets — never commit
+.env
+.env.local
+.env.*.local
+*.pem
+env.txt
+
+# OS / editor
+.DS_Store
+*.log
+
+# Local debug runs (optional — keep out of handoff)
+.exp7-runs/

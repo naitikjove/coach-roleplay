@@ -1,0 +1,82 @@
+{
+  "lockVersion": "1.0.0",
+  "lockDate": "2026-07-07",
+  "id": "scene-2-boundary",
+  "slug": "exp7-demo-favor",
+  "title": "Alex, your former peer, wants to talk.",
+  "type": "hot_seat",
+  "mode": "voice_only",
+  "lessonRef": "41949",
+  "lessonTitle": "How to Set Boundaries With Former Peers",
+  "lessonSlug": "how_to_set_boundaries_with_former_peers",
+  "primaryCharacter": "alex",
+  "skills": [
+    "boundaries"
+  ],
+  "turnLimits": {
+    "minLearnerTurns": 4,
+    "softMaxLearnerTurns": 7,
+    "hardMaxLearnerTurns": 8,
+    "absoluteMaxLearnerTurns": 10
+  },
+  "refusalPushTypes": [
+    "stakes",
+    "history",
+    "minimize"
+  ],
+  "maxPushTypes": 3,
+  "learnerFacingContext": null,
+  "anchorIntro": null,
+  "openingLine": null,
+  "prompts": {
+    "actor": "../prompts/alex.prompt.txt",
+    "analyzer": "../prompts/analyzer.prompt.txt",
+    "closeEvaluator": "../prompts/close_evaluator.prompt.txt"
+  },
+  "checklistItems": [
+    {
+      "id": "acknowledged",
+      "label": "Acknowledged Alex without agreeing to repeat the old habit",
+      "critical": false
+    },
+    {
+      "id": "ownership",
+      "label": "Made clear the slides and demo prep are Alex's to own",
+      "critical": true
+    },
+    {
+      "id": "no_takeover",
+      "label": "Did not agree to redo or polish Alex's slides for him",
+      "critical": true
+    },
+    {
+      "id": "calm",
+      "label": "Stayed calm when Alex pushed back about launch",
+      "critical": false
+    },
+    {
+      "id": "routing",
+      "label": "Said how Alex should ask and send work next time",
+      "critical": false
+    },
+    {
+      "id": "support",
+      "label": "Offered help that doesn't do the work (review, dry run, structure)",
+      "critical": false
+    }
+  ],
+  "headlineLabels": {
+    "nailed_it": "Nailed it",
+    "solid": "Solid",
+    "try_again": "Try again"
+  },
+  "scenarioSummary": {
+    "now": "Tomorrow ~10am product review: a few of Alex's slides in the shared deck aren't ready.",
+    "past": "At launch, learner cleaned up Alex's slides/demo; unspoken habit.",
+    "ask": "Polish Alex's slides tonight; Alex still presents."
+  },
+  "characterId": "alex",
+  "voice": "ash",
+  "actorPromptFile": "alex.prompt.txt",
+  "analyzerPromptFile": "analyzer.prompt.txt"
+}

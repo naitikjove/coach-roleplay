@@ -1,0 +1,55 @@
+{
+  "lockVersion": "1.0.0-local",
+  "lockDate": "2026-08-19",
+  "id": "scene-mc1-sam-post",
+  "slug": "exp7-sam-client-report-rejection",
+  "title": "Client Report Rejection",
+  "type": "hot_seat",
+  "mode": "voice_only",
+  "primaryCharacter": "sam",
+  "characterId": "sam",
+  "voice": "sage",
+  "actorPromptFile": "sam_client_report_rejection.prompt.txt",
+  "analyzerPromptFile": "sam_client_report_rejection_analyzer.prompt.txt",
+  "lessonRef": "mc1-post",
+  "lessonTitle": "Transitioning from Individual Contributor to Manager",
+  "lessonSlug": "transitioning-from-individual-contributor-to-manager",
+  "skills": ["building_trust", "setting_goals", "directing_work", "ensuring_accountability"],
+  "turnLimits": {
+    "minLearnerTurns": 8,
+    "softMaxLearnerTurns": 16,
+    "hardMaxLearnerTurns": 20,
+    "absoluteMaxLearnerTurns": 24
+  },
+  "checklistItems": [
+    {
+      "id": "trust_open",
+      "label": "Kept Sam open after the client flag (listen / respond; not push into defense or shutdown)",
+      "critical": true
+    },
+    {
+      "id": "goals_plan",
+      "label": "Agreed next report actions and timing",
+      "critical": true
+    },
+    {
+      "id": "own_with_sam",
+      "label": "Kept ownership with Sam; did not take over the report",
+      "critical": true
+    },
+    {
+      "id": "acct_name_and_check",
+      "label": "Named the client flag; agreed how progress is checked before resubmit",
+      "critical": true
+    }
+  ],
+  "headlineLabels": {
+    "nailed_it": "Nailed it",
+    "solid": "Solid",
+    "try_again": "Try again"
+  },
+  "scenarioSummary": {
+    "now": "First 1:1 after the client flagged a report with numbers Sam owned.",
+    "layers": "Trust → goals this week → who reworks the numbers → check before the client sees it again → close."
+  }
+}

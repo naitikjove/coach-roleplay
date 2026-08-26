@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "buildCommand": "cp src/middleware.demo.ts src/middleware.ts && npm run build",
+  "installCommand": "npm install",
+  "env": {
+    "ARENA_LLM_MODEL": "gpt-5.6-terra",
+    "ARENA_REALTIME_MODEL": "gpt-realtime-2.1"
+  },
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/arena/exp7/pre-post",
+      "permanent": false
+    }
+  ]
+}

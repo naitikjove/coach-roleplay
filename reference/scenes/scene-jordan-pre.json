@@ -1,0 +1,55 @@
+{
+  "lockVersion": "1.0.0-local",
+  "lockDate": "2026-08-12",
+  "id": "scene-mc1-jordan-pre",
+  "slug": "exp7-jordan-presentation-quality-miss",
+  "title": "Your First 1:1 as a New Manager",
+  "type": "hot_seat",
+  "mode": "voice_only",
+  "primaryCharacter": "jordan",
+  "characterId": "jordan",
+  "voice": "marin",
+  "actorPromptFile": "jordan_presentation_quality_miss.prompt.txt",
+  "analyzerPromptFile": "jordan_presentation_quality_miss_analyzer.prompt.txt",
+  "lessonRef": "mc1-pre",
+  "lessonTitle": "Transitioning from Individual Contributor to Manager",
+  "lessonSlug": "transitioning-from-individual-contributor-to-manager",
+  "skills": ["building_trust", "setting_goals", "directing_work", "ensuring_accountability"],
+  "turnLimits": {
+    "minLearnerTurns": 8,
+    "softMaxLearnerTurns": 16,
+    "hardMaxLearnerTurns": 20,
+    "absoluteMaxLearnerTurns": 24
+  },
+  "checklistItems": [
+    {
+      "id": "trust_open",
+      "label": "Kept Claire open after the rejection (listen / respond; not push into defense or shutdown)",
+      "critical": true
+    },
+    {
+      "id": "goals_plan",
+      "label": "Agreed next presentation actions and timing",
+      "critical": true
+    },
+    {
+      "id": "own_with_jordan",
+      "label": "Kept ownership with Claire; did not take over the draft",
+      "critical": true
+    },
+    {
+      "id": "acct_name_and_check",
+      "label": "Named the failed review; agreed how progress is checked before resubmit",
+      "critical": true
+    }
+  ],
+  "headlineLabels": {
+    "nailed_it": "Nailed it",
+    "solid": "Solid",
+    "try_again": "Try again"
+  },
+  "scenarioSummary": {
+    "now": "First 1:1 after senior leadership rejected a client presentation Claire owned.",
+    "layers": "A trust (why-budget) → B plan (confirm once) → C peer-habit hope → D check → clear close."
+  }
+}

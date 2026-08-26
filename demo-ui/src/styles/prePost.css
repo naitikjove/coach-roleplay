@@ -1,0 +1,709 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background: #fafafa;
+  font-family: var(--main-font, "Inter", system-ui, sans-serif);
+}
+
+/* ─── Entry teaser (chapter slot) — comfortable, not cramped ─ */
+
+.metaCard {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.metaMain {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+  flex-wrap: nowrap;
+}
+
+.metaIdentity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.metaAvatarImg,
+.metaAvatarFallback {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  flex: 0 0 auto;
+  object-fit: cover;
+  display: block;
+  background: #e8f2fd;
+}
+
+.metaAvatarFallback {
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2183ed;
+}
+
+.metaText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.metaTitle {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+  color: #18181b;
+}
+
+.metaCharacter {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 13px;
+  line-height: 1.35;
+  color: #71717a;
+}
+
+.metaCharName {
+  font-weight: 600;
+  color: #3f3f46;
+}
+
+.metaCharDot {
+  color: #a1a1aa;
+}
+
+.metaCharRole {
+  font-weight: 400;
+}
+
+.metaCta {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  max-width: none;
+}
+
+.metaPurpose {
+  margin: 0;
+  max-width: 52ch;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #52525b;
+}
+
+.assessBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.assessLabel {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #a1a1aa;
+}
+
+.compRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.compRow li {
+  font-size: 13px;
+  font-weight: 500;
+  color: #52525b;
+  background: #f4f4f5;
+  border-radius: 8px;
+  padding: 6px 11px;
+  line-height: 1.3;
+}
+
+/* session / shared helpers */
+.characterRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.characterMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.characterName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #18181b;
+}
+
+.characterRole {
+  font-size: 13px;
+  color: #71717a;
+}
+
+/* ─── Transition veil ───────────────────────────────────── */
+
+.transitionRoot {
+  position: fixed;
+  inset: 0;
+  z-index: 9990;
+  pointer-events: all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(250, 250, 250, 0);
+  animation: veilIn 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.transitionCard {
+  width: min(420px, calc(100% - 48px));
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 40px rgba(24, 24, 27, 0.08);
+  padding: 28px 32px;
+  opacity: 0;
+  transform: translateY(12px) scale(0.98);
+  animation: cardRise 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.transitionTitle {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #18181b;
+  letter-spacing: -0.35px;
+}
+
+.transitionSub {
+  margin: 0;
+  font-size: 14px;
+  color: #71717a;
+  line-height: 1.45;
+}
+
+.progressTrack {
+  margin-top: 20px;
+  height: 3px;
+  border-radius: 999px;
+  background: #e4e4e7;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  background: #2183ed;
+  animation: progress 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes veilIn {
+  0% {
+    background: rgba(250, 250, 250, 0);
+  }
+  35% {
+    background: rgba(250, 250, 250, 0.72);
+  }
+  100% {
+    background: rgba(250, 250, 250, 0.96);
+  }
+}
+
+@keyframes cardRise {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+/* ─── Session (chapter chrome + one shell) ─────────────── */
+
+.sessionRoot {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  background: #fff;
+}
+
+.sessionPage {
+  flex: 1 1 auto;
+  width: 100%;
+  background: #fafafa;
+  padding: 20px 24px 32px;
+  box-sizing: border-box;
+  font-family: var(--main-font, "Inter", system-ui, sans-serif);
+}
+
+@media (width >= 1280px) {
+  .sessionPage {
+    padding: 20px 32px 32px;
+  }
+}
+
+.sessionFrame {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.sessionLiveStatus {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+.livePill {
+  flex: 0 0 auto;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  color: #2183ed;
+  background: #e8f2fd;
+  border-radius: 999px;
+  padding: 8px 12px;
+}
+
+/* Platform surface (matches entry meta card / chapter cards) */
+.shell {
+  display: grid;
+  /* Content ~57% / action ~43% — left slightly wider so lists wrap shorter */
+  grid-template-columns: minmax(0, 1.35fr) 1px minmax(0, 1fr);
+  align-items: stretch;
+  min-height: min(70vh, 640px);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(24, 24, 27, 0.04);
+  overflow: hidden;
+}
+
+.shellLive {
+  min-height: min(74vh, 720px);
+}
+
+/* Debrief / analyzing: one full-width panel, no briefing column */
+.shellReport {
+  grid-template-columns: minmax(0, 1fr);
+  min-height: min(78vh, 800px);
+}
+
+.shellReport .shellColFull {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.shellColFull {
+  width: 100%;
+}
+
+.stageInnerFull {
+  padding: 16px 20px 20px;
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Analyzing: vertically center the “Working the magic” card in the shell */
+.stageInnerAnalyzing {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+}
+
+.stageInnerAnalyzing > * {
+  flex: 0 0 auto !important;
+  width: min(100%, 420px);
+}
+
+.shellDivider {
+  width: 1px;
+  background: rgba(0, 0, 0, 0.08);
+  align-self: stretch;
+}
+
+.shellCol {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.shellColEnd {
+  min-height: 0;
+}
+
+.colBody {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.colFooter {
+  flex: 0 0 auto;
+  padding: 16px 24px 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stageInner {
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.stageInner > * {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+@media (max-width: 900px) {
+  .shell,
+  .shellLive {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .shellDivider {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+.pageTitle {
+  margin: 0 0 20px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.45px;
+  line-height: 1.3;
+  color: #18181b;
+}
+
+.block {
+  margin: 0 0 22px;
+}
+
+.block:last-child {
+  margin-bottom: 0;
+}
+
+.blockLabel {
+  margin: 0 0 10px;
+  display: block;
+}
+
+.aboutList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  counter-reset: about;
+}
+
+.aboutList li {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #3f3f46;
+  counter-increment: about;
+  text-wrap: pretty;
+}
+
+.aboutList li::before {
+  content: counter(about);
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  border-radius: 999px;
+  background: #f4f4f5;
+  color: #52525b;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.objectives {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.objectives li {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #3f3f46;
+  text-wrap: pretty;
+}
+
+.objectivesNum {
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  border-radius: 999px;
+  background: #f4f4f5;
+  color: #52525b;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.whoStack {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.whoRow {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.whoRow:first-child {
+  padding-top: 2px;
+}
+
+.whoRow:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.whoMark,
+.whoAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.whoMark {
+  display: grid;
+  place-items: center;
+  background: #e8f2fd;
+  color: #2183ed;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.whoAvatar {
+  object-fit: cover;
+  background: #e8f2fd;
+  display: block;
+}
+
+.whoText {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.whoName {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #18181b;
+  line-height: 1.3;
+}
+
+.whoRole {
+  margin: 0;
+}
+
+.whoCopy {
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #3f3f46;
+}
+
+.railHint {
+  margin: 0;
+}
+
+.railCta {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.voiceSampleEntryLink {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.voiceSampleEntryLink a {
+  color: #2183ed;
+  text-decoration: none;
+}
+
+.voiceSampleLead {
+  margin: 0 0 16px;
+  max-width: 62ch;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #3f3f46;
+}
+
+.voiceSampleLine {
+  margin: 0 0 20px;
+  max-width: 64ch;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 14px;
+  line-height: 1.5;
+  color: #18181b;
+}
+
+.voiceSampleGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.voiceSampleCard {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.voiceSampleHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.voiceSampleName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #18181b;
+}
+
+.voiceSampleTag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #2183ed;
+  background: #e8f2fd;
+  border-radius: 999px;
+  padding: 4px 8px;
+}
+
+.voiceSampleFeel {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #52525b;
+}
+
+.voiceSampleAudio {
+  width: 100%;
+  height: 36px;
+}
+
+.voiceSampleFoot {
+  margin: 20px 0 0;
+  font-size: 13px;
+  color: #71717a;
+}
+
+.voiceSampleFoot a {
+  color: #2183ed;
+}

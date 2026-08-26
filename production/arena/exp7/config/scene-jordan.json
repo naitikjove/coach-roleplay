@@ -1,0 +1,70 @@
+{
+  "lockVersion": "1.0.0-local",
+  "lockDate": "2026-08-05",
+  "id": "scene-mc1-jordan-multi",
+  "slug": "exp7-jordan-mc1-multi-anchor",
+  "title": "Jordan, your former peer, wants a 1:1.",
+  "type": "hot_seat",
+  "mode": "voice_only",
+  "primaryCharacter": "jordan",
+  "characterId": "jordan",
+  "voice": "coral",
+  "actorPromptFile": "jordan.prompt.txt",
+  "analyzerPromptFile": "jordan_analyzer.prompt.txt",
+  "lessonRef": "mc1-multi",
+  "lessonTitle": "Transitioning from Individual Contributor to Manager",
+  "lessonSlug": "transitioning-from-individual-contributor-to-manager",
+  "skills": ["building_trust", "expectation_setting", "delegation", "accountability"],
+  "turnLimits": {
+    "minLearnerTurns": 6,
+    "softMaxLearnerTurns": 14,
+    "hardMaxLearnerTurns": 18,
+    "absoluteMaxLearnerTurns": 22
+  },
+  "checklistItems": [
+    {
+      "id": "trust_engage",
+      "label": "Engaged Jordan's day-to-day reality (listen / invite / paraphrase)",
+      "critical": true
+    },
+    {
+      "id": "trust_no_steamroll",
+      "label": "Did not only monologue process with zero interest in Jordan",
+      "critical": true
+    },
+    {
+      "id": "expect_ownership",
+      "label": "Peer-habit favor work stayed with Jordan (no full IC takeover)",
+      "critical": true
+    },
+    {
+      "id": "expect_tone",
+      "label": "Held expectations without shaming or pure rank flex",
+      "critical": true
+    },
+    {
+      "id": "deleg_clear",
+      "label": "Clear ownership + outcome for Deep-Dive without taking it back",
+      "critical": true
+    },
+    {
+      "id": "acct_own",
+      "label": "Owned the metrics miss as manager, no scapegoating",
+      "critical": true
+    },
+    {
+      "id": "acct_fix",
+      "label": "Drove remediation and upward path with Jordan in the fix",
+      "critical": true
+    }
+  ],
+  "headlineLabels": {
+    "nailed_it": "Nailed it",
+    "solid": "Solid",
+    "try_again": "Try again"
+  },
+  "scenarioSummary": {
+    "now": "Week-4 1:1 with former peer Jordan after your promotion.",
+    "layers": "Trust · peer-habit favor · Deep-Dive ownership · live metrics miss under VP heat."
+  }
+}
