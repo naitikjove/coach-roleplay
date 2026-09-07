@@ -53,21 +53,36 @@ export async function POST(request: Request, context: RouteContext) {
     const arc = session.exp7Arc;
     const movesLedger = session.movesLedger;
     const { debrief, debug } = await analyzeExp7Debrief(transcript, session.sceneId);
+    const sceneId = session.sceneId;
+    const lessonRef = debrief.lessonRef;
+    const phase =
+      String(lessonRef || "").includes("post") ||
+      String(sceneId || "").toLowerCase().includes("sam")
+        ? ("post" as const)
+        : ("pre" as const);
 
-    void persistExp7Debrief(sessionId, {
-      ts: new Date().toISOString(),
-      sessionId,
-      transcript,
-      movesLedger,
-      arc,
-      formattedTranscript: debug.formattedTranscript,
-      analyzerUserMessage: debug.analyzerUserMessage,
-      analyzerRawResponse: debug.rawResponse,
-      analyzerParsed: debug.parsed,
-      scoreBeforeFloor: debug.scoreBeforeFloor,
-      scoreAdjusted: debug.scoreAdjusted,
-      debrief,
-    }).catch((err) => console.error("[exp7] persist debrief failed", err));
+    // Await durable persist BEFORE responding — fire-and-forget is dropped on Vercel.
+    try {
+      await persistExp7Debrief(sessionId, {
+        ts: new Date().toISOString(),
+        sessionId,
+        transcript,
+        movesLedger,
+        arc,
+        formattedTranscript: debug.formattedTranscript,
+        analyzerUserMessage: debug.analyzerUserMessage,
+        analyzerRawResponse: debug.rawResponse,
+        analyzerParsed: debug.parsed,
+        scoreBeforeFloor: debug.scoreBeforeFloor,
+        scoreAdjusted: debug.scoreAdjusted,
+        debrief,
+        phase,
+        sceneId,
+        lessonRef,
+      });
+    } catch (err) {
+      console.error("[exp7] persist debrief failed", err);
+    }
 
     resetExp7Session(sessionId);
 

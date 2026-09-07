@@ -7,7 +7,7 @@ PROCEDURE (follow in order):
 1. Read the full transcript once.
 2. For each competency, mark administered or not (Section 1).
 3. Apply Section 2 line rules, then score all 12 goals using Section 3 scenarios. Each competency score = sum of G1+G2+G3. Never adjust scores to match overall impression.
-4. Compute sumScore, percent, score, level, focusSkill (Section 4).
+4. Compute sumScore, percent, score, level, focusSkill (Section 4). focusSkill = competency with the lowest numeric score (example: scores 10/7/10/6 → focusSkill = accountability).
 5. Write summary, then for EACH of the four competencies write note, youSaid, and tryInstead (Section 6). Copy cannot change any score.
 
 Score each competency independently.
@@ -51,13 +51,30 @@ SECTION 2 - LINE RULES (before scoring Section 3)
 | Fix this and give it to me | before B send-up | delegation G1 at least 2 if Claire owns fix + handoff to manager |
 | timing only: tomorrow, EOW | -- | expectation_setting G3; not alone accountability G3 |
 
-Evidence: score ONLY Learner lines; active points need verbatim quote; absence bands may use empty quote; never invent quotes.
+Evidence: score ONLY Learner lines; see EVIDENCE hard rules under Section 3 header (cannot quote → cannot award).
 
 ----------------------------------------------------------------------
 SECTION 3 - GOAL RUBRICS WITH SCORING SCENARIOS
 ----------------------------------------------------------------------
 
-Each skill = 3 goals. Sum G1+G2+G3 for skill score (0-10). Pick the band that matches evidence; if between bands, use Section 2 and prefer partial over 0 on trap holds.
+Each skill = 3 goals. Sum G1+G2+G3 for skill score (0-10). Pick the band that matches evidence; if between bands, use Section 2. When unsure between partial and full, award partial — do not invent full credit. On trap holds, prefer partial over full if still tied.
+
+EVIDENCE (hard — apply before locking any goal points):
+- Score ONLY Learner lines. Never credit Claire's words or plans as the learner's move.
+- If Claire proposed the plan, timing, or check path and the learner only bare-acked: at most partial on that goal — her substance is not their credit.
+- Active moves (asked, blocked, assigned, declined, timed, offered support): every award above 0 needs a verbatim Learner quote. If you cannot quote it, you cannot award it — points must be 0 and quote "".
+- Absence bands only (Trust G3 no-steamroll; soft Accountability G1 engagement): empty quote allowed. Do not invent quotes. Do not use absence empty-quote on Goals G3, Delegation, or other active goals.
+- Never invent learner dialogue; never paraphrase inside quote fields.
+- CREDIT ONCE still applies: one Learner substring → one primary goal.
+
+COMMON MISJUDGMENTS TO AVOID:
+- Reading bare ack as a block, decline, review path, or timing.
+- Using bye / exit as a held managerial move.
+- Crediting a goal because Claire behaved as if it happened.
+- Using one Learner line to fill multiple goals.
+- Rewarding fluency over whether the move was done.
+- Inventing Goals G3 timing with no day/checkpoint in a Learner quote.
+- Giving Goals G2 full (3) for the same block / "to me first" line already used for G1 — that line alone is G2 = 2 max.
 
 ======================================================================
 PRESSURE A - building_trust
@@ -117,11 +134,11 @@ WRONG patterns: Proceed/OK/yeah to send-up; no block; leaves path and timing to 
   Examples (0): Claire proposes send to leadership, learner "Proceed." or "OK" or "yeah" only; silence.
 
 --- G2 (max 3) What comes first ---
-3 points: Named what gets fixed first OR required manager review as step before leadership.
+3 points: Named what gets fixed first as its own step (fix content), OR required manager review in a distinct clause beyond the block line.
   Example: "Fix the data first, then send me the draft before leadership sees it."
 
-2 points: Clear to-me-first / not-leadership that implies review order without naming fix content.
-  Example: "Just send it to me" / "No, send it to me first" (review order implied).
+2 points: Clear to-me-first / not-leadership that only implies review order — including the same block line already used for G1.
+  Example: "Just send it to me" / "No, send it to me first" / "first send it to me for review" (review order implied). Max 2 when this is the only priority evidence.
 
 1 point: Gestured at ordering without what comes first.
   Example: "We need to be careful about order" with no step named.
@@ -129,15 +146,17 @@ WRONG patterns: Proceed/OK/yeah to send-up; no block; leaves path and timing to 
 0 points: No priority; left whole recovery path to Claire.
   Example: Only reacted to send-up with emotion, never stated order.
 
+HARD: Do not award G2 = 3 from the identical substring already scored as G1 block.
+
 --- G3 (max 3) Real time ---
-3 points: Specific handoff or deadline before leadership sees it again.
+3 points: Specific handoff or deadline before leadership sees it again — must quote a Learner day/checkpoint.
   Example: "Send me a draft tomorrow"; "by Thursday before leadership."
 
-1 point: Loose this-week-only framing.
+1 point: Loose this-week-only framing in a Learner quote.
   Example: "Get it done this week" with no day or checkpoint.
 
-0 points: Vague or no timing.
-  Example: No time at all after bypass discussion.
+0 points: Vague or no timing — including when timing only appears in Claire's lines.
+  Example: No Learner time at all after bypass discussion. Empty quote ⇒ 0 (not an absence band).
 
 ======================================================================
 PRESSURE C - delegation
@@ -219,8 +238,10 @@ WRONG patterns: takes leadership Q&A / answers for Claire; co-presents as joint 
 SECTION 4 - AGGREGATE SCORES, LEVELS, focusSkill
 ----------------------------------------------------------------------
 Competency score = G1 + G2 + G3 (0-10). sumScore = sum of four skills (0-40). maxScore = 40.
-percent = round(sumScore / 40 * 100). score = round(percent / 10), clamp 0-10.
+percent = round(sumScore / 40 * 100). score = round((sumScore / 40) * 10), clamp 0-10.
 headline: nailed_it if percent >= 80; solid if percent >= 50; else try_again.
+
+PERFECT 10 GUARD (skills): A competency score may be 10 ONLY when every goal is at its max AND none of those points came from absence-only credit (goal with points > 0 and empty quote — e.g. Trust G3 no-steamroll). If any goal used absence credit, cap that skill at 9 even if the raw sum is 10.
 
 Level per skill: 9-10 strong | 7-8 adequate | 3-6 developing | 0-2 needs_work | not administered = not_observed
 
@@ -284,6 +305,7 @@ Return JSON only. Every competency MUST have its own note, youSaid, tryInstead.
 }
 
 Do not output didWell, keyTakeaways, transcriptImprovements, strengths, improvements, or learnerQuote.
+Do not wrap the JSON in markdown fences (no ```). Return raw JSON only.
 
 ----------------------------------------------------------------------
 SECTION 6 - COACHING COPY (after scores locked)
@@ -296,12 +318,73 @@ SECTION 6 - COACHING COPY (after scores locked)
 6C youSaid + tryInstead: ONE PAIR PER SKILL (four pairs total).
 - youSaid = verbatim English Learner substring from transcript for THAT skill's pressure moment (1-25 words).
 - tryInstead = what they could say instead (7-24 words). ONLY prescriptive field.
-- Fill both when administered AND (score <= 8 OR any goal below full) AND English lines exist.
+- ALWAYS fill both when administered and English lines exist — including score 9–10. At high scores, tryInstead is a slightly sharper next-level line (polish), not a fail script.
 - Empty both when not_observed. Do not reuse same substring across skills.
 
 ----------------------------------------------------------------------
 SECTION 7 - SELF-CHECK
 ----------------------------------------------------------------------
 1. Math and goal sums  2. Evidence and Section 2  3. Administration  4. Levels  5. Copy rules  6. All four youSaid/tryInstead present in schema
+7. Section 8 calibration edges applied (minimize, bare-ack to trap, presence vs Q&A)
+8. Goal points match evidence; do not redistribute points across skills to fit a vibe
 
 Fix failures before returning.
+
+----------------------------------------------------------------------
+SECTION 8 - CALIBRATION (accuracy + stable repeats)
+----------------------------------------------------------------------
+Apply AFTER Sections 1–3. These edges resolve common grader drift. Same evidence → same goal points every run.
+
+8A SCORING DISCIPLINE
+- Score goals in order: Trust → expectation_setting → delegation → accountability.
+- Lock all 12 goal points BEFORE writing summary/notes/youSaid/tryInstead.
+- Never raise or lower a goal to balance another skill or to hit a headline band.
+- Prefer the listed band points only (no invented mid values like 2.5).
+- If between two bands: use Section 2; on trap holds prefer partial over 0; on soft/minimize language prefer the lower band.
+- Bare "ok/yeah/sure/fine" AFTER Claire proposes a trap plan (send-up, co-write, shared Q&A / room loop-in) IS evidence for that pressure — score per Section 2. "Silence is not capitulation" applies only when the learner never answered that proposal.
+
+8B HARD EDGES (do not mis-score)
+1) Minimize comfort is NOT Trust G2 credit.
+   - "don't worry", "it happens", "no big deal" → building_trust G2 = 0.
+   - Same lines also cap accountability G1 at 1 (softened / minimized), never 3.
+2) Asking why alone does NOT fill Trust G2. G2 needs human acknowledgment of how it landed (frustration/sting/impact), not only cause.
+3) Presence in the room is OK. Fail accountability G2 only if learner takes Q&A, answers for Claire, or agrees to defend/answer together.
+   - Clear "you'll lead / you handle questions; I'll be there" → G2 = 3 when held.
+   - "I'll be there" / "add me" with no who-answers line → G2 = 1.
+   - "OK/yeah" after Claire asks to answer together or loop learner into live defense → G2 = 0.
+4) Do not zero a whole skill because the closing goodbye was messy if earlier lines earned points.
+5) Do not invent timing credit: expectation_setting G3 needs a day/checkpoint ("tomorrow", "Thursday"), not only "this week" / "soon" / "before leadership" without a time.
+6) CREDIT ONCE: map each learner substring to one primary goal. Prefer expectation_setting for block / to-me / timing lines; delegation for ownership + distinct support; accountability for miss-naming + who answers leadership. Review support may still earn delegation G3 when Claire keeps the rewrite and the manager only reviews.
+7) Strong runs: missing deadline → expectation_setting G3 = 0 (skill often 7, not 10). Do not pad Accountability to compensate.
+8) Weak runs: credit real gates and non-takeover help when present. Do not collapse a mixed-weak call to near-zero total.
+
+8C ANCHOR PATTERNS (match the pattern, not wording cosplay)
+Use these as calibration targets when the transcript matches the shape. Quote fields in output must still come from the actual transcript.
+
+ANCHOR A — strong manager (listen → block/review → Claire owns rewrite → Claire leads Q&A; no hard deadline):
+  building_trust: G1=4, G2=3, G3=3 absence → cap skill at 9 (not 10)
+  expectation_setting: G1=4, G2=3, G3=0 → 7
+  delegation: G1=4, G2=3, G3=3 (quoted support) → 10 only if G3 has a real quote; else 9
+  accountability: G1=3, G2=3, G3=0 or 2 → usually 6 (check path often already credited under Goals; if only who-presents is new and check was credited once, G3=2; if both clearly named for Acct, G3=4 and total may be 8 — prefer 6 when check path was the Goals line and Acct only adds Claire-leads)
+  Typical sumScore ≈ 33/40. focusSkill = accountability when it is the lowest.
+
+ANCHOR B — trust trap (jump to fix; approve send-up; later markup help; agree to jump in on leadership pushback):
+  building_trust: G1=0, G2=0; G3=0 if learner dismissed cause ("doesn't matter why" / shut down account), else G3=3 if no steamroll → Trust often 0–3
+  expectation_setting: G1=0 if they approved bypass; G2/G3 may still earn from any gate/timing → skill often 3–6
+  delegation: markup/review without co-write → often 6–8; taking the draft or co-writing → low
+  accountability: "I'll jump in if they push" → G2=0; skill often 0–3
+  Typical sumScore ≈ 14–18/40 (try_again). Do NOT collapse to ~6 unless almost every goal is truly 0.
+
+ANCHOR C — messy mixed (asked why + minimize comfort; strong block+tomorrow review; decline co-write; then bare-ack room loop-in):
+  building_trust: G1=4, G2=0, G3=3 absence → 7
+  expectation_setting: G1=4, G2=3, G3=3 → 10 only with quoted timing; else as earned
+  delegation: G1=4, G2=3, G3=3 → 10 only with quoted non-takeover help; decline-only often leaves G3=0 → skill 7
+  accountability: G1=1, G2=0, G3=2 → 3
+  Typical sumScore ≈ 30/40 (solid). focusSkill = accountability.
+  Do NOT score ~21 by under-crediting Goals/Directing after a late accountability miss.
+
+8D REPEAT STABILITY
+- Absence-band quotes (e.g. Trust G3=3 with no steamroll) use quote "".
+- Trust G3 is an absence band: if Pressure A was administered and Learner lines have no process dump / shame / mockery / shutdown, Trust G3 MUST be 3 every run (even when G1=G2=0). Never leave Trust G3 at 0 just because listening failed.
+- When two quotes could fit, pick the earliest Learner line that unlocks the band; keep that choice if you re-score.
+- focusSkill = the administered competency with the strictly lowest score. Example: expectation_setting=7 and accountability=6 → focusSkill MUST be "accountability" (not expectation_setting). Only use the Section 4 tie-break when two skills share the exact same lowest score.

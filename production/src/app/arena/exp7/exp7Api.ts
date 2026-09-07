@@ -242,6 +242,7 @@ export function mapCompleteToDebrief(
     headline: payload.headline,
     headlineLabel: payload.headlineLabel,
     ...(payload.summary ? { summary: payload.summary } : {}),
+    ...(payload.focusSkill ? { focusSkill: payload.focusSkill } : {}),
     strengths,
     improvements,
     didWell,

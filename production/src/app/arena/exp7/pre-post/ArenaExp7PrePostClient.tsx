@@ -9,6 +9,7 @@ import {
   type Exp7ChapterPayload,
 } from "../constants";
 import PrePostEntryCard from "./PrePostEntryCard";
+import PrePostCertificateCard from "./PrePostCertificateCard";
 
 type ArenaExp7PrePostClientProps = Exp7ChapterPayload;
 
@@ -33,6 +34,7 @@ export default function ArenaExp7PrePostClient({
         chapterSlug: initialData?.chapterSlug ?? EXP7_CHAPTER_SLUG,
       }}
       chapterCardSlot={<PrePostEntryCard />}
+      afterLibraryListSlot={<PrePostCertificateCard />}
       hideChapterCard
       hideLibraryList={false}
     />

@@ -59,21 +59,23 @@ Owned the presentation that came back from leadership. Still getting used to rep
 
 ---
 
-## POST — Sam · Client Report Rejection
+## POST — Sam · Your 1:1 After Sam’s Report Was Rejected
 
 ### Meta
 
-- **Title:** Client Report Rejection  
+- **Title:** Your 1:1 After Sam’s Report Was Rejected  
 - **Character:** Sam · Former peer and work friend  
 - **What you will be assessed on:** same four competencies  
 
 ### What this conversation is about
 
-You are a newly promoted manager. About a month ago Sam was your peer and a close work friend. Today Sam reports to you.
+You are a newly promoted manager. Sam was your peer and a work friend. Today Sam reports to you.
 
-Two days ago the team sent a client report with numbers Sam owned. Today the client flagged clear errors: totals that do not match and two sections that contradict each other. A routine second check was skipped under pressure so the report could go out on time. Your manager expects a recovery plan this week. The corrected report is still due.
+The client replied on the report Sam owned. They flagged totals that do not match and two sections that contradict each other.
 
-This 1:1 is the first conversation since the client replied. Sam is usually careful and arrives shaken. Peer history is still present: when you sat at the same level, covering for each other felt easy, and nothing has yet been said about how you work together now.
+You have a 1:1 with Sam. This is the first since you became manager, and since the client replied.
+
+Your manager wants a recovery plan and the corrected report this week. Next steps are still open.
 
 ### Who the conversation is between
 
@@ -81,11 +83,15 @@ This 1:1 is the first conversation since the client replied. Sam is usually care
 Recently promoted. Sam was your peer and work friend a month ago. Today Sam reports to you. This 1:1 is the first since the client rejected a report with numbers Sam owned.
 
 **Sam — your report (former peer and work friend)**  
-Former peer and work friend. Owned the numbers the client flagged. Usually careful, now shaken by the miss. Used to covering for each other as equals; still adjusting to you as manager.
+Owned the numbers the client flagged. Shaken by the miss, and still getting used to reporting to you.
+
+### Session summary (learner-facing brief)
+
+The client rejected the report Sam sent them. You’re meeting him in a 1:1 as his manager to talk through what happened and what happens next.
 
 ### Objectives — 0/4 (learner text only)
 
-1. Listen and respond so Sam stays open in the discussion after the client flag, without only defending or withdrawing.  
-2. Agree the next actions for the corrected report and the timing for each.  
-3. Confirm Sam owns the numbers rework. Do not take the report over and complete it yourself.  
-4. Acknowledge that the client flagged the report. Do not minimize it. Agree how progress will be reviewed before it is resubmitted.  
+1. Find out from Sam what actually happened with the report.
+2. Agree what happens with the report between now and the client meeting.
+3. Decide who fixes the mistakes in the report.
+4. Decide who goes to the client meeting to walk them through the report.

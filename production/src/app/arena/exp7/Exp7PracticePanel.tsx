@@ -7,7 +7,7 @@ import Exp7PracticeCardShell from "./Exp7PracticeCardShell";
 import Exp7PracticeIdleCard from "./Exp7PracticeIdleCard";
 import Exp7PracticeLiveCard from "./Exp7PracticeLiveCard";
 import Exp7RealtimeBridge from "./Exp7RealtimeBridge";
-import { EXP7_LESSON_HREF, EXP7_LESSON_TITLE, EXP7_SCENE, type Exp7SceneCopy } from "./constants";
+import { EXP7_LESSON_HREF, EXP7_LESSON_TITLE, EXP7_SCENE, isRoleplayScene, type Exp7SceneCopy } from "./constants";
 import {
   exp7CommitTurnWithRetry,
   exp7CompleteScene,
@@ -34,6 +34,11 @@ import {
   type Exp7TopicCoverage,
 } from "@/lib/arena/exp7/beatProgress";
 import { coverageJudgeInstructions as buildCoverageJudgeInstructions } from "@/lib/arena/exp7/coverageJudge";
+import { EXP7_PRE_MICROCOURSE_HREF } from "./pre-post/constants";
+import {
+  applyPreMicrocourseHref,
+  saveLastRoleplayDebrief,
+} from "@/lib/arena/exp7/lastDebrief";
 import styles from "./exp7PracticeCard.module.css";
 
 const LEARNER_STT_WAIT_MS = 500;
@@ -69,6 +74,8 @@ type Exp7PracticePanelProps = {
   hideLiveProgress?: boolean;
   /** Live topic coverage A→D — covered means it came up, not scored. */
   onTopicCoverageChange?: (coverage: Exp7TopicCoverage) => void;
+  /** Skip live flow and show this debrief immediately (last-results view). */
+  initialDebrief?: Exp7DebriefResult | null;
 };
 
 export default function Exp7PracticePanel({
@@ -81,12 +88,13 @@ export default function Exp7PracticePanel({
   onPhaseChange,
   hideLiveProgress = false,
   onTopicCoverageChange,
+  initialDebrief = null,
 }: Exp7PracticePanelProps) {
-  const [phase, setPhase] = useState<Exp7PanelPhase>("idle");
+  const [phase, setPhase] = useState<Exp7PanelPhase>(initialDebrief ? "debrief" : "idle");
   const [caption, setCaption] = useState("");
   const [fullLine, setFullLine] = useState("");
   const [speakerState, setSpeakerState] = useState<Exp7SpeakerState>("idle");
-  const [debrief, setDebrief] = useState<Exp7DebriefResult | null>(null);
+  const [debrief, setDebrief] = useState<Exp7DebriefResult | null>(initialDebrief);
   const [healthStatus, setHealthStatus] = useState<Exp7HealthStatus>("checking");
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [voiceActive, setVoiceActive] = useState(false);
@@ -568,6 +576,7 @@ export default function Exp7PracticePanel({
         }
 
         setPhase("analyzing");
+        onPhaseChange?.("analyzing");
         setVoiceActive(false);
         setVoiceConnected(false);
 
@@ -592,7 +601,26 @@ export default function Exp7PracticePanel({
             formattedTranscript: result._debug.formattedTranscript,
           });
         }
-        setDebrief(mapCompleteToDebrief(result, EXP7_LESSON_HREF, result.lessonTitle || EXP7_LESSON_TITLE));
+        const lessonHref = isRoleplayScene(scene) ? EXP7_PRE_MICROCOURSE_HREF : EXP7_LESSON_HREF;
+        const mapped = mapCompleteToDebrief(
+          result,
+          lessonHref,
+          result.lessonTitle || EXP7_LESSON_TITLE,
+        );
+        const finalDebrief = isRoleplayScene(scene)
+          ? applyPreMicrocourseHref(mapped)
+          : mapped;
+        if (isRoleplayScene(scene)) {
+          const phase =
+            String(scene.characterId || "").toLowerCase() === "sam" ||
+            String(scene.scenarioKey || scene.sceneId || "")
+              .toLowerCase()
+              .includes("sam")
+              ? "post"
+              : "pre";
+          saveLastRoleplayDebrief(finalDebrief, sid, phase);
+        }
+        setDebrief(finalDebrief);
         setPhase("debrief");
         onDebriefReached?.();
       } catch (err) {
@@ -603,7 +631,7 @@ export default function Exp7PracticePanel({
         setEnding(false);
       }
     },
-    [commitAlexLine, commitLearnerOnly, enqueueCommit, flushCommitBuffer, getSessionSnapshot, onDebriefReached],
+    [commitAlexLine, commitLearnerOnly, enqueueCommit, flushCommitBuffer, getSessionSnapshot, onDebriefReached, scene],
   );
 
   finishSceneRef.current = finishScene;
@@ -659,7 +687,7 @@ export default function Exp7PracticePanel({
   };
 
   useEffect(() => {
-    if (!autoStart || autoStartedRef.current || disabled) return;
+    if (!autoStart || autoStartedRef.current || disabled || initialDebrief) return;
     if (healthStatus !== "ready" || phase !== "idle" || starting) return;
     autoStartedRef.current = true;
     void handleStart();
@@ -672,6 +700,10 @@ export default function Exp7PracticePanel({
   };
 
   const handleRetake = () => {
+    if (initialDebrief && typeof window !== "undefined") {
+      window.location.assign("/arena/exp7/pre-post/session");
+      return;
+    }
     resetSessionState();
     setCaption("");
     setFullLine("");

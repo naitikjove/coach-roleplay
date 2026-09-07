@@ -37,12 +37,26 @@
   isolation: isolate;
 }
 
-/* Debrief / post-session — no animated glow (avoids bleed through sticky chapter header). */
+/* Debrief / post-session — continuous white (Figma): no nested border card. */
 .wrapperFeedback {
   animation: none;
-  background: #e4e4e7;
+  background: transparent;
   box-shadow: none;
+  border-radius: 0;
+  padding: 0;
   z-index: 0;
+}
+
+.wrapperFeedback .cardInner {
+  border-radius: 0;
+  background: #fff;
+}
+
+.wrapperFeedback .card {
+  border-radius: 0;
+  background: #fff;
+  padding: 8px 0 24px;
+  gap: 20px;
 }
 
 /* Post-roleplay debrief loading — animated border + glow. */
@@ -290,10 +304,10 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid rgba(33, 131, 237, 0.12);
-  background: #f8fbff;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  background: transparent;
 }
 
 .characterMeta {
@@ -1451,6 +1465,32 @@
   gap: 8px;
 }
 
+.debriefIntroTitle {
+  margin: 0;
+  color: #18181b;
+  font-family: var(--main-font, "Inter", sans-serif);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+}
+
+.debriefPhaseLine {
+  margin: 0;
+  color: #71717a;
+  font-family: var(--main-font, "Inter", sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 640px) {
+  .debriefIntroTitle {
+    font-size: 22px;
+  }
+}
+
 .lessonRecommend {
   display: grid;
   gap: 8px;
@@ -1864,10 +1904,444 @@
   background: rgba(217, 119, 6, 0.05);
 }
 
+.competency_developing {
+  border-color: rgba(202, 138, 4, 0.28);
+  background: rgba(250, 204, 21, 0.08);
+}
+
 .competency_not_observed {
   border-color: rgba(100, 116, 139, 0.2);
   background: rgba(148, 163, 184, 0.08);
   opacity: 0.92;
+}
+
+/* --- Figma-aligned roleplay debrief (Claire PRE / v2–v3) --- */
+
+.summaryBlock {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 8px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: #fff;
+}
+
+.summaryBlock .debriefSectionTitle {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.summaryBlock .debriefSummary {
+  margin: 0;
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.focusScoreRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(148px, 168px);
+  gap: 12px;
+  align-items: stretch;
+  margin: 0 0 14px;
+}
+
+@media (max-width: 720px) {
+  .focusScoreRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.focusCard {
+  display: grid;
+  gap: 10px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(33, 131, 237, 0.16);
+  background: linear-gradient(165deg, #f7fbff 0%, #eef5ff 100%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+}
+
+.focusEyebrow {
+  margin: 0;
+  color: #2183ed;
+  font-family: var(--main-font, "Inter", sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.focusHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.focusSkillName {
+  margin: 0;
+  color: #0f172a;
+  font-family: var(--main-font, "Inter", sans-serif);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.focusScore {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid rgba(33, 131, 237, 0.22);
+  color: #1d4ed8;
+  font-family: var(--main-font, "Inter", sans-serif);
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.focusNote {
+  margin: 0;
+  color: #475569;
+  font-family: var(--main-font, "Inter", sans-serif);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.focusActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin-top: 4px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(33, 131, 237, 0.12);
+}
+
+.focusPrimaryCta {
+  min-height: 34px;
+  padding: 0 14px;
+  font-size: 13px;
+}
+
+.focusLinkBtn {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: #2183ed;
+  font-family: var(--main-font, "Inter", sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.focusLinkBtn:hover {
+  color: #1d4ed8;
+}
+
+.overallScoreCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 148px;
+  padding: 16px 14px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+}
+
+.overallScoreEyebrow {
+  margin: 0;
+  color: #64748b;
+  font-family: var(--main-font, "Inter", sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.scoreRing {
+  position: relative;
+  width: 108px;
+  height: 108px;
+  color: #1d4ed8;
+  flex-shrink: 0;
+}
+
+.scoreRing.scoreGood {
+  color: #059669;
+  background: transparent;
+}
+
+.scoreRing.scoreSolid {
+  color: #2183ed;
+  background: transparent;
+}
+
+.scoreRing.scoreRetry {
+  color: #ea580c;
+  background: transparent;
+}
+
+.scoreRingSvg {
+  display: block;
+}
+
+.scoreRingTrack {
+  stroke: #e8eef5;
+}
+
+.scoreRingValue {
+  transition: stroke-dashoffset 0.45s ease;
+}
+
+.scoreRingLabel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.scoreRingNumRow {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 1px;
+  line-height: 1;
+}
+
+.scoreRingNum {
+  font-family: var(--main-font, "Inter", sans-serif);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #0f172a;
+}
+
+.scoreRingDenom {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.scoreRingCaption {
+  display: none;
+}
+
+.skillsOverview {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 8px;
+}
+
+.skillsOverviewGrid {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+  gap: 14px 18px;
+  align-items: start;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: #fff;
+}
+
+@media (max-width: 720px) {
+  .skillsOverviewGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ratingsColumn {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.ratingsTitle {
+  margin: 0;
+  color: #64748b;
+  font-family: var(--main-font, "Inter", sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.skillAccordion {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skillAccordionItem {
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #f8fafc;
+  overflow: hidden;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.skillAccordionItem:hover {
+  border-color: rgba(15, 23, 42, 0.14);
+}
+
+.skillAccordionFocus {
+  border-color: rgba(33, 131, 237, 0.35);
+  background: #f5f9ff;
+  box-shadow: 0 0 0 1px rgba(33, 131, 237, 0.12);
+}
+
+.skillAccordionHead {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: start;
+  width: 100%;
+  padding: 12px 14px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.skillAccordionScoreBubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 46px;
+  height: 46px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1.5px solid rgba(33, 131, 237, 0.28);
+  color: #1d4ed8;
+  font-family: var(--main-font, "Inter", sans-serif);
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.scoreBubble_strong {
+  border-color: rgba(5, 150, 105, 0.35);
+  color: #047857;
+}
+
+.scoreBubble_adequate {
+  border-color: rgba(33, 131, 237, 0.35);
+  color: #1d4ed8;
+}
+
+.scoreBubble_developing {
+  border-color: rgba(217, 119, 6, 0.35);
+  color: #b45309;
+}
+
+.scoreBubble_needs_work {
+  border-color: rgba(234, 88, 12, 0.4);
+  color: #c2410c;
+}
+
+.scoreBubble_not_observed {
+  border-color: rgba(148, 163, 184, 0.45);
+  color: #94a3b8;
+}
+
+.skillAccordionMeta {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  padding-top: 2px;
+}
+
+.skillAccordionName {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  color: #0f172a;
+  font-family: var(--main-font, "Inter", sans-serif);
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.focusPill {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(33, 131, 237, 0.12);
+  color: #1d4ed8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.skillAccordionLevel {
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.skillAccordionNote {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.skillAccordionChevron {
+  color: #cbd5e1;
+  font-size: 11px;
+  line-height: 1;
+  padding-top: 6px;
+}
+
+.skillAccordionBody {
+  padding: 0 14px 14px 72px;
+  display: grid;
+  gap: 8px;
+}
+
+@media (max-width: 520px) {
+  .skillAccordionBody {
+    padding-left: 14px;
+  }
+}
+
+.skillAccordionQuotes {
+  display: grid;
+  gap: 8px;
+}
+
+.skillAccordionEmpty {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.45;
 }
 
 .competencyHead {

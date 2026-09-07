@@ -50,11 +50,8 @@ export default function ObjectivesCoverage({
   return (
     <section className={styles.block} aria-labelledby="exp7-objectives-heading">
       <div className={styles.objectivesHeadingRow}>
-        <h3
-          id="exp7-objectives-heading"
-          className={`type-overline ${styles.objectivesHeading}`}
-        >
-          Objectives
+        <h3 id="exp7-objectives-heading" className={styles.objectivesHeading}>
+          Your Objectives
         </h3>
         {live ? (
           <div className={styles.objectivesInfoWrap} ref={infoWrapRef}>
@@ -77,8 +74,9 @@ export default function ObjectivesCoverage({
               >
                 <p className={styles.objectivesInfoTitle}>What&apos;s this?</p>
                 <p className={styles.objectivesInfoBody}>
-                  Items light up when that topic comes up in the conversation.
-                  How well you handled each one is scored after you finish.
+                  Items light up when that topic is settled in the conversation
+                  — not just mentioned. How well you handled each one is scored
+                  after you finish.
                 </p>
               </div>
             ) : null}

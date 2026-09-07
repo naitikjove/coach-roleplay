@@ -16,9 +16,14 @@ export type Exp7CompetencyScore = {
   id: string;
   name: string;
   score: number | null;
-  level: "strong" | "adequate" | "needs_work" | "not_observed";
+  level: "strong" | "adequate" | "developing" | "needs_work" | "not_observed";
   note: string;
+  /** Mirrors youSaid for accordion fallback / older clients. */
   learnerQuote: string;
+  /** Roleplay accordion “You said” (English verbatim). */
+  youSaid?: string;
+  /** Roleplay accordion “Try instead”. */
+  tryInstead?: string;
 };
 
 export type Exp7DebriefResult = {
@@ -27,14 +32,15 @@ export type Exp7DebriefResult = {
   headlineLabel: string;
   /** 1–2 sentence coach recap of the call. */
   summary?: string;
-  /** Legacy evidence cards; UI prefers note-only pointers + transcriptImprovements. */
+  /** Roleplay — weakest administered competency id (focus card). */
+  focusSkill?: string;
+  /** Alex legacy evidence cards. Roleplay leaves these empty. */
   strengths: Exp7DebriefEvidenceItem[];
   improvements: Exp7DebriefEvidenceItem[];
-  /** 2–4 one-liners for “What you did well” (no transcript quotes). */
+  /** Alex legacy lists. Roleplay leaves these empty. */
   didWell?: string[];
-  /** 2–3 one-liners for “Key takeaways” / areas to improve (no transcript quotes). */
   keyTakeaways?: string[];
-  /** Quote-backed coaching — only section that shows transcript lines. */
+  /** Derived from competency youSaid/tryInstead for roleplay; Alex may set directly. */
   transcriptImprovements?: Exp7DebriefEvidenceItem[];
   lessonHref: string;
   lessonTitle: string;
@@ -45,7 +51,7 @@ export type Exp7DebriefResult = {
   sumScore?: number;
   /** Denominator for sumScore (four competencies x 10). */
   maxScore?: number;
-  /** round(sumScore / maxScore * 100). */
+  /** Display aid: round(sumScore / maxScore * 100). Overall /10 uses sum, not percent. */
   percent?: number;
   /** True when scoring failed — do not treat as a real 0% grade. */
   evaluationFailed?: boolean;

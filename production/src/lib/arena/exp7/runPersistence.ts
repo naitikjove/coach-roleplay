@@ -2,6 +2,11 @@ import { appendFile, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import type { CloseEvaluation } from "@/lib/arena/exp7/closeEvaluator";
 import type { Exp7DebriefPayload } from "@/lib/arena/exp7/analyzer";
+import {
+  exp7BlobEnabled,
+  writeExp7RunToBlob,
+  type Exp7RoleplayPhase,
+} from "@/lib/arena/exp7/exp7RunBlob";
 import type { Exp7ArcState, MoveLedgerEntry, TranscriptEntry } from "@/lib/arena/exp7/sessionStore";
 import {
   ensureExp7RunDir,
@@ -11,7 +16,7 @@ import {
 
 export { getExp7RunDir, getExp7RunDirRelative, ensureExp7RunDir };
 
-/** Debug artifacts (turns.jsonl, debrief.json) — dev/local only. Session state persists in all envs. */
+/** Local/dev filesystem artifacts (turns.jsonl etc.). Debriefs also go to Blob on Vercel. */
 export function exp7RunsEnabled(): boolean {
   return process.env.NODE_ENV !== "production";
 }
@@ -46,7 +51,19 @@ export type Exp7DebriefRecord = {
   scoreBeforeFloor?: number;
   scoreAdjusted?: boolean;
   debrief: Exp7DebriefPayload;
+  phase?: Exp7RoleplayPhase;
+  sceneId?: string;
+  lessonRef?: string;
 };
+
+function inferPhase(record: Exp7DebriefRecord): Exp7RoleplayPhase {
+  if (record.phase === "pre" || record.phase === "post") return record.phase;
+  const lesson = String(record.lessonRef || record.debrief?.lessonRef || "").toLowerCase();
+  if (lesson.includes("post")) return "post";
+  const scene = String(record.sceneId || "").toLowerCase();
+  if (scene.includes("sam")) return "post";
+  return "pre";
+}
 
 export async function initExp7RunSession(sessionId: string, sceneId: string): Promise<void> {
   if (!exp7RunsEnabled()) return;
@@ -90,24 +107,60 @@ export async function persistExp7Turn(sessionId: string, record: Exp7TurnRecord)
   await appendFile(path.join(getExp7RunDir(sessionId), "turns.jsonl"), line, "utf8");
 }
 
+/**
+ * Persist full transcript + debrief.
+ * - Local/dev: `.exp7-runs/{id}/debrief.json`
+ * - Vercel (Blob token): durable private Blob (`exp7-runs/...`)
+ */
 export async function persistExp7Debrief(sessionId: string, record: Exp7DebriefRecord): Promise<void> {
-  if (!exp7RunsEnabled()) return;
-  await ensureExp7RunDir(sessionId);
-  await writeFile(
-    path.join(getExp7RunDir(sessionId), "debrief.json"),
-    JSON.stringify(record, null, 2),
-    "utf8",
-  );
-  await writeFile(
-    path.join(getExp7RunDir(sessionId), "analyzer-input.txt"),
-    record.analyzerUserMessage,
-    "utf8",
-  );
-  if (record.analyzerRawResponse) {
+  const phase = inferPhase(record);
+  const enriched: Exp7DebriefRecord = {
+    ...record,
+    phase,
+    lessonRef: record.lessonRef || record.debrief?.lessonRef,
+  };
+
+  if (exp7RunsEnabled()) {
+    await ensureExp7RunDir(sessionId);
     await writeFile(
-      path.join(getExp7RunDir(sessionId), "analyzer-raw.json"),
-      record.analyzerRawResponse,
+      path.join(getExp7RunDir(sessionId), "debrief.json"),
+      JSON.stringify(enriched, null, 2),
       "utf8",
+    );
+    await writeFile(
+      path.join(getExp7RunDir(sessionId), "analyzer-input.txt"),
+      enriched.analyzerUserMessage,
+      "utf8",
+    );
+    if (enriched.analyzerRawResponse) {
+      await writeFile(
+        path.join(getExp7RunDir(sessionId), "analyzer-raw.json"),
+        enriched.analyzerRawResponse,
+        "utf8",
+      );
+    }
+  }
+
+  if (exp7BlobEnabled()) {
+    try {
+      const ok = await writeExp7RunToBlob({
+        ...enriched,
+        phase,
+      });
+      if (ok) {
+        console.info("[exp7] debrief+transcript saved to Blob", {
+          sessionId,
+          phase,
+          turns: enriched.transcript?.length ?? 0,
+        });
+      }
+    } catch (err) {
+      console.error("[exp7] Blob persist failed", sessionId, err);
+    }
+  } else if (!exp7RunsEnabled()) {
+    console.warn(
+      "[exp7] debrief not persisted — set BLOB_READ_WRITE_TOKEN for durable Vercel storage",
+      sessionId,
     );
   }
 }

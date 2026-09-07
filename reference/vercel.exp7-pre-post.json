@@ -4,7 +4,8 @@
   "buildCommand": "cp src/middleware.demo.ts src/middleware.ts && npm run build",
   "installCommand": "npm install",
   "env": {
-    "ARENA_LLM_MODEL": "gpt-5.6-terra",
+    "ARENA_LLM_MODEL": "anthropic/claude-sonnet-4.5",
+    "ARENA_ANALYZER_VERSION": "v2",
     "ARENA_REALTIME_MODEL": "gpt-realtime-2.1"
   },
   "redirects": [

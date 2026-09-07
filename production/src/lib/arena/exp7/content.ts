@@ -31,7 +31,7 @@ export const EXP7_SAM_POST_SCENE_ID = "scene-mc1-sam-post";
 export const EXP7_MISSION_SLUG = "exp7-demo-favor";
 export const ALEX_REALTIME_VOICE = "ash";
 export const JORDAN_REALTIME_VOICE = "coral";
-export const SAM_REALTIME_VOICE = "sage";
+export const SAM_REALTIME_VOICE = "cedar";
 
 const SCENE_FILES: Record<string, string> = {
   [EXP7_SCENE_ID]: "scene.json",
@@ -56,6 +56,8 @@ export type Exp7SceneConfig = {
   voice?: string;
   actorPromptFile?: string;
   analyzerPromptFile?: string;
+  /** Figma-aligned roleplay analyzer (Claire). Preferred by default; ARENA_ANALYZER_VERSION=v1 forces analyzerPromptFile. */
+  analyzerPromptFileV2?: string;
   turnLimits: {
     minLearnerTurns: number;
     softMaxLearnerTurns: number;
@@ -157,7 +159,15 @@ export function loadAlexPrompt(): string {
 
 export function loadAnalyzerPrompt(sceneId: string = EXP7_SCENE_ID): string {
   const scene = loadExp7Scene(sceneId);
-  return loadPromptFile(scene.analyzerPromptFile || "analyzer.prompt.txt");
+  // Roleplay (Claire/Sam) always uses the Figma-aligned analyzer when available.
+  // Alex keeps analyzerPromptFile. Optional ARENA_ANALYZER_VERSION=v1 forces legacy Claire file.
+  const forceLegacy =
+    String(process.env.ARENA_ANALYZER_VERSION || "").trim().toLowerCase() === "v1";
+  const fileName =
+    !forceLegacy && scene.analyzerPromptFileV2
+      ? scene.analyzerPromptFileV2
+      : scene.analyzerPromptFile || "analyzer.prompt.txt";
+  return loadPromptFile(fileName);
 }
 
 export function loadCloseEvaluatorPrompt(): string {

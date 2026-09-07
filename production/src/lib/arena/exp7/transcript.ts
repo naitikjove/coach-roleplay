@@ -20,7 +20,11 @@ export function formatExp7Transcript(transcript: TranscriptEntry[]): string {
 }
 
 export function parseJsonObject<T extends Record<string, unknown>>(raw: string): Partial<T> {
-  const text = raw.trim();
+  const text = raw
+    .trim()
+    .replace(/^```(?:json)?\s*/i, "")
+    .replace(/\s*```$/i, "")
+    .trim();
   if (!text) return {};
   try {
     return JSON.parse(text) as T;

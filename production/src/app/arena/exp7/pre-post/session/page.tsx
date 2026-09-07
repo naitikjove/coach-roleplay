@@ -1,5 +1,4 @@
 import ArenaExp4Seed from "../../../exp4/ArenaExp4Seed";
-import ArenaExp7Shell from "../../ArenaExp7Shell";
 import PrePostSessionClient from "../PrePostSessionClient";
 
 export const dynamic = "force-dynamic";
@@ -19,14 +18,15 @@ export const metadata = {
 export default async function ArenaExp7PrePostSessionPage({
   searchParams,
 }: {
-  searchParams: Promise<{ phase?: string }>;
+  searchParams: Promise<{ phase?: string; view?: string }>;
 }) {
-  const { phase } = await searchParams;
+  const { phase, view } = await searchParams;
   return (
     <ArenaExp4Seed>
-      <ArenaExp7Shell>
-        <PrePostSessionClient phase={phase === "post" ? "post" : "pre"} />
-      </ArenaExp7Shell>
+      <PrePostSessionClient
+        phase={phase === "post" ? "post" : "pre"}
+        viewLast={view === "last"}
+      />
     </ArenaExp4Seed>
   );
 }

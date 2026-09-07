@@ -3,6 +3,9 @@
  * Realtime session. The judge instructions REPLACE the actor prompt for that
  * one hidden generation; the model reads the conversation it already holds
  * and returns four booleans. Stateless per call; the UI merges monotonically.
+ *
+ * Coverage ≠ quality. true = the topic was settled in-conversation.
+ * Whether the manager handled it well is scored later by the analyzer.
  */
 
 export const EXP7_COVERAGE_TOPIC = "exp7_coverage";
@@ -17,18 +20,18 @@ type JudgeCriteria = {
 const JORDAN_PRE: JudgeCriteria = {
   criteria: [
     "What happened with the rejected client presentation was explained, and the manager engaged with it (asked, acknowledged, or responded to the substance).",
-    "A concrete path or timing for the deck this week was expressed by either person and acknowledged by the other (e.g. when it moves, or who sees it before leadership).",
-    "It is now clear who does the rewrite, after any back-and-forth about helping resolved. Merely asking for help does not count; the matter must have settled.",
-    "Who will be present or represent the work in the leadership conversation was decided (not merely raised or offered).",
+    "What needs to happen with the deck this week (path, review, or timing) was expressed and acknowledged by the other person — not merely that work is due. Claire only volunteering \"I'll fix/rewrite it\" without a path/timing ack does NOT count. Manager only refusing help does NOT count.",
+    "It is now clear who does the rewrite, after any back-and-forth about helping resolved. Merely asking for help does not count; the matter must have settled (either Claire owns it, or they agreed another split).",
+    "Who will represent / be present for the leadership conversation was decided and acknowledged — including if the manager joins, sits in, or Claire goes alone. Merely raising or offering the idea without a clear decision does NOT count. Do NOT judge whether the decision was good.",
   ],
 };
 
 const SAM_POST: JudgeCriteria = {
   criteria: [
-    "What happened with the flagged client report was explained, and the manager engaged with it (asked, acknowledged, or responded to the substance).",
-    "Concrete next actions and timing for the corrected report were expressed and acknowledged.",
-    "It is now clear who does the numbers rework, after any back-and-forth resolved. Merely asking for help does not count; the matter must have settled.",
-    "How progress will be reviewed before the report is resubmitted was agreed (not merely raised).",
+    "What happened after the client flagged the report was explained, and the manager engaged with it (asked, acknowledged, or responded to the substance).",
+    "What needs to happen before the corrected report goes back to the client (path, review, or timing) was expressed and acknowledged by the other person — not merely that it is due. Sam only volunteering \"I'll fix/send it\" without a path/timing ack does NOT count. Manager only refusing help does NOT count.",
+    "It is now clear who fixes the numbers before the report goes back, after any back-and-forth about helping resolved. Merely asking for help does not count; the matter must have settled (either Sam owns it, or they agreed another split).",
+    "Who handles the conversation when the report returns to the client was decided and acknowledged — including if the manager joins, loops in, or Sam goes alone. Merely raising or offering the idea without a clear decision does NOT count. Do NOT judge whether the decision was good.",
   ],
 };
 
@@ -50,7 +53,9 @@ export function coverageJudgeInstructions(sceneId: string): string | null {
   return [
     "You are silently auditing this workplace 1:1 for a training tool. Do not speak to anyone; produce data only.",
     "",
-    "For each item below, answer true only if it has GENUINELY been resolved in the conversation so far — both people engaged and the matter moved. A topic being mentioned once is NOT enough.",
+    "You track TOPIC COVERAGE only — whether each matter was settled in the conversation. You are NOT scoring quality, correctness, or managerial skill.",
+    "For each item, answer true only if it has GENUINELY been resolved so far — both people engaged and the matter settled. A topic being mentioned once is NOT enough.",
+    "A settled decision that is a poor managerial choice still counts as true for coverage.",
     "If you are not sure, answer false — you will see more of the conversation next time. Never guess true.",
     "",
     lines,

@@ -1,5 +1,9 @@
 import type { Exp7CompetencyScore } from "@/app/arena/exp7/exp7Types";
-import { loadOpenAiKey } from "@/lib/arena/loadOpenAiKey";
+import {
+  isOpenRouterAnalyzerModel,
+  loadOpenAiKey,
+  loadOpenRouterKey,
+} from "@/lib/arena/loadOpenAiKey";
 import {
   headlineLabel,
   loadAnalyzerPrompt,
@@ -22,22 +26,26 @@ export type Exp7DebriefPayload = {
   headlineLabel: string;
   /** 1–2 sentence coach recap. */
   summary?: string;
+  /** Roleplay — weakest administered competency id (focus card). */
+  focusSkill?: string;
+  /** Alex legacy. Roleplay: always []. */
   strengths: Exp7DebriefEvidenceItem[];
   improvements: Exp7DebriefEvidenceItem[];
-  /** Note-only one-liners (preferred UI). */
+  /** Alex legacy lists. Roleplay: always []. */
   didWell?: string[];
   keyTakeaways?: string[];
+  /** Roleplay: derived from youSaid/tryInstead. Alex may set directly. */
   transcriptImprovements?: Exp7DebriefEvidenceItem[];
   lessonRef?: string;
   lessonTitle?: string;
   lessonSlug?: string;
-  /** Per-competency ratings (Jordan multi-anchor and future multi-skill scenes). */
+  /** Per-competency ratings (Claire PRE / Sam POST). */
   competencies?: Exp7CompetencyScore[];
   /** Sum of the four competency scores. Untested competencies contribute 0. */
   sumScore?: number;
   /** Always 4 competencies x 10 for multi-anchor scenes. */
   maxScore?: number;
-  /** round(sumScore / maxScore * 100). */
+  /** Display aid: round(sumScore / maxScore * 100). Overall /10 does not use this. */
   percent?: number;
   /** True when the model returned no usable grade — UI must not treat this as a scored 0%. */
   evaluationFailed?: boolean;
@@ -70,10 +78,13 @@ type AnalyzerPayload = {
     goals?: Array<{ id?: string; points?: number; max?: number; quote?: string }>;
     note?: string;
     learnerQuote?: string;
+    youSaid?: string;
+    tryInstead?: string;
   }> | Record<string, unknown>;
   sumScore?: number;
   maxScore?: number;
   percent?: number;
+  focusSkill?: string;
 };
 
 export type Exp7DebriefSections = {
@@ -270,11 +281,105 @@ function mapNotePointers(
   return out;
 }
 
+function isV2AnalyzerPayload(parsed: AnalyzerPayload): boolean {
+  if (parsed.focusSkill) return true;
+  type RawComp = { youSaid?: string; tryInstead?: string };
+  for (const c of asArray<RawComp>(parsed.competencies)) {
+    if (c?.youSaid !== undefined || c?.tryInstead !== undefined) return true;
+  }
+  if (
+    parsed.competencies &&
+    !Array.isArray(parsed.competencies) &&
+    typeof parsed.competencies === "object"
+  ) {
+    for (const value of Object.values(parsed.competencies as Record<string, unknown>)) {
+      if (!value || typeof value !== "object") continue;
+      const row = value as { youSaid?: string; tryInstead?: string };
+      if (row.youSaid !== undefined || row.tryInstead !== undefined) return true;
+    }
+  }
+  return false;
+}
+
+const FOCUS_SKILL_ORDER = [
+  "building_trust",
+  "expectation_setting",
+  "delegation",
+  "accountability",
+] as const;
+
+function normalizeFocusSkillId(raw: string | undefined): string | undefined {
+  const id = String(raw ?? "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "_");
+  return FOCUS_SKILL_ORDER.includes(id as (typeof FOCUS_SKILL_ORDER)[number])
+    ? id
+    : undefined;
+}
+
+function deriveFocusSkill(competencies: Exp7CompetencyScore[]): string {
+  const administered = competencies.filter((c) => c.level !== "not_observed");
+  if (!administered.length) return "building_trust";
+
+  const minScore = Math.min(...administered.map((c) => c.score ?? 0));
+  const tied = administered.filter((c) => (c.score ?? 0) === minScore);
+  for (const id of FOCUS_SKILL_ORDER) {
+    const match = tied.find((c) => c.id === id);
+    if (match) return id;
+  }
+  return tied[0]?.id || "building_trust";
+}
+
+function buildTranscriptImprovementsFromCompetencies(
+  competencies: Exp7CompetencyScore[],
+  transcript: TranscriptEntry[],
+): Exp7DebriefEvidenceItem[] {
+  const usedQuotes = new Set<string>();
+  const out: Exp7DebriefEvidenceItem[] = [];
+
+  for (const c of competencies) {
+    const youSaid = (c.youSaid || "").trim();
+    const tryInstead = (c.tryInstead || "").trim();
+    if (!youSaid && !tryInstead) continue;
+
+    const item = normalizeEvidenceItem(
+      {
+        note: c.note,
+        learnerQuote: youSaid,
+        suggestedLine: tryInstead,
+      },
+      transcript,
+      { requireSuggestedLine: Boolean(tryInstead), usedQuotes },
+    );
+    if (item) out.push(item);
+    if (out.length >= 4) break;
+  }
+
+  return out;
+}
+
 function buildUiDebriefSections(
   parsed: AnalyzerPayload,
   sections: Exp7DebriefSections,
   transcript: TranscriptEntry[],
+  competencies?: Exp7CompetencyScore[],
 ): Pick<Exp7DebriefPayload, "didWell" | "keyTakeaways" | "transcriptImprovements"> {
+  // Multi-anchor RoleplayDebrief uses note/youSaid/tryInstead only — never list coaching fields.
+  const roleplayV2 =
+    Boolean(competencies?.length) || isV2AnalyzerPayload(parsed);
+
+  if (roleplayV2 && competencies?.length) {
+    return {
+      didWell: [],
+      keyTakeaways: [],
+      transcriptImprovements: buildTranscriptImprovementsFromCompetencies(
+        competencies,
+        transcript,
+      ),
+    };
+  }
+
   const didWell =
     mapNotePointers(parsed.didWell, 4).length > 0
       ? mapNotePointers(parsed.didWell, 4)
@@ -651,10 +756,29 @@ function scoreToHeadline(score: number): Exp7DebriefPayload["headline"] {
   return "solid";
 }
 
-function percentToHeadline(percent: number): Exp7DebriefPayload["headline"] {
-  if (percent >= 80) return "nailed_it";
-  if (percent >= 50) return "solid";
+/**
+ * Headline from raw point share (not from the rounded /10).
+ * ≥80% → nailed_it, ≥50% → solid, else try_again.
+ * For max=40: sum ≥32 / ≥20.
+ */
+function sumToHeadline(
+  sumScore: number,
+  maxScore: number,
+): Exp7DebriefPayload["headline"] {
+  if (maxScore <= 0) return "try_again";
+  const share = sumScore / maxScore;
+  if (share >= 0.8) return "nailed_it";
+  if (share >= 0.5) return "solid";
   return "try_again";
+}
+
+/**
+ * Overall /10: one integer round of (sum ÷ max) × 10.
+ * e.g. 22/40 → 5.5 → 6. Equivalent to Math.round(sum / 4) when max=40.
+ */
+function scoreOutOfTenFromSum(sumScore: number, maxScore: number): number {
+  if (maxScore <= 0) return 0;
+  return Math.min(10, Math.max(0, Math.round((sumScore / maxScore) * 10)));
 }
 
 function clampScore(score: number): number {
@@ -664,6 +788,63 @@ function clampScore(score: number): number {
 /** Competency scores run 0–10: 0 means the pressure was never administered. */
 function clampCompetencyScore(score: number): number {
   return Math.min(10, Math.max(0, Math.round(score)));
+}
+
+/**
+ * Absence-band goals may keep points with an empty quote.
+ * All other goals: points > 0 with empty quote → force 0 (cannot quote → cannot award).
+ */
+function isAbsenceBandGoal(competencyId: string, goalId: string): boolean {
+  const c = competencyId.toLowerCase();
+  const g = goalId.toLowerCase();
+  if (c === "building_trust" && g === "g3") return true;
+  if (c === "accountability" && g === "g1") return true;
+  return false;
+}
+
+function sanitizeGoalPoints(
+  competencyId: string,
+  goals?: Array<{ id?: string; points?: number; max?: number; quote?: string }>,
+): Array<{ id?: string; points: number; max?: number; quote?: string }> | null {
+  if (!Array.isArray(goals) || goals.length === 0) return null;
+  return goals.map((g) => {
+    const id = String(g?.id || "").trim() || undefined;
+    const max = typeof g?.max === "number" ? g.max : undefined;
+    let points = Number(g?.points ?? 0);
+    if (!Number.isFinite(points) || points < 0) points = 0;
+    if (max != null) points = Math.min(max, points);
+    points = Math.round(points);
+    const quote = String(g?.quote ?? "").trim();
+    if (
+      points > 0 &&
+      !quote &&
+      !isAbsenceBandGoal(competencyId, id || "")
+    ) {
+      points = 0;
+    }
+    return { id, points, max, quote: g?.quote ?? "" };
+  });
+}
+
+/**
+ * Safe perfect-score guard: a skill may stay at 10 only when every awarded
+ * goal has a real quote. Absence-band credit (points > 0, empty quote) — e.g.
+ * Trust G3 no-steamroll — cannot carry a skill to 10/10. Caps at 9.
+ * If goals are missing from the payload, leave the model score unchanged.
+ */
+function applyPerfectScoreGuard(
+  score: number,
+  goals?: Array<{ points?: number; quote?: string }>,
+): number {
+  const clamped = clampCompetencyScore(score);
+  if (clamped < 10) return clamped;
+  if (!Array.isArray(goals) || goals.length === 0) return clamped;
+  const usedAbsence = goals.some((g) => {
+    const pts = Number(g?.points ?? 0);
+    if (!Number.isFinite(pts) || pts <= 0) return false;
+    return !String(g?.quote ?? "").trim();
+  });
+  return usedAbsence ? 9 : clamped;
 }
 
 /**
@@ -752,12 +933,13 @@ function mapCompetencyLevel(
 ): Exp7CompetencyScore["level"] {
   const l = String(level ?? "").toLowerCase().replace(/\s+/g, "_");
   if (l === "not_observed" || l === "notobserved") return "not_observed";
-  if (l === "strong" || l === "adequate" || l === "needs_work") {
+  if (l === "strong" || l === "adequate" || l === "developing" || l === "needs_work") {
     return l as Exp7CompetencyScore["level"];
   }
   if (score == null) return "not_observed";
-  if (score >= 8) return "strong";
-  if (score >= 5) return "adequate";
+  if (score >= 9) return "strong";
+  if (score >= 7) return "adequate";
+  if (score >= 3) return "developing";
   return "needs_work";
 }
 
@@ -774,6 +956,9 @@ function normalizeCompetencies(
     goals?: Array<{ points?: number }>;
     note?: string;
     learnerQuote?: string;
+    youSaid?: string;
+    tryInstead?: string;
+    goals?: Array<{ points?: number; quote?: string; id?: string; max?: number }>;
   };
 
   const byId = new Map<string, RawComp>();
@@ -832,23 +1017,53 @@ function normalizeCompetencies(
           "This pressure did not clearly appear in the conversation."
         ).trim(),
         learnerQuote: "",
+        youSaid: "",
+        tryInstead: "",
       };
     }
 
-    const score = parsedScore ?? 0;
+    const sanitizedGoals = sanitizeGoalPoints(meta.id, raw.goals);
+    const goalSum =
+      sanitizedGoals?.reduce((total, g) => total + g.points, 0) ?? null;
+    const baseScore =
+      goalSum != null ? goalSum : (parsedScore ?? 0);
+    const score = applyPerfectScoreGuard(
+      baseScore,
+      sanitizedGoals ?? raw.goals,
+    );
     let level = mapCompetencyLevel(raw.level, score);
-    if (level === "not_observed") level = score >= 5 ? "adequate" : "needs_work";
+    if (level === "not_observed") {
+      level =
+        score >= 9
+          ? "strong"
+          : score >= 7
+            ? "adequate"
+            : score >= 3
+              ? "developing"
+              : "needs_work";
+    } else if (score >= 9 && score <= 10) {
+      level = "strong";
+    } else if (
+      (parsedScore ?? 0) >= 10 &&
+      score === 9 &&
+      level !== "strong"
+    ) {
+      level = "strong";
+    }
 
     const note = (raw.note || "").trim() || `How you handled ${meta.name.toLowerCase()}.`;
-    const quoteRaw = (raw.learnerQuote || "").trim();
-    let learnerQuote = "";
+    // Legacy learnerQuote accepted if present; Roleplay schema uses youSaid.
+    const quoteRaw = (raw.youSaid || raw.learnerQuote || "").trim();
+    let youSaid = "";
     if (quoteRaw) {
       const matched = pickLearnerLineForPattern(
         transcript,
         new RegExp(escapeRegExp(quoteRaw.slice(0, Math.min(40, quoteRaw.length))), "i"),
       );
-      learnerQuote = matched || quoteRaw;
+      youSaid = (matched || quoteRaw).slice(0, 280);
     }
+
+    const tryInstead = (raw.tryInstead || "").trim().slice(0, 280);
 
     return {
       id: meta.id,
@@ -856,7 +1071,9 @@ function normalizeCompetencies(
       score,
       level,
       note,
-      learnerQuote: learnerQuote.slice(0, 280),
+      learnerQuote: youSaid,
+      youSaid,
+      tryInstead,
     };
   });
 }
@@ -876,6 +1093,9 @@ export type Exp7CompetencyRollup = {
  * Sum, never average. A competency that was never administered contributes 0
  * and still counts toward the denominator, so the total reflects how much of
  * the whole conversation the learner actually handled.
+ *
+ * Overall /10 = round((sumScore / maxScore) × 10) — single round to integer.
+ * Percent is display-only and is not used to derive the /10 score.
  */
 function rollupCompetencies(
   competencies: Exp7CompetencyScore[],
@@ -891,7 +1111,7 @@ function rollupCompetencies(
     sumScore,
     maxScore,
     percent,
-    score: Math.min(10, Math.max(0, Math.round(percent / 10))),
+    score: scoreOutOfTenFromSum(sumScore, maxScore),
   };
 }
 
@@ -903,6 +1123,8 @@ function mockJordanCompetencies(): Exp7CompetencyScore[] {
     level: "adequate" as const,
     note: `Practice more of ${meta.name.toLowerCase()} in your next 1:1.`,
     learnerQuote: "",
+    youSaid: "",
+    tryInstead: "",
   }));
 }
 
@@ -1012,23 +1234,46 @@ async function callAnalyzerOnce(args: {
   model: string;
   reasoningEffort: "low" | "medium" | "high";
   maxCompletionTokens: number;
+  /** OpenRouter path for Claude (local Sonnet grader). */
+  provider?: "openai" | "openrouter";
 }): Promise<AnalyzerApiResult> {
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+  const provider = args.provider ?? "openai";
+  const useOpenRouter = provider === "openrouter";
+  const url = useOpenRouter
+    ? "https://openrouter.ai/api/v1/chat/completions"
+    : "https://api.openai.com/v1/chat/completions";
+
+  const body: Record<string, unknown> = {
+    model: args.model,
+    messages: [
+      { role: "system", content: args.system },
+      { role: "user", content: args.user },
+    ],
+    response_format: { type: "json_object" },
+  };
+
+  if (useOpenRouter) {
+    // Sonnet grader: stable, capped output (no OpenAI reasoning_effort).
+    body.temperature = 0;
+    body.max_tokens = Math.min(args.maxCompletionTokens, 3000);
+  } else {
+    body.reasoning_effort = args.reasoningEffort;
+    body.max_completion_tokens = args.maxCompletionTokens;
+  }
+
+  const headers: Record<string, string> = {
+    Authorization: `Bearer ${args.apiKey}`,
+    "Content-Type": "application/json",
+  };
+  if (useOpenRouter) {
+    headers["HTTP-Referer"] = "https://localhost/arena-exp7";
+    headers["X-Title"] = "Exp7 local analyzer";
+  }
+
+  const response = await fetch(url, {
     method: "POST",
-    headers: {
-      Authorization: `Bearer ${args.apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: args.model,
-      messages: [
-        { role: "system", content: args.system },
-        { role: "user", content: args.user },
-      ],
-      reasoning_effort: args.reasoningEffort,
-      max_completion_tokens: args.maxCompletionTokens,
-      response_format: { type: "json_object" },
-    }),
+    headers,
+    body: JSON.stringify(body),
   });
 
   if (!response.ok) {
@@ -1066,22 +1311,24 @@ export async function analyzeExp7Debrief(
       : isJordan
         ? "Claire"
         : "Alex";
-  const apiKey = loadOpenAiKey();
+  const system = loadAnalyzerPrompt(sceneId);
+  const model = process.env.ARENA_LLM_MODEL || "gpt-5.6-terra";
+  const useOpenRouter = isOpenRouterAnalyzerModel(model);
+  const apiKey = useOpenRouter ? loadOpenRouterKey() : loadOpenAiKey();
   const user = buildAnalyzerUserMessage(transcript);
 
   if (!apiKey) {
     const debrief = evaluationFailedDebrief(
       scene,
-      "Scoring could not run — OPENAI_API_KEY is missing. Add the key and retake.",
+      useOpenRouter
+        ? "Scoring could not run — OPENROUTER_API_KEY is missing. Add the key and retake."
+        : "Scoring could not run — OPENAI_API_KEY is missing. Add the key and retake.",
     );
     return {
       debrief,
       debug: buildAnalyzerDebug(transcript, user, { parsed: {} }),
     };
   }
-
-  const system = loadAnalyzerPrompt(sceneId);
-  const model = process.env.ARENA_LLM_MODEL || "gpt-5.6-terra";
 
   if (process.env.NODE_ENV !== "production") {
     console.info("[exp7] analyzer debrief", {
@@ -1091,18 +1338,21 @@ export async function analyzeExp7Debrief(
       learnerLines: transcript.filter((t) => t.role === "learner").length,
       transcriptChars: user.length,
       model,
+      provider: useOpenRouter ? "openrouter" : "openai",
     });
   }
 
   // o3 with high reasoning often spends the whole token budget on reasoning and
   // returns empty content — that previously collapsed into a fake 0% report.
+  // Claude/OpenRouter path uses temperature 0 + max_tokens 3000 (no reasoning_effort).
   let attempt = await callAnalyzerOnce({
     apiKey,
     system,
     user,
     model,
     reasoningEffort: "medium",
-    maxCompletionTokens: 12_000,
+    maxCompletionTokens: useOpenRouter ? 3000 : 12_000,
+    provider: useOpenRouter ? "openrouter" : "openai",
   });
 
   if (!attempt.ok || !hasUsableAnalyzerPayload(attempt.parsed, isJordan)) {
@@ -1117,7 +1367,8 @@ export async function analyzeExp7Debrief(
       user,
       model,
       reasoningEffort: "low",
-      maxCompletionTokens: 16_000,
+      maxCompletionTokens: useOpenRouter ? 3000 : 16_000,
+      provider: useOpenRouter ? "openrouter" : "openai",
     });
   }
 
@@ -1187,17 +1438,21 @@ export async function analyzeExp7Debrief(
       ? Math.min(40, Math.max(0, Math.round(parsed.sumScore)))
       : null;
 
-  const finalPercent = rollup?.percent ?? modelPercent ?? null;
   const finalSum = rollup?.sumScore ?? modelSum ?? null;
+  const finalMax = rollup?.maxScore ?? (finalSum != null ? 40 : null);
+  const finalPercent =
+    rollup?.percent ??
+    (finalSum != null && finalMax != null
+      ? Math.round((finalSum / finalMax) * 100)
+      : modelPercent);
   const finalScore =
     rollup?.score ??
-    (finalPercent != null
-      ? Math.min(10, Math.max(0, Math.round(finalPercent / 10)))
+    (finalSum != null && finalMax != null
+      ? scoreOutOfTenFromSum(finalSum, finalMax)
       : score);
-  const finalHeadline = rollup
-    ? percentToHeadline(rollup.percent)
-    : finalPercent != null
-      ? percentToHeadline(finalPercent)
+  const finalHeadline =
+    finalSum != null && finalMax != null
+      ? sumToHeadline(finalSum, finalMax)
       : scoreToHeadline(finalScore);
 
   const debug = buildAnalyzerDebug(transcript, user, {
@@ -1223,7 +1478,10 @@ export async function analyzeExp7Debrief(
     };
   }
 
-  const uiSections = buildUiDebriefSections(parsed, sections, transcript);
+  const uiSections = buildUiDebriefSections(parsed, sections, transcript, competencies);
+  const focusSkill =
+    normalizeFocusSkillId(parsed.focusSkill) ??
+    (competencies?.length ? deriveFocusSkill(competencies) : undefined);
 
   return {
     debrief: {
@@ -1231,6 +1489,7 @@ export async function analyzeExp7Debrief(
       headline: finalHeadline as Exp7DebriefPayload["headline"],
       headlineLabel: headlineLabel(scene, finalHeadline),
       summary: buildDebriefSummary(parsed, finalScore, competencies),
+      ...(focusSkill ? { focusSkill } : {}),
       strengths: sections.strengths,
       improvements: sections.improvements,
       ...uiSections,

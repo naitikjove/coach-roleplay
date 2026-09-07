@@ -30,7 +30,7 @@ Same skills, two different incidents, so the second conversation is not a memori
 **PRE — Claire · Presentation Quality Miss**  
 First 1:1 after senior leadership sent back a client deck Claire owned.
 
-**POST — Sam · Client Report Rejection**  
+**POST (Certificate Roleplay) — Sam · Your 1:1 After a Client Setback**  
 First 1:1 after the client flagged a report with numbers Sam owned.
 
 Both scenes score the same four skills: **Building Trust, Setting Goals, Directing Work, Ensuring Accountability.**
@@ -84,7 +84,7 @@ That split is why the character sounds like a coworker, not a quiz.
 | Step | Model | Role |
 |------|--------|------|
 | Live conversation | **gpt-realtime-2.1** (override: `ARENA_REALTIME_MODEL`) | Speech in / speech out. Character follows the actor prompt. |
-| Character voice | PRE **marin** (Claire) · POST **sage** (Sam) | Distinct voices so PRE/POST do not sound like the same person. |
+| Character voice | PRE **marin** (Claire) · POST **cedar** (Sam) | Both flagship; distinct so Practice/Certificate do not sound like the same person. |
 | Speech captions | **whisper-1** | Transcribe the learner for the transcript we score. |
 | Debrief | **o3** (override: `ARENA_LLM_MODEL`) | Read transcript + analyzer prompt → JSON scores and coaching lines. |
 | API key | `OPENAI_API_KEY` | Required. No key → session cannot start. |

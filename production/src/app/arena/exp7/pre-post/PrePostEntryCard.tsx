@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
+  EXP7_PRACTICE_LABEL,
   EXP7_PRE,
   EXP7_PRE_ENTRY_PURPOSE,
   EXP7_PRE_POST_COMPETENCIES,
+  EXP7_PRE_POST_LAST_RESULTS_HREF,
   EXP7_PRE_POST_SESSION_HREF,
   EXP7_PRE_TRANSITION,
   PRE_POST_TRANSITION_MS,
@@ -16,13 +18,45 @@ type PrePostEntryCardProps = {
   onNavigateStart?: () => void;
 };
 
+type LastSummary = {
+  score: number;
+};
+
 /**
  * Entry meta card — comfortable spacing + short PRE purpose line.
+ * Shows a subtle “Last results” affordance only when an evaluation exists.
  */
 export default function PrePostEntryCard({ onNavigateStart }: PrePostEntryCardProps) {
   const router = useRouter();
   const [transitioning, setTransitioning] = useState(false);
   const [imgFailed, setImgFailed] = useState(false);
+  const [lastSummary, setLastSummary] = useState<LastSummary | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    void (async () => {
+      try {
+        const res = await fetch("/api/arena/exp7/last-debrief?phase=pre", {
+          cache: "no-store",
+        });
+        const data = (await res.json()) as {
+          available?: boolean;
+          score?: number;
+        };
+        if (cancelled) return;
+        if (data?.available && typeof data.score === "number") {
+          setLastSummary({ score: data.score });
+          return;
+        }
+      } catch {
+        /* ignore — no link if unavailable */
+      }
+      if (!cancelled) setLastSummary(null);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const go = useCallback(() => {
     if (transitioning) return;
@@ -52,6 +86,7 @@ export default function PrePostEntryCard({ onNavigateStart }: PrePostEntryCardPr
               </span>
             )}
             <div className={styles.metaText}>
+              <p className={styles.metaEyebrow}>{EXP7_PRACTICE_LABEL}</p>
               <h3 className={styles.metaTitle}>{EXP7_PRE.title}</h3>
               <p className={styles.metaCharacter}>
                 <span className={styles.metaCharName}>{EXP7_PRE.characterName}</span>
@@ -83,6 +118,14 @@ export default function PrePostEntryCard({ onNavigateStart }: PrePostEntryCardPr
             ))}
           </ul>
         </div>
+
+        {lastSummary ? (
+          <p className={styles.lastResultsSubtle}>
+            <a href={EXP7_PRE_POST_LAST_RESULTS_HREF} className={styles.lastResultsLink}>
+              Last results · {lastSummary.score}/10
+            </a>
+          </p>
+        ) : null}
       </div>
 
       {transitioning ? (

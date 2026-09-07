@@ -28,6 +28,7 @@ function slotForIndex(i: number, n: number): "top" | "right" | "bottom" | "left"
 function levelLabel(level: Exp7CompetencyScore["level"]): string {
   if (level === "strong") return "Strong";
   if (level === "adequate") return "Adequate";
+  if (level === "developing") return "Developing";
   if (level === "needs_work") return "Needs work";
   return "Not observed";
 }
