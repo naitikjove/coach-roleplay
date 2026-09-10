@@ -10,7 +10,7 @@
   "characterId": "jordan",
   "voice": "marin",
   "actorPromptFile": "claire_pre.restructured.v17.prompt.txt",
-  "analyzerPromptFile": "jordan_presentation_quality_miss_analyzer.prompt.txt",
+  "analyzerPromptFile": "jordan_presentation_quality_miss_analyzer.prompt.v15.txt",
   "lessonRef": "mc1-pre",
   "lessonTitle": "Transitioning from Individual Contributor to Manager",
   "lessonSlug": "transitioning-from-individual-contributor-to-manager",
