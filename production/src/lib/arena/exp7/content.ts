@@ -127,17 +127,17 @@ export function loadExp7Scene(sceneId: string = EXP7_SCENE_ID): Exp7SceneConfig 
   if (!scene.actorPromptFile) {
     scene.actorPromptFile =
       scene.characterId === "sam"
-        ? "sam_client_report_rejection.prompt.txt"
+        ? "sam_post.restructured.v11.prompt.txt"
         : scene.characterId === "jordan"
-          ? "jordan.prompt.txt"
+          ? "claire_pre.restructured.v17.prompt.txt"
           : "alex.prompt.txt";
   }
   if (!scene.analyzerPromptFile) {
     scene.analyzerPromptFile =
       scene.characterId === "sam"
-        ? "sam_client_report_rejection_analyzer.prompt.txt"
+        ? "sam_client_report_rejection_analyzer.prompt.v10.txt"
         : scene.characterId === "jordan"
-          ? "jordan_analyzer.prompt.txt"
+          ? "jordan_presentation_quality_miss_analyzer.prompt.v16.txt"
           : "analyzer.prompt.txt";
   }
   return scene;
