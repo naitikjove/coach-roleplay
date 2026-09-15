@@ -6,7 +6,26 @@
  *
  * Coverage ≠ quality. true = the topic was settled in-conversation.
  * Whether the manager handled it well is scored later by the analyzer.
+ *
+ * ---------------------------------------------------------------------------
+ * JUDGE PROMPT ONLY — do not change output schema here.
+ * Schema stays exactly: {"1":boolean,"2":boolean,"3":boolean,"4":boolean}
+ *
+ * ITERATIONS (quality-only; no schema / actor / analyzer edits):
+ * - rev1 (2026-09-15): Align criteria to current Claire v17 / Sam v11 beats +
+ *   learner-facing objectives. Tighten false positives (greeting-only, weak
+ *   ack, character volunteering a plan alone, invite-without-decision).
+ * - rev2 (2026-09-15): Playbook test — thin_input falsely set Obj4=true on bare
+ *   "Okay"/"Yeah" after Sam's client-visit invite. Require an explicit decision
+ *   (who leads / who answers / goes alone / manager joins as support), not a
+ *   soft ack of the invite.
+ * - rev3 (2026-09-15): More playbooks — (a) derail falsely set Obj3=true with no
+ *   ownership line (jargon only); require explicit who-owns-the-fix language.
+ *   (b) out_of_order under-called Obj4 when manager clearly offered to join and
+ *   Sam accepted — count manager-offer + character-accept as settled.
+ * ---------------------------------------------------------------------------
  */
+export const JUDGE_PROMPT_REV = 3;
 
 export const EXP7_COVERAGE_TOPIC = "exp7_coverage";
 
@@ -17,21 +36,35 @@ type JudgeCriteria = {
   criteria: [string, string, string, string];
 };
 
+/**
+ * Claire PRE — maps to UI objectives:
+ * 1 talk about what happened with the presentation
+ * 2 what needs to happen with the deck this week
+ * 3 how the rewrite gets done
+ * 4 who represents in the leadership conversation
+ */
 const JORDAN_PRE: JudgeCriteria = {
   criteria: [
-    "What happened with the rejected client presentation was explained, and the manager engaged with it (asked, acknowledged, or responded to the substance).",
-    "What needs to happen with the deck this week (path, review, or timing) was expressed and acknowledged by the other person — not merely that work is due. Claire only volunteering \"I'll fix/rewrite it\" without a path/timing ack does NOT count. Manager only refusing help does NOT count.",
-    "It is now clear who does the rewrite, after any back-and-forth about helping resolved. Merely asking for help does not count; the matter must have settled (either Claire owns it, or they agreed another split).",
-    "Who will represent / be present for the leadership conversation was decided and acknowledged — including if the manager joins, sits in, or Claire goes alone. Merely raising or offering the idea without a clear decision does NOT count. Do NOT judge whether the decision was good.",
+    "Obj1 (what happened): The rejected / sent-back presentation was explained in substance (what leadership flagged or why it came back), AND the manager engaged with that substance (asked, acknowledged, or responded to it). Greeting / how-are-you / role small-talk alone = false. Claire naming it once with no manager engagement = false.",
+    "Obj2 (deck this week): A concrete next step for the deck before end of week was expressed AND acknowledged by the other person — review path, timing, or order of work (e.g. draft to manager first, day/time checkpoint). Claire only saying she will fix/rewrite/send up, with no manager ack of path/timing = false. Manager only refusing help with no plan settled = false. Bare okay/yeah/sure alone never settles this.",
+    "Obj3 (who does the rewrite): It is now clear who owns the rewrite work after any help/co-write pull resolved — Claire keeps it, manager takes it, or they agreed another split — in explicit ownership words. Merely asking for help, an open favor pull, or vague collaboration / jargon with no named owner = false. Weak ack alone = false.",
+    "Obj4 (leadership conversation): Who will be present / represent for the leadership conversation was decided and acknowledged with a clear role split — manager joins/sits in as support, Claire goes alone, or another explicit split. Counts if Claire invites and the manager clearly accepts a role, OR the manager offers to join/sit in and Claire accepts. Claire only inviting followed by bare okay/yeah/sure/fine = false. Soft thanks/ack without naming who answers or who goes = false. Do NOT judge whether the decision was good.",
   ],
 };
 
+/**
+ * Sam POST — maps to UI objectives:
+ * 1 what happened with the client report
+ * 2 what happens with the report before the client meeting EOW
+ * 3 who fixes the mistakes
+ * 4 who goes to the client meeting / walk-through
+ */
 const SAM_POST: JudgeCriteria = {
   criteria: [
-    "What happened after the client flagged the report was explained, and the manager engaged with it (asked, acknowledged, or responded to the substance).",
-    "What needs to happen before the corrected report goes back to the client (path, review, or timing) was expressed and acknowledged by the other person — not merely that it is due. Sam only volunteering \"I'll fix/send it\" without a path/timing ack does NOT count. Manager only refusing help does NOT count.",
-    "It is now clear who fixes the numbers before the report goes back, after any back-and-forth about helping resolved. Merely asking for help does not count; the matter must have settled (either Sam owns it, or they agreed another split).",
-    "Who handles the conversation when the report returns to the client was decided and acknowledged — including if the manager joins, loops in, or Sam goes alone. Merely raising or offering the idea without a clear decision does NOT count. Do NOT judge whether the decision was good.",
+    "Obj1 (what happened): The client-flagged report was explained in substance (what the client flagged — totals, contradictions, or the miss), AND the manager engaged with that substance (asked, acknowledged, or responded to it). Greeting / how-are-you / week small-talk alone = false. Sam naming the flag once with no manager engagement = false.",
+    "Obj2 (before client again): A concrete next step for the corrected report before the client sees it again / before the end-of-week client meeting was expressed AND acknowledged by the other person — manager review first, timing, or order of work. Sam only saying he will fix tonight / send straight back to the client, with no manager ack of path/timing = false. Manager only refusing help with no plan settled = false. Bare okay/yeah/sure alone never settles this.",
+    "Obj3 (who fixes the numbers): It is now clear who fixes the mistakes / totals before the report goes back, after any favor / take-the-numbers pull resolved — Sam keeps the fix, manager takes it, or they agreed another split — in explicit ownership words. Merely asking for help, an open favor pull, or vague collaboration / jargon with no named owner = false. Weak ack alone = false.",
+    "Obj4 (client meeting): Who goes to the client-office walk-through / client meeting was decided and acknowledged with a clear role split — who leads/answers vs who only sits in, or Sam goes alone. Counts if Sam invites and the manager clearly accepts a role, OR the manager offers to join/sit in and Sam accepts. Sam only inviting followed by bare okay/yeah/sure/fine = false. Soft thanks/ack without naming who answers or who goes = false. Do NOT judge whether the decision was good.",
   ],
 };
 
@@ -45,6 +78,9 @@ function criteriaForScene(sceneId: string): JudgeCriteria | null {
 /**
  * Judge instructions for one out-of-band response. Self-contained: at judge
  * time these replace the actor prompt, so all definitions must live here.
+ *
+ * OUTPUT SCHEMA (locked — do not change):
+ * {"1":boolean,"2":boolean,"3":boolean,"4":boolean}
  */
 export function coverageJudgeInstructions(sceneId: string): string | null {
   const config = criteriaForScene(sceneId);
@@ -57,6 +93,7 @@ export function coverageJudgeInstructions(sceneId: string): string | null {
     "For each item, answer true only if it has GENUINELY been resolved so far — both people engaged and the matter settled. A topic being mentioned once is NOT enough.",
     "A settled decision that is a poor managerial choice still counts as true for coverage.",
     "If you are not sure, answer false — you will see more of the conversation next time. Never guess true.",
+    "Hard false cases (apply every time): greeting-only / PRE-A small-talk; bare okay/yeah/sure/fine with no substance; Sam/Claire volunteering a fix or send-back alone with no manager acknowledgment of the plan; an open help/favor ask with no ownership decision; vague collaboration jargon with no named owner of the fix/rewrite; a meeting/walk-through invite answered only with okay/yeah/sure/thanks (not an explicit who-goes / who-answers decision).",
     "",
     lines,
     "",
