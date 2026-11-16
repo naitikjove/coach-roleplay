@@ -1,0 +1,165 @@
+{
+  "lockVersion": "1.0.0-ethan-practice-vA.1.1",
+  "lockDate": "2026-11-16",
+  "finalVariant": "A",
+  "promptNote": "vA 1.1 — no missing-piece quiz (never ask for number / target / deadline / reply-time / rhythm / measure slots)",
+  "id": "scene-mc3-rachel-practice",
+  "idNote": "Legacy rachel scene id retained for wiring; character is Ethan",
+  "slug": "exp7-ethan-next-month",
+  "title": "Planning Ethan's Next Month",
+  "type": "hot_seat",
+  "mode": "voice_only",
+  "primaryCharacter": "ethan",
+  "characterId": "ethan",
+  "voice": "verse",
+  "actorPromptFile": "ethan_next_month.actor.vA.prompt.txt",
+  "analyzerPromptFile": "ethan_next_month.analyzer.vA.prompt.txt",
+  "analyzerPromptFileV2": "ethan_next_month.analyzer.vA.prompt.txt",
+  "scoringMetaFile": "ethan_next_month.scoring_meta.json",
+  "promptVariants": {
+    "A": {
+      "actorPromptFile": "ethan_next_month.actor.vA.prompt.txt",
+      "analyzerPromptFile": "ethan_next_month.analyzer.vA.prompt.txt",
+      "status": "final",
+      "version": "1.1"
+    }
+  },
+  "lessonRef": "mc3-practice",
+  "lessonTitle": "Setting Clear Goals and Expectations",
+  "lessonSlug": "setting-clear-goals-and-expectations",
+  "sourceLessons": [
+    {
+      "beat": "A",
+      "lessonId": 41956,
+      "title": "What Are KPIs and Why Do They Matter?",
+      "competency": "setting_goals"
+    },
+    {
+      "beat": "A",
+      "lessonId": 41958,
+      "title": "Writing Clear and Measurable Objectives",
+      "competency": "setting_goals"
+    },
+    {
+      "beat": "B",
+      "lessonId": 41959,
+      "title": "Communicating Expectations with Clarity",
+      "competency": "setting_expectations"
+    },
+    {
+      "beat": "C",
+      "lessonId": 41746,
+      "title": "How to Set KPIs",
+      "competency": "measuring_results"
+    }
+  ],
+  "skills": [
+    "setting_goals",
+    "setting_expectations",
+    "measuring_results"
+  ],
+  "competencies": [
+    {
+      "id": "setting_goals",
+      "name": "Goal Setting"
+    },
+    {
+      "id": "setting_expectations",
+      "name": "Expectations Setting"
+    },
+    {
+      "id": "measuring_results",
+      "name": "Managing & Measuring Work"
+    }
+  ],
+  "turnLimits": {
+    "minLearnerTurns": 6,
+    "softMaxLearnerTurns": 14,
+    "hardMaxLearnerTurns": 18,
+    "absoluteMaxLearnerTurns": 22
+  },
+  "checklistItems": [
+    {
+      "id": "gs_next_month",
+      "label": "Ethan wants to double his calls next month. Agree with him what he should aim for.",
+      "critical": true
+    },
+    {
+      "id": "es_slow_reply",
+      "label": "A customer waited four days for Ethan to reply to her email. Agree with him how to handle customer emails.",
+      "critical": true
+    },
+    {
+      "id": "mmw_tracking",
+      "label": "Agree with Ethan how you'll both know whether it's working.",
+      "critical": true
+    }
+  ],
+  "scenarioSummary": {
+    "now": "You manage your company's sales team. Ethan joined four weeks ago. It's his first sales job, and his job is to call people who have asked about your company's service and get them to sign up. On his first day, you told him to get comfortable on the phone and make as many calls as he could. You haven't given him anything more specific since. Today is his first monthly check-in, where the two of you will plan his next month. He's keen and wants to do well.",
+    "layers": "A double the calls vs a sign-up aim with a number and a date → B \"I'll try to be quicker\" vs a clear reply time for customer emails → C \"I'll tell you at the end of the month\" vs what you'll look at and how often."
+  },
+  "scoring": {
+    "maxScore": 30,
+    "ranges": [
+      "0-1",
+      "2-4",
+      "5-7",
+      "8-10"
+    ],
+    "checks": {
+      "top": [4, 7, 10],
+      "middle": [3, 6, 9],
+      "bottom": [2, 5, 8]
+    },
+    "resultBands": [
+      {
+        "min": 25,
+        "max": 30,
+        "label": "Strong"
+      },
+      {
+        "min": 15,
+        "max": 24,
+        "label": "Getting there"
+      },
+      {
+        "min": 0,
+        "max": 14,
+        "label": "Needs practice"
+      }
+    ]
+  },
+  "passThreshold": 7,
+  "learnerCopy": {
+    "description": "You manage your company's sales team. Ethan joined four weeks ago. It's his first sales job, and his job is to call people who have asked about your company's service and get them to sign up. On his first day, you told him to get comfortable on the phone and make as many calls as he could. You haven't given him anything more specific since. Today is his first monthly check-in, where the two of you will plan his next month. He's keen and wants to do well.",
+    "characterRole": "Direct report",
+    "whoYouBody": "You manage the sales team. You hired Ethan four weeks ago.",
+    "whoThemBody": "A keen new sales rep in his first sales job. Calls people who asked about the service and tries to get them to sign up.",
+    "entryCardBody": "Help Ethan, a keen new sales rep, turn \"more calls\" into a clear plan for his next month.",
+    "characterAvatar": "/arena/exp4/characters/ethan.jpg",
+    "characterImageDrive": "https://drive.google.com/file/d/1sPVjmXmbbfqTpnBdAa1Y5YfyFSxj3WVr/view?usp=drivesdk"
+  },
+  "mustWatchVideos": [
+    {
+      "lessonId": 41956,
+      "title": "What Are KPIs and Why Do They Matter?",
+      "competency": "setting_goals"
+    },
+    {
+      "lessonId": 41958,
+      "title": "Writing Clear and Measurable Objectives",
+      "competency": "setting_goals"
+    },
+    {
+      "lessonId": 41959,
+      "title": "Communicating Expectations with Clarity",
+      "competency": "setting_expectations"
+    },
+    {
+      "lessonId": 41746,
+      "title": "How to Set KPIs",
+      "competency": "measuring_results"
+    }
+  ]
+}

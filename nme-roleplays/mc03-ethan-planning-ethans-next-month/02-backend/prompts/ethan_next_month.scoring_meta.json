@@ -1,0 +1,60 @@
+{
+  "maxScore": 30,
+  "characterName": "Ethan",
+  "competencies": [
+    {
+      "id": "setting_goals",
+      "name": "Goal Setting",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Aims Ethan at sign-ups instead of calls, with a number and a timeframe",
+          "max": 10
+        }
+      ]
+    },
+    {
+      "id": "setting_expectations",
+      "name": "Expectations Setting",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Sets a specific reply time for customer emails instead of \"try to be quicker\"",
+          "max": 10
+        }
+      ]
+    },
+    {
+      "id": "measuring_results",
+      "name": "Managing & Measuring Work",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Agrees what to look at and how often instead of an end-of-month report",
+          "max": 10
+        }
+      ]
+    }
+  ],
+  "absenceGoals": [],
+  "objectives": [
+    {
+      "n": 1,
+      "text": "Ethan wants to double his calls next month. Agree with him what he should aim for.",
+      "competency": "setting_goals",
+      "criterion": "True when the manager gives Ethan any direction on what to work toward next month: agreeing to double his calls, any sign-up aim, or even a vague steer such as 'just do your best' or 'focus on sign-ups', and Ethan acknowledges it or moves on to the customer email; false for a bare okay, a question alone, or Ethan's words alone."
+    },
+    {
+      "n": 2,
+      "text": "A customer waited four days for Ethan to reply to her email. Agree with him how to handle customer emails.",
+      "competency": "setting_expectations",
+      "criterion": "True when the manager gives any direction on how Ethan should handle customer emails: accepting 'try to be quicker', 'as soon as you can', 'whenever you can', or any reply time, and Ethan acknowledges it or moves on to how they'll know it's working; false for a bare okay, a question alone, or Ethan's words alone."
+    },
+    {
+      "n": 3,
+      "text": "Agree with Ethan how you'll both know whether it's working.",
+      "competency": "measuring_results",
+      "criterion": "True when the manager gives any direction on how they will keep track: accepting Ethan's end-of-month report, or any regular look together, and Ethan accepts it or the call closes; false for a bare okay or Ethan's words alone."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Planning Ethan's Next Month",
+  "phaseLabel": "Practice Roleplay Scenario",
+  "characterName": "Ethan",
+  "characterRole": "Direct report",
+  "characterAvatar": "/arena/exp4/characters/ethan.jpg",
+  "characterId": "ethan",
+  "scenario": "You manage your company's sales team. Ethan joined four weeks ago. It's his first sales job, and his job is to call people who have asked about your company's service and get them to sign up. On his first day, you told him to get comfortable on the phone and make as many calls as he could. You haven't given him anything more specific since. Today is his first monthly check-in, where the two of you will plan his next month. He's keen and wants to do well.",
+  "objectives": [
+    "Ethan wants to double his calls next month. Agree with him what he should aim for.",
+    "A customer waited four days for Ethan to reply to her email. Agree with him how to handle customer emails.",
+    "Agree with Ethan how you'll both know whether it's working."
+  ],
+  "whoYouBody": "You manage the sales team. You hired Ethan four weeks ago.",
+  "whoThemBody": "A keen new sales rep in his first sales job. Calls people who asked about the service and tries to get them to sign up.",
+  "entryCardBody": "Help Ethan, a keen new sales rep, turn \"more calls\" into a clear plan for his next month.",
+  "characterImageDrive": "https://drive.google.com/file/d/1sPVjmXmbbfqTpnBdAa1Y5YfyFSxj3WVr/view?usp=drivesdk",
+  "passThreshold": 7,
+  "competencies": [
+    {
+      "id": "setting_goals",
+      "name": "Goal Setting",
+      "mustWatchLessonIds": [41956, 41958],
+      "mustWatchTitles": [
+        "What Are KPIs and Why Do They Matter?",
+        "Writing Clear and Measurable Objectives"
+      ]
+    },
+    {
+      "id": "setting_expectations",
+      "name": "Expectations Setting",
+      "mustWatchLessonId": 41959,
+      "mustWatchTitle": "Communicating Expectations with Clarity"
+    },
+    {
+      "id": "measuring_results",
+      "name": "Managing & Measuring Work",
+      "mustWatchLessonId": 41746,
+      "mustWatchTitle": "How to Set KPIs"
+    }
+  ],
+  "course": {
+    "program": "New Manager Essentials",
+    "lessonTitle": "Setting Clear Goals and Expectations",
+    "lessonSlug": "setting-clear-goals-and-expectations",
+    "briefPath": "/setting-clear-goals-and-expectations/practice-roleplay?step=brief"
+  },
+  "sceneId": "scene-mc3-rachel-practice",
+  "scenarioKey": "mc3-ethan-practice",
+  "replaces": "Legacy Rachel practice (scene id scene-mc3-rachel-practice retained)"
+}
