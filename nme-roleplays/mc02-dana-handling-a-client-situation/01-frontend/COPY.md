@@ -36,11 +36,12 @@ https://drive.google.com/file/d/1a3D4xvg5O5j48ZrxBCIRWmJph4_eVIsA/view?usp=drive
 - Decision Quality
 
 ## Feedback labels already on staging (do not rename)
+Verified live on coach.dev FeedbackScreen:
 - How it went
-- You said
-- Try instead
-- Practice Roleplay Score (ring caption)
-- Focus / up-next cards use **backend variant copy** (not content headlines)
+- Your next step *(focus card + up-next card)*
+- Practice Roleplay Score
+- Skills overview / Insights
+- You said / Try instead *(per competency)*
 
 ## Not used on staging
 Do **not** ship: Nailed it / Solid / Try again

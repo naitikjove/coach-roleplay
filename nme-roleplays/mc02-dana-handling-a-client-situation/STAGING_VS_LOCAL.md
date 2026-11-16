@@ -2,14 +2,15 @@
 
 **This handoff matches staging Coach feedback (`FeedbackScreen`), not the local Exp7 Arena debrief.**
 
-| Item | Staging / prod | Local Arena (do **not** put in this pack as a ship requirement) |
+| Item | Staging / prod (verified) | Local Arena (do **not** ship) |
 |---|---|---|
-| Result headlines | **Not used** — no “Nailed it / Solid / Try again” | Exp7 debrief shows those headlines |
-| Score display | Score ring: “Practice Roleplay Score” (0–10) | Same idea locally, different chrome |
-| Summary | **How it went** | Similar |
-| Per competency | Label + note; expand → **You said** / **Try instead** | Similar labels |
-| Next-step card | Backend **focus** card (eyebrow / title / body / CTAs from feedback variants) | Local “Your next step” habit line |
-| Videos | **Must Watch** mapping: competency → lesson / video id (see `VIDEO_MAPPING.md`) | Often omitted or mocked |
-| Pass rule | Threshold **7/10** per competency (same intent) | Same |
+| Result headlines | **Absent** — no Nailed it / Solid / Try again | Exp7 shows those headlines |
+| Score | Ring: **Practice Roleplay Score** | Different chrome |
+| Summary | **HOW IT WENT** | Similar |
+| Next step | **YOUR NEXT STEP** focus card + up-next course card | Habit-only nextStep line |
+| Skills | **SKILLS OVERVIEW** + **INSIGHTS** rows | Local debrief layout |
+| Quotes | **You said** / **Try instead** | Similar |
+| Videos | Must Watch map + up-next micro-course card | Often mocked |
+| Pass | Threshold 7/10 | Same intent |
 
 When updating GitHub, prefer staging UI + existing NME handoff CSV columns over anything only present on `127.0.0.1` Arena.

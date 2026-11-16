@@ -1,27 +1,37 @@
-# Staging feedback UI — what frontend already renders
+# Staging feedback UI — verified on coach.dev
 
-Source: Coach `FeedbackScreen` on staging/prod (e.g. `?step=feedback`).
+Checked live (signed in):  
+`…/transitioning-from-individual-contributor-to-manager/practice-roleplay?step=feedback`  
+(MC1 Claire practice — **same FeedbackScreen chrome** Dana MC02 will use.)
 
-## Layout (practice)
+## Confirmed layout (top → bottom)
 
-1. Eyebrow + scenario title (roleplay title, not a “Nailed it” headline)
-2. Status line (from backend feedback variant — pass/fail style copy when applicable)
-3. **How it went** — summary paragraph
-4. **Focus card** (next-step / recommended practice) — eyebrow, title, body, primary/secondary CTAs  
-   - Often drives “watch this concept” / continue / retake via backend actions
-5. **Score ring** — caption: `Practice Roleplay Score`
-6. **Competency rows** (4) — score ring + label + note  
-   - Expand → **You said** + **Try instead** (quotes)
-7. **Up next** block when backend sends `upNext`
-8. Transcript / “See examples” when provided
+| # | Staging element | Notes |
+|---|---|---|
+| 1 | Eyebrow | e.g. `Practice Roleplay Feedback` |
+| 2 | Title | Roleplay title (not a pass/fail headline) |
+| 3 | Status line | e.g. `Your starting point before you begin the micro-course` |
+| 4 | **HOW IT WENT** | Summary paragraph |
+| 5 | **YOUR NEXT STEP** (focus card) | Eyebrow + title + body + primary CTA (e.g. Start Micro-course) + optional “See examples from the conversation” |
+| 6 | Score ring | Caption: **Practice Roleplay Score** · score /10 |
+| 7 | **SKILLS OVERVIEW** | Competency chart / rings |
+| 8 | **INSIGHTS** | Per competency: note (“How it went” for that skill) → expand **You said** / **Try instead** |
+| 9 | **YOUR NEXT STEP** (up next) | Next micro-course card (title · video count · duration · CTA) |
 
-## Do **not** implement from this pack
+## Confirmed: do **not** ship
 
-- Result headlines: ~~Nailed it~~ · ~~Solid~~ · ~~Try again~~ (local Arena only)
-- New feedback section names — keep existing staging labels
+- ~~Nailed it~~ · ~~Solid~~ · ~~Try again~~ — **not present** on staging feedback
 
-## What content owners still supply for FE
+## Labels content owners must keep
 
-From `COPY.md` / `brief-ui.json`: brief title, scenario, objectives, who cards, image, competency **display** names, pass threshold **7**.
+- How it went  
+- You said  
+- Try instead  
+- Your next step *(focus + up-next cards — backend variant copy)*  
+- Practice Roleplay Score  
+- Skills overview / Insights *(existing FE chrome)*
 
-Video deep-links: `VIDEO_MAPPING.md`.
+## What this pack still supplies for FE (Dana)
+
+Brief copy + objectives + who cards + image + competency names + Must Watch table (`VIDEO_MAPPING.md`).  
+Do **not** redesign this feedback shell — only swap scenario/competency content for MC02.

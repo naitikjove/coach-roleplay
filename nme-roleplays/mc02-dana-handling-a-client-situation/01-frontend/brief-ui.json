@@ -16,20 +16,45 @@
   "characterImageDrive": "https://drive.google.com/file/d/1a3D4xvg5O5j48ZrxBCIRWmJph4_eVIsA/view?usp=drivesdk",
   "passThreshold": 7,
   "competencies": [
-    { "id": "learning_agility", "name": "Learning Agility", "mustWatchLessonId": 41955 },
-    { "id": "managing_complexity", "name": "Managing Complexity", "mustWatchLessonId": 41952 },
-    { "id": "leading_change", "name": "Leading Change", "mustWatchLessonId": 41954 },
-    { "id": "decision_quality", "name": "Decision Quality", "mustWatchLessonId": 41953 }
+    {
+      "id": "learning_agility",
+      "name": "Learning Agility",
+      "mustWatchLessonId": 41955
+    },
+    {
+      "id": "managing_complexity",
+      "name": "Managing Complexity",
+      "mustWatchLessonId": 41952
+    },
+    {
+      "id": "leading_change",
+      "name": "Leading Change",
+      "mustWatchLessonId": 41954
+    },
+    {
+      "id": "decision_quality",
+      "name": "Decision Quality",
+      "mustWatchLessonId": 41953
+    }
   ],
   "stagingFeedbackLabels": {
+    "eyebrowExample": "Practice Roleplay Feedback",
     "summary": "How it went",
+    "yourNextStep": "Your next step",
+    "scoreRingCaption": "Practice Roleplay Score",
+    "skillsOverview": "Skills overview",
+    "insights": "Insights",
     "youSaid": "You said",
     "tryInstead": "Try instead",
-    "scoreRingCaption": "Practice Roleplay Score"
+    "seeExamples": "See examples from the conversation"
   },
   "doNotShip": {
-    "headlineLabels": ["Nailed it", "Solid", "Try again"],
-    "reason": "Local Arena Exp7 only — not used on coach.dev / production FeedbackScreen"
+    "headlineLabels": [
+      "Nailed it",
+      "Solid",
+      "Try again"
+    ],
+    "reason": "Local Arena Exp7 only \u2014 not used on coach.dev / production FeedbackScreen"
   },
   "course": {
     "program": "New Manager Essentials",
