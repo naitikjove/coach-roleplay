@@ -1,0 +1,127 @@
+{
+  "lockVersion": "2.0.0-dana-brightway-vB-final",
+  "lockDate": "2026-11-16",
+  "finalVariant": "B",
+  "id": "scene-mc2-dana-brightway-practice",
+  "slug": "exp7-dana-brightway",
+  "title": "Handling a client situation",
+  "type": "hot_seat",
+  "mode": "voice_only",
+  "primaryCharacter": "dana",
+  "characterId": "dana",
+  "voice": "sage",
+  "actorPromptFile": "dana_brightway.actor.vB.prompt.txt",
+  "analyzerPromptFile": "dana_brightway.analyzer.vB.prompt.txt",
+  "analyzerPromptFileV2": "dana_brightway.analyzer.vB.prompt.txt",
+  "promptVariants": {
+    "A": {
+      "actorPromptFile": "dana_brightway.actor.vA.prompt.txt",
+      "analyzerPromptFile": "dana_brightway.analyzer.vA.prompt.txt",
+      "status": "archive"
+    },
+    "B": {
+      "actorPromptFile": "dana_brightway.actor.vB.prompt.txt",
+      "analyzerPromptFile": "dana_brightway.analyzer.vB.prompt.txt",
+      "status": "final"
+    }
+  },
+  "lessonRef": "mc2-practice",
+  "lessonTitle": "Building a Managerial Mindset",
+  "lessonSlug": "building-a-managerial-mindset",
+  "sourceLessons": [
+    {
+      "beat": "A",
+      "lessonId": 41955,
+      "title": "Learning from Mistakes",
+      "competency": "learning_agility"
+    },
+    {
+      "beat": "B",
+      "lessonId": 41952,
+      "title": "Systems Thinking",
+      "competency": "managing_complexity"
+    },
+    {
+      "beat": "C",
+      "lessonId": 41954,
+      "title": "Adapting to Uncertainty",
+      "competency": "leading_change"
+    },
+    {
+      "beat": "D",
+      "lessonId": 42030,
+      "title": "Using Data",
+      "competency": "decision_quality"
+    }
+  ],
+  "skills": [
+    "learning_agility",
+    "managing_complexity",
+    "leading_change",
+    "decision_quality"
+  ],
+  "competencies": [
+    {
+      "id": "learning_agility",
+      "name": "Learning Agility"
+    },
+    {
+      "id": "managing_complexity",
+      "name": "Managing Complexity"
+    },
+    {
+      "id": "leading_change",
+      "name": "Leading Change"
+    },
+    {
+      "id": "decision_quality",
+      "name": "Decision Quality"
+    }
+  ],
+  "turnLimits": {
+    "minLearnerTurns": 6,
+    "softMaxLearnerTurns": 14,
+    "hardMaxLearnerTurns": 18,
+    "absoluteMaxLearnerTurns": 22
+  },
+  "checklistItems": [
+    {
+      "id": "la_weekend_catch_up",
+      "label": "Your team is behind, and Dana wants everyone to work this weekend to catch up. Decide with her how to get back on track.",
+      "critical": true
+    },
+    {
+      "id": "mc_missed_request",
+      "label": "Dana wants you to talk to Jake because he missed a request from Brightway. Decide what you'll do.",
+      "critical": true
+    },
+    {
+      "id": "lc_new_dashboard",
+      "label": "Brightway wants a new reporting dashboard, and Dana wants to promise it by the same due date. Agree with her how to handle it.",
+      "critical": true
+    },
+    {
+      "id": "dq_dashboard_owner",
+      "label": "Dana asks who should take on the dashboard. Agree with her how you'll choose.",
+      "critical": true
+    }
+  ],
+  "headlineLabels": {
+    "nailed_it": "Nailed it",
+    "solid": "Solid",
+    "try_again": "Try again"
+  },
+  "scenarioSummary": {
+    "now": "You lead a team of five, all working on a big delivery due in a week for Brightway, an important client. Dana, your most experienced team member, is in charge. By your plan from three weeks ago, the work should be 75% done, but it's only 50%, even with extra hours. To make things harder, Brightway now wants one more thing added to the same delivery. Dana is worried and wants to talk. As her manager, help her resolve the situation.",
+    "layers": "A weekend catch-up vs own the miss and fix the plan \u2192 B talk to Jake vs one shared way to track requests \u2192 C keep the date for the new dashboard vs reset the plan and tell people \u2192 D give it to Jake vs ask for workload facts."
+  },
+  "passThreshold": 7,
+  "learnerCopy": {
+    "description": "You lead a team of five, all working on a big delivery due in a week for Brightway, an important client. Dana, your most experienced team member, is in charge. By your plan from three weeks ago, the work should be 75% done, but it's only 50%, even with extra hours. To make things harder, Brightway now wants one more thing added to the same delivery. Dana is worried and wants to talk. As her manager, help her resolve the situation.",
+    "characterRole": "Direct report",
+    "whoYouBody": "You lead a team of five, including Dana.",
+    "whoThemBody": "Your most experienced team member. In charge of the Brightway delivery.",
+    "entryCardBody": "Help Dana get a late client delivery back on track and handle a new request from the client.",
+    "characterImageDrive": "https://drive.google.com/file/d/1a3D4xvg5O5j48ZrxBCIRWmJph4_eVIsA/view?usp=drivesdk"
+  }
+}

@@ -1,4 +1,12 @@
-# JoVE Coach — Exp7 PRE/POST Roleplay Handoff
+# JoVE Coach — Roleplay Handoffs
+
+## NME · Dana practice (new)
+**Handling a client situation** — frontend + backend split pack:  
+[`nme-roleplays/mc02-dana-handling-a-client-situation/`](nme-roleplays/mc02-dana-handling-a-client-situation/)
+
+---
+
+# Exp7 PRE/POST Roleplay Handoff
 
 Complete engineering handoff for the **Exp7 roleplay experience** (Jordan PRE + Sam POST) as it runs locally and on Vercel demo.
 
