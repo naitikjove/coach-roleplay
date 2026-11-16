@@ -17,7 +17,7 @@
 1. Load **actor** prompt as Realtime instructions  
 2. Set voice = **`sage`** (from `scene-runtime.json`)  
 3. Model actor = **`gpt-realtime-2.1`**  
-4. After session: run **analyzer** prompt on transcript → JSON scorecard  
+4. Analyzer model = **Opus (`claude-opus-5`), same as MC1 — do not change**; only swap analyzer prompt file  
 5. Map checklist ids: `la_weekend_catch_up`, `mc_missed_request`, `lc_new_dashboard`, `dq_dashboard_owner`  
 6. Pass threshold = **7** per competency  
 

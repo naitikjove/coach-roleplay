@@ -6,7 +6,7 @@
 |---|---|
 | Actor | `gpt-realtime-2.1` |
 | Voice | `sage` |
-| Analyzer | Same Chat Completions model as other NME roleplays (e.g. `gpt-5.6-terra`) |
+| Analyzer | **Opus — same as MC1** (`claude-opus-5`). **Do not change** the analyzer model. |
 
 ## Realtime
 
@@ -21,17 +21,13 @@ Keep existing NME VAD / PCM settings unless prod already differs.
 
 ## Analyzer
 
-```
-POST /v1/chat/completions
-messages = [
-  { role: "system", content: <entire dana_brightway.analyzer.vB.prompt.txt> },
-  { role: "user", content: <transcript> }
-]
-response_format = { type: "json_object" }
-```
+Same path as MC1. Model = **Opus (`claude-opus-5`)** — keep MC1 analyzer model; only swap the prompt file.
 
-Feedback payload must still expose: How it went / You said / Try instead / Your next step.  
-**Try instead** = ideal quote to Dana (not habit essays).
+```
+system = <entire dana_brightway.analyzer.vB.prompt.txt>
+user = <transcript>
+model = claude-opus-5   # same as MC1 — do not change
+```
 
 ## Runtime ids (`scene-runtime.json`)
 

@@ -22,4 +22,6 @@ https://github.com/naitikjove/coach-roleplay/tree/main/nme-roleplays/mc02-dana-h
 02-backend/      ← actor + analyzer prompts + scene-runtime.json
 ```
 
-**Out of scope for this pack:** static feedback chrome already on staging (Your next step, How it went, You said, Try instead, Practice Roleplay Score, Skills overview, etc.).
+**Models:** actor `gpt-realtime-2.1` · voice `sage` · analyzer **Opus same as MC1 (`claude-opus-5`) — do not change analyzer model.**
+
+**Out of scope for this pack:** static feedback chrome already on staging.
