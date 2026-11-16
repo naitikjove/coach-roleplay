@@ -1,0 +1,132 @@
+{
+  "lockVersion": "1.0.0-owen-post-v4.0",
+  "lockDate": "2026-11-16",
+  "finalVariant": "v4",
+  "id": "scene-mc2-owen-post",
+  "slug": "exp7-owen-new-team-members",
+  "title": "Getting New Team Members Ready",
+  "type": "hot_seat",
+  "mode": "voice_only",
+  "primaryCharacter": "owen",
+  "characterId": "owen",
+  "voice": "cedar",
+  "actorPromptFile": "owen_post.actor.prompt.txt",
+  "analyzerPromptFile": "owen_post.analyzer.prompt.txt",
+  "analyzerPromptFileV2": "owen_post.analyzer.prompt.txt",
+  "lessonRef": "mc2-post",
+  "lessonTitle": "Building a Managerial Mindset",
+  "lessonSlug": "building-a-managerial-mindset",
+  "sourceLessons": [
+    {
+      "beat": "A",
+      "lessonId": 41955,
+      "title": "Learning from Mistakes",
+      "competency": "learning_agility"
+    },
+    {
+      "beat": "B",
+      "lessonId": 41952,
+      "title": "Systems Thinking",
+      "competency": "managing_complexity"
+    },
+    {
+      "beat": "C",
+      "lessonId": 41954,
+      "title": "Adapting to Uncertainty",
+      "competency": "leading_change"
+    },
+    {
+      "beat": "D",
+      "lessonId": 42033,
+      "title": "Facilitating Team Decisions",
+      "competency": "decision_quality"
+    }
+  ],
+  "skills": [
+    "learning_agility",
+    "managing_complexity",
+    "leading_change",
+    "decision_quality"
+  ],
+  "competencies": [
+    {
+      "id": "learning_agility",
+      "name": "Learning Agility"
+    },
+    {
+      "id": "managing_complexity",
+      "name": "Managing Complexity"
+    },
+    {
+      "id": "leading_change",
+      "name": "Leading Change"
+    },
+    {
+      "id": "decision_quality",
+      "name": "Decision Quality"
+    }
+  ],
+  "turnLimits": {
+    "minLearnerTurns": 6,
+    "softMaxLearnerTurns": 14,
+    "hardMaxLearnerTurns": 18,
+    "absoluteMaxLearnerTurns": 22
+  },
+  "checklistItems": [
+    {
+      "id": "missed_goal",
+      "label": "Owen thinks two of the new people just didn't try hard enough. Decide with him what to do about the missed goal.",
+      "critical": true
+    },
+    {
+      "id": "late_laptops",
+      "label": "Owen wants you to complain to the head of IT about late laptops. Decide how you'll respond.",
+      "critical": true
+    },
+    {
+      "id": "six_new_people",
+      "label": "Six new people are joining next month, not two. Agree with Owen how to handle this with the team.",
+      "critical": true
+    },
+    {
+      "id": "team_choice",
+      "label": "Your team can't agree on the best way to teach new people. Agree with Owen how that choice gets made.",
+      "critical": true
+    }
+  ],
+  "scenarioSummary": {
+    "now": "You are Owen's manager. Until last month, you and Owen did the same job, side by side. Owen helps new people get started on your team. He gets each one a laptop and logins, and gives them a buddy: an experienced teammate who shows them the work. You set a goal: by the end of week two, new people should do their own work without help. This month, three people joined. Only one reached the goal. You asked to meet with Owen. Help him get things back on track.",
+    "layers": "A they didn't try hard enough \u2192 B complain to IT about laptops \u2192 C keep the six new people quiet \u2192 D just pick one way to teach new people."
+  },
+  "passThreshold": 7,
+  "learnerCopy": {
+    "description": "You are Owen's manager. Until last month, you and Owen did the same job, side by side. Owen helps new people get started on your team. He gets each one a laptop and logins, and gives them a buddy: an experienced teammate who shows them the work. You set a goal: by the end of week two, new people should do their own work without help. This month, three people joined. Only one reached the goal. You asked to meet with Owen. Help him get things back on track.",
+    "characterRole": "Former peer, now reports to you",
+    "whoYouBody": "You manage Owen. Until last month, you did the same job, side by side.",
+    "whoThemBody": "Helps new people get started on your team: a laptop, logins, and a buddy for each one.",
+    "entryCardBody": "Show you can think like a manager. Owen helps new people get started, and only one of three reached the goal this month. He used to be your peer. Help him get things back on track.",
+    "characterImageDrive": "https://drive.google.com/file/d/1tpcps18N7mHpztHs56AM8IfPPN7KRcpJ/view?usp=drivesdk"
+  },
+  "mustWatchVideos": [
+    {
+      "lessonId": 41955,
+      "title": "Learning from Mistakes and Moving Forward",
+      "competency": "learning_agility"
+    },
+    {
+      "lessonId": 41952,
+      "title": "Applying Systems Thinking in Daily Work",
+      "competency": "managing_complexity"
+    },
+    {
+      "lessonId": 41954,
+      "title": "Adapting to Uncertainty and Change",
+      "competency": "leading_change"
+    },
+    {
+      "lessonId": 42033,
+      "title": "Facilitating Team Decisions with Confidence",
+      "competency": "decision_quality"
+    }
+  ]
+}

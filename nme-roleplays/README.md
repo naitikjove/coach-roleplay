@@ -6,5 +6,6 @@ Separate from the Exp7 PRE/POST kit at repo root (`HANDOFF.md`).
 | Pack | Title | Link |
 |---|---|---|
 | MC02 Practice · Dana | Handling a client situation | [`mc02-dana-handling-a-client-situation/`](mc02-dana-handling-a-client-situation/) |
+| MC02 Certificate · Owen | Getting New Team Members Ready | [`mc02-owen-getting-new-team-members-ready/`](mc02-owen-getting-new-team-members-ready/) |
 
 Each pack splits **`01-frontend`** (learner-facing copy / brief UI) and **`02-backend`** (prompts / models / scene runtime).
