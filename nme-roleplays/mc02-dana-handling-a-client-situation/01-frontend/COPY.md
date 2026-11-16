@@ -1,4 +1,4 @@
-# Locked learner-facing copy
+# Locked learner-facing copy (staging-aligned)
 
 ## Title
 Handling a client situation
@@ -26,7 +26,7 @@ Help Dana get a late client delivery back on track and handle a new request from
 ## Character image (Drive)
 https://drive.google.com/file/d/1a3D4xvg5O5j48ZrxBCIRWmJph4_eVIsA/view?usp=drivesdk
 
-## Pass threshold (display)
+## Pass threshold
 7 / 10
 
 ## Competencies (display labels)
@@ -35,18 +35,20 @@ https://drive.google.com/file/d/1a3D4xvg5O5j48ZrxBCIRWmJph4_eVIsA/view?usp=drive
 - Leading Change
 - Decision Quality
 
-## Feedback section labels (do not rename)
+## Feedback labels already on staging (do not rename)
 - How it went
 - You said
 - Try instead
-- Your next step
+- Practice Roleplay Score (ring caption)
+- Focus / up-next cards use **backend variant copy** (not content headlines)
 
-## Result headlines
-- Nailed it
-- Solid
-- Try again
+## Not used on staging
+Do **not** ship: Nailed it / Solid / Try again
 
 ## Course placement
 - Program: New Manager Essentials  
 - Lesson: Building a Managerial Mindset  
 - Slot: Practice Roleplay (replace old Dana practice)
+
+## Videos
+See [`VIDEO_MAPPING.md`](VIDEO_MAPPING.md).

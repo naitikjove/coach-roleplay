@@ -1,22 +1,22 @@
-# Acceptance checklist — Dana practice
+# Acceptance checklist — Dana practice (staging-aligned)
 
 ## Frontend
 - [ ] Brief title = **Handling a client situation**
-- [ ] Scenario paragraph matches `01-frontend/COPY.md` exactly
-- [ ] All 4 objectives shown in order
-- [ ] Who cards: You (Manager) + Dana (Direct report) with locked bodies
-- [ ] Character image loads from Drive link in COPY
-- [ ] Old “Coordinating a Late Report” / Late Again copy removed from this slot
-- [ ] Results still show How it went / You said / Try instead / Your next step
+- [ ] Scenario + 4 objectives match `01-frontend/COPY.md`
+- [ ] Who cards + entry card + Drive image wired
+- [ ] Must Watch mapping matches `01-frontend/VIDEO_MAPPING.md`
+- [ ] Feedback uses existing staging chrome (How it went / You said / Try instead / score ring)
+- [ ] **No** Nailed it / Solid / Try again headlines
+- [ ] Old Coordinating a Late Report / Late Again copy removed from this slot
 
 ## Backend
-- [ ] Actor prompt = `02-backend/prompts/dana_brightway.actor.vB.prompt.txt` (full file)
-- [ ] Analyzer prompt = `02-backend/prompts/dana_brightway.analyzer.vB.prompt.txt` (full file)
+- [ ] Actor + analyzer prompts from `02-backend/prompts/` (full files)
 - [ ] Voice = `sage`
-- [ ] Realtime model = `gpt-realtime-2.1`
-- [ ] Checklist ids match `scene-runtime.json`
-- [ ] Pass threshold 7; four competencies score 0–10
+- [ ] Realtime = `gpt-realtime-2.1`
+- [ ] Checklist ids + pass threshold 7 from `scene-runtime.json`
+- [ ] Competency ids align with Must Watch table
 
-## Smoke
-- [ ] Join conversation → Dana opens (short notice / on edge)
-- [ ] End session → debrief returns with scores + try-instead quotes
+## Smoke (on coach.dev after login)
+- [ ] `?step=brief` shows locked copy
+- [ ] Live call → Dana opens on edge / short notice
+- [ ] `?step=feedback` shows scored FeedbackScreen (not Arena debrief)

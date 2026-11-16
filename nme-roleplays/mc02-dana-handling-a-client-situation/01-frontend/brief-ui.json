@@ -16,34 +16,21 @@
   "characterImageDrive": "https://drive.google.com/file/d/1a3D4xvg5O5j48ZrxBCIRWmJph4_eVIsA/view?usp=drivesdk",
   "passThreshold": 7,
   "competencies": [
-    {
-      "id": "learning_agility",
-      "name": "Learning Agility"
-    },
-    {
-      "id": "managing_complexity",
-      "name": "Managing Complexity"
-    },
-    {
-      "id": "leading_change",
-      "name": "Leading Change"
-    },
-    {
-      "id": "decision_quality",
-      "name": "Decision Quality"
-    }
+    { "id": "learning_agility", "name": "Learning Agility", "mustWatchLessonId": 41955 },
+    { "id": "managing_complexity", "name": "Managing Complexity", "mustWatchLessonId": 41952 },
+    { "id": "leading_change", "name": "Leading Change", "mustWatchLessonId": 41954 },
+    { "id": "decision_quality", "name": "Decision Quality", "mustWatchLessonId": 41953 }
   ],
-  "headlineLabels": {
-    "nailed_it": "Nailed it",
-    "solid": "Solid",
-    "try_again": "Try again"
+  "stagingFeedbackLabels": {
+    "summary": "How it went",
+    "youSaid": "You said",
+    "tryInstead": "Try instead",
+    "scoreRingCaption": "Practice Roleplay Score"
   },
-  "feedbackSections": [
-    "How it went",
-    "You said",
-    "Try instead",
-    "Your next step"
-  ],
+  "doNotShip": {
+    "headlineLabels": ["Nailed it", "Solid", "Try again"],
+    "reason": "Local Arena Exp7 only — not used on coach.dev / production FeedbackScreen"
+  },
   "course": {
     "program": "New Manager Essentials",
     "lessonTitle": "Building a Managerial Mindset",

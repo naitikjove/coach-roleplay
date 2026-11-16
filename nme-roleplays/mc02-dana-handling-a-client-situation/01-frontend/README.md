@@ -1,25 +1,24 @@
 # Frontend — Handling a client situation
 
-**Scope:** brief page (`?step=brief`), entry card, who-is-in-conversation, objectives list, debrief section labels.  
-**Not in scope:** Realtime prompts, analyzer prompts, model IDs (see `../02-backend/`).
+**Scope:** brief (`?step=brief`) + learner-facing strings. Feedback chrome already exists on staging — do not reinvent it.  
+**Not in scope:** Actor/analyzer prompts (see `../02-backend/`).
 
 ## Files
 
 | File | Use |
 |---|---|
-| [`COPY.md`](COPY.md) | Locked strings — implement exactly |
-| [`brief-ui.json`](brief-ui.json) | Same fields as JSON for CMS / constants |
+| [`COPY.md`](COPY.md) | Locked brief / who / objectives strings |
+| [`brief-ui.json`](brief-ui.json) | Same fields as JSON (+ competency → lesson ids) |
+| [`VIDEO_MAPPING.md`](VIDEO_MAPPING.md) | Must Watch table (lesson id ↔ competency) |
+| [`FEEDBACK_UI.md`](FEEDBACK_UI.md) | What staging feedback already shows |
 
-## Wire these UI surfaces
+## Wire
 
-1. **Title** → `Handling a client situation`
-2. **Scenario body** → `COPY.md` / `brief-ui.json` → `scenario`
-3. **Your Objectives** → 4 items (same order as live checklist)
-4. **Who is in the Conversation** → You + Dana cards
-5. **Entry / join card** → `entryCardBody` + character image
-6. **Results labels** (unchanged structure): How it went · You said · Try instead · Your next step
-7. **Headline labels:** Nailed it / Solid / Try again
+1. Title → **Handling a client situation**
+2. Scenario + 4 objectives + who cards + entry card + image from `COPY.md`
+3. Competency display names + Must Watch ids from `VIDEO_MAPPING.md`
+4. Keep staging feedback labels: How it went / You said / Try instead / Practice Roleplay Score
+5. **Do not** add Nailed it / Solid / Try again
 
 ## Source of truth
-
-If copy and JSON ever disagree, **`COPY.md` wins** for learner-facing text. Ask product before changing a word.
+`COPY.md` for learner text. Staging `FeedbackScreen` for feedback layout.

@@ -106,11 +106,6 @@
       "critical": true
     }
   ],
-  "headlineLabels": {
-    "nailed_it": "Nailed it",
-    "solid": "Solid",
-    "try_again": "Try again"
-  },
   "scenarioSummary": {
     "now": "You lead a team of five, all working on a big delivery due in a week for Brightway, an important client. Dana, your most experienced team member, is in charge. By your plan from three weeks ago, the work should be 75% done, but it's only 50%, even with extra hours. To make things harder, Brightway now wants one more thing added to the same delivery. Dana is worried and wants to talk. As her manager, help her resolve the situation.",
     "layers": "A weekend catch-up vs own the miss and fix the plan \u2192 B talk to Jake vs one shared way to track requests \u2192 C keep the date for the new dashboard vs reset the plan and tell people \u2192 D give it to Jake vs ask for workload facts."
@@ -123,5 +118,31 @@
     "whoThemBody": "Your most experienced team member. In charge of the Brightway delivery.",
     "entryCardBody": "Help Dana get a late client delivery back on track and handle a new request from the client.",
     "characterImageDrive": "https://drive.google.com/file/d/1a3D4xvg5O5j48ZrxBCIRWmJph4_eVIsA/view?usp=drivesdk"
+  },
+  "mustWatchVideos": [
+    {
+      "lessonId": 41955,
+      "title": "Learning from Mistakes and Moving Forward",
+      "competency": "learning_agility"
+    },
+    {
+      "lessonId": 41952,
+      "title": "Applying Systems Thinking in Daily Work",
+      "competency": "managing_complexity"
+    },
+    {
+      "lessonId": 41954,
+      "title": "Adapting to Uncertainty and Change",
+      "competency": "leading_change"
+    },
+    {
+      "lessonId": 41953,
+      "title": "Making Effective Decisions",
+      "competency": "decision_quality"
+    }
+  ],
+  "notes": {
+    "headlineLabels": "REMOVED \u2014 not used on staging/prod FeedbackScreen (local Arena only)",
+    "feedbackUi": "Use Coach FeedbackScreen: How it went, focus card, score ring, You said / Try instead, upNext"
   }
 }

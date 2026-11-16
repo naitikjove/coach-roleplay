@@ -43,11 +43,20 @@ Feedback payload must still expose: How it went / You said / Try instead / Your 
 - `passThreshold`: 7
 - Turn limits: min 6 · softMax 14 · hardMax 18 · absoluteMax 22
 
-## Must-watch lesson refs (if still used)
+## Must Watch videos (staging handoff)
 
-- 41955 → Learning Agility  
-- 41952 → Managing Complexity  
-- 41954 → Leading Change  
-- 41953 / 42030 → Decision Quality  
+Canonical table: [`../01-frontend/VIDEO_MAPPING.md`](../01-frontend/VIDEO_MAPPING.md)
 
-Use prod’s existing lesson mapping for this practice slot if IDs already differ.
+| Lesson ID | Competency id |
+|---|---|
+| 41955 | `learning_agility` |
+| 41952 | `managing_complexity` |
+| 41954 | `leading_change` |
+| 41953 | `decision_quality` |
+
+Also listed on `scene-runtime.json` → `mustWatchVideos`.
+
+## Feedback payload (staging)
+
+Analyzer / debrief should fill fields the existing `FeedbackScreen` already consumes (`summary`, per-rating `note` / `learnerQuote` / `suggestedLine`, focus / upNext).  
+Do **not** require Exp7-only headline enums (`nailed_it` / `solid` / `try_again`).
