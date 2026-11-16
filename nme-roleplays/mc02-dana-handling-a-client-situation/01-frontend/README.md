@@ -1,24 +1,11 @@
-# Frontend — Handling a client situation
+# Frontend — variable items only
 
-**Scope:** brief (`?step=brief`) + learner-facing strings. Feedback chrome already exists on staging — do not reinvent it.  
-**Not in scope:** Actor/analyzer prompts (see `../02-backend/`).
+Reuse existing staging brief + feedback chrome. Wire **only** what’s in this folder.
 
-## Files
-
-| File | Use |
+| File | What changes for Dana |
 |---|---|
-| [`COPY.md`](COPY.md) | Locked brief / who / objectives strings |
-| [`brief-ui.json`](brief-ui.json) | Same fields as JSON (+ competency → lesson ids) |
-| [`VIDEO_MAPPING.md`](VIDEO_MAPPING.md) | Must Watch table (lesson id ↔ competency) |
-| [`FEEDBACK_UI.md`](FEEDBACK_UI.md) | What staging feedback already shows |
+| [`COPY.md`](COPY.md) | Title, scenario, objectives, who cards, entry card, image, competencies, pass 7 |
+| [`brief-ui.json`](brief-ui.json) | Same fields as JSON |
+| [`VIDEO_MAPPING.md`](VIDEO_MAPPING.md) | Must Watch lesson id ↔ competency |
 
-## Wire
-
-1. Title → **Handling a client situation**
-2. Scenario + 4 objectives + who cards + entry card + image from `COPY.md`
-3. Competency display names + Must Watch ids from `VIDEO_MAPPING.md`
-4. Keep staging feedback labels: How it went / You said / Try instead / Practice Roleplay Score
-5. **Do not** add Nailed it / Solid / Try again
-
-## Source of truth
-`COPY.md` for learner text. Staging `FeedbackScreen` for feedback layout.
+Do **not** hand over static UI strings (Your next step, How it went, score ring caption, etc.) — already on staging.

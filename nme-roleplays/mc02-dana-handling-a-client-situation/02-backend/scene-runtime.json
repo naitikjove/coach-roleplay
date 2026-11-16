@@ -140,9 +140,5 @@
       "title": "Making Effective Decisions",
       "competency": "decision_quality"
     }
-  ],
-  "notes": {
-    "headlineLabels": "REMOVED \u2014 not used on staging/prod FeedbackScreen (local Arena only)",
-    "feedbackUi": "Use Coach FeedbackScreen: How it went, focus card, score ring, You said / Try instead, upNext"
-  }
+  ]
 }

@@ -1,4 +1,6 @@
-# Locked learner-facing copy (staging-aligned)
+# Locked learner-facing copy (variable only)
+
+Static feedback chrome (How it went, Your next step, You said, Try instead, score ring labels, etc.) already exists on staging — **do not re-specify it here**.
 
 ## Title
 Handling a client situation
@@ -29,27 +31,18 @@ https://drive.google.com/file/d/1a3D4xvg5O5j48ZrxBCIRWmJph4_eVIsA/view?usp=drive
 ## Pass threshold
 7 / 10
 
-## Competencies (display labels)
-- Learning Agility
-- Managing Complexity
-- Leading Change
-- Decision Quality
-
-## Feedback labels already on staging (do not rename)
-Verified live on coach.dev FeedbackScreen:
-- How it went
-- Your next step *(focus card + up-next card)*
-- Practice Roleplay Score
-- Skills overview / Insights
-- You said / Try instead *(per competency)*
-
-## Not used on staging
-Do **not** ship: Nailed it / Solid / Try again
+## Competencies (display + id)
+| Display | id |
+|---|---|
+| Learning Agility | `learning_agility` |
+| Managing Complexity | `managing_complexity` |
+| Leading Change | `leading_change` |
+| Decision Quality | `decision_quality` |
 
 ## Course placement
 - Program: New Manager Essentials  
 - Lesson: Building a Managerial Mindset  
-- Slot: Practice Roleplay (replace old Dana practice)
+- Slot: Practice Roleplay (replaces Coordinating a Late Report / Late Again)
 
 ## Videos
 See [`VIDEO_MAPPING.md`](VIDEO_MAPPING.md).

@@ -56,7 +56,6 @@ Canonical table: [`../01-frontend/VIDEO_MAPPING.md`](../01-frontend/VIDEO_MAPPIN
 
 Also listed on `scene-runtime.json` → `mustWatchVideos`.
 
-## Feedback payload (staging)
+## Analyzer output
 
-Analyzer / debrief should fill fields the existing `FeedbackScreen` already consumes (`summary`, per-rating `note` / `learnerQuote` / `suggestedLine`, focus / upNext).  
-Do **not** require Exp7-only headline enums (`nailed_it` / `solid` / `try_again`).
+Fill existing staging feedback fields from the analyzer (summary, per-skill note / quotes). Do not invent new UI labels.
