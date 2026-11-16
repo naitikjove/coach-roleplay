@@ -52,7 +52,7 @@ Canonical table: [`../01-frontend/VIDEO_MAPPING.md`](../01-frontend/VIDEO_MAPPIN
 | 41955 | `learning_agility` |
 | 41952 | `managing_complexity` |
 | 41954 | `leading_change` |
-| 41953 | `decision_quality` |
+| 42030 | `decision_quality` |
 
 Also listed on `scene-runtime.json` → `mustWatchVideos`.
 
