@@ -55,3 +55,8 @@ Also listed on `scene-runtime.json` → `mustWatchVideos`.
 ## Analyzer output
 
 Fill existing staging feedback fields from the analyzer (summary, per-skill note / quotes). Do not invent new UI labels.
+
+## Objective tracking + How it went
+
+Full mid-call coverage criteria, G1 map, and How it went field mapping:  
+[`OBJECTIVE_TRACKING.md`](OBJECTIVE_TRACKING.md)

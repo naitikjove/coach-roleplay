@@ -12,6 +12,7 @@
 | [`prompts/ethan_next_month.scoring_meta.json`](prompts/ethan_next_month.scoring_meta.json) | Competency goals + objective criteria |
 | [`scene-runtime.json`](scene-runtime.json) | Scene id, voice, checklist ids, competencies, turn limits, pass threshold |
 | [`WIRING.md`](WIRING.md) | Models + API call shape |
+| [`OBJECTIVE_TRACKING.md`](OBJECTIVE_TRACKING.md) | Mid-call coverage (3 objs) + G1 / How it went |
 
 ## Wire these server pieces
 

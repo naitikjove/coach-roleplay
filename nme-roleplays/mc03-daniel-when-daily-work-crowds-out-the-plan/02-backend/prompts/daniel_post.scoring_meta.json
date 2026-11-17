@@ -1,0 +1,50 @@
+{
+  "characterName": "Daniel",
+  "maxScore": 30,
+  "competencies": [
+    {
+      "id": "setting_goals",
+      "name": "Goal Setting",
+      "beat": "A",
+      "videoId": 41961,
+      "goals": [
+        { "id": "G1", "label": "Keeps the templates, with set weekly time and a rule for urgent jobs", "max": 10, "absenceBand": false }
+      ]
+    },
+    {
+      "id": "setting_expectations",
+      "name": "Expectations Setting",
+      "beat": "B",
+      "videoId": 41959,
+      "goals": [
+        { "id": "G1", "label": "Finds out why, then makes clear which jobs are the newer designers' and how Daniel helps them start", "max": 10, "absenceBand": false }
+      ]
+    },
+    {
+      "id": "measuring_results",
+      "name": "Managing & Measuring Work",
+      "beat": "C",
+      "videoId": 41746,
+      "goals": [
+        { "id": "G1", "label": "Counts the small jobs still coming in, with a target and who checks it how often", "max": 10, "absenceBand": false }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "n": 1,
+      "text": "Daniel wants to push the templates to next year. Agree with him what happens to the templates.",
+      "competency": "setting_goals"
+    },
+    {
+      "n": 2,
+      "text": "The two newer designers send Daniel every tricky job. Agree with Daniel how to handle this.",
+      "competency": "setting_expectations"
+    },
+    {
+      "n": 3,
+      "text": "Leadership wants to know whether the templates are working. Agree with Daniel how you'll both tell.",
+      "competency": "measuring_results"
+    }
+  ]
+}

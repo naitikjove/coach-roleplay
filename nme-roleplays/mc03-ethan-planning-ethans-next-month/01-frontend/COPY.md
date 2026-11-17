@@ -6,7 +6,7 @@ Static feedback chrome (How it went, Your next step, You said, Try instead, scor
 Planning Ethan's Next Month
 
 ## Scenario (brief card)
-You manage your company's sales team. Ethan joined four weeks ago. It's his first sales job, and his job is to call people who have asked about your company's service and get them to sign up. On his first day, you told him to get comfortable on the phone and make as many calls as he could. You haven't given him anything more specific since. Today is his first monthly check-in, where the two of you will plan his next month. He's keen and wants to do well.
+You manage your company's sales team. Ethan joined your team four weeks ago, and this is his first sales job. His job is to call people who have shown interest in your company's service and get them to sign up. On his first day, your only advice was to get comfortable on the phone and make as many calls as he could. You haven't given him any other guidance since. Today is his first monthly check-in. He's keen and wants to do well. Help him plan his next month.
 
 ## Your Objectives
 1. Ethan wants to double his calls next month. Agree with him what he should aim for.
@@ -19,7 +19,7 @@ You manage your company's sales team. Ethan joined four weeks ago. It's his firs
 You manage the sales team. You hired Ethan four weeks ago.
 
 **Ethan — Direct report**  
-A keen new sales rep in his first sales job. Calls people who asked about the service and tries to get them to sign up.
+A keen new sales rep in his first sales job. Calls people who have shown interest in the service and tries to get them to sign up.
 
 ## Entry card body
 Help Ethan, a keen new sales rep, turn “more calls” into a clear plan for his next month.

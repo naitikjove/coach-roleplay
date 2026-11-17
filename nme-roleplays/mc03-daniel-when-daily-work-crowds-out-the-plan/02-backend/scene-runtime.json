@@ -1,0 +1,133 @@
+{
+  "lockVersion": "1.0.0-daniel-post-v1.0",
+  "lockDate": "2026-11-16",
+  "finalVariant": "v1.0",
+  "id": "scene-mc3-daniel-post",
+  "slug": "exp7-daniel-templates",
+  "title": "When Daily Work Crowds Out the Plan",
+  "type": "hot_seat",
+  "mode": "voice_only",
+  "primaryCharacter": "daniel",
+  "characterId": "daniel",
+  "voice": "ash",
+  "actorPromptFile": "daniel_post.actor.prompt.txt",
+  "analyzerPromptFile": "daniel_post.analyzer.prompt.txt",
+  "analyzerPromptFileV2": "daniel_post.analyzer.prompt.txt",
+  "scoringMetaFile": "daniel_post.scoring_meta.json",
+  "lessonRef": "mc3-post",
+  "lessonTitle": "Setting Clear Goals and Expectations",
+  "lessonSlug": "setting-clear-goals-and-expectations",
+  "sourceLessons": [
+    {
+      "beat": "A",
+      "lessonId": 41961,
+      "title": "Balancing Short- and Long-Term Objectives",
+      "competency": "setting_goals"
+    },
+    {
+      "beat": "B",
+      "lessonId": 41959,
+      "title": "Communicating Expectations with Clarity",
+      "competency": "setting_expectations"
+    },
+    {
+      "beat": "C",
+      "lessonId": 41746,
+      "title": "How to Set KPIs",
+      "competency": "measuring_results"
+    }
+  ],
+  "skills": [
+    "setting_goals",
+    "setting_expectations",
+    "measuring_results"
+  ],
+  "competencies": [
+    {
+      "id": "setting_goals",
+      "name": "Goal Setting"
+    },
+    {
+      "id": "setting_expectations",
+      "name": "Expectations Setting"
+    },
+    {
+      "id": "measuring_results",
+      "name": "Managing & Measuring Work"
+    }
+  ],
+  "turnLimits": {
+    "minLearnerTurns": 5,
+    "softMaxLearnerTurns": 12,
+    "hardMaxLearnerTurns": 16,
+    "absoluteMaxLearnerTurns": 20
+  },
+  "checklistItems": [
+    {
+      "id": "templates_plan",
+      "label": "Daniel wants to push the templates to next year. Agree with him what happens to the templates.",
+      "critical": true
+    },
+    {
+      "id": "newer_designers",
+      "label": "The two newer designers send Daniel every tricky job. Agree with Daniel how to handle this.",
+      "critical": true
+    },
+    {
+      "id": "templates_working",
+      "label": "Leadership wants to know whether the templates are working. Agree with Daniel how you'll both tell.",
+      "critical": true
+    }
+  ],
+  "scenarioSummary": {
+    "now": "You manage a small design team: Daniel, your senior designer, and two newer designers. Other teams have no designers, so they send small design jobs to your team. Daniel does most of them, which takes time from his bigger work. So leadership asked him to make ten ready-made templates that other teams can use to create simple designs themselves. They're due in eight weeks, but Daniel hasn't worked on them in a while. In your weekly one-on-one, help him plan to finish on time.",
+    "layers": "A push the templates to next year → B keep doing the newer designers' tricky jobs → C report only how many templates are finished."
+  },
+  "scoring": {
+    "maxScore": 30,
+    "g1Bands": [0, 2, 4, 6, 8, 10],
+    "resultBands": [
+      {
+        "min": 25,
+        "max": 30,
+        "label": "Strong"
+      },
+      {
+        "min": 15,
+        "max": 24,
+        "label": "Getting there"
+      },
+      {
+        "min": 0,
+        "max": 14,
+        "label": "Needs practice"
+      }
+    ]
+  },
+  "passThreshold": 7,
+  "learnerCopy": {
+    "description": "You manage a small design team: Daniel, your senior designer, and two newer designers. Other teams have no designers, so they send small design jobs to your team. Daniel does most of them, which takes time from his bigger work. So leadership asked him to make ten ready-made templates that other teams can use to create simple designs themselves. They're due in eight weeks, but Daniel hasn't worked on them in a while. In your weekly one-on-one, help him plan to finish on time.",
+    "characterRole": "Direct report",
+    "whoYouBody": "You manage a small design team: Daniel and two newer designers.",
+    "whoThemBody": "Your senior designer. Does most of the small jobs other teams send, and owns the ten templates leadership asked for.",
+    "entryCardBody": "Show you can set clear goals and expectations. Daniel’s templates have stalled under a pile of small jobs. Help him plan the next eight weeks.",
+    "characterAvatar": "/arena/exp4/characters/daniel.jpg"
+  },
+  "mustWatchVideos": [
+    {
+      "lessonId": 41961,
+      "title": "Balancing Short- and Long-Term Objectives",
+      "competency": "setting_goals"
+    },
+    {
+      "lessonId": 41959,
+      "title": "Communicating Expectations with Clarity",
+      "competency": "setting_expectations"
+    },
+    {
+      "lessonId": 41746,
+      "title": "How to Set KPIs",
+      "competency": "measuring_results"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "title": "When Daily Work Crowds Out the Plan",
+  "phaseLabel": "Certificate Roleplay Scenario",
+  "characterName": "Daniel",
+  "characterRole": "Direct report",
+  "characterAvatar": "/arena/exp4/characters/daniel.jpg",
+  "characterId": "daniel",
+  "scenario": "You manage a small design team: Daniel, your senior designer, and two newer designers. Other teams have no designers, so they send small design jobs to your team. Daniel does most of them, which takes time from his bigger work. So leadership asked him to make ten ready-made templates that other teams can use to create simple designs themselves. They're due in eight weeks, but Daniel hasn't worked on them in a while. In your weekly one-on-one, help him plan to finish on time.",
+  "objectives": [
+    "Daniel wants to push the templates to next year. Agree with him what happens to the templates.",
+    "The two newer designers send Daniel every tricky job. Agree with Daniel how to handle this.",
+    "Leadership wants to know whether the templates are working. Agree with Daniel how you'll both tell."
+  ],
+  "whoYouBody": "You manage a small design team: Daniel and two newer designers.",
+  "whoThemBody": "Your senior designer. Does most of the small jobs other teams send, and owns the ten templates leadership asked for.",
+  "entryCardBody": "Show you can set clear goals and expectations. Daniel’s templates have stalled under a pile of small jobs. Help him plan the next eight weeks.",
+  "characterImageDrive": null,
+  "passThreshold": 7,
+  "competencies": [
+    {
+      "id": "setting_goals",
+      "name": "Goal Setting",
+      "mustWatchLessonId": 41961,
+      "mustWatchTitle": "Balancing Short- and Long-Term Objectives"
+    },
+    {
+      "id": "setting_expectations",
+      "name": "Expectations Setting",
+      "mustWatchLessonId": 41959,
+      "mustWatchTitle": "Communicating Expectations with Clarity"
+    },
+    {
+      "id": "measuring_results",
+      "name": "Managing & Measuring Work",
+      "mustWatchLessonId": 41746,
+      "mustWatchTitle": "How to Set KPIs"
+    }
+  ],
+  "course": {
+    "program": "New Manager Essentials",
+    "lessonTitle": "Setting Clear Goals and Expectations",
+    "lessonSlug": "setting-clear-goals-and-expectations",
+    "briefPath": "/setting-clear-goals-and-expectations/certificate-roleplay?step=brief"
+  },
+  "sceneId": "scene-mc3-daniel-post",
+  "scenarioKey": "daniel-post"
+}
