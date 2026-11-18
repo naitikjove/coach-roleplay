@@ -4,7 +4,7 @@ Reuse existing staging brief + feedback chrome. Wire **only** what’s in this f
 
 | File | What changes for Ethan |
 |---|---|
-| [`COPY.md`](COPY.md) | Title, scenario, objectives, who cards, entry card, image, competencies, pass 7 |
+| [`COPY.md`](COPY.md) | Practice modal headline, title, scenario, objectives, who cards, entry card, image, competencies, pass 7 |
 | [`brief-ui.json`](brief-ui.json) | Same fields as JSON |
 | [`VIDEO_MAPPING.md`](VIDEO_MAPPING.md) | Must Watch lesson id ↔ competency |
 

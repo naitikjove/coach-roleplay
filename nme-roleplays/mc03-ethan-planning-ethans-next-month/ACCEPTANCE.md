@@ -1,6 +1,7 @@
 # Acceptance — variable items only
 
 ## Frontend
+- [ ] Practice modal headline = **See how you'd think like a manager under pressure** (not MC1 "See how you'd handle your first 1:1"); eyebrow, subtitle, chips unchanged
 - [ ] Title = **Planning Ethan's Next Month**
 - [ ] Scenario + 3 objectives + who cards + entry card + image = `01-frontend/COPY.md`
 - [ ] Locked scenario uses “shown interest”, “your only advice was…”, “any other guidance”, and ends with “Help him plan his next month.”
