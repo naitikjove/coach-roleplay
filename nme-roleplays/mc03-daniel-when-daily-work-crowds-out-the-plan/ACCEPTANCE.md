@@ -16,8 +16,11 @@
 - [ ] Pass threshold 7 · lock `1.0.0-daniel-post-v1.0`
 - [ ] Mid-call coverage + How it went = `02-backend/OBJECTIVE_TRACKING.md`
 
+## Character image
+- [ ] Pack asset committed: `01-frontend/assets/daniel.jpg` (open on GitHub; no Drive TBD)
+- [ ] App path for prod wiring remains `/arena/exp4/characters/daniel.jpg`
+
 ## Known gaps (honest)
-- [ ] No Drive character-image URL in this pack yet — use app path `/arena/exp4/characters/daniel.jpg` until Drive asset is attached
 - [ ] Daniel playbook/QA batch is thinner than Ethan’s; calibrate against prompts + scoring_meta, not a full generic batch folder
 
 ## Smoke

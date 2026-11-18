@@ -111,7 +111,8 @@
     "whoYouBody": "You manage a small design team: Daniel and two newer designers.",
     "whoThemBody": "Your senior designer. Does most of the small jobs other teams send, and owns the ten templates leadership asked for.",
     "entryCardBody": "Show you can set clear goals and expectations. Daniel’s templates have stalled under a pile of small jobs. Help him plan the next eight weeks.",
-    "characterAvatar": "/arena/exp4/characters/daniel.jpg"
+    "characterAvatar": "/arena/exp4/characters/daniel.jpg",
+    "characterImagePack": "01-frontend/assets/daniel.jpg"
   },
   "mustWatchVideos": [
     {

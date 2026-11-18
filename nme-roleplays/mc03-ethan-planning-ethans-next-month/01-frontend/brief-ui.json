@@ -12,6 +12,7 @@
   "characterName": "Ethan",
   "characterRole": "Direct report",
   "characterAvatar": "/arena/exp4/characters/ethan.jpg",
+  "characterImagePack": "assets/ethan.jpg",
   "characterId": "ethan",
   "scenario": "You manage your company's sales team. Ethan joined your team four weeks ago, and this is his first sales job. His job is to call people who have shown interest in your company's service and get them to sign up. On his first day, your only advice was to get comfortable on the phone and make as many calls as he could. You haven't given him any other guidance since. Today is his first monthly check-in. He's keen and wants to do well. Help him plan his next month.",
   "objectives": [

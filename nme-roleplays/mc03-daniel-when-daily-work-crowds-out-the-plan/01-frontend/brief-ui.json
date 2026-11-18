@@ -4,6 +4,7 @@
   "characterName": "Daniel",
   "characterRole": "Direct report",
   "characterAvatar": "/arena/exp4/characters/daniel.jpg",
+  "characterImagePack": "assets/daniel.jpg",
   "characterId": "daniel",
   "scenario": "You manage a small design team: Daniel, your senior designer, and two newer designers. Other teams have no designers, so they send small design jobs to your team. Daniel does most of them, which takes time from his bigger work. So leadership asked him to make ten ready-made templates that other teams can use to create simple designs themselves. They're due in eight weeks, but Daniel hasn't worked on them in a while. In your weekly one-on-one, help him plan to finish on time.",
   "objectives": [

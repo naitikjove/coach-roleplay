@@ -25,8 +25,8 @@ Your senior designer. Does most of the small jobs other teams send, and owns the
 Show you can set clear goals and expectations. Daniel’s templates have stalled under a pile of small jobs. Help him plan the next eight weeks.
 
 ## Character image
-- App path: `/arena/exp4/characters/daniel.jpg`
-- Drive: _(not attached in this pack yet — use app path)_
+- Pack (GitHub — open this): [`assets/daniel.jpg`](assets/daniel.jpg)
+- App path (prod wiring): `/arena/exp4/characters/daniel.jpg`
 
 ## Pass threshold
 7 / 10

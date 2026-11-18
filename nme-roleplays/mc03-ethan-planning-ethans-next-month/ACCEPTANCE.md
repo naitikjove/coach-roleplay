@@ -8,6 +8,7 @@
 - [ ] whoThem uses “shown interest” (aligned with locked scenario)
 - [ ] Competencies + Must Watch = `01-frontend/VIDEO_MAPPING.md`
 - [ ] Character = Ethan (Direct report), not Rachel
+- [ ] Pack character image committed: `01-frontend/assets/ethan.jpg` (GitHub-accessible; do not rely on local `/arena/...` alone)
 
 ## Backend
 - [ ] Actor + analyzer prompts from `02-backend/prompts/` (vA 1.1 — no missing-piece quiz)

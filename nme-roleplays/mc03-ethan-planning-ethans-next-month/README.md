@@ -26,6 +26,8 @@ https://github.com/naitikjove/coach-roleplay/tree/main/nme-roleplays/mc03-ethan-
 
 **Prompt lock:** actor/analyzer **vA 1.1** — no missing-piece quiz (Ethan never asks for number / target / deadline / reply-time / rhythm / measure slots).
 
+**Character image:** [`01-frontend/assets/ethan.jpg`](01-frontend/assets/ethan.jpg) (committed in this pack for GitHub access).
+
 **Learner scenario lock:** “shown interest” / “your only advice was…” / “any other guidance” / “Help him plan his next month.” (see `01-frontend/COPY.md`).
 
 **Objective tracking:** mid-call coverage (3 settle/decision ticks) + post-call G1 + How it went → [`02-backend/OBJECTIVE_TRACKING.md`](02-backend/OBJECTIVE_TRACKING.md).

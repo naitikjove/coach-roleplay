@@ -38,8 +38,9 @@ A keen new sales rep in his first sales job. Calls people who have shown interes
 Help Ethan, a keen new sales rep, turn “more calls” into a clear plan for his next month.
 
 ## Character image
-- App path: `/arena/exp4/characters/ethan.jpg`
-- Drive: https://drive.google.com/file/d/1sPVjmXmbbfqTpnBdAa1Y5YfyFSxj3WVr/view?usp=drivesdk
+- Pack (GitHub — open this): [`assets/ethan.jpg`](assets/ethan.jpg)
+- App path (prod wiring): `/arena/exp4/characters/ethan.jpg`
+- Drive (optional; may require Google account): https://drive.google.com/file/d/1sPVjmXmbbfqTpnBdAa1Y5YfyFSxj3WVr/view?usp=drivesdk
 
 ## Pass threshold
 7 / 10

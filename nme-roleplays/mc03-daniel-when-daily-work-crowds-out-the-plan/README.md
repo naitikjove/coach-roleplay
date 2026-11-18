@@ -28,6 +28,8 @@ https://github.com/naitikjove/coach-roleplay/tree/main/nme-roleplays/mc03-daniel
 
 **Objective tracking:** mid-call coverage (3 settle/decision ticks) + post-call G1 + How it went → [`02-backend/OBJECTIVE_TRACKING.md`](02-backend/OBJECTIVE_TRACKING.md).
 
+**Character image:** [`01-frontend/assets/daniel.jpg`](01-frontend/assets/daniel.jpg) (committed in this pack for GitHub access).
+
 **Known gap:** Daniel has lighter playbook/QA batch evidence than Ethan practice; prompts + scoring meta here are still the ship source. Flagged in ACCEPTANCE.
 
 **Out of scope for this pack:** static feedback chrome already on staging (Your next step, How it went, You said, Try instead, Certificate Roleplay Score, Skills overview, etc.).
