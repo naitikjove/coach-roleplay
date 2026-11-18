@@ -2,6 +2,19 @@
 
 Static feedback chrome (How it went, Your next step, You said, Try instead, score ring labels, etc.) already exists on staging — **do not re-specify it here**.
 
+## Practice modal (before the brief)
+The Practice Roleplay modal shown when the learner opens MC2 practice. Production currently shows MC1 copy here; replace only the headline.
+
+| Field | Copy |
+|---|---|
+| Eyebrow | Practice Roleplay |
+| Headline | See how you'd think like a manager under pressure |
+| Subtitle | Unchanged — keep as in production |
+| Chips | Unchanged — keep as in production (Voice Roleplay \| No Preparation \| Instant Feedback) |
+
+- Replaces the MC1 headline "See how you'd handle your first 1:1" for this slot.
+- The headline is **not** the scenario title. Keep the title below as **Handling a client situation**.
+
 ## Title
 Handling a client situation
 

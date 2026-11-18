@@ -1,5 +1,13 @@
 {
   "title": "Handling a client situation",
+  "practiceModal": {
+    "eyebrow": "Practice Roleplay",
+    "headline": "See how you'd think like a manager under pressure",
+    "subtitle": "unchanged (keep production)",
+    "chips": "unchanged (keep production)",
+    "replacesHeadline": "See how you'd handle your first 1:1",
+    "note": "Modal headline only. Not the scenario title; keep title = Handling a client situation."
+  },
   "phaseLabel": "Practice Roleplay Scenario",
   "characterName": "Dana",
   "characterRole": "Direct report",

@@ -1,6 +1,7 @@
 # Acceptance — variable items only
 
 ## Frontend
+- [ ] Practice modal headline = **See how you'd think like a manager under pressure** (not MC1 "See how you'd handle your first 1:1"); eyebrow, subtitle, chips unchanged
 - [ ] Title = **Handling a client situation**
 - [ ] Scenario + 4 objectives + who cards + entry card + image = `01-frontend/COPY.md`
 - [ ] Competencies + Must Watch = `01-frontend/VIDEO_MAPPING.md`
