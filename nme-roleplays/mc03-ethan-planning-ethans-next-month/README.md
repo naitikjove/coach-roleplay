@@ -24,6 +24,10 @@ https://github.com/naitikjove/coach-roleplay/tree/main/nme-roleplays/mc03-ethan-
 
 **Models:** actor `gpt-realtime-2.1` · voice `verse` · analyzer **Opus same as MC1 (`claude-opus-5`) — do not change analyzer model.**
 
+**MC1 headline replacement (practice slot):**  
+`Show how you'd set clear goals with your team`  
+Replaces the MC1 headline "See how you'd handle your first 1:1" for this slot. **Not** the scenario title (keep **Planning Ethan's Next Month**). Do **not** label this string as "Entry card body".
+
 **Prompt lock:** actor/analyzer **vA 1.1** — no missing-piece quiz (Ethan never asks for number / target / deadline / reply-time / rhythm / measure slots).
 
 **Character image:** [`01-frontend/assets/ethan.jpg`](01-frontend/assets/ethan.jpg) (committed in this pack for GitHub access).

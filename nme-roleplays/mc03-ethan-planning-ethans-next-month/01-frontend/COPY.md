@@ -2,18 +2,19 @@
 
 Static feedback chrome (How it went, Your next step, You said, Try instead, score ring labels, etc.) already exists on staging — **do not re-specify it here**.
 
-## Practice modal (before the brief)
-The Practice Roleplay modal shown when the learner opens MC3 practice. Production currently shows MC1 copy here; replace only the headline.
+## MC1 headline replacement (practice slot)
+Shown when the learner opens MC3 practice (modal / purpose line). Production may still show MC1 copy here; replace only this headline.
 
 | Field | Copy |
 |---|---|
 | Eyebrow | Practice Roleplay |
-| Headline | See how you'd think like a manager under pressure |
+| Headline | Show how you'd set clear goals with your team |
 | Subtitle | Unchanged — keep as in production |
 | Chips | Unchanged — keep as in production (Voice Roleplay \| No Preparation \| Instant Feedback) |
 
-- Replaces the MC1 headline "See how you'd handle your first 1:1" for this slot.
+- **Replaces the MC1 headline "See how you'd handle your first 1:1" for this slot.**
 - The headline is **not** the scenario title. Keep the title below as **Planning Ethan's Next Month**.
+- Do **not** call this string "Entry card body".
 
 ## Title
 Planning Ethan's Next Month
@@ -33,9 +34,6 @@ You manage the sales team. You hired Ethan four weeks ago.
 
 **Ethan — Direct report**  
 A keen new sales rep in his first sales job. Calls people who have shown interest in the service and tries to get them to sign up.
-
-## Entry card body
-Help Ethan, a keen new sales rep, turn “more calls” into a clear plan for his next month.
 
 ## Character image
 - Pack (GitHub — open this): [`assets/ethan.jpg`](assets/ethan.jpg)

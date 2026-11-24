@@ -1,9 +1,9 @@
 # Acceptance — variable items only
 
 ## Frontend
-- [ ] Practice modal headline = **See how you'd think like a manager under pressure** (not MC1 "See how you'd handle your first 1:1"); eyebrow, subtitle, chips unchanged
+- [ ] MC1 headline replacement for this practice slot = **Show how you'd set clear goals with your team** (not MC1 "See how you'd handle your first 1:1"); eyebrow, subtitle, chips unchanged where that modal exists
 - [ ] Title = **Planning Ethan's Next Month**
-- [ ] Scenario + 3 objectives + who cards + entry card + image = `01-frontend/COPY.md`
+- [ ] Scenario + 3 objectives + who cards + image = `01-frontend/COPY.md`
 - [ ] Locked scenario uses “shown interest”, “your only advice was…”, “any other guidance”, and ends with “Help him plan his next month.”
 - [ ] whoThem uses “shown interest” (aligned with locked scenario)
 - [ ] Competencies + Must Watch = `01-frontend/VIDEO_MAPPING.md`

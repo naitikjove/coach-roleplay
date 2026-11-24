@@ -136,7 +136,8 @@
     "characterRole": "Direct report",
     "whoYouBody": "You manage the sales team. You hired Ethan four weeks ago.",
     "whoThemBody": "A keen new sales rep in his first sales job. Calls people who have shown interest in the service and tries to get them to sign up.",
-    "entryCardBody": "Help Ethan, a keen new sales rep, turn \"more calls\" into a clear plan for his next month.",
+    "mc1HeadlineReplacement": "Show how you'd set clear goals with your team",
+    "mc1HeadlineReplacementNote": "Replaces MC1 headline 'See how you'd handle your first 1:1' for this practice slot. Not the scenario title. Do not label as Entry card body.",
     "characterAvatar": "/arena/exp4/characters/ethan.jpg",
     "characterImagePack": "01-frontend/assets/ethan.jpg",
     "characterImageDrive": "https://drive.google.com/file/d/1sPVjmXmbbfqTpnBdAa1Y5YfyFSxj3WVr/view?usp=drivesdk"
