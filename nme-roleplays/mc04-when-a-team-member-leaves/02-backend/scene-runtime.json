@@ -1,0 +1,124 @@
+{
+  "lockVersion": "1.0.0-rebecca-lucas-post-actor-v4-analyzer-v3",
+  "lockDate": "2026-11-21",
+  "finalVariant": "actor-v4-analyzer-v3",
+  "id": "scene-mc4-lucas-post",
+  "slug": "exp7-rebecca-before-lucas-moves-on",
+  "title": "When a Team Member Leaves",
+  "type": "hot_seat",
+  "mode": "voice_only",
+  "primaryCharacter": "rebecca",
+  "characterId": "rebecca",
+  "voice": "shimmer",
+  "actorModel": "gpt-realtime-2.1",
+  "analyzerModel": "claude-opus-5",
+  "analyzerModelNote": "Opus same as MC1 — do not change",
+  "actorPromptFile": "rebecca_lucas_post.actor.prompt.txt",
+  "analyzerPromptFile": "rebecca_lucas_post.analyzer.prompt.txt",
+  "analyzerPromptFileV2": "rebecca_lucas_post.analyzer.prompt.txt",
+  "scoringMetaFile": "rebecca_lucas_post.scoring_meta.json",
+  "promptNote": "actor v4 + analyzer v3; unversioned filenames match live scene wiring",
+  "promptVariants": {
+    "final": {
+      "actorPromptFile": "rebecca_lucas_post.actor.v4.prompt.txt",
+      "analyzerPromptFile": "rebecca_lucas_post.analyzer.v3.prompt.txt",
+      "status": "final"
+    }
+  },
+  "lessonRef": "mc4-post",
+  "lessonTitle": "Aligning People and Roles in Teams",
+  "lessonSlug": "aligning-people-and-roles-in-teams",
+  "sourceLessons": [
+    {
+      "beat": "A",
+      "lessonId": 42026,
+      "title": "Creating a Team Charter That Aligns Everyone",
+      "competency": "building_effective_teams"
+    },
+    {
+      "beat": "B",
+      "lessonId": 42029,
+      "title": "Eliminating Role Confusion in Your Team",
+      "competency": "managing_stakeholders"
+    },
+    {
+      "beat": "C",
+      "lessonId": 42027,
+      "title": "Make Better Hiring Decisions with Behavioral Interviewing",
+      "competency": "attracting_top_talent"
+    }
+  ],
+  "skills": [
+    "building_effective_teams",
+    "managing_stakeholders",
+    "attracting_top_talent"
+  ],
+  "competencies": [
+    {
+      "id": "building_effective_teams",
+      "name": "Building Effective Teams"
+    },
+    {
+      "id": "managing_stakeholders",
+      "name": "Managing Stakeholders"
+    },
+    {
+      "id": "attracting_top_talent",
+      "name": "Attracting Top Talent"
+    }
+  ],
+  "turnLimits": {
+    "minLearnerTurns": 5,
+    "softMaxLearnerTurns": 14,
+    "hardMaxLearnerTurns": 18,
+    "absoluteMaxLearnerTurns": 22
+  },
+  "checklistItems": [
+    {
+      "id": "lucas_jobs",
+      "label": "Lucas is the only one who plans the team's week and checks work before clients see it. Agree with Rebecca who will do these jobs after he moves.",
+      "critical": true
+    },
+    {
+      "id": "client_contact",
+      "label": "Clients go to Lucas with every question. Agree with Rebecca who they should go to now.",
+      "critical": true
+    },
+    {
+      "id": "interviews",
+      "label": "You're interviewing two people for the new role this week. Tell Rebecca how you'll run the interviews and what you'll ask.",
+      "critical": true
+    }
+  ],
+  "scenarioSummary": {
+    "now": "You manage a team of five people. Lucas, your most experienced team member, is moving to lead a new team in three weeks. He does two jobs that no one else does. Each week, he decides who works on what. He also checks the team's work before clients see it. Clients call him directly whenever they have a question. Your manager, Rebecca, wants your team to be ready without him. She has approved hiring one new person and set up a meeting to plan the next three weeks. Share your plan with her.",
+    "layers": "A \"Lucas writes it down, whoever's free picks it up\" vs agreeing owners for planning and checking with the team before he goes → B \"tell clients they can email anyone / whoever is free\" vs one main contact with a backup that Lucas introduces → C \"Lucas vouches for Nina\" vs asking both finalists the same questions about real past situations and scoring them the same way."
+  },
+  "passThreshold": 7,
+  "learnerCopy": {
+    "description": "You manage a team of five people. Lucas, your most experienced team member, is moving to lead a new team in three weeks. He does two jobs that no one else does. Each week, he decides who works on what. He also checks the team's work before clients see it. Clients call him directly whenever they have a question. Your manager, Rebecca, wants your team to be ready without him. She has approved hiring one new person and set up a meeting to plan the next three weeks. Share your plan with her.",
+    "characterRole": "Your manager",
+    "learnerRole": "Manager",
+    "whoYouBody": "You manage a team of five people, including Lucas.",
+    "whoThemBody": "She manages you and approved hiring one new person.",
+    "mc1HeadlineReplacement": "Show how you'd keep your team ready when someone leaves",
+    "mc1HeadlineReplacementNote": "Replaces MC1 headline for this certificate slot. Generic (not Harper-specific). Not the scenario title. Do not label as Entry card body."
+  },
+  "mustWatchVideos": [
+    {
+      "lessonId": 42026,
+      "title": "Creating a Team Charter That Aligns Everyone",
+      "competency": "building_effective_teams"
+    },
+    {
+      "lessonId": 42029,
+      "title": "Eliminating Role Confusion in Your Team",
+      "competency": "managing_stakeholders"
+    },
+    {
+      "lessonId": 42027,
+      "title": "Make Better Hiring Decisions with Behavioral Interviewing",
+      "competency": "attracting_top_talent"
+    }
+  ]
+}

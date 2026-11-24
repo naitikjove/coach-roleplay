@@ -1,0 +1,52 @@
+{
+  "title": "Planning the Harper Handover",
+  "practiceModal": {
+    "eyebrow": "Practice Roleplay",
+    "headline": "Show how you'd set clear roles on your team",
+    "subtitle": "unchanged (keep production)",
+    "chips": "unchanged (keep production)",
+    "replacesHeadline": "See how you'd handle your first 1:1",
+    "note": "MC1 headline replacement for this practice slot only. Not the scenario title; keep title = Planning the Harper Handover. Do not label this string as Entry card body."
+  },
+  "phaseLabel": "Practice Roleplay Scenario",
+  "characterName": "Rebecca",
+  "characterRole": "Your manager",
+  "scenario": "You manage a team of five people. Harper is one of your company's biggest clients, and another team has always looked after them. In three weeks, that work moves to your team. No one on your team has worked with Harper before, and your first delivery to them is due in the second month. Your manager, Rebecca, made this decision with leadership. She has set up a short meeting with you to walk through how your team will handle it. Share your plan with her.",
+  "objectives": [
+    "Your team takes over Harper in three weeks. Tell Rebecca how you'll get your team ready.",
+    "Harper got two different answers from your team. Agree with Rebecca how to make sure Harper gets one clear answer.",
+    "You're interviewing two finalists tomorrow. Tell Rebecca how you'll choose."
+  ],
+  "whoYouRole": "Team lead",
+  "whoYouBody": "You lead a team of five. Rebecca is your manager.",
+  "whoThemBody": "Busy, direct and fair. She made the decision to move Harper to your team and wants it to go well.",
+  "passThreshold": 7,
+  "competencies": [
+    {
+      "id": "team_setup",
+      "name": "Building Effective Teams",
+      "mustWatchLessonId": 42026,
+      "mustWatchTitle": "Creating a Team Charter That Aligns Everyone"
+    },
+    {
+      "id": "client_contact",
+      "name": "Managing Stakeholders",
+      "mustWatchLessonId": 42029,
+      "mustWatchTitle": "Eliminating Role Confusion in Your Team"
+    },
+    {
+      "id": "attracting_top_talent",
+      "name": "Attracting Top Talent",
+      "mustWatchLessonId": 42027,
+      "mustWatchTitle": "Make Better Hiring Decisions with Behavioral Interviewing"
+    }
+  ],
+  "course": {
+    "program": "New Manager Essentials",
+    "lessonTitle": "Aligning People and Roles in Teams",
+    "lessonSlug": "aligning-people-and-roles-in-teams",
+    "briefPath": "/aligning-people-and-roles-in-teams/practice-roleplay?step=brief"
+  },
+  "sceneId": "scene-mc4-rebecca-practice",
+  "scenarioKey": "mc4-rebecca-practice"
+}

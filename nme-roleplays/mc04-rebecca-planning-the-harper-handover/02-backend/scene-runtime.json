@@ -1,0 +1,114 @@
+{
+  "lockVersion": "1.0.0-rebecca-harper-v1-draft",
+  "lockDate": "2026-11-16",
+  "finalVariant": "A",
+  "id": "scene-mc4-rebecca-practice",
+  "slug": "exp7-rebecca-harper-handover",
+  "title": "Planning the Harper Handover",
+  "type": "hot_seat",
+  "mode": "voice_only",
+  "primaryCharacter": "rebecca",
+  "characterId": "rebecca",
+  "voice": "shimmer",
+  "actorModel": "gpt-realtime-2.1",
+  "analyzerModel": "claude-opus-5",
+  "analyzerModelNote": "Opus same as MC1 — do not change",
+  "actorPromptFile": "rebecca_harper.actor.vA.prompt.txt",
+  "analyzerPromptFile": "rebecca_harper.analyzer.vA.prompt.txt",
+  "analyzerPromptFileV2": "rebecca_harper.analyzer.vA.prompt.txt",
+  "scoringMetaFile": "rebecca_harper.scoring_meta.json",
+  "promptVariants": {
+    "A": {
+      "actorPromptFile": "rebecca_harper.actor.vA.prompt.txt",
+      "analyzerPromptFile": "rebecca_harper.analyzer.vA.prompt.txt",
+      "status": "final"
+    }
+  },
+  "lessonRef": "mc4-practice",
+  "lessonTitle": "Aligning People and Roles in Teams",
+  "lessonSlug": "aligning-people-and-roles-in-teams",
+  "sourceLessons": [
+    {
+      "beat": "A",
+      "lessonId": 42026,
+      "title": "Creating a Team Charter That Aligns Everyone",
+      "competency": "team_setup"
+    },
+    {
+      "beat": "B",
+      "lessonId": 42029,
+      "title": "Eliminating Role Confusion in Your Team",
+      "competency": "client_contact"
+    },
+    {
+      "beat": "C",
+      "lessonId": 42027,
+      "title": "Make Better Hiring Decisions with Behavioral Interviewing",
+      "competency": "attracting_top_talent"
+    }
+  ],
+  "skills": [
+    "team_setup",
+    "client_contact",
+    "attracting_top_talent"
+  ],
+  "competencies": [
+    { "id": "team_setup", "name": "Building Effective Teams" },
+    { "id": "client_contact", "name": "Managing Stakeholders" },
+    { "id": "attracting_top_talent", "name": "Attracting Top Talent" }
+  ],
+  "turnLimits": {
+    "minLearnerTurns": 6,
+    "softMaxLearnerTurns": 14,
+    "hardMaxLearnerTurns": 18,
+    "absoluteMaxLearnerTurns": 22
+  },
+  "checklistItems": [
+    {
+      "id": "bet_kickoff",
+      "label": "Your team takes over Harper in three weeks. Tell Rebecca how you'll get your team ready.",
+      "critical": true
+    },
+    {
+      "id": "bet_client_contact",
+      "label": "Harper got two different answers from your team. Agree with Rebecca how to make sure Harper gets one clear answer.",
+      "critical": true
+    },
+    {
+      "id": "att_interviews",
+      "label": "You're interviewing two finalists tomorrow. Tell Rebecca how you'll choose.",
+      "critical": true
+    }
+  ],
+  "scenarioSummary": {
+    "now": "You manage a team of five people. Harper is one of your company's biggest clients, and another team has always looked after them. In three weeks, that work moves to your team. No one on your team has worked with Harper before, and your first delivery to them is due in the second month. Your manager, Rebecca, made this decision with leadership. She has set up a short meeting with you to walk through how your team will handle it. Share your plan with her.",
+    "layers": "A \"can some of it wait until you're in?\" vs agreeing who does what with the team before you start → B \"copy me on every reply\" vs one person who answers Harper → C \"go with the polished resume\" vs asking both finalists about real past situations, the same way."
+  },
+  "passThreshold": 7,
+  "learnerCopy": {
+    "description": "You manage a team of five people. Harper is one of your company's biggest clients, and another team has always looked after them. In three weeks, that work moves to your team. No one on your team has worked with Harper before, and your first delivery to them is due in the second month. Your manager, Rebecca, made this decision with leadership. She has set up a short meeting with you to walk through how your team will handle it. Share your plan with her.",
+    "characterRole": "Your manager",
+    "learnerRole": "Team lead",
+    "whoYouBody": "You lead a team of five. Rebecca is your manager.",
+    "whoThemBody": "Busy, direct and fair. She made the decision to move Harper to your team and wants it to go well.",
+    "mc1HeadlineReplacement": "Show how you'd set clear roles on your team",
+    "mc1HeadlineReplacementNote": "Replaces MC1 headline 'See how you'd handle your first 1:1' for this practice slot. Not the scenario title. Do not label as Entry card body."
+  },
+  "mustWatchVideos": [
+    {
+      "lessonId": 42026,
+      "title": "Creating a Team Charter That Aligns Everyone",
+      "competency": "team_setup"
+    },
+    {
+      "lessonId": 42029,
+      "title": "Eliminating Role Confusion in Your Team",
+      "competency": "client_contact"
+    },
+    {
+      "lessonId": 42027,
+      "title": "Make Better Hiring Decisions with Behavioral Interviewing",
+      "competency": "attracting_top_talent"
+    }
+  ]
+}

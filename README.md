@@ -1,8 +1,16 @@
 # JoVE Coach — Roleplay Handoffs
 
-## NME · Dana practice (new)
-**Handling a client situation** — frontend + backend split pack:  
-[`nme-roleplays/mc02-dana-handling-a-client-situation/`](nme-roleplays/mc02-dana-handling-a-client-situation/)
+## NME roleplay packs
+Index: [`nme-roleplays/README.md`](nme-roleplays/README.md)
+
+| Slot | Pack |
+|------|------|
+| MC02 Practice · Dana | [`nme-roleplays/mc02-dana-handling-a-client-situation/`](nme-roleplays/mc02-dana-handling-a-client-situation/) |
+| MC02 Certificate · Owen | [`nme-roleplays/mc02-owen-getting-new-team-members-ready/`](nme-roleplays/mc02-owen-getting-new-team-members-ready/) |
+| MC03 Practice · Ethan | [`nme-roleplays/mc03-ethan-planning-ethans-next-month/`](nme-roleplays/mc03-ethan-planning-ethans-next-month/) |
+| MC03 Certificate · Daniel | [`nme-roleplays/mc03-daniel-when-daily-work-crowds-out-the-plan/`](nme-roleplays/mc03-daniel-when-daily-work-crowds-out-the-plan/) |
+| MC04 Practice · Rebecca | [`nme-roleplays/mc04-rebecca-planning-the-harper-handover/`](nme-roleplays/mc04-rebecca-planning-the-harper-handover/) |
+| MC04 Certificate · When a Team Member Leaves | [`nme-roleplays/mc04-when-a-team-member-leaves/`](nme-roleplays/mc04-when-a-team-member-leaves/) |
 
 ---
 

@@ -1,0 +1,66 @@
+{
+  "maxScore": 30,
+  "characterName": "Rebecca",
+  "competencies": [
+    {
+      "id": "building_effective_teams",
+      "name": "Building Effective Teams",
+      "beat": "A",
+      "videoId": 42026,
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Before Lucas leaves, agrees with the team who plans the week and who checks the work, plus how the team works",
+          "max": 10
+        }
+      ]
+    },
+    {
+      "id": "managing_stakeholders",
+      "name": "Managing Stakeholders",
+      "beat": "B",
+      "videoId": 42029,
+      "goals": [
+        {
+          "id": "G1",
+          "label": "One main person clients go to, plus a backup, all questions routed there, Lucas introducing them, or a shared list",
+          "max": 10
+        }
+      ]
+    },
+    {
+      "id": "attracting_top_talent",
+      "name": "Attracting Top Talent",
+      "beat": "C",
+      "videoId": 42027,
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Asks Nina and Omar about real past situations and compares them the same way",
+          "max": 10
+        }
+      ]
+    }
+  ],
+  "absenceGoals": [],
+  "objectives": [
+    {
+      "n": 1,
+      "text": "Lucas is the only one who plans the team's week and checks work before clients see it. Agree with Rebecca who will do these jobs after he moves.",
+      "competency": "building_effective_teams",
+      "criterion": "True when the manager gives Rebecca any answer on how the team will cover Lucas's planning and checking (owners, a team meeting, 'Lucas writes it down and whoever's free picks it up', or even 'we'll manage') AND Rebecca accepts it or moves on to clients; false for a bare okay, a question alone, or Rebecca's words alone."
+    },
+    {
+      "n": 2,
+      "text": "Clients go to Lucas with every question. Agree with Rebecca who they should go to now.",
+      "competency": "managing_stakeholders",
+      "criterion": "True when the manager gives any direction on who clients go to now (one main person, a shared list, 'let them email whoever they like', 'reply faster') AND Rebecca accepts it or moves on to the new hire; false for a bare okay, an apology alone, a question alone, or Rebecca's words alone."
+    },
+    {
+      "n": 3,
+      "text": "You're interviewing two people for the new role this week. Tell Rebecca how you'll run the interviews and what you'll ask.",
+      "competency": "attracting_top_talent",
+      "criterion": "True when the manager gives any answer on how they'll run the interviews or choose (any questions or comparison plan, or 'let's just go with Nina') AND Rebecca accepts it or the call closes; false for a bare okay or Rebecca's words alone."
+    }
+  ]
+}

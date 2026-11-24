@@ -1,0 +1,51 @@
+{
+  "title": "When a Team Member Leaves",
+  "certificateModal": {
+    "eyebrow": "Certificate Roleplay",
+    "headline": "Show how you'd keep your team ready when someone leaves",
+    "subtitle": "unchanged (keep production)",
+    "chips": "unchanged (keep production)",
+    "note": "MC1 headline replacement for this certificate slot. Generic (not Harper-specific). Not the scenario title; keep title = When a Team Member Leaves. Do not label this string as Entry card body."
+  },
+  "phaseLabel": "Certificate Roleplay Scenario",
+  "characterName": "Rebecca",
+  "characterRole": "Your manager",
+  "scenario": "You manage a team of five people. Lucas, your most experienced team member, is moving to lead a new team in three weeks. He does two jobs that no one else does. Each week, he decides who works on what. He also checks the team's work before clients see it. Clients call him directly whenever they have a question. Your manager, Rebecca, wants your team to be ready without him. She has approved hiring one new person and set up a meeting to plan the next three weeks. Share your plan with her.",
+  "objectives": [
+    "Lucas is the only one who plans the team's week and checks work before clients see it. Agree with Rebecca who will do these jobs after he moves.",
+    "Clients go to Lucas with every question. Agree with Rebecca who they should go to now.",
+    "You're interviewing two people for the new role this week. Tell Rebecca how you'll run the interviews and what you'll ask."
+  ],
+  "whoYouRole": "Manager",
+  "whoYouBody": "You manage a team of five people, including Lucas.",
+  "whoThemBody": "She manages you and approved hiring one new person.",
+  "passThreshold": 7,
+  "competencies": [
+    {
+      "id": "building_effective_teams",
+      "name": "Building Effective Teams",
+      "mustWatchLessonId": 42026,
+      "mustWatchTitle": "Creating a Team Charter That Aligns Everyone"
+    },
+    {
+      "id": "managing_stakeholders",
+      "name": "Managing Stakeholders",
+      "mustWatchLessonId": 42029,
+      "mustWatchTitle": "Eliminating Role Confusion in Your Team"
+    },
+    {
+      "id": "attracting_top_talent",
+      "name": "Attracting Top Talent",
+      "mustWatchLessonId": 42027,
+      "mustWatchTitle": "Make Better Hiring Decisions with Behavioral Interviewing"
+    }
+  ],
+  "course": {
+    "program": "New Manager Essentials",
+    "lessonTitle": "Aligning People and Roles in Teams",
+    "lessonSlug": "aligning-people-and-roles-in-teams",
+    "briefPath": "/aligning-people-and-roles-in-teams/certificate-roleplay?step=brief"
+  },
+  "sceneId": "scene-mc4-lucas-post",
+  "scenarioKey": "mc4-lucas-post"
+}

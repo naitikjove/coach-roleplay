@@ -1,0 +1,60 @@
+{
+  "maxScore": 30,
+  "characterName": "Rebecca",
+  "competencies": [
+    {
+      "id": "team_setup",
+      "name": "Building Effective Teams",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Agrees with the team, before starting, who does what plus what they deliver, who checks, and how they work",
+          "max": 10
+        }
+      ]
+    },
+    {
+      "id": "client_contact",
+      "name": "Managing Stakeholders",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "One person answers Harper, with a backup, all questions routed to them, or a shared record",
+          "max": 10
+        }
+      ]
+    },
+    {
+      "id": "attracting_top_talent",
+      "name": "Attracting Top Talent",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Asks both finalists about real past situations and compares them the same way",
+          "max": 10
+        }
+      ]
+    }
+  ],
+  "absenceGoals": [],
+  "objectives": [
+    {
+      "n": 1,
+      "text": "Your team takes over Harper in three weeks. Tell Rebecca how you'll get your team ready.",
+      "competency": "team_setup",
+      "criterion": "True when the manager gives Rebecca any answer on how they'll get the team started on Harper: an up-front plan of any size, 'we'll figure it out as we go', or even a vague 'I'll make sure the team is ready', and Rebecca accepts it or moves on to the two different answers Harper got; false for a bare okay, a question alone, or Rebecca's words alone."
+    },
+    {
+      "n": 2,
+      "text": "Harper got two different answers from your team. Agree with Rebecca how to make sure Harper gets one clear answer.",
+      "competency": "client_contact",
+      "criterion": "True when the manager gives any direction on how to handle replies to Harper: agreeing to copy Rebecca, 'be more careful', one person answering, a shared record, or sending the right date, and Rebecca accepts it or moves on to the new hire; false for a bare okay, an apology alone, a question alone, or Rebecca's words alone."
+    },
+    {
+      "n": 3,
+      "text": "You're interviewing two finalists tomorrow. Tell Rebecca how you'll choose.",
+      "competency": "attracting_top_talent",
+      "criterion": "True when the manager gives any answer on how they'll choose: picking the first finalist, 'see who fits', or any interview plan, and Rebecca accepts it or the call closes; false for a bare okay or Rebecca's words alone."
+    }
+  ]
+}
