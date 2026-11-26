@@ -24,7 +24,7 @@ https://github.com/naitikjove/coach-roleplay/tree/main/nme-roleplays/mc04-when-a
 
 **Models:** actor `gpt-realtime-2.1` · voice `shimmer` · analyzer **Opus same as MC1 (`claude-opus-5`) — do not change analyzer model.**
 
-**Prompt lock:** actor **v4** · analyzer **v3** (live files also as `rebecca_lucas_post.actor.prompt.txt` / `rebecca_lucas_post.analyzer.prompt.txt`).
+**Prompt files:** `rebecca_lucas_post.actor.prompt.txt` / `rebecca_lucas_post.analyzer.prompt.txt` (the only copies; match live scene wiring).
 
 **MC1 headline replacement (certificate slot):**  
 `Show how you'd keep your team ready when someone leaves`  

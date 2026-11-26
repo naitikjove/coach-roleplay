@@ -8,7 +8,7 @@
 - [ ] Pass threshold = **7 / 10**
 
 ## Backend
-- [ ] Actor v4 + analyzer v3 prompts from `02-backend/prompts/`
+- [ ] Actor + analyzer prompts from `02-backend/prompts/`
 - [ ] Voice = `shimmer` · Realtime = `gpt-realtime-2.1`
 - [ ] Analyzer = **Opus (`claude-opus-5`), same as MC1 — do not change**
 - [ ] Checklist ids + pass threshold 7 from `scene-runtime.json`

@@ -13,7 +13,7 @@
 ```
 POST https://api.openai.com/v1/realtime/client_secrets
 session.model = gpt-realtime-2.1
-session.instructions = <entire rebecca_lucas_post.actor.v4.prompt.txt>
+session.instructions = <entire rebecca_lucas_post.actor.prompt.txt>
 session.audio.output.voice = shimmer
 ```
 
@@ -21,10 +21,10 @@ Keep existing NME VAD / PCM settings unless prod already differs.
 
 ## Analyzer
 
-Same path as MC1. Model = **Opus (`claude-opus-5`)** — keep MC1 analyzer model; only swap the prompt file (v3).
+Same path as MC1. Model = **Opus (`claude-opus-5`)** — keep MC1 analyzer model; only swap the prompt file.
 
 ```
-system = <entire rebecca_lucas_post.analyzer.v3.prompt.txt>
+system = <entire rebecca_lucas_post.analyzer.prompt.txt>
 user = <transcript>
 model = claude-opus-5   # same as MC1 — do not change
 ```

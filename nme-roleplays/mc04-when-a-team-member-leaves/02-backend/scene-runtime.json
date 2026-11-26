@@ -17,11 +17,11 @@
   "analyzerPromptFile": "rebecca_lucas_post.analyzer.prompt.txt",
   "analyzerPromptFileV2": "rebecca_lucas_post.analyzer.prompt.txt",
   "scoringMetaFile": "rebecca_lucas_post.scoring_meta.json",
-  "promptNote": "actor v4 + analyzer v3; unversioned filenames match live scene wiring",
+  "promptNote": "single actor + analyzer prompt; filenames match live scene wiring",
   "promptVariants": {
     "final": {
-      "actorPromptFile": "rebecca_lucas_post.actor.v4.prompt.txt",
-      "analyzerPromptFile": "rebecca_lucas_post.analyzer.v3.prompt.txt",
+      "actorPromptFile": "rebecca_lucas_post.actor.prompt.txt",
+      "analyzerPromptFile": "rebecca_lucas_post.analyzer.prompt.txt",
       "status": "final"
     }
   },
