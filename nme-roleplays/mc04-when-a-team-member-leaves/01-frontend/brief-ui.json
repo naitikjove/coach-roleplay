@@ -47,5 +47,7 @@
     "briefPath": "/aligning-people-and-roles-in-teams/certificate-roleplay?step=brief"
   },
   "sceneId": "scene-mc4-lucas-post",
-  "scenarioKey": "mc4-lucas-post"
+  "scenarioKey": "mc4-lucas-post",
+  "characterAvatar": "/arena/exp4/characters/reporting-manager.png",
+  "characterImagePack": "assets/rebecca.png"
 }

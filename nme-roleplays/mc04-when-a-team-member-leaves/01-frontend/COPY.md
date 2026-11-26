@@ -36,6 +36,11 @@ You manage a team of five people, including Lucas.
 **Rebecca — Your manager**  
 She manages you and approved hiring one new person.
 
+## Character image
+- Pack (GitHub — open this): [`assets/rebecca.png`](assets/rebecca.png)
+- App path (prod wiring): `/arena/exp4/characters/reporting-manager.png`
+- Same image for MC4 practice and certificate (temporary Rebecca avatar until a portrait lands).
+
 ## Pass threshold
 7 / 10
 

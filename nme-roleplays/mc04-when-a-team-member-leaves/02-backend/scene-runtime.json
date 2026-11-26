@@ -102,7 +102,9 @@
     "whoYouBody": "You manage a team of five people, including Lucas.",
     "whoThemBody": "She manages you and approved hiring one new person.",
     "mc1HeadlineReplacement": "Show how you'd keep your team ready when someone leaves",
-    "mc1HeadlineReplacementNote": "Replaces MC1 headline for this certificate slot. Generic (not Harper-specific). Not the scenario title. Do not label as Entry card body."
+    "mc1HeadlineReplacementNote": "Replaces MC1 headline for this certificate slot. Generic (not Harper-specific). Not the scenario title. Do not label as Entry card body.",
+    "characterAvatar": "/arena/exp4/characters/reporting-manager.png",
+    "characterImagePack": "01-frontend/assets/rebecca.png"
   },
   "mustWatchVideos": [
     {

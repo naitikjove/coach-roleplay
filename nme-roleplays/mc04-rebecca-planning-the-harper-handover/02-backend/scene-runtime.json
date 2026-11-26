@@ -92,7 +92,9 @@
     "whoYouBody": "You lead a team of five. Rebecca is your manager.",
     "whoThemBody": "Busy, direct and fair. She made the decision to move Harper to your team and wants it to go well.",
     "mc1HeadlineReplacement": "Show how you'd set clear roles on your team",
-    "mc1HeadlineReplacementNote": "Replaces MC1 headline 'See how you'd handle your first 1:1' for this practice slot. Not the scenario title. Do not label as Entry card body."
+    "mc1HeadlineReplacementNote": "Replaces MC1 headline 'See how you'd handle your first 1:1' for this practice slot. Not the scenario title. Do not label as Entry card body.",
+    "characterAvatar": "/arena/exp4/characters/reporting-manager.png",
+    "characterImagePack": "01-frontend/assets/rebecca.png"
   },
   "mustWatchVideos": [
     {

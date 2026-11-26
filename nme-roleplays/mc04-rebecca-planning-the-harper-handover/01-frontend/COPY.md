@@ -35,6 +35,11 @@ You lead a team of five. Rebecca is your manager.
 **Rebecca — Your manager**  
 Busy, direct and fair. She made the decision to move Harper to your team and wants it to go well.
 
+## Character image
+- Pack (GitHub — open this): [`assets/rebecca.png`](assets/rebecca.png)
+- App path (prod wiring): `/arena/exp4/characters/reporting-manager.png`
+- Same image for MC4 practice and certificate (temporary Rebecca avatar until a portrait lands).
+
 ## Pass threshold
 7 / 10
 

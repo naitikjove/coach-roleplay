@@ -7,6 +7,9 @@
 - [ ] Competencies + Must Watch = `01-frontend/VIDEO_MAPPING.md` (42026, 42029, 42027)
 - [ ] Pass threshold = **7 / 10**
 
+- [ ] Pack asset committed: `01-frontend/assets/rebecca.png` (open on GitHub)
+- [ ] App path for prod wiring: `/arena/exp4/characters/reporting-manager.png`
+
 ## Backend
 - [ ] Actor + analyzer prompts from `02-backend/prompts/` (`rebecca_harper.*.vA`)
 - [ ] Voice = `shimmer` · Realtime = `gpt-realtime-2.1`

@@ -48,5 +48,7 @@
     "briefPath": "/aligning-people-and-roles-in-teams/practice-roleplay?step=brief"
   },
   "sceneId": "scene-mc4-rebecca-practice",
-  "scenarioKey": "mc4-rebecca-practice"
+  "scenarioKey": "mc4-rebecca-practice",
+  "characterAvatar": "/arena/exp4/characters/reporting-manager.png",
+  "characterImagePack": "assets/rebecca.png"
 }

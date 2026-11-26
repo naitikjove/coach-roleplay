@@ -24,6 +24,8 @@ https://github.com/naitikjove/coach-roleplay/tree/main/nme-roleplays/mc04-when-a
 
 **Models:** actor `gpt-realtime-2.1` · voice `shimmer` · analyzer **Opus same as MC1 (`claude-opus-5`) — do not change analyzer model.**
 
+**Character image:** [`01-frontend/assets/rebecca.png`](01-frontend/assets/rebecca.png) (committed in this pack for GitHub access). App path: `/arena/exp4/characters/reporting-manager.png`.
+
 **Prompt files:** `rebecca_lucas_post.actor.prompt.txt` / `rebecca_lucas_post.analyzer.prompt.txt` (the only copies; match live scene wiring).
 
 **MC1 headline replacement (certificate slot):**  
