@@ -1,0 +1,45 @@
+{
+  "suite": "qa-marcus-v4",
+  "playbooks": [
+    {
+      "id": "ideal",
+      "file": "01_ideal.json",
+      "order": 1
+    },
+    {
+      "id": "prompted",
+      "file": "02_prompted.json",
+      "order": 2
+    },
+    {
+      "id": "owns_then_folds",
+      "file": "03_owns_then_folds.json",
+      "order": 3
+    },
+    {
+      "id": "all_shortcuts",
+      "file": "04_all_shortcuts.json",
+      "order": 4
+    },
+    {
+      "id": "mixed_partial",
+      "file": "05_mixed_partial.json",
+      "order": 5
+    },
+    {
+      "id": "declines_offer",
+      "file": "06_declines_offer.json",
+      "order": 6
+    },
+    {
+      "id": "passive",
+      "file": "07_passive.json",
+      "order": 7
+    },
+    {
+      "id": "curious",
+      "file": "09_curious.json",
+      "order": 9
+    }
+  ]
+}

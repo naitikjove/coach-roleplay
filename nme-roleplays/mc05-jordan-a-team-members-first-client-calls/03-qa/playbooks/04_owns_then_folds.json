@@ -1,0 +1,92 @@
+{
+  "id": "owns_then_folds",
+  "title": "Owns then folds: makes the right move, then gives in after Jordan's push",
+  "goal": "Make the right move in each beat, then clearly give in the moment Jordan pushes.",
+  "must_hit": [
+    "Right move first (asks, keeps the calls / small yes + deadline to you / short same-day note)",
+    "Gives in after each push: takes the next few calls, 'check them all with me for now', 'fine, put everything in'"
+  ],
+  "must_avoid": [
+    "Holding after a push"
+  ],
+  "max_learner_turns": 14,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "low",
+    "sum_score_max": 12,
+    "markers": {
+      "1": true,
+      "2": true,
+      "3": true
+    }
+  },
+  "intents": [
+    {
+      "id": "open_greet",
+      "when": "Jordan greets only (no topic yet)",
+      "do": "Short warm greeting back only. Do not ask about the work or the call yet.",
+      "examples": [
+        "Good, thanks. How are you?",
+        "Hi Jordan, doing well. What's up?"
+      ]
+    },
+    {
+      "id": "A_ask_keep",
+      "when": "Jordan has explained the call and is wondering about taking the calls back",
+      "do": "Ask what's been hard, then say keep running them.",
+      "examples": [
+        "What's been hard? ... Okay, keep running them, I think you can do it."
+      ]
+    },
+    {
+      "id": "A_fold",
+      "when": "Jordan pushes: 'Are you sure?'",
+      "do": "Give in: you will take the next few calls.",
+      "examples": [
+        "You're right, that's a big client. Okay, I'll take the next few."
+      ]
+    },
+    {
+      "id": "B_split",
+      "when": "Jordan asks about Sarah's changes",
+      "do": "Give the right line: small ones Jordan decides, deadline ones to you.",
+      "examples": [
+        "Small things you can say yes to, deadline things come to me."
+      ]
+    },
+    {
+      "id": "B_fold",
+      "when": "Jordan pushes: what if I say yes and it turns out wrong?",
+      "do": "Give in: check them all with you for now.",
+      "examples": [
+        "Maybe just check them all with me for now."
+      ]
+    },
+    {
+      "id": "C_note",
+      "when": "Jordan says they plan to write up everything at the end of the week",
+      "do": "Say short note same day, what was agreed and who is doing what.",
+      "examples": [
+        "Send a short note the same day with what we agreed and who's doing what."
+      ]
+    },
+    {
+      "id": "C_fold",
+      "when": "Jordan pushes: shouldn't I put everything in?",
+      "do": "Give in.",
+      "examples": [
+        "Fine, put everything in."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Jordan wraps up",
+      "do": "Short goodbye or [[END]].",
+      "examples": [
+        "Thanks, bye."
+      ]
+    }
+  ],
+  "character": "jordan",
+  "order": 4
+}

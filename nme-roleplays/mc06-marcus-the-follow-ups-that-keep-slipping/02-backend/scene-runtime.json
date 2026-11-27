@@ -1,0 +1,172 @@
+{
+  "lockVersion": "1.0.0-marcus-practice-v4-local",
+  "lockDate": "2026-11-25",
+  "id": "scene-mc6-marcus-practice",
+  "slug": "exp7-marcus-same-callers-again",
+  "title": "The Follow-Ups That Keep Slipping",
+  "type": "hot_seat",
+  "mode": "voice_only",
+  "primaryCharacter": "marcus",
+  "characterId": "marcus",
+  "voice": "cedar",
+  "actorModel": "gpt-realtime-2.1",
+  "analyzerModel": "claude-opus-5",
+  "analyzerModelNote": "Opus same as MC1 — do not change",
+  "actorPromptFile": "marcus_practice.actor.prompt.txt",
+  "analyzerPromptFile": "marcus_practice.analyzer.prompt.txt",
+  "analyzerPromptFileV2": "marcus_practice.analyzer.prompt.txt",
+  "scoringMetaFile": "marcus_practice.scoring_meta.json",
+  "promptVariants": {
+    "final": {
+      "actorPromptFile": "marcus_practice.actor.prompt.txt",
+      "analyzerPromptFile": "marcus_practice.analyzer.prompt.txt",
+      "status": "final"
+    }
+  },
+  "lessonRef": "mc6-practice",
+  "lessonTitle": "Coaching and Developing Teams",
+  "lessonSlug": "coaching-and-developing-teams",
+  "sourceLessons": [
+    {
+      "beat": "A",
+      "lessonId": 41970,
+      "title": "How to Identify Strengths and Gaps in the Team",
+      "competency": "assessing_capabilities"
+    },
+    {
+      "beat": "B",
+      "lessonId": 41978,
+      "title": "How to Give Real-Time Feedback that Works",
+      "competency": "coaching_team_members"
+    },
+    {
+      "beat": "C",
+      "lessonId": 41975,
+      "title": "Promoting Peer Learning and Collaboration",
+      "competency": "sharing_knowledge"
+    }
+  ],
+  "skills": [
+    "assessing_capabilities",
+    "coaching_team_members",
+    "sharing_knowledge"
+  ],
+  "competencies": [
+    {
+      "id": "assessing_capabilities",
+      "name": "Assessing Capabilities"
+    },
+    {
+      "id": "coaching_team_members",
+      "name": "Coaching Team Members"
+    },
+    {
+      "id": "sharing_knowledge",
+      "name": "Sharing Knowledge"
+    }
+  ],
+  "turnLimits": {
+    "minLearnerTurns": 6,
+    "softMaxLearnerTurns": 14,
+    "hardMaxLearnerTurns": 18,
+    "absoluteMaxLearnerTurns": 22
+  },
+  "checklistItems": [
+    {
+      "id": "slipping_followups",
+      "label": "Marcus is behind on his follow-up calls and plans to stay late to catch up. Decide with him what to do.",
+      "critical": true
+    },
+    {
+      "id": "handle_calls",
+      "label": "Marcus keeps his calls short so customers don't wait. Agree with him what, if anything, should change on his calls.",
+      "critical": true
+    },
+    {
+      "id": "repeat_callers",
+      "label": "Three upset customers are about to hear from Marcus. Agree with him how he handles those calls.",
+      "critical": true
+    }
+  ],
+  "headlineLabels": {
+    "nailed_it": "Nailed it",
+    "solid": "Solid",
+    "try_again": "Try again"
+  },
+  "scenarioSummary": {
+    "now": "You manage a small customer support team. Marcus takes calls from customers who have a problem. When he can't fix it on the call, he writes a short note, and the tech team fixes it from that. Later, Marcus calls the customer to check that it worked. Lately his follow-up calls have been late, and the same customers keep calling in again. Marcus asked to talk to you.",
+    "layers": "A late follow-ups: stay late and catch up vs ask what is really happening → B short calls: keep them as they are vs one clear change to the note and why → C upset customers: Marcus handles them alone vs does the calls with Nina next to him."
+  },
+  "scoring": {
+    "maxScore": 30,
+    "ranges": [
+      "0-1",
+      "2-4",
+      "5-7",
+      "8-10"
+    ],
+    "checks": {
+      "top": [
+        4,
+        7,
+        10
+      ],
+      "middle": [
+        3,
+        6,
+        9
+      ],
+      "bottom": [
+        2,
+        5,
+        8
+      ]
+    },
+    "resultBands": [
+      {
+        "min": 24,
+        "max": 30,
+        "label": "Strong"
+      },
+      {
+        "min": 15,
+        "max": 23,
+        "label": "Getting there"
+      },
+      {
+        "min": 0,
+        "max": 14,
+        "label": "Needs practice"
+      }
+    ]
+  },
+  "passThreshold": 7,
+  "learnerCopy": {
+    "description": "You manage a small customer support team. Marcus takes calls from customers who have a problem. When he can't fix it on the call, he writes a short note, and the tech team fixes it from that. Later, Marcus calls the customer to check that it worked. Lately his follow-up calls have been late, and the same customers keep calling in again. Marcus asked to talk to you. Help him work out what to do.",
+    "characterRole": "Direct report",
+    "learnerRole": "Manager",
+    "learnerCard": "You manage Marcus and Nina.",
+    "characterCard": "Friendly and quick. Proud that customers never wait long on his calls. A bit embarrassed that his follow-ups are late.",
+    "entryCardBody": "Marcus's follow-up calls have been late, and the same customers keep calling in again. Help him with the late calls, how he handles his calls, and the upset customers.",
+    "characterAvatar": "/arena/exp4/characters/marcus.jpg",
+    "characterImagePack": "01-frontend/assets/marcus.jpg",
+    "mc1HeadlineReplacement": "Show how you'd help a team member whose customers keep calling in again"
+  },
+  "mustWatchVideos": [
+    {
+      "lessonId": 41970,
+      "title": "How to Identify Strengths and Gaps in the Team",
+      "competency": "assessing_capabilities"
+    },
+    {
+      "lessonId": 41978,
+      "title": "How to Give Real-Time Feedback that Works",
+      "competency": "coaching_team_members"
+    },
+    {
+      "lessonId": 41975,
+      "title": "Promoting Peer Learning and Collaboration",
+      "competency": "sharing_knowledge"
+    }
+  ]
+}

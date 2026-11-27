@@ -1,0 +1,29 @@
+{
+  "id": "all_shortcuts",
+  "order": 6,
+  "title": "Takes both of Theo's shortcuts",
+  "expected": {
+    "A": [
+      0,
+      0
+    ],
+    "B": [
+      0,
+      0
+    ],
+    "total": [
+      0,
+      0
+    ],
+    "close": "poor",
+    "reaches_B": true
+  },
+  "goal": "Agree with whatever Theo wants to do.",
+  "plan": [
+    "Greet. After the draft: say 'Sounds fine, go ahead and send it.'",
+    "After Theo moves to Devon: say 'Yeah, tell him today that it's not good enough.'",
+    "[[END]] after the close."
+  ],
+  "learner_style": "You are a first-time manager who was just promoted. You speak in short, plain, natural spoken lines (1-2 sentences, under 30 words). You know ONLY what Theo has said so far. Never mention scores, playbooks or that this is practice.",
+  "first_line": "Sure, what's up?"
+}

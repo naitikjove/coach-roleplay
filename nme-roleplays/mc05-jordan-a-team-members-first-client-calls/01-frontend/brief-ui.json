@@ -1,0 +1,65 @@
+{
+  "title": "A Team Member’s First Client Calls",
+  "practiceModal": {
+    "eyebrow": "Practice Roleplay",
+    "headline": "Show how you’d help a team member who is new to client calls.",
+    "subtitle": "unchanged (keep production)",
+    "chips": "unchanged (keep production)",
+    "replacesHeadline": "See how you'd handle your first 1:1",
+    "note": "MC1 headline replacement for this practice slot only. Not the scenario title. Do not label this string as Entry card body."
+  },
+  "phaseLabel": "Practice Roleplay Scenario",
+  "characterName": "Jordan",
+  "characterRole": "Team member",
+  "scenario": "Every week, your team has a short call with Sarah, who works at one of your biggest clients. The call is to share progress on the work you are doing for her company. Two weeks ago, you asked Jordan, who is new to client calls, to take over this call. Last week’s call went on for a full hour, not the 30 minutes planned. Sarah also keeps asking for changes during the calls. Jordan wants to talk to you about it.",
+  "about": [
+    "Who: Jordan works on your team. Sarah works at one of your biggest clients.",
+    "What: Your team talks to Sarah once a week. Two weeks ago, you asked Jordan to run the call.",
+    "Why now: The calls are too long, and Sarah keeps asking for changes. Jordan asked to talk to you."
+  ],
+  "objectives": [
+    "Jordan is worried and thinks you should take the calls back. Decide with Jordan what to do next.",
+    "Sarah asks for changes during the calls. Jordan doesn’t know what they can say yes to. Decide with Jordan what to do when she asks.",
+    "After the calls, Sarah wasn’t sure what was agreed. Decide with Jordan what to do about it."
+  ],
+  "whoYouRole": "Team lead",
+  "whoYouBody": "You asked Jordan to run the weekly call with Sarah.",
+  "whoThemRole": "Team member",
+  "whoThemBody": "Reliable and keen. New to client calls, and not sure what they can say yes to.",
+  "intro": "Jordan wants to talk to you about the weekly call with Sarah.",
+  "howItWorks": "Jordan starts the talk. Answer out loud, like a real conversation. When you’re done, end the conversation to get your feedback.",
+  "passThreshold": 7,
+  "competencies": [
+    {
+      "id": "ensuring_accountability",
+      "name": "Ensuring Accountability",
+      "beat": "A",
+      "mustWatchLessonId": 41968,
+      "mustWatchTitle": "Handling Mistakes After Delegation"
+    },
+    {
+      "id": "effective_delegation",
+      "name": "Effective Delegation",
+      "beat": "B",
+      "mustWatchLessonId": 41963,
+      "mustWatchTitle": "Deciding What to Delegate"
+    },
+    {
+      "id": "expectations_setting",
+      "name": "Expectations Setting",
+      "beat": "C",
+      "mustWatchLessonId": 41966,
+      "mustWatchTitle": "Giving Clear and Actionable Instructions"
+    }
+  ],
+  "course": {
+    "program": "New Manager Essentials",
+    "lessonTitle": "How to Delegate with Clarity",
+    "lessonSlug": "how-to-delegate-with-clarity",
+    "briefPath": "/how-to-delegate-with-clarity/practice-roleplay?step=brief"
+  },
+  "sceneId": "scene-mc5-first-calls-practice",
+  "scenarioKey": "mc5-first-calls",
+  "characterAvatar": "/arena/exp4/characters/jordan-v2.jpg",
+  "characterImagePack": "assets/jordan.jpg"
+}

@@ -1,0 +1,61 @@
+{
+  "title": "The Delegation Dilemma",
+  "certificateModal": {
+    "headline": null,
+    "note": "No certificate headline or entry line for this pack. Keep production."
+  },
+  "phaseLabel": "Certificate Roleplay Scenario",
+  "characterName": "Amara",
+  "characterRole": "Plans the weekly work",
+  "scenario": "Amara plans the weekly work for your team of six. A new request just came in from the sales team: a short comparison of how two competitors price their service, due at the end of the month. Dev has been on your team the longest and prepares the monthly customer report. Lena joined three months ago. Amara asked to talk with you about who should take the request, how to keep track of it, and how to recognize something Dev did last month.",
+  "about": [
+    "Who: Amara plans the work for your team of six. Dev is your longest-serving team member, and he prepares the monthly report your team sends to customers. Lena joined three months ago.",
+    "What: A new request from the sales team is due in about three weeks.",
+    "Why now: Amara needs your decision on the request. She also wants to talk about Dev’s work on last month’s customer report."
+  ],
+  "objectives": [
+    "Amara leans toward Dev for the sales team’s request. Decide with her who should take it.",
+    "Amara wants to follow the work closely. Agree with her how to keep track of it.",
+    "Dev stayed late to fix mistakes in last month’s customer report. Decide with Amara how to thank him."
+  ],
+  "whoYouRole": "Team lead",
+  "whoYouBody": "Dev, Lena and Amara are three of the six people on your team.",
+  "whoThemRole": "Plans the weekly work",
+  "whoThemBody": "Careful and organized. Brings you her ideas before she acts.",
+  "intro": "Amara asked to talk with you about a new request from the sales team and about Dev’s work last month.",
+  "howItWorks": "Amara starts the talk. Answer out loud, like a real conversation. When you’re done, end the conversation to get your feedback.",
+  "passThreshold": 7,
+  "competencies": [
+    {
+      "id": "effective_delegation",
+      "name": "Effective Delegation",
+      "beat": "A",
+      "mustWatchLessonId": 41965,
+      "mustWatchTitle": "How to Choose the Right Person for the Task"
+    },
+    {
+      "id": "ensuring_accountability",
+      "name": "Ensuring Accountability",
+      "beat": "B",
+      "mustWatchLessonId": 41967,
+      "mustWatchTitle": "How to Monitor Progress Without Micromanaging"
+    },
+    {
+      "id": "recognizing_contributions",
+      "name": "Recognizing Contributions",
+      "beat": "C",
+      "mustWatchLessonId": 41969,
+      "mustWatchTitle": "Recognizing and Rewarding Accountability"
+    }
+  ],
+  "course": {
+    "program": "New Manager Essentials",
+    "lessonTitle": "How to Delegate with Clarity",
+    "lessonSlug": "how-to-delegate-with-clarity",
+    "briefPath": "/how-to-delegate-with-clarity/certificate-roleplay?step=brief"
+  },
+  "sceneId": "scene-mc5-amara-post",
+  "scenarioKey": "mc5-amara-post",
+  "characterAvatar": "/arena/exp4/characters/amara-v4.jpg",
+  "characterImagePack": "assets/amara.jpg"
+}

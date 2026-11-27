@@ -1,0 +1,45 @@
+{
+  "title": "When Mistakes Get Emotional",
+  "phaseLabel": "Practice Roleplay Scenario",
+  "characterName": "Theo",
+  "characterRole": "Team member",
+  "characterAvatar": "/arena/exp7/mc8/theo.jpg",
+  "characterImagePack": "assets/theo.jpg",
+  "characterId": "theo",
+  "scenario": "Every week, your team sends a progress report to one client, and Theo is the person who writes it. This week the report went out two days late, and the client's contact, Mark, was upset enough to email a complaint and copy his own boss on it. Theo feels bad about the delay but is also a little angry, and he has already written a reply to Mark that he wants to send right now. Before he does, he has asked to talk with you.",
+  "about": [
+    "Who: Theo is on your team and writes the weekly client report. Mark works at the client.",
+    "What: The report should go out every Tuesday. This week it went out on Thursday.",
+    "Why now: Mark emailed to complain and copied his boss. Theo asked to talk with you before he replies."
+  ],
+  "objectives": [
+    "Mark emailed to complain and copied his boss, and Theo wants to reply right away. Decide with him what to do about the reply.",
+    "Devon, a teammate, has been quiet and his work has slipped. Agree with Theo how he'll talk to him."
+  ],
+  "whoYouBody": "You manage a small team that does work for clients. Theo reports to you.",
+  "whoThemBody": "Capable and proud of his work. He writes the weekly report and worries about how the team looks to the client.",
+  "entryCardBody": "Show how you'd handle an upset client and a teammate whose work is slipping.",
+  "passThreshold": 7,
+  "competencies": [
+    {
+      "id": "managing_emotions",
+      "name": "Managing Emotions",
+      "mustWatchLessonId": 41989,
+      "mustWatchTitle": "How to Handle Emotional Reactions Professionally"
+    },
+    {
+      "id": "demonstrating_awareness",
+      "name": "Demonstrating Awareness",
+      "mustWatchLessonId": 41995,
+      "mustWatchTitle": "Showing Empathy Without Losing Authority"
+    }
+  ],
+  "course": {
+    "program": "New Manager Essentials",
+    "lessonTitle": "How Can You Lead with Emotional Intelligence?",
+    "lessonSlug": "how-can-you-lead-with-emotional-intelligence",
+    "briefPath": "/how-can-you-lead-with-emotional-intelligence/practice-roleplay?step=brief"
+  },
+  "sceneId": "scene-mc8-theo-practice",
+  "scenarioKey": "exp7-theo-the-late-report"
+}

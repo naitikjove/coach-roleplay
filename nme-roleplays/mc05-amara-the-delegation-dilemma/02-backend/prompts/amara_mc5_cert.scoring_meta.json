@@ -1,0 +1,63 @@
+{
+  "maxScore": 30,
+  "characterName": "Amara",
+  "competencies": [
+    {
+      "id": "effective_delegation",
+      "name": "Effective Delegation",
+      "beat": "A",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Asks what Dev and Lena are carrying and whether either has done this before, then picks Lena and says why",
+          "max": 10
+        }
+      ]
+    },
+    {
+      "id": "ensuring_accountability",
+      "name": "Ensuring Accountability",
+      "beat": "B",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Turns down daily updates and checking every draft, sets one review partway, and offers guidance",
+          "max": 10
+        }
+      ]
+    },
+    {
+      "id": "recognizing_contributions",
+      "name": "Recognizing Contributions",
+      "beat": "C",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Tells Dev themselves what he did and why it mattered, and lets the team hear it",
+          "max": 10
+        }
+      ]
+    }
+  ],
+  "absenceGoals": [],
+  "objectives": [
+    {
+      "n": 1,
+      "text": "Amara wants to give a new request to the fastest person. Decide with her who should take it.",
+      "competency": "effective_delegation",
+      "criterion": "True only when the learner gives a clear decision on who takes the new request (Lena, Dev, or another person) and Amara acknowledges it or the call moves on to how to keep track of the work; false for a bare okay, Amara's words alone, or a question with no decision."
+    },
+    {
+      "n": 2,
+      "text": "Amara wants to check the work every day. Decide with her how to keep track.",
+      "competency": "ensuring_accountability",
+      "criterion": "True only when the learner gives a clear decision on how the work is tracked (daily updates and every draft, one review partway, or leaving it until the end) and Amara acknowledges it or the call moves on to Dev; false for a bare okay, Amara's words alone, or a question with no decision."
+    },
+    {
+      "n": 3,
+      "text": "Amara plans a quick private thank-you for Dev. Decide with her what to do about it.",
+      "competency": "recognizing_contributions",
+      "criterion": "True only when the learner gives a clear decision on how Dev is thanked (the quick private message, no thanks, or thanking him themselves and where the team hears it) and Amara acknowledges it or the call closes; false for a bare okay, Amara's words alone, or a question with no decision."
+    }
+  ]
+}

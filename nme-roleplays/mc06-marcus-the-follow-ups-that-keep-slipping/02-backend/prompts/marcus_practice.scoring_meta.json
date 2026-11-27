@@ -1,0 +1,60 @@
+{
+  "maxScore": 30,
+  "characterName": "Marcus",
+  "competencies": [
+    {
+      "id": "assessing_capabilities",
+      "name": "Assessing Capabilities",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Asks what is really happening before agreeing to a fix",
+          "max": 10
+        }
+      ]
+    },
+    {
+      "id": "coaching_team_members",
+      "name": "Coaching Team Members",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Gives one clear change to the note, and says why it helps",
+          "max": 10
+        }
+      ]
+    },
+    {
+      "id": "sharing_knowledge",
+      "name": "Sharing Knowledge",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Brings Nina in to help with the upset calls, by guiding Marcus or sitting in",
+          "max": 10
+        }
+      ]
+    }
+  ],
+  "absenceGoals": [],
+  "objectives": [
+    {
+      "n": 1,
+      "text": "Marcus is behind on his follow-up calls and plans to stay late to catch up. Decide with him what to do.",
+      "competency": "assessing_capabilities",
+      "criterion": "True when the manager gives any direction on the late follow-ups (asks why customers keep calling in again, asks for an example, agrees to stay late, takes follow-ups away, or says try harder) and Marcus answers it or moves on to how he handles his calls; false for a bare okay, a greeting, or Marcus's words alone."
+    },
+    {
+      "n": 2,
+      "text": "Marcus keeps his calls short so customers don't wait. Agree with him what, if anything, should change on his calls.",
+      "competency": "coaching_team_members",
+      "criterion": "True when the manager gives any direction on how Marcus handles his calls (a step on every call, write more, keep calls as they are, let the tech team call, or later) and Marcus accepts it or moves on to the upset customers; false for a bare okay, a question alone, or Marcus's words alone."
+    },
+    {
+      "n": 3,
+      "text": "Three upset customers are about to hear from Marcus. Agree with him how he handles those calls.",
+      "competency": "sharing_knowledge",
+      "criterion": "True when the manager gives any direction on the upset customers (Nina guiding Marcus or sitting in, ask someone for tips, leave him to it, or take the calls) and Marcus accepts it or the call closes; false for a bare okay or Marcus's words alone."
+    }
+  ]
+}

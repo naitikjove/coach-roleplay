@@ -1,0 +1,69 @@
+{
+  "title": "Writing the Mid-Year Reviews",
+  "practiceModal": {
+    "eyebrow": "Practice Roleplay",
+    "headline": "not defined for MC7 yet (content team to supply)",
+    "subtitle": "unchanged (keep production)",
+    "chips": "unchanged (keep production)",
+    "entryPurposeApp": "Practice a short one-on-one with Rebecca before mid-year reviews go to HR: what to write in Jamie's review, what the team summary should show, a call that went wrong for Chloe, and Dylan's late reports.",
+    "note": "No MC1 headline replacement exists for MC7. Not the scenario title; keep title = Writing the Mid-Year Reviews. Do not label as Entry card body.",
+    "briefPath": "/how-to-manage-team-performance-and-feedback/practice-roleplay?step=brief"
+  },
+  "phaseLabel": "Practice Roleplay Scenario",
+  "characterName": "Rebecca",
+  "characterRole": "Your manager",
+  "scenario": "Mid-year reviews for your customer support team go to HR at the end of this week, and you haven't started writing them. Your manager, Rebecca, has about twenty minutes before a leadership meeting. She wants to use them to go through four things she's noticed over the last few weeks, covering Jamie, Chloe, Dylan and a summary that leadership has asked for. She'll ask what you plan to do about each one.",
+  "about": [
+    "You manage a customer support team.",
+    "Mid-year reviews for your team go to HR at the end of this week.",
+    "Rebecca, your manager, has about twenty minutes and wants to go through four things from the last few weeks first."
+  ],
+  "objectives": [
+    "Jamie's customer emails had mistakes in six of the last eight weeks. Decide what you'll do about it in her review.",
+    "Leadership wants to know if your team's work is helping keep customers. Decide what the summary will show.",
+    "Chloe kept cutting in while a client was talking on a call last week. Decide what you'll say to her.",
+    "Dylan's weekly report has been late every week this month. Decide what you'll do about it."
+  ],
+  "whoYouRole": "Team manager",
+  "whoYouBody": "You manage a customer support team and write the mid-year reviews for it.",
+  "whoThemBody": "Warm, busy and direct. She tells you what happened, how it affects her, and asks what you will do. She asks if you really need all of it, so be ready to hold your point.",
+  "howItWorks": "Rebecca starts the talk. Answer her out loud, like a real one-on-one, and keep your point if she asks whether you really need all of it. When you’re done, end the conversation to get your feedback.",
+  "passThreshold": 7,
+  "competencies": [
+    {
+      "id": "conducting_performance_reviews",
+      "name": "Conducting Performance Reviews",
+      "mustWatchLessonId": 41981,
+      "mustWatchTitle": "Running Productive Performance Reviews"
+    },
+    {
+      "id": "driving_results",
+      "name": "Driving Results",
+      "mustWatchLessonId": 41503,
+      "mustWatchTitle": "Must-Have for Success: Focus Your Team on Results"
+    },
+    {
+      "id": "giving_feedback",
+      "name": "Giving Feedback",
+      "mustWatchLessonId": 41985,
+      "mustWatchTitle": "How to Give Constructive Feedback"
+    },
+    {
+      "id": "addressing_underperformance",
+      "name": "Addressing Underperformance",
+      "mustWatchLessonId": 41984,
+      "mustWatchTitle": "Diagnosing Performance Gaps"
+    }
+  ],
+  "course": {
+    "program": "New Manager Essentials",
+    "lessonTitle": "How to Manage Team Performance and Feedback",
+    "lessonSlug": "how-to-manage-team-performance-and-feedback",
+    "briefPath": "/how-to-manage-team-performance-and-feedback/practice-roleplay?step=brief",
+    "briefPathNote": "pattern-derived, not verified against production routes"
+  },
+  "sceneId": "scene-mc7-becca-practice",
+  "scenarioKey": "becca-practice",
+  "characterAvatar": "/arena/exp4/characters/reporting-manager.png",
+  "characterImagePack": "assets/rebecca.png"
+}

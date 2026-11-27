@@ -1,0 +1,167 @@
+{
+  "lockVersion": "1.1.0-amara-delegation-dilemma-locked-local",
+  "lockDate": "2026-11-26",
+  "finalVariant": "A",
+  "id": "scene-mc5-amara-post",
+  "slug": "exp7-amara-new-request",
+  "title": "The Delegation Dilemma",
+  "type": "hot_seat",
+  "mode": "voice_only",
+  "primaryCharacter": "amara",
+  "characterId": "amara",
+  "voice": "ballad",
+  "actorModel": "gpt-realtime-2.1",
+  "analyzerModel": "claude-opus-5",
+  "analyzerModelNote": "Opus same as MC1 — do not change",
+  "actorPromptFile": "amara_mc5_cert.actor.vA.prompt.txt",
+  "analyzerPromptFile": "amara_mc5_cert.analyzer.vA.prompt.txt",
+  "analyzerPromptFileV2": "amara_mc5_cert.analyzer.vA.prompt.txt",
+  "scoringMetaFile": "amara_mc5_cert.scoring_meta.json",
+  "promptVariants": {
+    "A": {
+      "actorPromptFile": "amara_mc5_cert.actor.vA.prompt.txt",
+      "analyzerPromptFile": "amara_mc5_cert.analyzer.vA.prompt.txt",
+      "status": "final"
+    }
+  },
+  "lessonRef": "mc5-post",
+  "lessonTitle": "How to Delegate with Clarity",
+  "lessonSlug": "how-to-delegate-with-clarity",
+  "sourceLessons": [
+    {
+      "beat": "A",
+      "lessonId": 41965,
+      "title": "How to Choose the Right Person for the Task",
+      "competency": "effective_delegation"
+    },
+    {
+      "beat": "B",
+      "lessonId": 41967,
+      "title": "How to Monitor Progress Without Micromanaging",
+      "competency": "ensuring_accountability"
+    },
+    {
+      "beat": "C",
+      "lessonId": 41969,
+      "title": "Recognizing and Rewarding Accountability",
+      "competency": "recognizing_contributions"
+    }
+  ],
+  "skills": [
+    "effective_delegation",
+    "ensuring_accountability",
+    "recognizing_contributions"
+  ],
+  "competencies": [
+    {
+      "id": "effective_delegation",
+      "name": "Effective Delegation"
+    },
+    {
+      "id": "ensuring_accountability",
+      "name": "Ensuring Accountability"
+    },
+    {
+      "id": "recognizing_contributions",
+      "name": "Recognizing Contributions"
+    }
+  ],
+  "turnLimits": {
+    "minLearnerTurns": 6,
+    "softMaxLearnerTurns": 14,
+    "hardMaxLearnerTurns": 18,
+    "absoluteMaxLearnerTurns": 22
+  },
+  "checklistItems": [
+    {
+      "id": "who_takes_request",
+      "label": "Amara leans toward Dev for the sales team’s request. Decide with her who should take it.",
+      "critical": true
+    },
+    {
+      "id": "keep_track",
+      "label": "Amara wants to follow the work closely. Agree with her how to keep track of it.",
+      "critical": true
+    },
+    {
+      "id": "thank_dev",
+      "label": "Dev stayed late to fix mistakes in last month’s customer report. Decide with Amara how to thank him.",
+      "critical": true
+    }
+  ],
+  "scenarioSummary": {
+    "now": "Amara plans the weekly work for your team of six. A new request just came in from the sales team: a short comparison of how two competitors price their service, due at the end of the month. Dev has been on your team the longest and prepares the monthly customer report. Lena joined three months ago. Amara asked to talk with you about who should take the request, how to keep track of it, and how to recognize something Dev did last month.",
+    "layers": "A who takes the new request: ask about workload and experience, then choose by fit, not speed → B keeping track: one review partway and guidance, not daily updates or every draft → C thanking Dev: say it yourself, say exactly what he did, and let the team hear it"
+  },
+  "scoring": {
+    "maxScore": 30,
+    "ranges": [
+      "0-1",
+      "2-4",
+      "5-7",
+      "8-10"
+    ],
+    "checks": {
+      "top": [
+        4,
+        7,
+        10
+      ],
+      "middle": [
+        3,
+        6,
+        9
+      ],
+      "bottom": [
+        2,
+        5,
+        8
+      ]
+    },
+    "resultBands": [
+      {
+        "min": 25,
+        "max": 30,
+        "label": "Strong"
+      },
+      {
+        "min": 15,
+        "max": 24,
+        "label": "Getting there"
+      },
+      {
+        "min": 0,
+        "max": 14,
+        "label": "Needs practice"
+      }
+    ]
+  },
+  "passThreshold": 7,
+  "learnerCopy": {
+    "description": "Amara plans the weekly work for your team of six. A new request just came in from the sales team: a short comparison of how two competitors price their service, due at the end of the month. Dev has been on your team the longest and prepares the monthly customer report. Lena joined three months ago. Amara asked to talk with you about who should take the request, how to keep track of it, and how to recognize something Dev did last month.",
+    "characterRole": "Plans the weekly work",
+    "learnerRole": "Team lead",
+    "whoYouBody": "Dev, Lena and Amara are three of the six people on your team.",
+    "whoThemBody": "Careful and organized. Brings you her ideas before she acts.",
+    "certificateHeadline": "none for this pack; keep production",
+    "characterAvatar": "/arena/exp4/characters/amara-v4.jpg",
+    "characterImagePack": "01-frontend/assets/amara.jpg"
+  },
+  "mustWatchVideos": [
+    {
+      "lessonId": 41965,
+      "title": "How to Choose the Right Person for the Task",
+      "competency": "effective_delegation"
+    },
+    {
+      "lessonId": 41967,
+      "title": "How to Monitor Progress Without Micromanaging",
+      "competency": "ensuring_accountability"
+    },
+    {
+      "lessonId": 41969,
+      "title": "Recognizing and Rewarding Accountability",
+      "competency": "recognizing_contributions"
+    }
+  ]
+}

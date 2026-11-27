@@ -1,0 +1,65 @@
+{
+  "sumScore": 20,
+  "maxScore": 20,
+  "percent": 100,
+  "score": 10,
+  "summary": "You came across as a calm, clear manager who slows people down before they act. Starting with a question shows you gather facts before you steer, which stops a hot moment turning into a decision. That quality shows up in both parts: you ask before you decide. It keeps Theo from sending a message he cannot take back and from telling Devon off without knowing what is going on. The habit to build next is promising Mark short status notes until the reports are back on track.",
+  "nextStep": {
+    "headline": "Promise Mark short status notes until fixed",
+    "body": "Strong managers keep a client calm after a mistake by staying in touch. When a client is upset, add a short status note to your apology. Then Mark sees the fix is real and does not have to chase."
+  },
+  "competencies": {
+    "managing_emotions": {
+      "score": 10,
+      "level": "strong",
+      "administered": true,
+      "goals": [
+        {
+          "id": "G1",
+          "evidence": {
+            "said": "hold, owning the miss, next date",
+            "missing": "",
+            "theoAsked": "",
+            "afterTheoAsked": false,
+            "hedgedOrWalkedBack": false,
+            "gaveIn": false
+          },
+          "points": 10,
+          "max": 10,
+          "range": "8-10",
+          "check": "top",
+          "quote": "Tell Mark it was our miss and when his next report will arrive—next Tuesday."
+        }
+      ],
+      "note": "Strong managers stay composed first because a calm response defuses tension and a sent message cannot be taken back. Asking what happened before you steered shows you gather facts before you decide, which stops a hot moment turning into a mistake. It kept Theo from sending an excuse that would have made Mark trust the team less.",
+      "youSaid": "Tell Mark it was our miss and when his next report will arrive—next Tuesday.",
+      "tryInstead": "Hold that reply. Tell Mark the late report was your miss, and promise him a short status note each week until the reports are back on track."
+    },
+    "demonstrating_awareness": {
+      "score": 10,
+      "level": "strong",
+      "administered": true,
+      "goals": [
+        {
+          "id": "G1",
+          "evidence": {
+            "said": "what Theo has noticed, ask what's going on, deadline",
+            "missing": "",
+            "theoAsked": "",
+            "afterTheoAsked": false,
+            "hedgedOrWalkedBack": false,
+            "gaveIn": false
+          },
+          "points": 10,
+          "max": 10,
+          "range": "8-10",
+          "check": "top",
+          "quote": "Asking isn't going easy—listen first, then agree the numbers come by Monday evening."
+        }
+      ],
+      "note": "Strong managers name what they have noticed in neutral facts and invite the person's own view before offering solutions. Telling Theo to listen first then agree the deadline shows you keep support and standards together, which stops Devon hiding problems while still keeping the work expectation. It gave Theo a way to find out what is going on without losing the deadline.",
+      "youSaid": "Asking isn't going easy—listen first, then agree the numbers come by Monday evening.",
+      "tryInstead": "After you listen to Devon, agree one or two clear aims for the next two weeks and a short midweek check in with him."
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "gold_ideal",
+  "order": 1,
+  "title": "Ideal first-time manager, before any follow-up",
+  "expected": {
+    "A": [
+      10,
+      10
+    ],
+    "B": [
+      10,
+      10
+    ],
+    "total": [
+      19,
+      20
+    ],
+    "close": "strong",
+    "reaches_B": true,
+    "f4": true
+  },
+  "goal": "Make every ideal move cleanly and hold under both pushes.",
+  "plan": [
+    "Turn 1: greet ('Sure, what's up?').",
+    "After Jenna tells you about the email: ask what exactly went wrong with the forecast.",
+    "After Jenna explains the old figures: say don't send the email, tell Ryan you were out of line and that part of it was her miss, and offer to sit down with him this afternoon at 2.",
+    "If Jenna pushes ('won't the team think I let mistakes slide?'): hold firm, say owning your part isn't soft, it shows the team you hold yourself to the same standard.",
+    "After Jenna tells you about Kayla: say don't just say yes yet, tell her what you've noticed (quieter, mistakes in her draft) and ask what's going on and listen.",
+    "If Jenna pushes ('won't everyone else expect it too?'): hold, say listening isn't lowering the bar, agree the client still gets a first version by Friday and a quick check-in Wednesday.",
+    "After Jenna's final recap say 'Good. Let me know how it goes.' then [[END]]."
+  ],
+  "learner_style": "You are a first-time manager who was just promoted. You speak in short, plain, natural spoken lines (1-2 sentences, under 30 words). You know ONLY what Jenna has said so far. Never mention scores, playbooks or that this is practice.",
+  "first_line": "Sure, what's up?"
+}

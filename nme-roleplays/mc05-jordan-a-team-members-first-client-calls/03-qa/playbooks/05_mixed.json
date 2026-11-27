@@ -1,0 +1,67 @@
+{
+  "id": "mixed",
+  "title": "Mixed: asks then stays open, 'message me during the call', 'keep it short'",
+  "goal": "Ask what is hard but then leave it open ('let's see how it goes'); tell Jordan to message you during the call about changes; tell them to keep the note short with no contents or timing.",
+  "must_hit": [
+    "Asks first but no decision on the calls",
+    "'Message me during the call'",
+    "'Keep it short' only"
+  ],
+  "must_avoid": [
+    "Clear keep/take-back decision",
+    "Small-vs-deadline line",
+    "Contents or timing for the note"
+  ],
+  "max_learner_turns": 14,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "low",
+    "sum_score_min": 6,
+    "sum_score_max": 16
+  },
+  "intents": [
+    {
+      "id": "open_greet",
+      "when": "Jordan greets only (no topic yet)",
+      "do": "Short warm greeting back only. Do not ask about the work or the call yet.",
+      "examples": [
+        "Good, thanks. How are you?",
+        "Hi Jordan, doing well. What's up?"
+      ]
+    },
+    {
+      "id": "A_ask_open",
+      "when": "Jordan has explained the call and is wondering about taking the calls back",
+      "do": "Ask what has been hard, then leave it open.",
+      "examples": [
+        "What's been hard on the calls? ... Okay, let's see how it goes."
+      ]
+    },
+    {
+      "id": "B_msg",
+      "when": "Jordan asks about checking Sarah's changes with you",
+      "do": "Tell them to message you during the call.",
+      "examples": [
+        "Message me during the call and I'll tell you quickly."
+      ]
+    },
+    {
+      "id": "C_short",
+      "when": "Jordan says they plan to write up everything at the end of the week",
+      "do": "Only say keep it short.",
+      "examples": [
+        "Keep it short."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Jordan wraps up",
+      "do": "Short goodbye or [[END]].",
+      "examples": [
+        "Okay, thanks Jordan."
+      ]
+    }
+  ],
+  "character": "jordan",
+  "order": 5
+}

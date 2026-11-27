@@ -1,0 +1,196 @@
+{
+  "lockVersion": "1.0.0-becca-mc7-post-vA-draft",
+  "lockDate": "2026-11-26",
+  "id": "scene-mc7-becca-post",
+  "slug": "exp7-rebecca-performance-and-feedback-in-practice",
+  "title": "Performance and Feedback in Practice",
+  "type": "hot_seat",
+  "mode": "voice_only",
+  "primaryCharacter": "becca",
+  "characterId": "becca",
+  "voice": "shimmer",
+  "realtimeReasoningEffort": "low",
+  "actorPromptFile": "becca_mc7_post.actor.vA.prompt.txt",
+  "analyzerPromptFile": "becca_mc7_post.analyzer.vA.prompt.txt",
+  "analyzerPromptFileV2": "becca_mc7_post.analyzer.vA.prompt.txt",
+  "promptVariants": {
+    "A": {
+      "actorPromptFile": "becca_mc7_post.actor.vA.prompt.txt",
+      "analyzerPromptFile": "becca_mc7_post.analyzer.vA.prompt.txt"
+    }
+  },
+  "lessonRef": "mc7-post",
+  "lessonTitle": "How to Manage Team Performance and Feedback",
+  "lessonSlug": "how-to-manage-team-performance-and-feedback",
+  "sourceLessons": [
+    {
+      "beat": "A",
+      "lessonId": 41981,
+      "title": "Running Productive Performance Reviews",
+      "competency": "conducting_performance_reviews"
+    },
+    {
+      "beat": "B",
+      "lessonId": 41503,
+      "title": "Must-Have for Success: Focus Your Team on Results",
+      "competency": "driving_results"
+    },
+    {
+      "beat": "C",
+      "lessonId": 41985,
+      "title": "How to Give Constructive Feedback",
+      "competency": "giving_feedback"
+    },
+    {
+      "beat": "D",
+      "lessonId": 41984,
+      "title": "Diagnosing Performance Gaps",
+      "competency": "addressing_underperformance"
+    }
+  ],
+  "skills": [
+    "conducting_performance_reviews",
+    "driving_results",
+    "giving_feedback",
+    "addressing_underperformance"
+  ],
+  "competencies": [
+    {
+      "id": "conducting_performance_reviews",
+      "name": "Conducting Performance Reviews"
+    },
+    {
+      "id": "driving_results",
+      "name": "Driving Results"
+    },
+    {
+      "id": "giving_feedback",
+      "name": "Giving Feedback"
+    },
+    {
+      "id": "addressing_underperformance",
+      "name": "Addressing Underperformance"
+    }
+  ],
+  "turnLimits": {
+    "minLearnerTurns": 8,
+    "softMaxLearnerTurns": 18,
+    "hardMaxLearnerTurns": 22,
+    "absoluteMaxLearnerTurns": 26
+  },
+  "checklistItems": [
+    {
+      "id": "cpr_review",
+      "label": "Zara ran the sponsor program well but did almost everything herself. Tell Rebecca what you'll say in her review.",
+      "critical": true
+    },
+    {
+      "id": "dr_debrief",
+      "label": "Leadership will ask if the conference was worth the investment. Tell Rebecca what you'll put at the top of the team debrief.",
+      "critical": true
+    },
+    {
+      "id": "gf_felix",
+      "label": "Felix changed an approved sponsor banner and told no one, so the logo was cut off. Tell Rebecca what you'll say to him.",
+      "critical": true
+    },
+    {
+      "id": "au_omar",
+      "label": "Ravi, new on your team, had three invoices go to the wrong person, so three vendors were paid late. Tell Rebecca what you'll do.",
+      "critical": true
+    }
+  ],
+  "headlineLabels": {
+    "nailed_it": "Nailed it",
+    "solid": "Solid",
+    "try_again": "Try again"
+  },
+  "scenarioSummary": {
+    "now": "Last week your events team of five ran the company's customer conference, and it's over. Zara led the sponsor program, Felix looked after the sponsor banners, and Ravi, the newest on the team, handles vendor invoices. Your manager, Rebecca, presents the conference to leadership in about ten minutes. Before she goes in, she wants to go through a few things from the week with you, and she'll ask what you plan to do about each one. The four things: Zara's review, the team debrief, a sponsor banner mistake, and late vendor payments.",
+    "layers": "A Zara's review: what she delivered, her side, and what doing it well looks like next time → B team debrief: lead with the people who tried the product and tie the team's work to it → C Felix: say what he did, what it caused and one thing to try → D Ravi: explain who signs off on what, give him the rule, and see that it worked."
+  },
+  "scoring": {
+    "maxScore": 40,
+    "ranges": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "checks": {
+      "top": [
+        4,
+        7,
+        10
+      ],
+      "middle": [
+        3,
+        6,
+        9
+      ],
+      "bottom": [
+        2,
+        5,
+        8
+      ]
+    },
+    "resultBands": [
+      {
+        "min": 32,
+        "max": 40,
+        "label": "Strong"
+      },
+      {
+        "min": 20,
+        "max": 31,
+        "label": "Getting there"
+      },
+      {
+        "min": 0,
+        "max": 19,
+        "label": "Needs practice"
+      }
+    ]
+  },
+  "passThreshold": 7,
+  "learnerCopy": {
+    "description": "Last week your events team of five ran the company's customer conference, and it's over. Zara led the sponsor program, Felix looked after the sponsor banners, and Ravi, the newest on the team, handles vendor invoices. Your manager, Rebecca, presents the conference to leadership in about ten minutes. Before she goes in, she wants to go through a few things from the week with you, and she'll ask what you plan to do about each one.",
+    "characterRole": "Your manager",
+    "learnerRole": "Team manager",
+    "learnerCard": "You manage the events team. Zara, Felix and Ravi report to you.",
+    "characterCard": "Your manager. Direct and short on time.",
+    "entryCardBody": "Show you can manage team performance and feedback. The conference is over, and Rebecca wants to go through a few things from the week before she presents to leadership.",
+    "characterAvatar": "/arena/exp4/characters/reporting-manager.png",
+    "characterImagePack": "01-frontend/assets/rebecca.png"
+  },
+  "actorModel": "gpt-realtime-2.1",
+  "analyzerModel": "claude-opus-5",
+  "analyzerModelNote": "Opus same as MC1 — do not change",
+  "scoringMetaFile": "becca_mc7_post.scoring_meta.json",
+  "status": "DRAFT (not locked)",
+  "scoringNote": "scoring.ranges is copied from the app scene file. The analyzer prompt scores in ranges 0-1 / 2-4 / 5-7 / 8-10 with top/middle/bottom checks; the analyzer prompt is the source of truth.",
+  "mustWatchVideos": [
+    {
+      "lessonId": 41981,
+      "title": "Running Productive Performance Reviews",
+      "competency": "conducting_performance_reviews"
+    },
+    {
+      "lessonId": 41503,
+      "title": "Must-Have for Success: Focus Your Team on Results",
+      "competency": "driving_results"
+    },
+    {
+      "lessonId": 41985,
+      "title": "How to Give Constructive Feedback",
+      "competency": "giving_feedback"
+    },
+    {
+      "lessonId": 41984,
+      "title": "Diagnosing Performance Gaps",
+      "competency": "addressing_underperformance"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "ideal",
+  "title": "Ideal first-time manager: asks, keeps the calls, splits the changes, same-day note",
+  "goal": "Ask what's been hard before deciding, keep the calls with Jordan and own the unclear handover, let Jordan say yes to small changes while deadline changes come to you, then ask for a short same-day note saying what was agreed and who is doing what. Hold each move when Jordan pushes. Plain everyday words, no jargon.",
+  "must_hit": [
+    "Asks what's been happening or hard BEFORE deciding about the calls",
+    "Keeps the calls with Jordan, holds after 'Are you sure?'",
+    "Jordan decides small changes (moving the call, changing task order); anything that would push the deadline comes to the manager",
+    "Short note to Sarah the same day with what was agreed and who is doing what; holds against 'put everything in'"
+  ],
+  "must_avoid": [
+    "Taking the calls back",
+    "'Check everything with me'",
+    "End-of-week full write-up",
+    "Blaming Jordan",
+    "Jargon"
+  ],
+  "max_learner_turns": 14,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "high",
+    "sum_score_min": 25,
+    "markers": {
+      "1": true,
+      "2": true,
+      "3": true
+    }
+  },
+  "intents": [
+    {
+      "id": "open_greet",
+      "when": "Jordan greets only (no topic yet)",
+      "do": "Short warm greeting back only. Do not ask about the work or the call yet.",
+      "examples": [
+        "Good, thanks. How are you?",
+        "Hi Jordan, doing well. What's up?"
+      ]
+    },
+    {
+      "id": "A_ask",
+      "when": "Jordan has explained the weekly client call, what went wrong, and is asking whether you should take the calls back",
+      "do": "Ask what has been happening on the calls / what has been hard BEFORE deciding anything.",
+      "examples": [
+        "Thanks for telling me. Before we decide that, what's been happening on the calls? What's been hard?"
+      ]
+    },
+    {
+      "id": "A_keep",
+      "when": "Jordan has said what is hard (not sure if they are allowed to say yes), or asks what you think",
+      "do": "Own the unclear handover, then keep the calls with Jordan.",
+      "examples": [
+        "That makes sense, and I should have been clearer when I handed it over. I'd like you to keep running the calls. We can sort this out."
+      ]
+    },
+    {
+      "id": "A_hold",
+      "when": "Jordan asks 'Are you sure?' or worries about making it worse",
+      "do": "Hold: keep the calls with Jordan, one short reason, offer help.",
+      "examples": [
+        "I'm sure. You know Sarah best now, and I'll help you get the next one right."
+      ]
+    },
+    {
+      "id": "B_split",
+      "when": "Jordan describes Sarah's changes (Thursday move, task order, the extra report that would push the deadline) and asks if they should keep checking each one with you",
+      "do": "Small things Jordan can say yes to; anything that would make us late comes to you.",
+      "examples": [
+        "Not for small things. Moving the call or swapping tasks, you can just say yes. If something would make us late, like that extra report, tell her you'll get back to her, then bring it to me."
+      ]
+    },
+    {
+      "id": "B_hold",
+      "when": "Jordan asks what if they say yes and it turns out wrong",
+      "do": "Hold: Jordan decides the small ones, you fix mistakes together.",
+      "examples": [
+        "Then we'll fix it together. I'd rather you decide than keep her waiting."
+      ]
+    },
+    {
+      "id": "C_note",
+      "when": "Jordan says they plan to write up everything and send it at the end of the week",
+      "do": "Say what to send and when: short note the same day, what was agreed and who is doing what.",
+      "examples": [
+        "The end of the week is too late. After each call, send her a short note the same day with what we agreed and who's doing what."
+      ]
+    },
+    {
+      "id": "C_hold",
+      "when": "Jordan asks 'shouldn't I put everything in, just in case?'",
+      "do": "Hold: keep it short, only what was agreed and who is doing it.",
+      "examples": [
+        "Keep it short. She just needs what we agreed and who's doing it."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Jordan recaps and thanks you",
+      "do": "Short warm close, or [[END]].",
+      "examples": [
+        "Great. Talk soon."
+      ]
+    }
+  ],
+  "character": "jordan",
+  "order": 1
+}

@@ -1,0 +1,31 @@
+{
+  "id": "nearly_there",
+  "order": 3,
+  "title": "Owns the miss but no date; asks Devon but no deadline",
+  "expected": {
+    "A": [
+      5,
+      7
+    ],
+    "B": [
+      5,
+      7
+    ],
+    "total": [
+      10,
+      14
+    ],
+    "close": "strong",
+    "reaches_B": true
+  },
+  "goal": "Make half of each move and never supply the missing piece even when Theo asks.",
+  "plan": [
+    "Greet. Say hold the reply and tell Mark it was our miss.",
+    "If Theo asks what to say about the next report: answer vaguely ('Just tell him we'll do better.') with NO date.",
+    "Hold under the push.",
+    "For Devon: say ask him what's going on. If Theo asks about the numbers or the report on time: say 'I'm sure he'll sort it out' with NO deadline.",
+    "Hold under the push. [[END]] after Theo's close."
+  ],
+  "learner_style": "You are a first-time manager who was just promoted. You speak in short, plain, natural spoken lines (1-2 sentences, under 30 words). You know ONLY what Theo has said so far. Never mention scores, playbooks or that this is practice.",
+  "first_line": "Sure, what's up?"
+}

@@ -1,0 +1,168 @@
+{
+  "lockVersion": "1.1.0-jordan-first-calls-locked-local",
+  "lockDate": "2026-11-26",
+  "finalVariant": "A",
+  "id": "scene-mc5-first-calls-practice",
+  "slug": "exp7-jordan-first-client-calls",
+  "title": "A Team Member’s First Client Calls",
+  "type": "hot_seat",
+  "mode": "voice_only",
+  "primaryCharacter": "jordan5",
+  "characterId": "jordan5",
+  "voice": "verse",
+  "actorModel": "gpt-realtime-2.1",
+  "analyzerModel": "claude-opus-5",
+  "analyzerModelNote": "Opus same as MC1 — do not change",
+  "actorPromptFile": "jordan_first_calls.actor.vA.prompt.txt",
+  "analyzerPromptFile": "jordan_first_calls.analyzer.vA.prompt.txt",
+  "analyzerPromptFileV2": "jordan_first_calls.analyzer.vA.prompt.txt",
+  "scoringMetaFile": "jordan_first_calls.scoring_meta.json",
+  "promptVariants": {
+    "A": {
+      "actorPromptFile": "jordan_first_calls.actor.vA.prompt.txt",
+      "analyzerPromptFile": "jordan_first_calls.analyzer.vA.prompt.txt",
+      "status": "final"
+    }
+  },
+  "lessonRef": "mc5-practice",
+  "lessonTitle": "How to Delegate with Clarity",
+  "lessonSlug": "how-to-delegate-with-clarity",
+  "sourceLessons": [
+    {
+      "beat": "A",
+      "lessonId": 41968,
+      "title": "Handling Mistakes After Delegation",
+      "competency": "ensuring_accountability"
+    },
+    {
+      "beat": "B",
+      "lessonId": 41963,
+      "title": "Deciding What to Delegate",
+      "competency": "effective_delegation"
+    },
+    {
+      "beat": "C",
+      "lessonId": 41966,
+      "title": "Giving Clear and Actionable Instructions",
+      "competency": "expectations_setting"
+    }
+  ],
+  "skills": [
+    "ensuring_accountability",
+    "effective_delegation",
+    "expectations_setting"
+  ],
+  "competencies": [
+    {
+      "id": "ensuring_accountability",
+      "name": "Ensuring Accountability"
+    },
+    {
+      "id": "effective_delegation",
+      "name": "Effective Delegation"
+    },
+    {
+      "id": "expectations_setting",
+      "name": "Expectations Setting"
+    }
+  ],
+  "turnLimits": {
+    "minLearnerTurns": 6,
+    "softMaxLearnerTurns": 14,
+    "hardMaxLearnerTurns": 18,
+    "absoluteMaxLearnerTurns": 22
+  },
+  "checklistItems": [
+    {
+      "id": "calls_next_step",
+      "label": "Jordan is worried and thinks you should take the calls back. Decide with Jordan what to do next.",
+      "critical": true
+    },
+    {
+      "id": "change_requests",
+      "label": "Sarah asks for changes during the calls. Jordan doesn’t know what they can say yes to. Decide with Jordan what to do when she asks.",
+      "critical": true
+    },
+    {
+      "id": "after_call_note",
+      "label": "After the calls, Sarah wasn’t sure what was agreed. Decide with Jordan what to do about it.",
+      "critical": true
+    }
+  ],
+  "scenarioSummary": {
+    "now": "Every week, your team has a short call with Sarah, who works at one of your biggest clients. The call is to share progress on the work you are doing for her company. Two weeks ago, you asked Jordan, who is new to client calls, to take over this call. Last week’s call went on for a full hour, not the 30 minutes planned. Sarah also keeps asking for changes during the calls. Jordan wants to talk to you about it.",
+    "layers": "A should you take the calls back: ask what's been happening and keep the calls with Jordan → B Sarah's changes: Jordan decides the small ones, deadline changes come to you → C after the call: what to send and when"
+  },
+  "scoring": {
+    "maxScore": 30,
+    "ranges": [
+      "0-1",
+      "2-4",
+      "5-7",
+      "8-10"
+    ],
+    "checks": {
+      "top": [
+        4,
+        7,
+        10
+      ],
+      "middle": [
+        3,
+        6,
+        9
+      ],
+      "bottom": [
+        2,
+        5,
+        8
+      ]
+    },
+    "resultBands": [
+      {
+        "min": 25,
+        "max": 30,
+        "label": "Strong"
+      },
+      {
+        "min": 15,
+        "max": 24,
+        "label": "Getting there"
+      },
+      {
+        "min": 0,
+        "max": 14,
+        "label": "Needs practice"
+      }
+    ]
+  },
+  "passThreshold": 7,
+  "learnerCopy": {
+    "description": "Every week, your team has a short call with Sarah, who works at one of your biggest clients. The call is to share progress on the work you are doing for her company. Two weeks ago, you asked Jordan, who is new to client calls, to take over this call. Last week’s call went on for a full hour, not the 30 minutes planned. Sarah also keeps asking for changes during the calls. Jordan wants to talk to you about it.",
+    "characterRole": "Team member",
+    "learnerRole": "Team lead",
+    "whoYouBody": "You asked Jordan to run the weekly call with Sarah.",
+    "whoThemBody": "Reliable and keen. New to client calls, and not sure what they can say yes to.",
+    "mc1HeadlineReplacement": "Show how you’d help a team member who is new to client calls.",
+    "mc1HeadlineReplacementNote": "Replaces MC1 headline 'See how you'd handle your first 1:1' for this practice slot. Not the scenario title. Do not label as Entry card body.",
+    "characterAvatar": "/arena/exp4/characters/jordan-v2.jpg",
+    "characterImagePack": "01-frontend/assets/jordan.jpg"
+  },
+  "mustWatchVideos": [
+    {
+      "lessonId": 41968,
+      "title": "Handling Mistakes After Delegation",
+      "competency": "ensuring_accountability"
+    },
+    {
+      "lessonId": 41963,
+      "title": "Deciding What to Delegate",
+      "competency": "effective_delegation"
+    },
+    {
+      "lessonId": 41966,
+      "title": "Giving Clear and Actionable Instructions",
+      "competency": "expectations_setting"
+    }
+  ]
+}

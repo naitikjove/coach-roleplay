@@ -1,0 +1,120 @@
+{
+  "id": "curious",
+  "title": "Curious learner: asks the note question and an off-topic question before the step",
+  "goal": "Speak in SHORT natural lines (one short sentence, 12 words or fewer). Part 1: do NOT agree to stay late. Ask 'Why do you think they keep calling back?' After the woman's story ask 'What did you write in the note?' Then ask one natural off-topic question, 'How long have you been on the phones?', and after Marcus brushes past it say 'I see.' Part 2: give the change plus reason in one line: 'Write down what customers already tried, so they don't have to call again.' When he asks 'even when it's busy?' say 'Yes, even then.' Part 3: when he says he'd like Nina's help but doesn't want to bother her, say 'Have Nina sit in on your calls. Today, and the next few.' When he says she has her own calls, say 'I'll talk to her and free up her time.' Then say bye.",
+  "must_hit": [
+    "Q1 before agreeing",
+    "Clear change to the note plus reason in the first answer",
+    "Hold at lunch",
+    "Nina for these and the next few",
+    "Hold after Nina push"
+  ],
+  "must_avoid": [
+    "Agreeing to stay late",
+    "Taking his follow-ups",
+    "Giving a step without a reason",
+    "Taking the calls yourself"
+  ],
+  "max_learner_turns": 12,
+  "exit": "natural",
+  "expected": {
+    "score_band": "high",
+    "sum_score_min": 27,
+    "sum_score_max": 30,
+    "competency_score_range": {
+      "assessing_capabilities": [
+        9,
+        10
+      ],
+      "coaching_team_members": [
+        9,
+        10
+      ],
+      "sharing_knowledge": [
+        9,
+        10
+      ]
+    },
+    "markers": {
+      "1": true,
+      "2": true,
+      "3": true
+    }
+  },
+  "intents": [
+    {
+      "id": "a",
+      "when": "Marcus says the same customers keep calling in again and he'll stay late",
+      "do": "Ask why, do not agree",
+      "examples": [
+        "Why do you think they keep calling back?"
+      ]
+    },
+    {
+      "id": "note_q",
+      "when": "Marcus tells the woman's story",
+      "do": "Ask what was in the note",
+      "examples": [
+        "What did you write in the note?"
+      ]
+    },
+    {
+      "id": "offtopic",
+      "when": "Marcus says what was in the note",
+      "do": "Ask one natural off-topic question about Marcus",
+      "examples": [
+        "How long have you been on the phones?"
+      ]
+    },
+    {
+      "id": "ack",
+      "when": "Marcus brushes past the off-topic question",
+      "do": "Short ack only",
+      "examples": [
+        "I see."
+      ]
+    },
+    {
+      "id": "b",
+      "when": "Marcus says he keeps calls short and the tech team could call",
+      "do": "Clear change plus reason, one short line",
+      "examples": [
+        "Write down what customers already tried, so they don't have to call again."
+      ]
+    },
+    {
+      "id": "b_hold",
+      "when": "Marcus asks even when it's busy",
+      "do": "Hold",
+      "examples": [
+        "Yes, even then."
+      ]
+    },
+    {
+      "id": "c",
+      "when": "Marcus says he'd like Nina's help but doesn't want to bother her",
+      "do": "Nina sits in, now and the next few",
+      "examples": [
+        "Have Nina sit in on your calls. Today, and the next few."
+      ]
+    },
+    {
+      "id": "c_hold",
+      "when": "Marcus says she has her own calls",
+      "do": "Hold, offer to free her time",
+      "examples": [
+        "I'll talk to her and free up her time."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Marcus wraps up",
+      "do": "Bye",
+      "examples": [
+        "Bye."
+      ]
+    }
+  ],
+  "character": "marcus",
+  "order": 9
+}

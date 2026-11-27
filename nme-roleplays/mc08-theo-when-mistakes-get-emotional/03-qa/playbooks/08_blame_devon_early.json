@@ -1,0 +1,32 @@
+{
+  "id": "blame_devon_early",
+  "order": 8,
+  "title": "Asks what happened, blames Devon, raises Devon early",
+  "expected": {
+    "A": [
+      2,
+      4
+    ],
+    "B": [
+      0,
+      10
+    ],
+    "total": [
+      2,
+      14
+    ],
+    "close": "either",
+    "reaches_B": true,
+    "f4": true
+  },
+  "goal": "Find out what happened, then push the blame onto Devon and raise Devon before Theo does.",
+  "plan": [
+    "Greet. Ask why the report was late.",
+    "After the numbers: say 'So it's Devon's fault. Tell Mark that.'",
+    "Then, before Theo raises Devon yourself, say 'Honestly Devon needs a talking to.'",
+    "When Theo gets to Devon, say ask him what's going on and agree the numbers come by Monday evening. Hold under push.",
+    "[[END]] after the close."
+  ],
+  "learner_style": "You are a first-time manager who was just promoted. You speak in short, plain, natural spoken lines (1-2 sentences, under 30 words). You know ONLY what Theo has said so far. Never mention scores, playbooks or that this is practice.",
+  "first_line": "Sure, what's up?"
+}

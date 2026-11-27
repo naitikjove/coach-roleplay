@@ -1,0 +1,133 @@
+{
+  "id": "prompted",
+  "title": "Prompted: vague first, full answer only after Marcus's nudge, then holds",
+  "goal": "Part 1: first say only 'Don't stay late, you've been working hard.' After Marcus says he doesn't get why they keep coming back, ask 'Why do you think they call back?' (no second check). Part 2: first say only 'Write more in your notes.' After he asks 'More like what?', give the step: before you hang up ask what they've already tried and what changed and put it in the note. After he asks 'and how would that help?', give the reason: it gets fixed first time so they don't call again. Hold at lunch. Part 3: first say only 'Ask Nina for tips.' After he asks 'Like, just ask her what to say?', say: no, sit in on those calls with Nina next to you this afternoon and for the next few. Hold when he says she is busy.",
+  "must_hit": [
+    "Vague first in each part",
+    "Full answer only after the nudge",
+    "Hold after the push"
+  ],
+  "must_avoid": [
+    "Full answer before the nudge",
+    "Agreeing to stay late",
+    "Taking his easy view"
+  ],
+  "max_learner_turns": 14,
+  "exit": "natural",
+  "expected": {
+    "score_band": "high",
+    "sum_score_min": 22,
+    "sum_score_max": 28,
+    "competency_score_range": {
+      "assessing_capabilities": [
+        5,
+        8
+      ],
+      "coaching_team_members": [
+        7,
+        9
+      ],
+      "sharing_knowledge": [
+        7,
+        9
+      ]
+    },
+    "markers": {
+      "1": true,
+      "2": true,
+      "3": true
+    }
+  },
+  "intents": [
+    {
+      "id": "vague_a",
+      "when": "Marcus says he'll stay late",
+      "do": "Vague, no question",
+      "examples": [
+        "Don't stay late, you've been working hard."
+      ]
+    },
+    {
+      "id": "q1",
+      "when": "Marcus says he doesn't get why they keep coming back",
+      "do": "Ask why",
+      "examples": [
+        "Why do you think they call back?"
+      ]
+    },
+    {
+      "id": "ack",
+      "when": "Marcus tells the story",
+      "do": "Short ack",
+      "examples": [
+        "Okay, I see."
+      ]
+    },
+    {
+      "id": "vague_b",
+      "when": "Marcus says calls can't be longer",
+      "do": "Vague",
+      "examples": [
+        "Write more in your notes."
+      ]
+    },
+    {
+      "id": "step",
+      "when": "Marcus asks 'More like what?'",
+      "do": "Give the step",
+      "examples": [
+        "Before you hang up, ask what they've already tried and what changed, and put it in the note."
+      ]
+    },
+    {
+      "id": "reason",
+      "when": "Marcus asks how that would help",
+      "do": "Give the reason",
+      "examples": [
+        "It gets fixed the first time, so they don't have to call again."
+      ]
+    },
+    {
+      "id": "hold_b",
+      "when": "Marcus asks even at lunch",
+      "do": "Hold",
+      "examples": [
+        "Yes, even at lunch. It saves a second call."
+      ]
+    },
+    {
+      "id": "vague_c",
+      "when": "Marcus says he'll handle upset customers himself",
+      "do": "Vague",
+      "examples": [
+        "Ask Nina for tips."
+      ]
+    },
+    {
+      "id": "full_c",
+      "when": "Marcus asks 'Like, just ask her what to say?'",
+      "do": "Full",
+      "examples": [
+        "No, have Nina sit in on those calls with you this afternoon, and the next few too."
+      ]
+    },
+    {
+      "id": "hold_c",
+      "when": "Marcus says she is busy",
+      "do": "Hold",
+      "examples": [
+        "I'll talk to her. Start with these three."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Marcus wraps up",
+      "do": "Short bye",
+      "examples": [
+        "Thanks, Marcus. Bye."
+      ]
+    }
+  ],
+  "character": "marcus",
+  "order": 2
+}

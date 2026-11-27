@@ -1,0 +1,117 @@
+{
+  "id": "mixed_partial",
+  "title": "Mixed: partial moves that stay general",
+  "goal": "Part 1: first say only 'You don't need to stay late.' After Marcus's nudge ask 'Why do you think they call back?' and nothing else. Part 2: say 'Just write more down on your calls.' Do not give a specific step or a reason, even if Marcus asks more like what: answer 'I don't know, just be more careful.' Part 3: say 'Ask Nina for some tips on angry customers.' Do not say to do the calls together. When Marcus asks like just ask her what to say, say 'Yes, that's right.' When Marcus then offers 'Maybe Nina could sit in on them with me. Would that be okay?' say only 'Yes, that would be good.' with no timing.",
+  "must_hit": [
+    "General moves only",
+    "No specific step",
+    "Nina tips only"
+  ],
+  "must_avoid": [
+    "A specific step on every call",
+    "Doing calls with Nina",
+    "Agreeing to stay late"
+  ],
+  "max_learner_turns": 12,
+  "exit": "natural",
+  "expected": {
+    "score_band": "low",
+    "sum_score_min": 13,
+    "sum_score_max": 19,
+    "competency_score_range": {
+      "assessing_capabilities": [
+        5,
+        7
+      ],
+      "coaching_team_members": [
+        2,
+        4
+      ],
+      "sharing_knowledge": [
+        5,
+        7
+      ]
+    },
+    "markers": {
+      "1": true,
+      "2": true,
+      "3": true
+    }
+  },
+  "intents": [
+    {
+      "id": "a1",
+      "when": "Marcus says he'll stay late",
+      "do": "No question",
+      "examples": [
+        "You don't need to stay late."
+      ]
+    },
+    {
+      "id": "a2",
+      "when": "Marcus nudges 'I just don't get why they keep coming back'",
+      "do": "Ask why",
+      "examples": [
+        "Why do you think they call back?"
+      ]
+    },
+    {
+      "id": "ack",
+      "when": "Marcus tells the story",
+      "do": "Bare ack",
+      "examples": [
+        "Okay."
+      ]
+    },
+    {
+      "id": "b1",
+      "when": "Marcus raises short calls",
+      "do": "General",
+      "examples": [
+        "Just write more down on your calls."
+      ]
+    },
+    {
+      "id": "b2",
+      "when": "Marcus asks more like what",
+      "do": "Still general, no reason",
+      "examples": [
+        "I don't know, just be more careful."
+      ]
+    },
+    {
+      "id": "c1",
+      "when": "Marcus raises upset customers",
+      "do": "Tips only",
+      "examples": [
+        "Ask Nina for some tips on angry customers."
+      ]
+    },
+    {
+      "id": "c2",
+      "when": "Marcus asks like just ask her what to say",
+      "do": "Agree",
+      "examples": [
+        "Yes, that's right."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Marcus wraps up",
+      "do": "Bye",
+      "examples": [
+        "Okay, bye."
+      ]
+    },
+    {
+      "id": "c_offer",
+      "when": "Marcus offers that Nina sit in with him",
+      "do": "Plain yes, no timing",
+      "examples": [
+        "Yes, that would be good."
+      ]
+    }
+  ],
+  "character": "marcus",
+  "order": 5
+}

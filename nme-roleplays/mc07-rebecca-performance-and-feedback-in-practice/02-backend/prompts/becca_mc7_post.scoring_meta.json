@@ -1,0 +1,189 @@
+{
+  "maxScore": 40,
+  "characterName": "Rebecca",
+  "passThreshold": 7,
+  "competencies": [
+    {
+      "id": "conducting_performance_reviews",
+      "name": "Conducting Performance Reviews",
+      "beat": "A",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Says what Zara delivered in real facts, hears her side, and agrees what doing it well looks like next time",
+          "max": 10,
+          "absenceBand": false
+        }
+      ],
+      "descriptors": {
+        "strong": "Says what she delivered (fourteen sponsors, on budget, two signed for next year), asks how she saw the week, and agrees what doing it well looks like next time (for example giving the juniors real pieces of the work).",
+        "ok": "Says what she delivered in facts, with at most one of: asking her side, agreeing what doing it well looks like.",
+        "weak": "Only praise with no facts, or only asks her side, or only names the gap with no facts."
+      },
+      "traps": [
+        {
+          "move": "Proposes a label as the review (control freak, doesn't trust people, needs to delegate)",
+          "score": 0
+        },
+        {
+          "move": "Only 'tell her great job' with no facts",
+          "score": 4
+        }
+      ],
+      "video": {
+        "lessonId": 41981,
+        "title": "Running Productive Performance Reviews"
+      }
+    },
+    {
+      "id": "driving_results",
+      "name": "Driving Results",
+      "beat": "B",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Puts the people who came to the demo and tried the product at the top of the debrief and ties the team's work to it",
+          "max": 10,
+          "absenceBand": false
+        }
+      ],
+      "descriptors": {
+        "strong": "Leads the debrief with how many people came to the demo and tried the product, and shows what the team did that brought them in.",
+        "ok": "The result alone, or the work linked to leadership's question without naming the result.",
+        "weak": "Says the four pages won't answer leadership, or leads with only how many came, or only asks what leadership cares about."
+      },
+      "traps": [
+        {
+          "move": "Goes through the booths, sessions and emails, or adds more detail",
+          "score": 0
+        },
+        {
+          "move": "Leads with the six hundred who came only",
+          "score": 3
+        }
+      ],
+      "video": {
+        "lessonId": 41503,
+        "title": "Must-Have for Success: Focus Your Team on Results"
+      }
+    },
+    {
+      "id": "giving_feedback",
+      "name": "Giving Feedback",
+      "beat": "C",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Tells Felix what he did, what it caused, and one thing to try next time",
+          "max": 10,
+          "absenceBand": false
+        }
+      ],
+      "descriptors": {
+        "strong": "Says he changed the approved banner and told no one, that the sponsor's logo was cut off and it was reprinted, and one thing to do next time (tell Rebecca or the team before changing anything approved).",
+        "ok": "Two of the three.",
+        "weak": "One of the three, or only 'be more careful'."
+      },
+      "traps": [
+        {
+          "move": "Agrees to send the team a reminder instead of talking to Felix",
+          "score": 0
+        },
+        {
+          "move": "Only 'be more careful'",
+          "score": 3
+        }
+      ],
+      "video": {
+        "lessonId": 41985,
+        "title": "How to Give Constructive Feedback"
+      }
+    },
+    {
+      "id": "addressing_underperformance",
+      "name": "Addressing Underperformance",
+      "beat": "D",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Matches the fix to the cause (explains who signs off on what and gives Ravi the rule) and says how they will see it worked",
+          "max": 10,
+          "absenceBand": false
+        }
+      ],
+      "descriptors": {
+        "strong": "Walks him through who signs off on what, gives him the rule, and checks his next few invoices before the payment run.",
+        "ok": "Explains who signs off on what, with no way to see it worked.",
+        "weak": "A reminder or warning alone, 'be more careful', checks alone with no explanation, or 'another chance'."
+      },
+      "traps": [
+        {
+          "move": "Proposes a written warning or formal plan as the first step",
+          "score": 0
+        },
+        {
+          "move": "Only 'be more careful'",
+          "score": 3
+        }
+      ],
+      "video": {
+        "lessonId": 41984,
+        "title": "Diagnosing Performance Gaps"
+      }
+    }
+  ],
+  "absenceGoals": [],
+  "objectives": [
+    {
+      "n": 1,
+      "text": "Zara ran the sponsor program and it went well, but she did almost everything herself. Her review is on Friday. Decide what you'll say in it.",
+      "competency": "conducting_performance_reviews",
+      "criterion": "True when the manager gives any direction on what to say in Zara's review (what she delivered, asking her side, what doing it well looks like next time, plain praise, or a label) AND Rebecca acknowledges it or moves on to the debrief; false for a bare okay, a question alone, or Rebecca's words alone."
+    },
+    {
+      "n": 2,
+      "text": "Leadership put real money into the conference and will ask if it was worth it. Decide what you'll put at the top of the team debrief.",
+      "competency": "driving_results",
+      "criterion": "True when the manager gives any direction on what the debrief leads with (the people who tried the product, the team's work, a list of what was done, the head count) AND Rebecca acknowledges it or moves on to Felix; false for a bare okay, a question alone, or Rebecca's words alone."
+    },
+    {
+      "n": 3,
+      "text": "Felix changed an approved sponsor banner and told no one, and the sponsor's logo was cut off. Decide what you'll say to him.",
+      "competency": "giving_feedback",
+      "criterion": "True when the manager gives any direction on what to say or do about Felix (what he did, what it caused, one thing to try, a reminder to the team, or leaving it) AND Rebecca acknowledges it or moves on to Ravi; false for a bare okay, a question alone, or Rebecca's words alone."
+    },
+    {
+      "n": 4,
+      "text": "Ravi's vendor invoices went to the wrong person, so three vendors were paid late. Decide what you'll do about it.",
+      "competency": "addressing_underperformance",
+      "criterion": "True when the manager gives any direction on what to do about Ravi's invoices (explaining who signs off on what, giving him the rule, checking his invoices, a warning, a reminder, or a plan) AND Rebecca acknowledges it or the call is closing; false for a bare okay, a question alone, or Rebecca's words alone."
+    }
+  ],
+  "videos": [
+    {
+      "order": 1,
+      "lessonId": 41981,
+      "title": "Running Productive Performance Reviews",
+      "competency": "conducting_performance_reviews"
+    },
+    {
+      "order": 2,
+      "lessonId": 41503,
+      "title": "Must-Have for Success: Focus Your Team on Results",
+      "competency": "driving_results"
+    },
+    {
+      "order": 3,
+      "lessonId": 41985,
+      "title": "How to Give Constructive Feedback",
+      "competency": "giving_feedback"
+    },
+    {
+      "order": 4,
+      "lessonId": 41984,
+      "title": "Diagnosing Performance Gaps",
+      "competency": "addressing_underperformance"
+    }
+  ],
+  "scoringModel": "one G1 band per skill: 0/2/4/6/8/10; levels 9-10 strong, 7-8 adequate, 3-6 developing, 0-2 needs_work"
+}

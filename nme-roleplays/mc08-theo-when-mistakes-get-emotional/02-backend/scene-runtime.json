@@ -1,0 +1,134 @@
+{
+  "lockVersion": "1.1.0-theo-late-report-vA-local",
+  "lockDate": "2026-11-25",
+  "id": "scene-mc8-theo-practice",
+  "slug": "exp7-theo-the-late-report",
+  "title": "When Mistakes Get Emotional",
+  "type": "hot_seat",
+  "mode": "voice_only",
+  "primaryCharacter": "theo",
+  "characterId": "theo",
+  "voice": "ash",
+  "actorPromptFile": "theo_late_report.actor.vA.prompt.txt",
+  "analyzerPromptFile": "theo_late_report.analyzer.vA.prompt.txt",
+  "analyzerPromptFileV2": "theo_late_report.analyzer.vA.prompt.txt",
+  "scoringMetaFile": "theo_late_report.scoring_meta.json",
+  "lessonRef": "mc8-practice",
+  "lessonTitle": "How Can You Lead with Emotional Intelligence?",
+  "lessonSlug": "how-can-you-lead-with-emotional-intelligence",
+  "sourceLessons": [
+    {
+      "beat": "A",
+      "lessonId": 41989,
+      "title": "How to Handle Emotional Reactions Professionally",
+      "competency": "managing_emotions"
+    },
+    {
+      "beat": "B",
+      "lessonId": 41995,
+      "title": "Showing Empathy Without Losing Authority",
+      "competency": "demonstrating_awareness"
+    }
+  ],
+  "skills": [
+    "managing_emotions",
+    "demonstrating_awareness"
+  ],
+  "competencies": [
+    {
+      "id": "managing_emotions",
+      "name": "Managing Emotions"
+    },
+    {
+      "id": "demonstrating_awareness",
+      "name": "Demonstrating Awareness"
+    }
+  ],
+  "turnLimits": {
+    "minLearnerTurns": 5,
+    "softMaxLearnerTurns": 12,
+    "hardMaxLearnerTurns": 16,
+    "absoluteMaxLearnerTurns": 20
+  },
+  "checklistItems": [
+    {
+      "id": "client_reply",
+      "label": "Mark emailed to complain and copied his boss, and Theo wants to reply right away. Decide with him what to do about the reply.",
+      "critical": true
+    },
+    {
+      "id": "devon_talk",
+      "label": "Devon, a teammate, has been quiet and his work has slipped. Agree with Theo how he'll talk to him.",
+      "critical": true
+    }
+  ],
+  "scenarioSummary": {
+    "now": "Every week, your team sends a progress report to one client, and Theo is the person who writes it. This week the report went out two days late, and the client's contact, Mark, was upset enough to email a complaint and copy his own boss on it. Theo feels bad about the delay but is also a little angry, and he has already written a reply to Mark that he wants to send right now. Before he does, he has asked to talk with you.",
+    "layers": "A the reply: send the excuse now vs stop it and reply owning the miss with a next date → B Devon: 'tell him it's not good enough today' vs say what Theo has noticed, ask what's going on, and keep the Monday-evening deadline."
+  },
+  "scoring": {
+    "maxScore": 20,
+    "ranges": [
+      "0-1",
+      "2-4",
+      "5-7",
+      "8-10"
+    ],
+    "checks": {
+      "top": [
+        4,
+        7,
+        10
+      ],
+      "middle": [
+        3,
+        6,
+        9
+      ],
+      "bottom": [
+        2,
+        5,
+        8
+      ]
+    },
+    "resultBands": [
+      {
+        "min": 17,
+        "max": 20,
+        "label": "Strong"
+      },
+      {
+        "min": 10,
+        "max": 16,
+        "label": "Getting there"
+      },
+      {
+        "min": 0,
+        "max": 9,
+        "label": "Needs practice"
+      }
+    ]
+  },
+  "passThreshold": 7,
+  "learnerCopy": {
+    "description": "Every week, your team sends a progress report to one client, and Theo is the person who writes it. This week the report went out two days late, and the client's contact, Mark, was upset enough to email a complaint and copy his own boss on it. Theo feels bad about the delay but is also a little angry, and he has already written a reply to Mark that he wants to send right now. Before he does, he has asked to talk with you.",
+    "characterRole": "Team member",
+    "whoYouBody": "You manage a small team that does work for clients. Theo reports to you.",
+    "whoThemBody": "Capable and proud of his work. He writes the weekly report and worries about how the team looks to the client.",
+    "entryCardBody": "Show how you'd handle an upset client and a teammate whose work is slipping.",
+    "characterAvatar": "/arena/exp7/mc8/theo.jpg",
+    "characterImagePack": "01-frontend/assets/theo.jpg"
+  },
+  "mustWatchVideos": [
+    {
+      "lessonId": 41989,
+      "title": "How to Handle Emotional Reactions Professionally",
+      "competency": "managing_emotions"
+    },
+    {
+      "lessonId": 41995,
+      "title": "Showing Empathy Without Losing Authority",
+      "competency": "demonstrating_awareness"
+    }
+  ]
+}

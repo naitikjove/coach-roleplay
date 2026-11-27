@@ -1,0 +1,84 @@
+{
+  "id": "out_of_order",
+  "order": 8,
+  "character": "becca",
+  "title": "Learner runs ahead and jumps between items",
+  "covers": [
+    "out_of_order"
+  ],
+  "goal": "Early in the call announce what you'd do for Chloe and Dylan before Rebecca gets there; Rebecca must keep her order and not skip anything.",
+  "must_hit": [],
+  "must_avoid": [
+    "Rebecca proposing a label, list, note or plan",
+    "Rebecca inventing facts",
+    "Rebecca giving advice or approval"
+  ],
+  "max_learner_turns": 18,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "any",
+    "markers": {
+      "1": "any",
+      "2": "any",
+      "3": "any",
+      "4": "any"
+    },
+    "total": [
+      24,
+      40
+    ],
+    "goals": {},
+    "adherence_flags_max": 0
+  },
+  "intents": [
+    {
+      "id": "warm",
+      "when": "Rebecca opens with a greeting",
+      "do": "Brief warm reply",
+      "examples": [
+        "Good, thanks. What's up?",
+        "Pretty good, thanks. Go ahead."
+      ]
+    },
+    {
+      "id": "jamie",
+      "when": "Rebecca asks about Jamie",
+      "do": "In the same answer add what you'd do for Chloe and Dylan",
+      "examples": [
+        "I'd write down what actually happened, six weeks out of eight with mistakes, and a couple of examples. Then I'd talk it through with her, hear her side, and work out together what a good email should look like. And for Chloe I'd talk to her privately, and for Dylan I'd get him trained on the software."
+      ]
+    },
+    {
+      "id": "summary",
+      "when": "Rebecca asks what you will put in the leadership summary",
+      "do": "Answer the item",
+      "examples": [
+        "I'd start with how many customers we kept compared with last half, then add a few things the team did that helped."
+      ]
+    },
+    {
+      "id": "chloe",
+      "when": "Rebecca asks what you will say to Chloe",
+      "do": "Answer the item",
+      "examples": [
+        "I'd catch her this week, just the two of us. I'd say, On that call last week you jumped in a few times and the client went quiet after that. Next time, try letting them finish first."
+      ]
+    },
+    {
+      "id": "dylan",
+      "when": "Rebecca explains Dylan's late report and the software and asks what you will do",
+      "do": "Answer the item",
+      "examples": [
+        "I'd get him trained on the software, ask for the report on time from next week, and check in with him every week for a month."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Rebecca closes",
+      "do": "Short thanks, goodbye",
+      "examples": [
+        "Will do. Thanks, Rebecca."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "maxScore": 40,
+  "characterName": "Rebecca",
+  "passThreshold": 7,
+  "competencies": [
+    {
+      "id": "conducting_performance_reviews",
+      "name": "Conducting Performance Reviews",
+      "beat": "A",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Writes what happened instead of a label, asks Jamie's side, and agrees what good looks like",
+          "max": 10,
+          "absenceBand": false
+        }
+      ],
+      "descriptors": {
+        "strong": "Writes what happened (mistakes in her customer emails in six of the last eight weeks) instead of the label, asks for Jamie's side, and agrees what a good email looks like from now on, still standing after Rebecca's push.",
+        "ok": "Writes what happened instead of the label, with at most one of: asking for Jamie's side, agreeing what good looks like.",
+        "weak": "Says the label is unfair or only asks for Jamie's side with no facts, or only says be more specific."
+      },
+      "traps": [
+        {
+          "move": "Agrees to write 'not detail-oriented' as the label",
+          "score": 0
+        },
+        {
+          "move": "Only says 'be more specific' with no facts of what happened",
+          "score": 2
+        },
+        {
+          "move": "Gives the facts, then agrees to the label after Rebecca's push",
+          "score": 2
+        }
+      ],
+      "video": {
+        "lessonId": 41981,
+        "title": "Running Productive Performance Reviews"
+      }
+    },
+    {
+      "id": "driving_results",
+      "name": "Driving Results",
+      "beat": "B",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Makes the team summary show how many customers we kept, and ties the team's work to it",
+          "max": 10,
+          "absenceBand": false
+        }
+      ],
+      "descriptors": {
+        "strong": "The summary shows the result leadership cares about (how many customers we kept) and ties what the team did to it, still standing after Rebecca asks if leadership will think they did less.",
+        "ok": "Names the result (customers kept) alone, or ties the work to leadership's goal without naming the result.",
+        "weak": "Says more detail will not answer leadership or only asks what leadership cares about, with no result named."
+      },
+      "traps": [
+        {
+          "move": "Agrees to the day-by-day list or more detail",
+          "score": 0
+        },
+        {
+          "move": "Only asks what the summary listed last time",
+          "score": 2
+        },
+        {
+          "move": "Names the result, then agrees to list what everyone did after Rebecca's push",
+          "score": 2
+        }
+      ],
+      "video": {
+        "lessonId": 41503,
+        "title": "Must-Have for Success: Focus Your Team on Results"
+      }
+    },
+    {
+      "id": "giving_feedback",
+      "name": "Giving Feedback",
+      "beat": "C",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Tells Chloe what she did, what it caused for the client, and one thing to try next call",
+          "max": 10,
+          "absenceBand": false
+        }
+      ],
+      "descriptors": {
+        "strong": "Talks to Chloe directly and privately, says she interrupted the client several times, that the client stopped sharing ideas, and gives one thing to try on her next call, still standing after Rebecca asks if it will feel harsh.",
+        "ok": "A direct, private talk with Chloe, alone or with one or two of: what she did, the effect, one thing to try.",
+        "weak": "Says a note to everyone will not tell her it was her, or only says to tell her to be better, with no private talk of what happened."
+      },
+      "traps": [
+        {
+          "move": "Agrees to send the quick note to the whole team",
+          "score": 0
+        },
+        {
+          "move": "Talks to Chloe but only 'tell her to be better' or judges her personality",
+          "score": 3
+        },
+        {
+          "move": "Gives a private talk with detail, then agrees to the team note after Rebecca's push",
+          "score": 2
+        }
+      ],
+      "video": {
+        "lessonId": 41985,
+        "title": "How to Give Constructive Feedback"
+      }
+    },
+    {
+      "id": "addressing_underperformance",
+      "name": "Addressing Underperformance",
+      "beat": "D",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Matches the fix to the cause (training or help with the software) and says how they will see it is working",
+          "max": 10,
+          "absenceBand": false
+        }
+      ],
+      "descriptors": {
+        "strong": "Asks why the reports are late before agreeing to any plan, then agrees training on the new reporting software and at least two of: a clear goal and date, weekly check-ins, a formal plan with HR only if nothing improves, still standing after Rebecca's push.",
+        "ok": "Asks why plus at least one other piece, fewer than the strong mix.",
+        "weak": "Only asks why, or only gives Dylan another chance with no goal, date, training or check-ins."
+      },
+      "traps": [
+        {
+          "move": "Agrees to the formal plan before asking why",
+          "score": 0
+        },
+        {
+          "move": "Asks why, then only 'give him another chance' with no goal or date",
+          "score": 4
+        },
+        {
+          "move": "Gives a clear piece, then agrees to start the formal plan now after Rebecca's push",
+          "score": 2
+        }
+      ],
+      "video": {
+        "lessonId": 41984,
+        "title": "Diagnosing Performance Gaps"
+      }
+    }
+  ],
+  "absenceGoals": [],
+  "objectives": [
+    {
+      "n": 1,
+      "text": "Jamie's customer emails had mistakes in six of the last eight weeks. Decide what you'll do about it in her review.",
+      "competency": "conducting_performance_reviews",
+      "criterion": "True when the manager gives any direction on what Jamie's review should say (writing what happened, asking for her side, a standard going forward, a vague steer, or agreeing to the label) and Rebecca acknowledges it or moves on to the team summary; false for a bare okay, a question alone, or Rebecca's words alone."
+    },
+    {
+      "n": 2,
+      "text": "Leadership wants to know if your team's work is helping keep customers. Decide what the summary will show.",
+      "competency": "driving_results",
+      "criterion": "True when the manager gives any direction on what the team summary should show (customers kept, the team's work next to the result, a vague steer, or agreeing to the day-by-day list) and Rebecca acknowledges it or moves on to Chloe; false for a bare okay, a question alone, or Rebecca's words alone."
+    },
+    {
+      "n": 3,
+      "text": "Chloe kept cutting in while a client was talking on a call last week. Decide what you'll say to her.",
+      "competency": "giving_feedback",
+      "criterion": "True when the manager gives any direction on how to handle Chloe (a private talk with her, what to say, a vague steer, or agreeing to the team note) and Rebecca acknowledges it or moves on to Dylan; false for a bare okay, a question alone, or Rebecca's words alone."
+    },
+    {
+      "n": 4,
+      "text": "Dylan's weekly report has been late every week this month. Decide what you'll do about it.",
+      "competency": "addressing_underperformance",
+      "criterion": "True when the manager gives any direction on what to do about Dylan's late report (asking why, training, a goal and date, weekly check-ins, a plan only if nothing improves, or agreeing to the formal plan now) and Rebecca acknowledges it or the call is closing; false for a bare okay, a question alone, or Rebecca's words alone."
+    }
+  ],
+  "videos": [
+    {
+      "order": 1,
+      "lessonId": 41981,
+      "title": "Running Productive Performance Reviews",
+      "competency": "conducting_performance_reviews"
+    },
+    {
+      "order": 2,
+      "lessonId": 41503,
+      "title": "Must-Have for Success: Focus Your Team on Results",
+      "competency": "driving_results"
+    },
+    {
+      "order": 3,
+      "lessonId": 41985,
+      "title": "How to Give Constructive Feedback",
+      "competency": "giving_feedback"
+    },
+    {
+      "order": 4,
+      "lessonId": 41984,
+      "title": "Diagnosing Performance Gaps",
+      "competency": "addressing_underperformance"
+    }
+  ],
+  "scoringModel": "one G1 band per skill: 0/2/4/6/8/10; levels 9-10 strong, 7-8 adequate, 3-6 developing, 0-2 needs_work"
+}

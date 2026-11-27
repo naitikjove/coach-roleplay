@@ -1,0 +1,71 @@
+{
+  "id": "shortcuts",
+  "title": "All shortcuts: picks Dev for speed, agrees to daily updates, agrees to private thanks",
+  "goal": "Take Amara's easy way out in every beat and never push back: pick Dev because he is quickest, agree to daily updates and reviewing every draft, and agree the private thank-you is enough.",
+  "must_hit": [
+    "Picks Dev without asking about workload",
+    "Agrees to daily updates and every-draft review",
+    "Agrees to a quick private thank-you, no specifics"
+  ],
+  "must_avoid": [
+    "Asking about workload",
+    "One review partway",
+    "Telling Dev himself with specifics",
+    "Saying it to the team"
+  ],
+  "max_learner_turns": 10,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "low",
+    "sum_score_max": 5,
+    "markers": {
+      "1": true,
+      "2": true,
+      "3": true
+    }
+  },
+  "intents": [
+    {
+      "id": "A_dev",
+      "when": "Amara explains the request and asks what you think",
+      "do": "Agree with Amara: give it to Dev, he's the quickest.",
+      "examples": [
+        "Sounds right, give it to Dev. He's the quickest."
+      ]
+    },
+    {
+      "id": "A_accept",
+      "when": "Amara pushes or asks you to confirm",
+      "do": "Agree, no pushback.",
+      "examples": [
+        "Yes, Dev. Go ahead."
+      ]
+    },
+    {
+      "id": "B_agree",
+      "when": "Amara proposes daily updates and every-draft review",
+      "do": "Agree it sounds safe.",
+      "examples": [
+        "Yes, daily updates and checking each draft sounds safe. Do that."
+      ]
+    },
+    {
+      "id": "C_agree",
+      "when": "Amara plans a quick private thank-you message",
+      "do": "Agree, nothing more.",
+      "examples": [
+        "That's fine, a quick message is plenty."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Amara recaps and thanks you",
+      "do": "Short warm close, or [[END]].",
+      "examples": [
+        "Great. Talk soon."
+      ]
+    }
+  ],
+  "character": "amara",
+  "order": 3
+}

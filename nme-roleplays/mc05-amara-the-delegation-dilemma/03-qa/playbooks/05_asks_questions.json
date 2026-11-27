@@ -1,0 +1,102 @@
+{
+  "id": "asks_questions",
+  "title": "Asks questions: wants to know who the sales team is, what the report is, then handles the beats",
+  "goal": "Before and between the moves, ask Amara things a first-timer would not know, one at a time: what is the sales team's request for, who is Lena, what is the customer report Dev does, how long Lena has been here. Then make the right moves. Amara should answer plainly and the story should still reach all three beats.",
+  "must_hit": [
+    "Asks at least three real questions about the scene",
+    "Reaches all three beats and makes the right moves",
+    "Amara never decides for the learner"
+  ],
+  "must_avoid": [
+    "Giving in after pushes",
+    "Skipping a beat"
+  ],
+  "max_learner_turns": 18,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "high",
+    "sum_score_min": 22,
+    "markers": {
+      "1": true,
+      "2": true,
+      "3": true
+    }
+  },
+  "intents": [
+    {
+      "id": "Q_scene",
+      "when": "Amara has explained the request, or a beat is open and you do not have a fact",
+      "do": "Ask one plain question about what you were just told (what the report is, who is on the sales team, how long Lena has been here).",
+      "examples": [
+        "Sorry, what is the sales team going to use it for?",
+        "What's the customer report Dev does, exactly?"
+      ]
+    },
+    {
+      "id": "A_ask",
+      "when": "Amara has explained the request, Dev and Lena, and asks what you think",
+      "do": "Ask how much each is carrying and whether either has done this before, BEFORE choosing.",
+      "examples": [
+        "Thanks for checking with me. Before I decide, how much is each of them carrying right now, and has either of them done something like this before?"
+      ]
+    },
+    {
+      "id": "A_choose",
+      "when": "Amara has said Dev is full and working late, Lena has some bandwidth, has done this before and wants something bigger",
+      "do": "Choose Lena and give reasons: she has done it, she has bandwidth, it's what she's asking for, Dev is full.",
+      "examples": [
+        "Then I'd give it to Lena. She's done this before, she has bandwidth this month, and it's the kind of work she's asking for. Dev already has a lot on."
+      ]
+    },
+    {
+      "id": "A_hold",
+      "when": "Amara pushes: 'Are you sure? ... Dev could do it in two days'",
+      "do": "Hold: Lena stays, one short reason, offer help.",
+      "examples": [
+        "I'm sure. It's a good fit for her, and I'll help her get it right."
+      ]
+    },
+    {
+      "id": "B_mid",
+      "when": "Amara proposes a short update every day and looking over each draft, and asks what you think",
+      "do": "Say no to daily updates and every-draft review; one review partway through, and she can come to you for guidance.",
+      "examples": [
+        "I wouldn't do it every day, and I wouldn't look at every draft. That would slow her down and she'd feel watched. Let's have one review partway through, and she can come to me for guidance whenever she's unsure."
+      ]
+    },
+    {
+      "id": "B_hold",
+      "when": "Amara asks 'what if she's stuck and doesn't say anything until it's late?'",
+      "do": "Hold: the review partway is there to catch it early, and you'll make it easy for her to say she's stuck.",
+      "examples": [
+        "That's what the review partway through is for. We'd see early if she's off track, and I'll make it easy for her to tell me if she's stuck."
+      ]
+    },
+    {
+      "id": "C_own",
+      "when": "Amara has told you what Dev did and plans a quick private thank-you message",
+      "do": "Say you will tell Dev yourself, say exactly what he did and why it mattered, and say it in front of the team too.",
+      "examples": [
+        "I'd rather tell Dev myself, and be specific: you stayed late twice to fix the mistakes, and you told the customer about the changed number before they found it. That's why the report went out right. I'd also say it in front of the team."
+      ]
+    },
+    {
+      "id": "C_hold",
+      "when": "Amara asks 'Are you sure? I really don't want him to feel embarrassed'",
+      "do": "Hold: tell Dev first, one on one, ask if he's comfortable with the team hearing it, keep it about what he did.",
+      "examples": [
+        "I'll tell him first, one on one, and ask if he's comfortable with me mentioning it to the team. I'll keep it about what he did, not make a fuss."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Amara recaps and thanks you",
+      "do": "Short warm close, or [[END]].",
+      "examples": [
+        "Great. Talk soon."
+      ]
+    }
+  ],
+  "character": "amara",
+  "order": 5
+}

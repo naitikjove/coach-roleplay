@@ -1,0 +1,43 @@
+{
+  "maxScore": 20,
+  "characterName": "Theo",
+  "competencies": [
+    {
+      "id": "managing_emotions",
+      "name": "Managing Emotions",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Holds the angry reply, then replies owning the miss with a clear next date",
+          "max": 10
+        }
+      ]
+    },
+    {
+      "id": "demonstrating_awareness",
+      "name": "Demonstrating Awareness",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Says what Theo has noticed or asks what is going on, and keeps the Monday-evening deadline",
+          "max": 10
+        }
+      ]
+    }
+  ],
+  "absenceGoals": [],
+  "objectives": [
+    {
+      "n": 1,
+      "text": "Mark emailed to complain and copied his boss, and Theo wants to reply right away. Decide with him what to do about the reply.",
+      "competency": "managing_emotions",
+      "criterion": "True when the manager gives any direction on Theo's reply to Mark (hold it, reply owning the miss, give a next date, blame Devon, soften it, or send it as is) and Theo acknowledges it or moves on to Devon; false for a bare okay, a question alone, or Theo's words alone."
+    },
+    {
+      "n": 2,
+      "text": "Devon, a teammate, has been quiet and his work has slipped. Agree with Theo how he'll talk to him.",
+      "competency": "demonstrating_awareness",
+      "criterion": "True when the manager gives any direction on how Theo should talk to Devon (say what he has noticed, ask what is going on, keep the deadline, go easy, be straight, or tell him it's not good enough) and Theo acknowledges it or the call closes; false for a bare okay or Theo's words alone."
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "id": "prompted",
+  "title": "Prompted: each piece vague first, specific only after Jordan's follow-up",
+  "goal": "Start vague in every beat, then give the specific move only after Jordan asks their follow-up question. Hold after each push.",
+  "must_hit": [
+    "Gives direction only after Jordan asks 'so should I keep running them / which can I say yes to / what should be in it / when'",
+    "Holds after each push"
+  ],
+  "must_avoid": [
+    "Specifics before Jordan's follow-up",
+    "Taking the calls back",
+    "Check-everything"
+  ],
+  "max_learner_turns": 16,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "high",
+    "sum_score_min": 20,
+    "sum_score_max": 28,
+    "markers": {
+      "1": true,
+      "2": true,
+      "3": true
+    }
+  },
+  "intents": [
+    {
+      "id": "open_greet",
+      "when": "Jordan greets only (no topic yet)",
+      "do": "Short warm greeting back only. Do not ask about the work or the call yet.",
+      "examples": [
+        "Good, thanks. How are you?",
+        "Hi Jordan, doing well. What's up?"
+      ]
+    },
+    {
+      "id": "A_vague",
+      "when": "Jordan has explained the call and is wondering if you should take the calls back",
+      "do": "Say something kind and vague, no decision, no question.",
+      "examples": [
+        "Thanks for being upfront about it. I appreciate that."
+      ]
+    },
+    {
+      "id": "A_keep",
+      "when": "Jordan asks 'so should I keep running them?'",
+      "do": "Now decide: keep the calls with Jordan.",
+      "examples": [
+        "Yes, I'd like you to keep running them."
+      ]
+    },
+    {
+      "id": "A_hold",
+      "when": "Jordan asks 'Are you sure?'",
+      "do": "Hold with a short reason.",
+      "examples": [
+        "Yes. You know her best now, and I'll help."
+      ]
+    },
+    {
+      "id": "B_vague",
+      "when": "Jordan describes Sarah's changes and asks if they should keep checking each with you",
+      "do": "Vague: 'use your judgement'.",
+      "examples": [
+        "Just use your judgement."
+      ]
+    },
+    {
+      "id": "B_line",
+      "when": "Jordan asks which ones they can just say yes to",
+      "do": "Give the line: small ones yes, deadline ones to you.",
+      "examples": [
+        "Small things like moving the call, yes. Anything that would make us late, bring to me."
+      ]
+    },
+    {
+      "id": "B_hold",
+      "when": "Jordan asks what if they say yes and it turns out wrong",
+      "do": "Hold.",
+      "examples": [
+        "Then we fix it together."
+      ]
+    },
+    {
+      "id": "C_vague",
+      "when": "Jordan says they will write up everything and send it at the end of the week",
+      "do": "Vague: 'keep it short'.",
+      "examples": [
+        "Maybe keep it shorter than that."
+      ]
+    },
+    {
+      "id": "C_specific",
+      "when": "Jordan asks what should be in it, or when to send it",
+      "do": "Give contents and timing: what was agreed, who is doing it, same day.",
+      "examples": [
+        "What we agreed and who's doing it, sent the same day."
+      ]
+    },
+    {
+      "id": "C_hold",
+      "when": "Jordan asks 'shouldn't I put everything in?'",
+      "do": "Hold.",
+      "examples": [
+        "No, just what we agreed."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Jordan recaps and thanks you",
+      "do": "Short close.",
+      "examples": [
+        "Thanks, Jordan."
+      ]
+    }
+  ],
+  "character": "jordan",
+  "order": 2
+}

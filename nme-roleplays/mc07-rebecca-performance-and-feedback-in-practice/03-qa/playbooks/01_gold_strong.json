@@ -1,0 +1,101 @@
+{
+  "id": "gold_strong",
+  "order": 1,
+  "character": "becca",
+  "title": "Ideal answers, natural speech",
+  "covers": [
+    "gold_strong"
+  ],
+  "goal": "Ideal first-time-manager answers in all four beats.",
+  "must_hit": [],
+  "must_avoid": [
+    "Rebecca proposing an answer",
+    "Rebecca challenging a good answer",
+    "Rebecca inventing facts",
+    "ordinal signposts (First, Second...)"
+  ],
+  "max_learner_turns": 14,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "any",
+    "markers": {
+      "1": "any",
+      "2": "any",
+      "3": "any",
+      "4": "any"
+    },
+    "total": [
+      36,
+      40
+    ],
+    "goals": {
+      "A": [
+        8,
+        10
+      ],
+      "B": [
+        8,
+        10
+      ],
+      "C": [
+        8,
+        10
+      ],
+      "D": [
+        8,
+        10
+      ]
+    },
+    "adherence_flags_max": 0
+  },
+  "intents": [
+    {
+      "id": "warm",
+      "when": "Rebecca opens with a greeting and a check-in",
+      "do": "Brief natural reply, then ask what she needs",
+      "examples": [
+        "Tired, but good. What do you need from me?"
+      ]
+    },
+    {
+      "id": "zara",
+      "when": "Rebecca asks what you'll say in Zara's review",
+      "do": "Answer the item",
+      "examples": [
+        "I'd start with what she delivered, the fourteen sponsors, on budget, and two already signed for next year. Then I'd ask how she saw the week, and agree what doing it well looks like next time, like giving the juniors real pieces of the work."
+      ]
+    },
+    {
+      "id": "debrief",
+      "when": "Rebecca asks what you'll put at the top of the debrief",
+      "do": "Answer the item",
+      "examples": [
+        "I'd put at the top how many people came to the demo and went on to try the product. Then I'd show what we did that brought them in, like the demo invites and the follow-up emails."
+      ]
+    },
+    {
+      "id": "felix",
+      "when": "Rebecca asks what you'll say to Felix",
+      "do": "Answer the item",
+      "examples": [
+        "I'd talk to him tomorrow and say, you changed the approved banner the night before the conference and told no one, and the sponsor's logo was cut off and we had to reprint it. Next time, tell me before you change anything that's been approved."
+      ]
+    },
+    {
+      "id": "omar",
+      "when": "Rebecca asks what you'll do about Ravi",
+      "do": "Answer the item",
+      "examples": [
+        "I'd sit down with him and walk through who signs off on what, and give him the rule. Then I'd check his next few invoices before the payment run to make sure they go to the right person."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Rebecca closes",
+      "do": "Short thanks, goodbye",
+      "examples": [
+        "Will do."
+      ]
+    }
+  ]
+}

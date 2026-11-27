@@ -1,0 +1,43 @@
+{
+  "maxScore": 20,
+  "characterName": "Jenna",
+  "competencies": [
+    {
+      "id": "managing_emotions",
+      "name": "Managing Emotions",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Holds the all-team email, owns how she spoke or her part, and gives a time to talk to Ryan",
+          "max": 10
+        }
+      ]
+    },
+    {
+      "id": "demonstrating_awareness",
+      "name": "Demonstrating Awareness",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Says what Jenna has noticed or asks what is going on, and keeps Friday for the client",
+          "max": 10
+        }
+      ]
+    }
+  ],
+  "absenceGoals": [],
+  "objectives": [
+    {
+      "n": 1,
+      "text": "Jenna wants to email the whole team about Ryan's wrong forecast before lunch. Decide with her what to do about the email.",
+      "competency": "managing_emotions",
+      "criterion": "True when the manager gives any direction on Jenna's email about Ryan (hold it, own it, talk to Ryan, send it, soften it, or blame Finance) and Jenna acknowledges it or moves on to Kayla; false for a bare okay, a question alone, or Jenna's words alone."
+    },
+    {
+      "n": 2,
+      "text": "Kayla, a teammate, asked to move a client deadline and did not say why. Agree with Jenna how she'll answer Kayla.",
+      "competency": "demonstrating_awareness",
+      "criterion": "True when the manager gives any direction on how Jenna should answer Kayla (say what she has noticed, ask what is going on, keep Friday, give her space, say yes, or say no) and Jenna acknowledges it or the call closes; false for a bare okay or Jenna's words alone."
+    }
+  ]
+}

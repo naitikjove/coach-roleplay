@@ -1,0 +1,32 @@
+{
+  "id": "prompted",
+  "order": 2,
+  "title": "Needs Theo's follow-up to complete each move, then holds",
+  "expected": {
+    "A": [
+      8,
+      10
+    ],
+    "B": [
+      8,
+      10
+    ],
+    "total": [
+      16,
+      20
+    ],
+    "close": "strong",
+    "reaches_B": true
+  },
+  "goal": "Give an incomplete first answer, complete it only after Theo's one follow-up question, then hold under the push.",
+  "plan": [
+    "Greet. After the draft: say only 'Don't send that.'",
+    "After Theo's follow-up ('what do I say instead?'): say tell Mark it was our miss and give him a date for the next report.",
+    "Hold under Theo's push (still own it).",
+    "After Theo explains Devon: say only 'Go easy on him, he might have something going on.'",
+    "After Theo's follow-up about the report going out on time: say ask him what's going on and agree he sends the numbers by Monday evening.",
+    "Hold under the push. After Theo's recap say thanks and [[END]]."
+  ],
+  "learner_style": "You are a first-time manager who was just promoted. You speak in short, plain, natural spoken lines (1-2 sentences, under 30 words). You know ONLY what Theo has said so far. Never mention scores, playbooks or that this is practice.",
+  "first_line": "Sure, what's up?"
+}

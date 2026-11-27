@@ -1,0 +1,111 @@
+{
+  "id": "declines_offer",
+  "title": "Names Nina for tips, then refuses Marcus's sit-in offer and says handle it yourself (gave in)",
+  "goal": "Part 1: do NOT agree to stay late. Ask why the same customers keep calling in again; after the woman's story say only 'I see. Thanks for walking me through that.' Part 2: give a clear change plus reason: 'Her note only said can't log in, but she'd told you more. Please write down what customers say they've already tried, so they don't have to call again.' Hold it if he says 'even at lunch?'. Part 3: when Marcus raises the upset customers say only 'Ask Nina for some tips on angry customers.' When he asks 'Like, just ask her what to say?' say 'Yes, just ask her.' When Marcus then offers 'Maybe Nina could sit in on them with me. Would that be okay?' DISAGREE: first ask one detail ('Isn't she busy?') then refuse: 'No, she's got her own calls. Just handle them yourself.'",
+  "must_hit": [
+    "Q1 before agreeing",
+    "Clear change to the note plus reason",
+    "Tips only for Nina",
+    "Refuse Marcus's offer"
+  ],
+  "must_avoid": [
+    "Agreeing to stay late",
+    "Agreeing to the offer",
+    "Proposing the calls with Nina yourself"
+  ],
+  "max_learner_turns": 12,
+  "exit": "natural",
+  "expected": {
+    "score_band": "mid",
+    "sum_score_min": 18,
+    "sum_score_max": 22,
+    "competency_score_range": {
+      "assessing_capabilities": [
+        9,
+        10
+      ],
+      "coaching_team_members": [
+        8,
+        10
+      ],
+      "sharing_knowledge": [
+        0,
+        2
+      ]
+    },
+    "markers": {
+      "1": true,
+      "2": true,
+      "3": true
+    }
+  },
+  "intents": [
+    {
+      "id": "a",
+      "when": "Marcus says the same customers keep calling in again and he'll stay late",
+      "do": "Ask why, do not agree",
+      "examples": [
+        "Why do you think they keep calling in again?"
+      ]
+    },
+    {
+      "id": "ack",
+      "when": "Marcus tells the woman's story",
+      "do": "Short thanks only",
+      "examples": [
+        "I see. Thanks for walking me through that."
+      ]
+    },
+    {
+      "id": "b",
+      "when": "Marcus raises short calls and the tech team idea",
+      "do": "Clear change plus reason",
+      "examples": [
+        "Her note only said can't log in, but she'd told you more. Please write down what customers say they've already tried, so they don't have to call again."
+      ]
+    },
+    {
+      "id": "b_hold",
+      "when": "Marcus asks even at lunch",
+      "do": "Hold",
+      "examples": [
+        "Yes, it saves the repeat calls."
+      ]
+    },
+    {
+      "id": "c1",
+      "when": "Marcus raises the upset customers",
+      "do": "Tips only",
+      "examples": [
+        "Ask Nina for some tips on angry customers."
+      ]
+    },
+    {
+      "id": "c2",
+      "when": "Marcus asks like just ask her what to say",
+      "do": "Agree",
+      "examples": [
+        "Yes, just ask her."
+      ]
+    },
+    {
+      "id": "c_offer",
+      "when": "Marcus offers that Nina sit in with him",
+      "do": "Disagree: one detail question, then refuse",
+      "examples": [
+        "Isn't she busy?",
+        "No, she's got her own calls. Just handle them yourself."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Marcus wraps up",
+      "do": "Bye",
+      "examples": [
+        "Okay, bye."
+      ]
+    }
+  ],
+  "character": "marcus",
+  "order": 6
+}

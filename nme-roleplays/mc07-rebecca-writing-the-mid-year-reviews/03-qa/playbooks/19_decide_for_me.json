@@ -1,0 +1,57 @@
+{
+  "id": "decide_for_me",
+  "order": 19,
+  "character": "becca",
+  "title": "Always asks Rebecca to decide",
+  "covers": [
+    "decide_for_me"
+  ],
+  "goal": "In every item only ask Rebecca what she'd do and never give your own plan, even when asked repeatedly; the story must still move and close with no recap.",
+  "must_hit": [
+    "Story moves on; close has no recap"
+  ],
+  "must_avoid": [
+    "Rebecca proposing a label, list, note or plan",
+    "Rebecca inventing facts",
+    "Rebecca giving advice or approval"
+  ],
+  "max_learner_turns": 30,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "any",
+    "markers": {
+      "1": "any",
+      "2": "any",
+      "3": "any",
+      "4": "any"
+    },
+    "total": [
+      0,
+      10
+    ],
+    "goals": {},
+    "adherence_flags_max": 0
+  },
+  "intents": [
+    {
+      "id": "warm",
+      "when": "Rebecca opens with a greeting",
+      "do": "Brief warm reply",
+      "examples": [
+        "Good, thanks. What's up?",
+        "Pretty good, thanks. Go ahead."
+      ]
+    },
+    {
+      "id": "decide",
+      "when": "Every Rebecca question",
+      "do": "Ask her to decide, no plan",
+      "examples": [
+        "What would you do?",
+        "I'm not sure, what do you think?",
+        "Can't you just tell me?",
+        "You decide."
+      ]
+    }
+  ]
+}

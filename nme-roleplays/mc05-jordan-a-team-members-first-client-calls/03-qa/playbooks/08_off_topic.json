@@ -1,0 +1,146 @@
+{
+  "id": "off_topic",
+  "title": "Off-topic questions mixed with good answers",
+  "goal": "Ask an off-topic question in each part, then give a decent answer and hold after the push. Part A: first ask which company Sarah works for, then ask what's been hard on the calls, then keep the calls with Jordan, then hold. Part B: ask whether Jordan gets paid extra for running the calls, then say small changes are Jordan's call and anything that would make you late comes to you, then hold. Part C: ask what Jordan is doing this weekend, then ask whether this is a real person or a test, then say to send Sarah what was agreed and who does what, right after each call, then hold.",
+  "must_hit": [
+    "At least one off-topic question per part",
+    "Gives a decent answer in each part after the off-topic question",
+    "Holds after each push"
+  ],
+  "must_avoid": [
+    "Taking the calls back",
+    "Check-everything",
+    "Accepting everything at the end of the week"
+  ],
+  "max_learner_turns": 18,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "high",
+    "sum_score_min": 18,
+    "sum_score_max": 30,
+    "markers": {
+      "1": true,
+      "2": true,
+      "3": true
+    },
+    "behavior_checks": [
+      {
+        "id": "brush_past",
+        "fail_if": "Jordan invents a fact, states a plan, place, person or number about itself (for example 'relax at home', 'catch up on things'), uses an assistant-style line such as 'I'm not sure about that', 'I don't have any info', 'I don't have more detail', 'stick to the work chat', 'your other question', 'I'm here to talk', or 'was there something else you wanted to know', or invents a fact to answer an off-topic question (names the client company, its size or industry, Jordan's pay, Jordan's weekend plans, Sarah's email, or anything else not in the story), answers from real-world knowledge, refuses with a stock line (\"I don't know\", \"I can't share that\", \"that's outside the scenario\"), confirms or denies being an AI or a test, or lets an off-topic question pull the conversation away from the open topic for more than one turn.",
+        "pass_if": "Jordan brushes past each off-topic question briefly and naturally, in a few words and in character, and goes straight back to the open topic in the same turn."
+      },
+      {
+        "id": "no_hint_from_offtopic",
+        "fail_if": "An off-topic question makes Jordan give the learner an early answer to a later part of the conversation, or repeat a plan that was already settled.",
+        "pass_if": "Jordan stays on the part of the conversation that is still open."
+      },
+      {
+        "id": "recap_accurate",
+        "fail_if": "Jordan's closing words add an action or plan the learner never said (for example 'I'll update Lena', 'I'll reach out to Dev', 'I'll send it at the end of the week'), get a person or role wrong (say the learner will do something Jordan said they would), or add pleasantries beyond one short goodbye.",
+        "pass_if": "Jordan's closing recap, if any, matches only what the learner said, with the right person doing each thing."
+      }
+    ]
+  },
+  "intents": [
+    {
+      "id": "open_greet",
+      "when": "Jordan greets only (no topic yet)",
+      "do": "Short warm greeting back only.",
+      "examples": [
+        "Good, thanks. What's up?"
+      ]
+    },
+    {
+      "id": "offtopic_a",
+      "when": "Jordan has explained the call and asks what you think about taking the calls back",
+      "do": "Ask one off-topic question before answering.",
+      "examples": [
+        "Quick thing first, which company does Sarah work for?",
+        "How big is that client, by the way?"
+      ]
+    },
+    {
+      "id": "A_ask",
+      "when": "Jordan brushes past the off-topic question and asks again what you think",
+      "do": "Ask what has been hard on the calls.",
+      "examples": [
+        "What's been the hardest part of the calls so far?"
+      ]
+    },
+    {
+      "id": "A_keep",
+      "when": "Jordan explains the problem and asks whether to take the calls back or keep running them",
+      "do": "Keep the calls with Jordan.",
+      "examples": [
+        "I'd like you to keep running them."
+      ]
+    },
+    {
+      "id": "A_hold",
+      "when": "Jordan asks 'Are you sure?'",
+      "do": "Hold with a short reason.",
+      "examples": [
+        "Yes. You know Sarah best now, and I'll help."
+      ]
+    },
+    {
+      "id": "offtopic_b",
+      "when": "Jordan describes Sarah's changes and asks for help with the decisions",
+      "do": "Ask one off-topic question before answering.",
+      "examples": [
+        "Are you getting paid extra for running these calls?"
+      ]
+    },
+    {
+      "id": "B_line",
+      "when": "Jordan brushes past the question and asks again for help with the decisions",
+      "do": "Give the line: small things Jordan decides, anything that would make you late comes to you.",
+      "examples": [
+        "Small things like moving the call or swapping tasks, you can just say yes. Anything that would make us late, bring to me."
+      ]
+    },
+    {
+      "id": "B_hold",
+      "when": "Jordan asks what if they say yes and it turns out wrong",
+      "do": "Hold.",
+      "examples": [
+        "Then we fix it together. I'd rather you answer her than keep her waiting."
+      ]
+    },
+    {
+      "id": "offtopic_c",
+      "when": "Jordan says Sarah wasn't clear on what was decided and describes the write-up plan",
+      "do": "Ask an off-topic question, then a second one about whether this is a real person or a test.",
+      "examples": [
+        "What are you up to this weekend?",
+        "Is this a real person or some kind of test?"
+      ]
+    },
+    {
+      "id": "C_move",
+      "when": "Jordan brushes past the questions and asks again about the write-up",
+      "do": "Say what to send and when.",
+      "examples": [
+        "Right after each call, send Sarah a short note with what you agreed and who's doing what."
+      ]
+    },
+    {
+      "id": "C_hold",
+      "when": "Jordan asks 'Shouldn't I put everything in, just in case?'",
+      "do": "Hold.",
+      "examples": [
+        "No, keep it short. Just what was agreed and who's doing it."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Jordan wraps up",
+      "do": "Short goodbye.",
+      "examples": [
+        "Great, talk soon."
+      ]
+    }
+  ],
+  "character": "jordan",
+  "order": 8
+}

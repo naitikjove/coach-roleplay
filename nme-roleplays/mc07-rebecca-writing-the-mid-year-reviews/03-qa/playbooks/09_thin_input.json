@@ -1,0 +1,59 @@
+{
+  "id": "thin_input",
+  "order": 9,
+  "character": "becca",
+  "title": "One-word and vague answers throughout",
+  "covers": [
+    "thin_input"
+  ],
+  "goal": "Only answer yeah, okay, I'm not sure, maybe, let's see.",
+  "must_hit": [
+    "Story moves on and closes with no recap"
+  ],
+  "must_avoid": [
+    "Rebecca proposing a label, list, note or plan",
+    "Rebecca inventing facts",
+    "Rebecca giving advice or approval"
+  ],
+  "max_learner_turns": 28,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "any",
+    "markers": {
+      "1": "any",
+      "2": "any",
+      "3": "any",
+      "4": "any"
+    },
+    "total": [
+      0,
+      8
+    ],
+    "goals": {},
+    "adherence_flags_max": 0
+  },
+  "intents": [
+    {
+      "id": "warm",
+      "when": "Rebecca opens with a greeting",
+      "do": "Brief warm reply",
+      "examples": [
+        "Good, thanks. What's up?",
+        "Pretty good, thanks. Go ahead."
+      ]
+    },
+    {
+      "id": "vague",
+      "when": "Every Rebecca question",
+      "do": "Answer only with a one-word or vague reply",
+      "examples": [
+        "Yeah.",
+        "Okay.",
+        "I'm not sure.",
+        "Maybe.",
+        "Let's see.",
+        "Mm, okay."
+      ]
+    }
+  ]
+}

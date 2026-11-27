@@ -1,0 +1,61 @@
+{
+  "id": "passive_story_moves",
+  "title": "Passive: learner only says okay / yeah / mm-hm; the story must still move on its own",
+  "goal": "Never ask a question, never decide anything, never add detail. Reply to every Jordan message with only a bare acknowledgement: 'okay', 'yeah', 'mm-hm', 'sure', 'right'. Jordan should still reach all three topics and close the call without you.",
+  "must_hit": [
+    "Only bare acknowledgements from the learner, whole call"
+  ],
+  "must_avoid": [
+    "Any question",
+    "Any decision",
+    "Any detail about the calls, changes or the note"
+  ],
+  "max_learner_turns": 12,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "low",
+    "sum_score_max": 3,
+    "markers": {
+      "1": "any",
+      "2": "any",
+      "3": "any"
+    },
+    "behavior_checks": [
+      {
+        "id": "jordan_moves_to_B_and_C",
+        "fail_if": "Jordan never brings up Sarah's change requests (Thursday move, task order, extra report) or never brings up what to send after calls, or stops and only repeats the question about the calls without moving to the next topic.",
+        "pass_if": "Jordan, without the learner asking, gives a follow-up and then moves on, raising BOTH Sarah's changes AND what to send after the calls."
+      },
+      {
+        "id": "jordan_closes_the_call",
+        "fail_if": "The call never reaches a goodbye or close, or Jordan keeps asking the same thing in a loop.",
+        "pass_if": "Jordan ends the call with a short thanks/goodbye after covering the topics."
+      },
+      {
+        "id": "no_invented_decisions",
+        "fail_if": "Jordan says the learner agreed to, decided or promised something concrete that the learner never said (for example 'thanks for agreeing I can say yes to small changes').",
+        "pass_if": "Jordan does not claim any decision the learner did not state; bare okays are not treated as agreements."
+      },
+      {
+        "id": "no_coaching",
+        "fail_if": "Jordan tells the learner what the answer should be (what a manager should decide, what the note should contain).",
+        "pass_if": "Jordan only asks and describes their situation; they never suggest the fix."
+      }
+    ]
+  },
+  "intents": [
+    {
+      "id": "ack",
+      "when": "Any Jordan message",
+      "do": "Reply with only ONE of: okay / yeah / mm-hm / sure / right. Nothing else. Vary it. Use [[END]] only after Jordan says goodbye.",
+      "examples": [
+        "Okay.",
+        "Yeah.",
+        "Mm-hm.",
+        "Sure."
+      ]
+    }
+  ],
+  "character": "jordan",
+  "order": 6
+}

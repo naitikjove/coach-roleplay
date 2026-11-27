@@ -1,0 +1,30 @@
+{
+  "id": "mixed_weak",
+  "order": 2,
+  "title": "Stops the email with nothing instead; kind but vague about Kayla",
+  "expected": {
+    "A": [
+      2,
+      4
+    ],
+    "B": [
+      2,
+      4
+    ],
+    "total": [
+      4,
+      8
+    ],
+    "close": "either",
+    "reaches_B": true
+  },
+  "goal": "Be vague and warm but give no concrete move.",
+  "plan": [
+    "Greet. Say 'Don't send that.' and nothing more.",
+    "If Jenna asks what to do about Ryan instead: say 'I don't know, just maybe give it a bit.'",
+    "For Kayla: say 'Be kind to her.' If Jenna says the client still needs the report Friday: say 'Just be nice about it.'",
+    "[[END]] after the close."
+  ],
+  "learner_style": "You are a first-time manager who was just promoted. You speak in short, plain, natural spoken lines (1-2 sentences, under 30 words). You know ONLY what Jenna has said so far. Never mention scores, playbooks or that this is practice.",
+  "first_line": "Sure, what's up?"
+}

@@ -1,0 +1,103 @@
+{
+  "id": "gold_strong",
+  "order": 1,
+  "character": "becca",
+  "title": "Ideal first-time manager, natural speech, all four beats",
+  "covers": [
+    "gold_strong"
+  ],
+  "goal": "Ideal answers in all four beats, plain speech.",
+  "must_hit": [
+    "Strong recap with only the learner's own words"
+  ],
+  "must_avoid": [
+    "Rebecca proposing a label, list, note or plan",
+    "Rebecca inventing facts",
+    "Rebecca giving advice or approval"
+  ],
+  "max_learner_turns": 16,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "any",
+    "markers": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true
+    },
+    "total": [
+      36,
+      40
+    ],
+    "goals": {
+      "A": [
+        8,
+        10
+      ],
+      "B": [
+        8,
+        10
+      ],
+      "C": [
+        8,
+        10
+      ],
+      "D": [
+        8,
+        10
+      ]
+    },
+    "adherence_flags_max": 0
+  },
+  "intents": [
+    {
+      "id": "warm",
+      "when": "Rebecca opens with a greeting",
+      "do": "Brief warm reply",
+      "examples": [
+        "Good, thanks. What's up?",
+        "Pretty good, thanks. Go ahead."
+      ]
+    },
+    {
+      "id": "jamie",
+      "when": "Rebecca asks what you plan to do about Jamie's mistakes",
+      "do": "Answer the item",
+      "examples": [
+        "I'd write down what happened, six weeks out of eight, with a couple of examples. Then I'd talk it through with her, hear her side, and agree what a good email looks like."
+      ]
+    },
+    {
+      "id": "summary",
+      "when": "Rebecca asks what you will put in the leadership summary",
+      "do": "Answer the item",
+      "examples": [
+        "I'd start with how many customers we kept compared with last half, then add a few things the team did that helped."
+      ]
+    },
+    {
+      "id": "chloe",
+      "when": "Rebecca asks what you will say to Chloe",
+      "do": "Answer the item",
+      "examples": [
+        "I'd catch her this week, just the two of us. I'd say, On the call last week you jumped in a few times and the client went quiet. Next time, try letting them finish first."
+      ]
+    },
+    {
+      "id": "dylan",
+      "when": "Rebecca explains Dylan's late report and the software and asks what you will do",
+      "do": "Answer the item",
+      "examples": [
+        "I'd get him trained on the software, ask for the report on time from next week, and check in with him every week for a month."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Rebecca closes",
+      "do": "Short thanks, goodbye",
+      "examples": [
+        "Will do. Thanks, Rebecca."
+      ]
+    }
+  ]
+}

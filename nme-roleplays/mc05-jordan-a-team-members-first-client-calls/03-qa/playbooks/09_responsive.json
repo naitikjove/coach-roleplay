@@ -1,0 +1,189 @@
+{
+  "id": "responsive",
+  "title": "Responsive: different in-story questions and an unexpected suggestion at every part",
+  "goal": "At each part ask different in-story questions that have answers in the story, make one unexpected suggestion, then give a decent answer and hold. Part A: ask what Sarah's email said exactly, then how many calls Jordan has run and when the next one is, then how Sarah took it, then what has been hard on the calls, then suggest keeping the next call to 30 minutes with a short agenda sent the day before, then keep the calls with Jordan, then hold. Part B: ask whether moving the call to Thursday changes anything, then what happened with the extra report, then say small things Jordan decides and anything that makes you late comes to you, then hold. Part C: ask what Sarah wasn't clear about, then when the project is due, then say to send Sarah what was agreed and who does what right after each call, then hold.",
+  "must_hit": [
+    "Asks at least two different in-story questions in each part",
+    "Makes the unexpected suggestion in Part A",
+    "Gives a decent answer in each part and holds after each push"
+  ],
+  "must_avoid": [
+    "Taking the calls back",
+    "Check-everything",
+    "Accepting everything at the end of the week"
+  ],
+  "max_learner_turns": 22,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "high",
+    "sum_score_min": 18,
+    "sum_score_max": 30,
+    "markers": {
+      "1": true,
+      "2": true,
+      "3": true
+    },
+    "behavior_checks": [
+      {
+        "id": "answers_the_question_asked",
+        "fail_if": "For any direct in-story question the learner asks, Jordan's reply skips the matching fact, answers a different question, answers with only the next scripted item, or says 'I'm not sure'/'I don't know' when the story has an answer. The facts that must be given: email = full hour instead of half an hour and Sarah wasn't clear on what was decided; calls so far = two, next call = next week; how Sarah took it = polite, Jordan worried about trust; Thursday = just one day later; extra report = Jordan said they'd check, it got dropped, Sarah hasn't asked again; project due = about a month.",
+        "pass_if": "Each question gets its matching fact from Jordan, in a short natural answer, before anything else."
+      },
+      {
+        "id": "reacts_to_the_suggestion",
+        "fail_if": "When the learner makes an unexpected suggestion (keep the next call to 30 minutes and send a short agenda the day before), Jordan ignores it, repeats the earlier worry or opener unchanged, or jumps to the next scripted part without reacting to it.",
+        "pass_if": "Jordan acknowledges the suggestion in a few words in their own way, then stays on the open item."
+      },
+      {
+        "id": "no_scripted_dump",
+        "fail_if": "In the same reply as a fact answer, Jordan opens a new part of the story (new requests, the write-up plan, the thank-you plan) or repeats a line already said, while the current part is still open.",
+        "pass_if": "Jordan answers, then stays on the part that is still open. A new part opens only after the learner has settled the current one."
+      },
+      {
+        "id": "replies_differ_with_questions",
+        "fail_if": "Jordan's replies to two different questions are the same or nearly the same.",
+        "pass_if": "Jordan's replies are clearly different and each fits its own question."
+      }
+    ]
+  },
+  "intents": [
+    {
+      "id": "open_greet",
+      "when": "Jordan greets only (no topic yet)",
+      "do": "Short warm greeting back only.",
+      "examples": [
+        "Good, thanks. What's up?"
+      ]
+    },
+    {
+      "id": "Q_email",
+      "when": "Jordan has explained the call and asks what you think about taking the calls back",
+      "do": "Ask what exactly Sarah said in her email.",
+      "examples": [
+        "What exactly did Sarah say in her email?"
+      ]
+    },
+    {
+      "id": "Q_calls",
+      "when": "Jordan has told you what Sarah's email said",
+      "do": "Ask how many calls Jordan has run so far and when the next one is.",
+      "examples": [
+        "How many calls have you run so far, and when's the next one?"
+      ]
+    },
+    {
+      "id": "Q_took",
+      "when": "Jordan has said how many calls and when the next one is",
+      "do": "Ask how Sarah took it.",
+      "examples": [
+        "How did Sarah take it, was she upset?"
+      ]
+    },
+    {
+      "id": "A_ask",
+      "when": "Jordan has said how Sarah took it",
+      "do": "Ask what has been hard on the calls.",
+      "examples": [
+        "What's been the hardest part of running them?"
+      ]
+    },
+    {
+      "id": "A_suggest",
+      "when": "Jordan has explained that they never know if they can say yes to changes and asks whether to take the calls back or keep running them",
+      "do": "Before deciding, make an unexpected suggestion about the time problem.",
+      "examples": [
+        "What if you keep the next call to thirty minutes and send her a short agenda the day before?"
+      ]
+    },
+    {
+      "id": "A_keep",
+      "when": "Jordan has reacted to your suggestion",
+      "do": "Keep the calls with Jordan.",
+      "examples": [
+        "I'd like you to keep running them."
+      ]
+    },
+    {
+      "id": "A_hold",
+      "when": "Jordan asks 'Are you sure?'",
+      "do": "Hold with a short reason.",
+      "examples": [
+        "Yes. You know Sarah best now, and I'll help."
+      ]
+    },
+    {
+      "id": "Q_thursday",
+      "when": "Jordan describes Sarah's changes and asks for help with the decisions",
+      "do": "Ask whether moving the call to Thursday changes anything.",
+      "examples": [
+        "If she wants to move the call to Thursday, does that change anything?"
+      ]
+    },
+    {
+      "id": "Q_report",
+      "when": "Jordan has answered about Thursday",
+      "do": "Ask what happened with the extra report.",
+      "examples": [
+        "And what happened with the extra report?"
+      ]
+    },
+    {
+      "id": "B_line",
+      "when": "Jordan has answered about the extra report",
+      "do": "Give the line: small things Jordan decides, anything that would make you late comes to you.",
+      "examples": [
+        "Small things like moving the call or swapping tasks, you can say yes. Anything that would make us late, bring to me."
+      ]
+    },
+    {
+      "id": "B_hold",
+      "when": "Jordan asks what if they say yes and it turns out wrong",
+      "do": "Hold.",
+      "examples": [
+        "Then we fix it together. I'd rather you answer her than keep her waiting."
+      ]
+    },
+    {
+      "id": "Q_clear",
+      "when": "Jordan says Sarah wasn't clear on what had been decided and describes the write-up plan",
+      "do": "Ask what exactly Sarah wasn't clear about.",
+      "examples": [
+        "What exactly wasn't she clear about?"
+      ]
+    },
+    {
+      "id": "Q_due",
+      "when": "Jordan has answered about what Sarah wasn't clear on",
+      "do": "Ask when the project is due.",
+      "examples": [
+        "When is the project due, again?"
+      ]
+    },
+    {
+      "id": "C_move",
+      "when": "Jordan has answered about the project due date",
+      "do": "Say what to send and when.",
+      "examples": [
+        "Right after each call, send Sarah a short note with what you agreed and who's doing what."
+      ]
+    },
+    {
+      "id": "C_hold",
+      "when": "Jordan asks 'Shouldn't I put everything in, just in case?'",
+      "do": "Hold.",
+      "examples": [
+        "No, keep it short. Just what was agreed and who's doing it."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Jordan wraps up",
+      "do": "Short goodbye.",
+      "examples": [
+        "Great, talk soon."
+      ]
+    }
+  ],
+  "character": "jordan",
+  "order": 9
+}

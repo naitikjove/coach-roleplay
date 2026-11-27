@@ -1,0 +1,60 @@
+{
+  "title": "The Follow-Ups That Keep Slipping",
+  "practiceModal": {
+    "eyebrow": "Practice Roleplay",
+    "headline": "Show how you'd help a team member whose customers keep calling in again",
+    "subtitle": "unchanged (keep production)",
+    "chips": "unchanged (keep production)",
+    "note": "MC1 headline replacement for this practice slot only. Not the scenario title; keep title = The Follow-Ups That Keep Slipping. Do not label this string as Entry card body."
+  },
+  "phaseLabel": "Practice Roleplay Scenario",
+  "characterName": "Marcus",
+  "characterRole": "Direct report",
+  "characterAvatar": "/arena/exp4/characters/marcus.jpg",
+  "characterImagePack": "assets/marcus.jpg",
+  "characterId": "marcus",
+  "scenario": "You manage a small customer support team. Marcus takes calls from customers who have a problem. When he can't fix it on the call, he writes a short note, and the tech team fixes it from that. Later, Marcus calls the customer to check that it worked. Lately his follow-up calls have been late, and the same customers keep calling in again. Marcus asked to talk to you. Help him work out what to do.",
+  "objectives": [
+    "Marcus is behind on his follow-up calls and plans to stay late to catch up. Decide with him what to do.",
+    "Marcus keeps his calls short so customers don't wait. Agree with him what, if anything, should change on his calls.",
+    "Three upset customers are about to hear from Marcus. Agree with him how he handles those calls."
+  ],
+  "passThreshold": 7,
+  "competencies": [
+    {
+      "id": "assessing_capabilities",
+      "name": "Assessing Capabilities",
+      "mustWatchLessonId": 41970,
+      "mustWatchTitle": "How to Identify Strengths and Gaps in the Team"
+    },
+    {
+      "id": "coaching_team_members",
+      "name": "Coaching Team Members",
+      "mustWatchLessonId": 41978,
+      "mustWatchTitle": "How to Give Real-Time Feedback that Works"
+    },
+    {
+      "id": "sharing_knowledge",
+      "name": "Sharing Knowledge",
+      "mustWatchLessonId": 41975,
+      "mustWatchTitle": "Promoting Peer Learning and Collaboration"
+    }
+  ],
+  "course": {
+    "program": "New Manager Essentials",
+    "lessonTitle": "Coaching and Developing Teams",
+    "lessonSlug": "coaching-and-developing-teams",
+    "briefPath": "/coaching-and-developing-teams/practice-roleplay?step=brief"
+  },
+  "sceneId": "scene-mc6-marcus-practice",
+  "scenarioKey": "marcus-practice",
+  "whoYouRole": "Manager",
+  "whoYouBody": "You manage a small support team. Marcus and Nina report to you.",
+  "whoThemRole": "Direct report",
+  "whoThemBody": "Takes calls from customers and calls them later to check. Friendly and quick.",
+  "scene": {
+    "headline": "The Follow-Ups That Keep Slipping",
+    "formatNote": "Microphone required",
+    "ctaLabel": "Join Conversation"
+  }
+}

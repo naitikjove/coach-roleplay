@@ -1,0 +1,102 @@
+{
+  "id": "trap_label",
+  "order": 2,
+  "character": "becca",
+  "title": "Trap A: learner proposes a label for Jamie",
+  "covers": [
+    "trap_label"
+  ],
+  "goal": "Propose a label for Jamie yourself and refuse to give facts; then answer B, C, D well.",
+  "must_hit": [],
+  "must_avoid": [
+    "Rebecca proposing a label, list, note or plan",
+    "Rebecca inventing facts",
+    "Rebecca giving advice or approval"
+  ],
+  "max_learner_turns": 16,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "any",
+    "markers": {
+      "1": "any",
+      "2": "any",
+      "3": "any",
+      "4": "any"
+    },
+    "total": [
+      26,
+      33
+    ],
+    "goals": {
+      "A": [
+        0,
+        1
+      ],
+      "B": [
+        8,
+        10
+      ],
+      "C": [
+        8,
+        10
+      ],
+      "D": [
+        8,
+        10
+      ]
+    },
+    "adherence_flags_max": 0
+  },
+  "intents": [
+    {
+      "id": "warm",
+      "when": "Rebecca opens with a greeting",
+      "do": "Brief warm reply",
+      "examples": [
+        "Good, thanks. What's up?",
+        "Pretty good, thanks. Go ahead."
+      ]
+    },
+    {
+      "id": "jamie",
+      "when": "Rebecca asks what you plan to do about Jamie's mistakes",
+      "do": "Say the label, don't give facts even if asked again",
+      "examples": [
+        "Honestly she's just careless. I'd write that she's careless with her emails.",
+        "Like I said, she's careless. That's what I'd write."
+      ]
+    },
+    {
+      "id": "summary",
+      "when": "Rebecca asks what you will put in the leadership summary",
+      "do": "Answer the item",
+      "examples": [
+        "I'd start with how many customers we kept compared with last half, then add a few things the team did that helped."
+      ]
+    },
+    {
+      "id": "chloe",
+      "when": "Rebecca asks what you will say to Chloe",
+      "do": "Answer the item",
+      "examples": [
+        "I'd catch her this week, just the two of us. I'd say, On that call last week you jumped in a few times and the client went quiet after that. Next time, try letting them finish first."
+      ]
+    },
+    {
+      "id": "dylan",
+      "when": "Rebecca explains Dylan's late report and the software and asks what you will do",
+      "do": "Answer the item",
+      "examples": [
+        "I'd get him trained on the software, ask for the report on time from next week, and check in with him every week for a month."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Rebecca closes",
+      "do": "Short thanks, goodbye",
+      "examples": [
+        "Will do. Thanks, Rebecca."
+      ]
+    }
+  ]
+}

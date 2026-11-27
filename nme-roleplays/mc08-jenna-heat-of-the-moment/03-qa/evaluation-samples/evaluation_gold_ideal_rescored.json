@@ -1,0 +1,65 @@
+{
+  "sumScore": 20,
+  "maxScore": 20,
+  "percent": 100,
+  "score": 10,
+  "summary": "You came across as a calm, fair manager who gathers facts before steering. Asking what went wrong first shows you look for the cause, not just the symptom. The thread across both parts is that you name the standard and the support together. That approach teaches Jenna to hold people accountable without leaving them alone. Your growth edge is agreeing how new figures reach Ryan next time, so the same mistake cannot catch him out a fourth time.",
+  "nextStep": {
+    "headline": "Agree how new numbers reach Ryan next time",
+    "body": "Strong managers fix the cause as well as the hurt. After you repair things with a teammate, agree who passes on new figures and when. Then the same mistake cannot catch Ryan out a fourth time."
+  },
+  "competencies": {
+    "managing_emotions": {
+      "score": 10,
+      "level": "strong",
+      "administered": true,
+      "goals": [
+        {
+          "id": "G1",
+          "evidence": {
+            "said": "asked what went wrong; held the email; told Jenna to own how she spoke and her part in the miss; gave a time to talk to Ryan (this afternoon at two)",
+            "missing": "",
+            "jennaAsked": "",
+            "afterJennaAsked": false,
+            "hedgedOrWalkedBack": false,
+            "gaveIn": false
+          },
+          "points": 10,
+          "max": 10,
+          "range": "8-10",
+          "check": "top",
+          "quote": "Don't send that email. You need to tell Ryan you were out of line and that part of this was your miss, then offer to sit down with him this afternoon at two."
+        }
+      ],
+      "note": "Strong managers stay composed and take responsibility first, because owning your share earns the right to hold others to the standard. You stopped the email and told Jenna to own how she spoke and her part in the old figures, which showed her that fairness starts with the leader. That gave Ryan a repair he could trust and taught Jenna that accountability and humility go together.",
+      "youSaid": "Don't send that email. You need to tell Ryan you were out of line and that part of this was your miss, then offer to sit down with him this afternoon at two.",
+      "tryInstead": "After you sit down with Ryan, agree who passes on new figures from Finance and when they reach him. Then the old numbers cannot happen again."
+    },
+    "demonstrating_awareness": {
+      "score": 10,
+      "level": "strong",
+      "administered": true,
+      "goals": [
+        {
+          "id": "G1",
+          "evidence": {
+            "said": "told Jenna to say what she has noticed (quieter mood and mistakes); told her to ask what's going on and listen; kept Friday for the client (first version by Friday)",
+            "missing": "",
+            "jennaAsked": "",
+            "afterJennaAsked": false,
+            "hedgedOrWalkedBack": false,
+            "gaveIn": false
+          },
+          "points": 10,
+          "max": 10,
+          "range": "8-10",
+          "check": "top",
+          "quote": "Don't just say yes yet—tell her what you've noticed, the quieter mood and the mistakes, then ask what's going on and listen."
+        }
+      ],
+      "note": "Strong managers name what they have noticed in neutral facts and invite the person's view before offering solutions. You told Jenna to say what she has seen and ask what is going on, which shows you gather the story before deciding. That gave Kayla support without removing the Friday deadline, so she knows the standard still stands while things are hard.",
+      "youSaid": "Listening isn't lowering the bar—the client still gets a first version by Friday, and you can do a quick check-in Wednesday to help her stay on track.",
+      "tryInstead": "After you listen to Kayla, agree one or two short aims for the next two weeks. Then she knows what good looks like while things are hard."
+    }
+  }
+}

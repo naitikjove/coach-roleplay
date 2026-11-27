@@ -1,0 +1,196 @@
+{
+  "lockVersion": "1.0.0-becca-mc7-vA-locked",
+  "lockDate": "2026-11-26",
+  "id": "scene-mc7-becca-practice",
+  "slug": "exp7-rebecca-before-reviews-go-in",
+  "title": "Writing the Mid-Year Reviews",
+  "type": "hot_seat",
+  "mode": "voice_only",
+  "primaryCharacter": "becca",
+  "characterId": "becca",
+  "voice": "shimmer",
+  "realtimeReasoningEffort": "low",
+  "actorPromptFile": "becca_mc7.actor.vA.prompt.txt",
+  "analyzerPromptFile": "becca_mc7.analyzer.vA.prompt.txt",
+  "analyzerPromptFileV2": "becca_mc7.analyzer.vA.prompt.txt",
+  "promptVariants": {
+    "A": {
+      "actorPromptFile": "becca_mc7.actor.vA.prompt.txt",
+      "analyzerPromptFile": "becca_mc7.analyzer.vA.prompt.txt"
+    }
+  },
+  "lessonRef": "mc7-practice",
+  "lessonTitle": "How to Manage Team Performance and Feedback",
+  "lessonSlug": "how-to-manage-team-performance-and-feedback",
+  "sourceLessons": [
+    {
+      "beat": "A",
+      "lessonId": 41981,
+      "title": "Running Productive Performance Reviews",
+      "competency": "conducting_performance_reviews"
+    },
+    {
+      "beat": "B",
+      "lessonId": 41503,
+      "title": "Must-Have for Success: Focus Your Team on Results",
+      "competency": "driving_results"
+    },
+    {
+      "beat": "C",
+      "lessonId": 41985,
+      "title": "How to Give Constructive Feedback",
+      "competency": "giving_feedback"
+    },
+    {
+      "beat": "D",
+      "lessonId": 41984,
+      "title": "Diagnosing Performance Gaps",
+      "competency": "addressing_underperformance"
+    }
+  ],
+  "skills": [
+    "conducting_performance_reviews",
+    "driving_results",
+    "giving_feedback",
+    "addressing_underperformance"
+  ],
+  "competencies": [
+    {
+      "id": "conducting_performance_reviews",
+      "name": "Conducting Performance Reviews"
+    },
+    {
+      "id": "driving_results",
+      "name": "Driving Results"
+    },
+    {
+      "id": "giving_feedback",
+      "name": "Giving Feedback"
+    },
+    {
+      "id": "addressing_underperformance",
+      "name": "Addressing Underperformance"
+    }
+  ],
+  "turnLimits": {
+    "minLearnerTurns": 8,
+    "softMaxLearnerTurns": 18,
+    "hardMaxLearnerTurns": 22,
+    "absoluteMaxLearnerTurns": 26
+  },
+  "checklistItems": [
+    {
+      "id": "cpr_review",
+      "label": "Jamie's customer emails had mistakes in six of the last eight weeks. Decide what you'll do about it in her review.",
+      "critical": true
+    },
+    {
+      "id": "dr_summary",
+      "label": "Leadership wants to know if your team's work is helping keep customers. Decide what the summary will show.",
+      "critical": true
+    },
+    {
+      "id": "gf_chloe",
+      "label": "Chloe kept cutting in while a client was talking on a call last week. Decide what you'll say to her.",
+      "critical": true
+    },
+    {
+      "id": "au_dylan",
+      "label": "Dylan's weekly report has been late every week this month. Decide what you'll do about it.",
+      "critical": true
+    }
+  ],
+  "headlineLabels": {
+    "nailed_it": "Nailed it",
+    "solid": "Solid",
+    "try_again": "Try again"
+  },
+  "scenarioSummary": {
+    "now": "You manage a customer support team, and you're writing the mid-year reviews for it. They go to HR at the end of this week. Your manager, Rebecca, only has about twenty minutes before she's in with leadership, and she wants to go through four things from the last few weeks first: Jamie's emails, the summary leadership wants, a client call Chloe was on, and Dylan's late weekly report.",
+    "layers": "A Jamie's review: what actually happened, her side, and what good looks like → B team summary: lead with the result leadership cares about (customers kept) and tie the team's work to it → C Chloe: say what she did, what it caused and one thing to try → D Dylan: match the fix to the cause (help with the software) and see that it worked. Rebecca asks whether all of it is needed after each answer; keep your point."
+  },
+  "scoring": {
+    "maxScore": 40,
+    "ranges": [
+      "0",
+      "2",
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "checks": {
+      "top": [
+        4,
+        7,
+        10
+      ],
+      "middle": [
+        3,
+        6,
+        9
+      ],
+      "bottom": [
+        2,
+        5,
+        8
+      ]
+    },
+    "resultBands": [
+      {
+        "min": 32,
+        "max": 40,
+        "label": "Strong"
+      },
+      {
+        "min": 20,
+        "max": 31,
+        "label": "Getting there"
+      },
+      {
+        "min": 0,
+        "max": 19,
+        "label": "Needs practice"
+      }
+    ]
+  },
+  "passThreshold": 7,
+  "learnerCopy": {
+    "description": "Mid-year reviews for your customer support team go to HR at the end of this week, and you haven't started writing them. Your manager, Rebecca, has about twenty minutes before a leadership meeting. She wants to use them to go through four things she's noticed over the last few weeks, covering Jamie, Chloe, Dylan and a summary that leadership has asked for. She'll ask what you plan to do about each one.",
+    "characterRole": "Your manager",
+    "learnerRole": "Team manager",
+    "learnerCard": "You manage a customer support team. Mid-year reviews go to HR at the end of this week.",
+    "characterCard": "Warm and busy. She gives you the facts on each item and asks what you will do.",
+    "entryCardBody": "Mid-year reviews go in this week. Talk with Rebecca about Jamie's review, the team summary, a call that went wrong for Chloe, and Dylan's late reports.",
+    "characterAvatar": "/arena/exp4/characters/reporting-manager.png",
+    "characterImagePack": "01-frontend/assets/rebecca.png"
+  },
+  "actorModel": "gpt-realtime-2.1",
+  "analyzerModel": "claude-opus-5",
+  "analyzerModelNote": "Opus same as MC1 — do not change",
+  "scoringMetaFile": "becca_mc7.scoring_meta.json",
+  "status": "LOCKED (2026-11-26)",
+  "scoringNote": "scoring.ranges is copied from the app scene file. The analyzer prompt scores in ranges 0-1 / 2-4 / 5-7 / 8-10 with top/middle/bottom checks; the analyzer prompt is the source of truth.",
+  "mustWatchVideos": [
+    {
+      "lessonId": 41981,
+      "title": "Running Productive Performance Reviews",
+      "competency": "conducting_performance_reviews"
+    },
+    {
+      "lessonId": 41503,
+      "title": "Must-Have for Success: Focus Your Team on Results",
+      "competency": "driving_results"
+    },
+    {
+      "lessonId": 41985,
+      "title": "How to Give Constructive Feedback",
+      "competency": "giving_feedback"
+    },
+    {
+      "lessonId": 41984,
+      "title": "Diagnosing Performance Gaps",
+      "competency": "addressing_underperformance"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "hedgy_novice",
+  "order": 17,
+  "character": "becca",
+  "title": "Plain, hedged, still sensible",
+  "covers": [
+    "hedgy_novice"
+  ],
+  "goal": "Short plain hedged answers: I guess, maybe, kind of, but the right moves.",
+  "must_hit": [],
+  "must_avoid": [
+    "Rebecca proposing a label, list, note or plan",
+    "Rebecca inventing facts",
+    "Rebecca giving advice or approval"
+  ],
+  "max_learner_turns": 16,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "any",
+    "markers": {
+      "1": "any",
+      "2": "any",
+      "3": "any",
+      "4": "any"
+    },
+    "total": [
+      16,
+      34
+    ],
+    "goals": {
+      "A": [
+        4,
+        9
+      ],
+      "B": [
+        4,
+        9
+      ],
+      "C": [
+        4,
+        9
+      ],
+      "D": [
+        4,
+        9
+      ]
+    },
+    "adherence_flags_max": 0
+  },
+  "intents": [
+    {
+      "id": "warm",
+      "when": "Rebecca opens with a greeting",
+      "do": "Brief warm reply",
+      "examples": [
+        "Good, thanks. What's up?",
+        "Pretty good, thanks. Go ahead."
+      ]
+    },
+    {
+      "id": "hedge",
+      "when": "Every item",
+      "do": "Right idea with hedges",
+      "examples": [
+        "I guess I'd write what happened, like the six weeks, and maybe ask her side?",
+        "Maybe show how many customers stayed and kind of what we did?",
+        "I'd probably talk to her privately, and tell her the client went quiet, maybe ask her to let them finish?",
+        "I guess get him some training, and check in weekly?"
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Rebecca closes",
+      "do": "Thanks",
+      "examples": [
+        "Thanks!"
+      ]
+    }
+  ]
+}

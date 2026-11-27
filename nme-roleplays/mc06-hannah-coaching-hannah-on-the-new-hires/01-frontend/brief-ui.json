@@ -1,0 +1,61 @@
+{
+  "title": "Coaching Hannah on the New Hires",
+  "certificateModal": {
+    "note": "No MC1 headline replacement is defined for this certificate slot in the app — keep production copy."
+  },
+  "phaseLabel": "Certificate Roleplay Scenario",
+  "characterName": "Hannah",
+  "characterRole": "Leads the account team",
+  "characterAvatar": "/arena/exp4/characters/hannah.jpg",
+  "characterImagePack": "assets/hannah.jpg",
+  "characterId": "hannah",
+  "scenario": "You manage the client teams at a small marketing agency. Hannah leads the account team. Six new people joined her team this year. Two have already left, and two more look unhappy. Hannah plans to book a two-day course for the new hires, and the invoice would come to you. She asked to talk to you before she does. Help her work out what to do.",
+  "objectives": [
+    "Hannah plans to book a two-day course for the new hires. Decide with her what to do.",
+    "Two of the six new hires have left, and two more look unhappy. Agree with Hannah what, if anything, should change for new hires.",
+    "All four new hires on Joel’s team are still there. Decide with Hannah what to do about that."
+  ],
+  "passThreshold": 7,
+  "competencies": [
+    {
+      "id": "assessing_capabilities",
+      "name": "Assessing Capabilities",
+      "mustWatchLessonId": 41970,
+      "mustWatchTitle": "How to Identify Strengths and Gaps in the Team"
+    },
+    {
+      "id": "coaching_team_members",
+      "name": "Coaching Team Members",
+      "mustWatchLessonId": 41978,
+      "mustWatchTitle": "How to Give Real-Time Feedback That Works"
+    },
+    {
+      "id": "sharing_knowledge",
+      "name": "Sharing Knowledge",
+      "mustWatchLessonId": 41975,
+      "mustWatchTitle": "Promoting Peer Learning and Collaboration"
+    }
+  ],
+  "course": {
+    "program": "New Manager Essentials",
+    "lessonTitle": "Coaching and Developing Teams",
+    "lessonSlug": "coaching-and-developing-teams",
+    "briefPath": "/coaching-and-developing-teams/certificate-roleplay?step=brief"
+  },
+  "sceneId": "scene-mc6-hannah-cert",
+  "scenarioKey": "mc6-hannah-cert",
+  "about": [
+    "Who: Hannah leads your account team. Joel leads another team. Both report to you.",
+    "What: Six new people joined Hannah’s team this year. Two have left, and two more look unhappy. Hannah plans to book a two-day course for them.",
+    "Why now: Hannah asked to talk to you before the course invoice arrives."
+  ],
+  "whoYouRole": "Manager",
+  "whoYouBody": "You manage the client teams at a small marketing agency. Hannah and Joel each lead a team that reports to you.",
+  "whoThemRole": "Leads the account team",
+  "whoThemBody": "Warm and a bit rushed. Proud of her team, and worried that new people keep leaving.",
+  "scene": {
+    "headline": "Coaching Hannah on the New Hires",
+    "formatNote": "Microphone required",
+    "ctaLabel": "Join Conversation"
+  }
+}

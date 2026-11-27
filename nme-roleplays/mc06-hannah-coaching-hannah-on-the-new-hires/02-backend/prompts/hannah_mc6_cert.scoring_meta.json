@@ -1,0 +1,60 @@
+{
+  "maxScore": 30,
+  "characterName": "Hannah",
+  "competencies": [
+    {
+      "id": "assessing_capabilities",
+      "name": "Assessing Capabilities",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Asks what is really happening with the new hires before agreeing to the course",
+          "max": 10
+        }
+      ]
+    },
+    {
+      "id": "coaching_team_members",
+      "name": "Coaching Team Members",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Gives one clear change for new hires, and says why it helps",
+          "max": 10
+        }
+      ]
+    },
+    {
+      "id": "sharing_knowledge",
+      "name": "Sharing Knowledge",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Brings Joel in to help, with a clear start",
+          "max": 10
+        }
+      ]
+    }
+  ],
+  "absenceGoals": [],
+  "objectives": [
+    {
+      "n": 1,
+      "text": "Hannah plans to book a two-day course for the new hires. Decide with her what to do.",
+      "competency": "assessing_capabilities",
+      "criterion": "True when the manager gives any direction on the course (asks what is going on in a new hire's first week, asks for an example, approves it, says do it anyway, or tells Hannah to push on) and Hannah answers it or moves on to how she welcomes new hires; false for a greeting, a bare okay, or Hannah's words alone."
+    },
+    {
+      "n": 2,
+      "text": "Two of the six new hires have left, and two more look unhappy. Agree with Hannah what, if anything, should change for new hires.",
+      "competency": "coaching_team_members",
+      "criterion": "True when the manager gives any direction on how Hannah welcomes new hires (a first task, a day-one check-in, more in the handbook, be more supportive, or leave it) and Hannah accepts it or moves on to Joel's team; false for a question alone, a bare okay, or Hannah's words alone."
+    },
+    {
+      "n": 3,
+      "text": "All four new hires on Joel’s team are still there. Decide with Hannah what to do about that.",
+      "competency": "sharing_knowledge",
+      "criterion": "True when the manager gives any direction on the other team (Joel's help by a group of team leads, a demo, working alongside Joel, or guiding Hannah; ask Joel for tips; use Joel's checklist; or leave it) and Hannah accepts it or the call closes; false for a bare okay or Hannah's words alone. Do not judge whether the plan is good."
+    }
+  ]
+}

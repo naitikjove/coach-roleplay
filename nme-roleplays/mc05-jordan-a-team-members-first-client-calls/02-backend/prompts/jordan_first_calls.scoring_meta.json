@@ -1,0 +1,60 @@
+{
+  "maxScore": 30,
+  "characterName": "Jordan",
+  "competencies": [
+    {
+      "id": "ensuring_accountability",
+      "name": "Ensuring Accountability",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Asks what has been happening on the calls, then keeps the calls with Jordan",
+          "max": 10
+        }
+      ]
+    },
+    {
+      "id": "effective_delegation",
+      "name": "Effective Delegation",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Lets Jordan say yes to the small changes, and keeps the ones that affect the deadline",
+          "max": 10
+        }
+      ]
+    },
+    {
+      "id": "expectations_setting",
+      "name": "Expectations Setting",
+      "goals": [
+        {
+          "id": "G1",
+          "label": "Says what Jordan sends the client after each call, and when",
+          "max": 10
+        }
+      ]
+    }
+  ],
+  "absenceGoals": [],
+  "objectives": [
+    {
+      "n": 1,
+      "text": "Jordan wonders if you should take the calls back. Decide with Jordan what happens next.",
+      "competency": "ensuring_accountability",
+      "criterion": "True only when the learner gives a clear decision on what happens with the calls (Jordan keeps running them, or the learner takes them back) and Jordan acknowledges it or the call moves on to Sarah's changes; false for a bare okay, Jordan's words alone, or a question with no decision."
+    },
+    {
+      "n": 2,
+      "text": "Sarah asks for changes during the call. Decide with Jordan what to do when she does.",
+      "competency": "effective_delegation",
+      "criterion": "True only when the learner gives a clear decision on what Jordan does when Sarah asks for changes (say yes to some, check them all with the learner, or bring some to the learner) and Jordan acknowledges it or the call moves on to what Jordan sends after the calls; false for a bare okay, Jordan's words alone, or a question with no decision."
+    },
+    {
+      "n": 3,
+      "text": "Sarah wasn't clear on what was agreed after the calls. Decide with Jordan what to do about it.",
+      "competency": "expectations_setting",
+      "criterion": "True only when the learner gives a clear decision on what Jordan sends Sarah after the calls (what to send, when, or agreeing to send everything at the end of the week) and Jordan acknowledges it or the call closes; false for a bare okay, Jordan's words alone, or a question with no decision."
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "id": "ideal",
+  "title": "Ideal (lean): why question, note change with reason, hold, Nina now and next few, hold, bye",
+  "goal": "Speak in SHORT natural lines (one short sentence). Say only the scored moves. Part 1: do NOT agree to stay late. Ask 'Why do you think they keep calling in again?' After the woman's story, go straight to the note change with the reason: 'Write down what customers already tried, so they don't have to call again.' When he pushes ('even when it's busy?') say 'Yes, even then.' Part 3: when Marcus says he'd like Nina's help but doesn't want to bother her, say 'Have Nina sit in on your calls. Today, and the next few.' When he says she has her own calls, say 'I'll talk to her and free up her time.' Then say 'Bye.'",
+  "must_hit": [
+    "Q1 before agreeing",
+    "General note change said early",
+    "Specific change after the nudge",
+    "Hold at busy",
+    "Nina now and next few"
+  ],
+  "must_avoid": [
+    "Agreeing to stay late",
+    "Taking the calls yourself"
+  ],
+  "max_learner_turns": 12,
+  "exit": "natural",
+  "expected": {
+    "score_band": "high",
+    "sum_score_min": 27,
+    "sum_score_max": 30,
+    "competency_score_range": {
+      "assessing_capabilities": [
+        9,
+        10
+      ],
+      "coaching_team_members": [
+        9,
+        10
+      ],
+      "sharing_knowledge": [
+        9,
+        10
+      ]
+    },
+    "markers": {
+      "1": true,
+      "2": true,
+      "3": true
+    }
+  },
+  "intents": [
+    {
+      "id": "a",
+      "when": "Marcus says the same customers keep calling in again",
+      "do": "Ask why, do not agree",
+      "examples": [
+        "Why do you think they keep calling in again?"
+      ]
+    },
+    {
+      "id": "b",
+      "when": "Marcus finishes the woman's story",
+      "do": "Clear note change plus reason, right away",
+      "examples": [
+        "Write down what customers already tried, so they don't have to call again."
+      ]
+    },
+    {
+      "id": "b_hold",
+      "when": "Marcus pushes about it being busy",
+      "do": "Hold",
+      "examples": [
+        "Yes, even then."
+      ]
+    },
+    {
+      "id": "c",
+      "when": "Marcus says he'd like Nina's help but doesn't want to bother her",
+      "do": "Nina sits in, now and next few",
+      "examples": [
+        "Have Nina sit in on your calls. Today, and the next few."
+      ]
+    },
+    {
+      "id": "c_hold",
+      "when": "Marcus says she has her own calls",
+      "do": "Hold, free her time",
+      "examples": [
+        "I'll talk to her and free up her time."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Marcus wraps up",
+      "do": "Bye",
+      "examples": [
+        "Bye."
+      ]
+    }
+  ],
+  "character": "marcus",
+  "order": 1
+}

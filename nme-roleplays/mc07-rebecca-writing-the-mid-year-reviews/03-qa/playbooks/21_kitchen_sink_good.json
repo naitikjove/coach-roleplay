@@ -1,0 +1,149 @@
+{
+  "id": "kitchen_sink_good",
+  "order": 21,
+  "character": "becca",
+  "title": "Realistic mixed learner",
+  "covers": [
+    "kitchen_sink_good"
+  ],
+  "goal": "Clarifies, hedges, jumps topics once, recovers after a follow-up, one off-topic aside, asks for the plan again, then bye.",
+  "must_hit": [],
+  "must_avoid": [
+    "Rebecca proposing a label, list, note or plan",
+    "Rebecca inventing facts",
+    "Rebecca giving advice or approval"
+  ],
+  "max_learner_turns": 26,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "any",
+    "markers": {
+      "1": "any",
+      "2": "any",
+      "3": "any",
+      "4": "any"
+    },
+    "total": [
+      28,
+      40
+    ],
+    "goals": {
+      "A": [
+        5,
+        10
+      ],
+      "B": [
+        5,
+        10
+      ],
+      "C": [
+        5,
+        10
+      ],
+      "D": [
+        8,
+        10
+      ]
+    },
+    "adherence_flags_max": 0
+  },
+  "intents": [
+    {
+      "id": "warm",
+      "when": "Rebecca opens with a greeting",
+      "do": "Brief warm reply",
+      "examples": [
+        "Good, thanks. What's up?",
+        "Pretty good, thanks. Go ahead."
+      ]
+    },
+    {
+      "id": "jamie_q",
+      "when": "Rebecca asks what you plan to do about Jamie",
+      "do": "Ask a clarifying question first",
+      "examples": [
+        "Was it the same kind of mistake each week, or different ones?"
+      ]
+    },
+    {
+      "id": "jamie_a",
+      "when": "After Rebecca answers",
+      "do": "Decent answer without a standard",
+      "examples": [
+        "I'd write down the mistakes, six weeks out of eight, and talk to her about them."
+      ]
+    },
+    {
+      "id": "early_dylan",
+      "when": "Once during the summary",
+      "do": "Mention Dylan early",
+      "examples": [
+        "Oh, and I wanted to ask about Dylan's reports too, but go on."
+      ]
+    },
+    {
+      "id": "summary_weak",
+      "when": "Rebecca asks what you'll put in",
+      "do": "Activity only",
+      "examples": [
+        "I'd add more about what everyone worked on this half."
+      ]
+    },
+    {
+      "id": "summary_fix",
+      "when": "Rebecca asks what would show customers are staying",
+      "do": "Recover",
+      "examples": [
+        "I'd start with how many customers we kept compared with last half, then add a few things the team did that helped."
+      ]
+    },
+    {
+      "id": "chloe_weak",
+      "when": "Rebecca asks what you'll say to Chloe",
+      "do": "Just talk",
+      "examples": [
+        "I'd talk to her this week, privately."
+      ]
+    },
+    {
+      "id": "chloe_fix",
+      "when": "Rebecca asks what you'd actually say",
+      "do": "Natural wording",
+      "examples": [
+        "I'd catch her this week, just the two of us. I'd say, On that call last week you jumped in a few times and the client went quiet after that. Next time, try letting them finish first."
+      ]
+    },
+    {
+      "id": "aside",
+      "when": "Once",
+      "do": "Off-topic aside before answering",
+      "examples": [
+        "Do clients always get this picky? Anyway,"
+      ]
+    },
+    {
+      "id": "dylan_q",
+      "when": "Rebecca asks what you'll do about Dylan",
+      "do": "Ask one question about the software",
+      "examples": [
+        "Is it just Dylan who struggles with it, or others too?"
+      ]
+    },
+    {
+      "id": "dylan_a",
+      "when": "After Rebecca answers",
+      "do": "Answer",
+      "examples": [
+        "I'd get him trained on the software, ask for the report on time from next week, and check in with him every week for a month."
+      ]
+    },
+    {
+      "id": "recap_q",
+      "when": "Rebecca closes with a recap",
+      "do": "Ask the plan again then bye",
+      "examples": [
+        "Sorry, can you say the plan again? ... Okay, thanks, bye."
+      ]
+    }
+  ]
+}

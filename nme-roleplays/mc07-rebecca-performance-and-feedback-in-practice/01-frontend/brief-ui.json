@@ -1,0 +1,69 @@
+{
+  "title": "Performance and Feedback in Practice",
+  "certificateModal": {
+    "eyebrow": "Certificate Roleplay",
+    "headline": "not defined for MC7 yet (content team to supply)",
+    "subtitle": "unchanged (keep production)",
+    "chips": "unchanged (keep production)",
+    "entryPurposeApp": "Show you can manage team performance and feedback. The conference is over, and Rebecca wants to go through a few things from the week before she presents to leadership.",
+    "note": "No MC1 headline replacement exists for MC7. Not the scenario title; keep title = Performance and Feedback in Practice. Do not label as Entry card body.",
+    "briefPath": "/how-to-manage-team-performance-and-feedback/certificate-roleplay?step=brief"
+  },
+  "phaseLabel": "Certificate Roleplay Scenario",
+  "characterName": "Rebecca",
+  "characterRole": "Your manager",
+  "scenario": "Last week your events team of five ran the company's customer conference, and it's over. Zara led the sponsor program, Felix looked after the sponsor banners, and Ravi, the newest on the team, handles vendor invoices. Your manager, Rebecca, presents the conference to leadership in about ten minutes. Before she goes in, she wants to go through a few things from the week with you, and she'll ask what you plan to do about each one.",
+  "about": [
+    "You manage the events team. Zara, Felix and Ravi report to you.",
+    "Your team ran the customer conference last week.",
+    "Rebecca, your manager, has about ten minutes before she presents it to leadership and wants to go through a few things first."
+  ],
+  "objectives": [
+    "Zara ran the sponsor program well but did almost everything herself. Tell Rebecca what you'll say in her review.",
+    "Leadership will ask if the conference was worth the investment. Tell Rebecca what you'll put at the top of the team debrief.",
+    "Felix changed an approved sponsor banner and told no one, so the logo was cut off. Tell Rebecca what you'll say to him.",
+    "Ravi, new on your team, had three invoices go to the wrong person, so three vendors were paid late. Tell Rebecca what you'll do."
+  ],
+  "whoYouRole": "Team manager",
+  "whoYouBody": "You manage the events team. Zara, Felix and Ravi report to you.",
+  "whoThemBody": "Your manager. Direct and short on time.",
+  "howItWorks": "Rebecca starts the talk. Answer her out loud, like a real one-on-one. When you’re done, end the conversation to get your feedback.",
+  "passThreshold": 7,
+  "competencies": [
+    {
+      "id": "conducting_performance_reviews",
+      "name": "Conducting Performance Reviews",
+      "mustWatchLessonId": 41981,
+      "mustWatchTitle": "Running Productive Performance Reviews"
+    },
+    {
+      "id": "driving_results",
+      "name": "Driving Results",
+      "mustWatchLessonId": 41503,
+      "mustWatchTitle": "Must-Have for Success: Focus Your Team on Results"
+    },
+    {
+      "id": "giving_feedback",
+      "name": "Giving Feedback",
+      "mustWatchLessonId": 41985,
+      "mustWatchTitle": "How to Give Constructive Feedback"
+    },
+    {
+      "id": "addressing_underperformance",
+      "name": "Addressing Underperformance",
+      "mustWatchLessonId": 41984,
+      "mustWatchTitle": "Diagnosing Performance Gaps"
+    }
+  ],
+  "course": {
+    "program": "New Manager Essentials",
+    "lessonTitle": "How to Manage Team Performance and Feedback",
+    "lessonSlug": "how-to-manage-team-performance-and-feedback",
+    "briefPath": "/how-to-manage-team-performance-and-feedback/certificate-roleplay?step=brief",
+    "briefPathNote": "pattern-derived, not verified against production routes"
+  },
+  "sceneId": "scene-mc7-becca-post",
+  "scenarioKey": "mc7-becca-post",
+  "characterAvatar": "/arena/exp4/characters/reporting-manager.png",
+  "characterImagePack": "assets/rebecca.png"
+}

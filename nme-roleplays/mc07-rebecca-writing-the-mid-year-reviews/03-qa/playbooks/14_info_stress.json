@@ -1,0 +1,83 @@
+{
+  "id": "info_stress",
+  "order": 14,
+  "character": "becca",
+  "title": "Only questions, tries to make Rebecca decide",
+  "covers": [
+    "info_stress"
+  ],
+  "goal": "Ask questions in every item, try to make Rebecca decide, mention Dylan early three times, ask for the plan again at the end.",
+  "must_hit": [],
+  "must_avoid": [
+    "Rebecca proposing a label, list, note or plan",
+    "Rebecca inventing facts",
+    "Rebecca giving advice or approval"
+  ],
+  "max_learner_turns": 34,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "any",
+    "markers": {
+      "1": "any",
+      "2": "any",
+      "3": "any",
+      "4": "any"
+    },
+    "total": [
+      0,
+      40
+    ],
+    "goals": {},
+    "adherence_flags_max": 0
+  },
+  "intents": [
+    {
+      "id": "warm",
+      "when": "Rebecca opens with a greeting",
+      "do": "Brief warm reply",
+      "examples": [
+        "Good, thanks. What's up?",
+        "Pretty good, thanks. Go ahead."
+      ]
+    },
+    {
+      "id": "q",
+      "when": "At the start of each item",
+      "do": "Ask 1-2 factual questions then try to make Rebecca decide",
+      "examples": [
+        "How many reviews are we doing?",
+        "Does Jamie know yet?",
+        "What would you put in?",
+        "Should I just talk to Chloe or send a note?",
+        "Just tell me what to do."
+      ]
+    },
+    {
+      "id": "early",
+      "when": "During the first item",
+      "do": "Mention Dylan early",
+      "examples": [
+        "We should talk about Dylan's reports at some point."
+      ]
+    },
+    {
+      "id": "answer",
+      "when": "After two or three question turns",
+      "do": "Short sensible answer",
+      "examples": [
+        "I'd write down what actually happened, six weeks out of eight with mistakes, and a couple of examples. Then I'd talk it through with her, hear her side, and work out together what a good email should look like.",
+        "I'd start with how many customers we kept compared with last half, then add a few things the team did that helped.",
+        "I'd catch her this week, just the two of us. I'd say, On that call last week you jumped in a few times and the client went quiet after that. Next time, try letting them finish first.",
+        "I'd get him trained on the software, ask for the report on time from next week, and check in with him every week for a month."
+      ]
+    },
+    {
+      "id": "recap",
+      "when": "Rebecca closes",
+      "do": "Ask for the plan again",
+      "examples": [
+        "Sorry, what's the plan again?"
+      ]
+    }
+  ]
+}

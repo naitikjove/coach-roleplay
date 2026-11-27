@@ -1,0 +1,118 @@
+{
+  "id": "mixed",
+  "title": "Mixed: vague answers, then Joel for tips, says yes to Hannah's offer",
+  "goal": "Part 1: first say only 'Don't book it, you've been working hard.' After Hannah's nudge ask 'Why do they leave?' and say 'Okay.' after the email. Part 2: say 'Be more supportive.' Do not give a specific step or a reason, even if Hannah asks more like what: answer 'I don't know, just be more careful.' Part 3: say 'Ask Joel for tips.' When Hannah asks what she would ask, say 'Yes, that's right.' When Hannah then offers 'What if Joel walked me through how Joel starts a new hire? Would that be okay?' say only 'Yes, that would be good.' with no timing. Then say 'Okay, bye.'",
+  "must_hit": [
+    "No question first",
+    "Question after the nudge",
+    "General answer only in B",
+    "Joel for tips, vague",
+    "Yes to the offer"
+  ],
+  "must_avoid": [
+    "A clear change in B",
+    "A clear start for Joel's help"
+  ],
+  "max_learner_turns": 14,
+  "exit": "natural",
+  "expected": {
+    "score_band": "mid",
+    "sum_score_min": 13,
+    "sum_score_max": 19,
+    "competency_score_range": {
+      "assessing_capabilities": [
+        5,
+        7
+      ],
+      "coaching_team_members": [
+        2,
+        4
+      ],
+      "sharing_knowledge": [
+        5,
+        7
+      ]
+    },
+    "markers": {
+      "1": true,
+      "2": true,
+      "3": true
+    }
+  },
+  "intents": [
+    {
+      "id": "a1",
+      "when": "Hannah says she is booking a two-day course",
+      "do": "No question",
+      "examples": [
+        "Don't book it, you've been working hard."
+      ]
+    },
+    {
+      "id": "a2",
+      "when": "Hannah nudges 'I just don't get why they keep leaving'",
+      "do": "Ask why",
+      "examples": [
+        "Why do they leave?"
+      ]
+    },
+    {
+      "id": "ack",
+      "when": "Hannah has read the new hire's email",
+      "do": "Bare ack",
+      "examples": [
+        "Okay."
+      ]
+    },
+    {
+      "id": "b1",
+      "when": "Hannah raises how she welcomes new hires",
+      "do": "General",
+      "examples": [
+        "Be more supportive."
+      ]
+    },
+    {
+      "id": "b2",
+      "when": "Hannah asks more like what",
+      "do": "Still general, no reason",
+      "examples": [
+        "I don't know, just be more careful."
+      ]
+    },
+    {
+      "id": "c1",
+      "when": "Hannah raises Joel's team",
+      "do": "Tips only",
+      "examples": [
+        "Ask Joel for tips."
+      ]
+    },
+    {
+      "id": "c2",
+      "when": "Hannah asks what she would ask",
+      "do": "Agree",
+      "examples": [
+        "Yes, that's right."
+      ]
+    },
+    {
+      "id": "c_offer",
+      "when": "Hannah offers that Joel walk her through how Joel starts a new hire",
+      "do": "Plain yes, no timing",
+      "examples": [
+        "Yes, that would be good."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Hannah wraps up",
+      "do": "Bye",
+      "examples": [
+        "Okay, bye."
+      ]
+    }
+  ],
+  "character": "hannah",
+  "order": 3
+}

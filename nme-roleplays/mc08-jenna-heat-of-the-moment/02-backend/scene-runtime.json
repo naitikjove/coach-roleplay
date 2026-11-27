@@ -1,0 +1,134 @@
+{
+  "lockVersion": "1.0.0-jenna-heated-week-vA-local",
+  "lockDate": "2026-11-27",
+  "id": "scene-mc8-jenna-cert",
+  "slug": "exp7-jenna-a-heated-week",
+  "title": "Heat of the Moment",
+  "type": "hot_seat",
+  "mode": "voice_only",
+  "primaryCharacter": "jenna",
+  "characterId": "jenna",
+  "voice": "sage",
+  "actorPromptFile": "jenna_heated_week.actor.vA.prompt.txt",
+  "analyzerPromptFile": "jenna_heated_week.analyzer.vA.prompt.txt",
+  "analyzerPromptFileV2": "jenna_heated_week.analyzer.vA.prompt.txt",
+  "scoringMetaFile": "jenna_heated_week.scoring_meta.json",
+  "lessonRef": "mc8-cert",
+  "lessonTitle": "How Can You Lead with Emotional Intelligence?",
+  "lessonSlug": "how-can-you-lead-with-emotional-intelligence",
+  "sourceLessons": [
+    {
+      "beat": "A",
+      "lessonId": 41989,
+      "title": "How to Handle Emotional Reactions Professionally",
+      "competency": "managing_emotions"
+    },
+    {
+      "beat": "B",
+      "lessonId": 41995,
+      "title": "Showing Empathy Without Losing Authority",
+      "competency": "demonstrating_awareness"
+    }
+  ],
+  "skills": [
+    "managing_emotions",
+    "demonstrating_awareness"
+  ],
+  "competencies": [
+    {
+      "id": "managing_emotions",
+      "name": "Managing Emotions"
+    },
+    {
+      "id": "demonstrating_awareness",
+      "name": "Demonstrating Awareness"
+    }
+  ],
+  "turnLimits": {
+    "minLearnerTurns": 5,
+    "softMaxLearnerTurns": 12,
+    "hardMaxLearnerTurns": 16,
+    "absoluteMaxLearnerTurns": 20
+  },
+  "checklistItems": [
+    {
+      "id": "team_email",
+      "label": "Jenna wants to email the whole team about Ryan's wrong forecast before lunch. Decide with her what to do about the email.",
+      "critical": true
+    },
+    {
+      "id": "kayla_request",
+      "label": "Kayla, a teammate, asked to move a client deadline and did not say why. Agree with Jenna how she'll answer Kayla.",
+      "critical": true
+    }
+  ],
+  "scenarioSummary": {
+    "now": "You lead a small team of analysts. This morning, Ryan's monthly sales forecast went to the director with wrong numbers again. In the team meeting, Jenna, a senior analyst, told Ryan his work was sloppy, in front of everyone. She is still angry and has written an email to the whole team listing his mistakes, which she wants to send before lunch. Jenna also wants your advice on Kayla, another teammate, who asked to move a client deadline and did not say why. Help Jenna decide what to do about both.",
+    "layers": "A the email: send the list of Ryan's mistakes to the whole team vs hold it, own how she spoke or her part, and set a private talk with Ryan → B Kayla: 'just say yes to Wednesday' vs say what Jenna has noticed, ask what's going on, and keep Friday for the client."
+  },
+  "scoring": {
+    "maxScore": 20,
+    "ranges": [
+      "0-1",
+      "2-4",
+      "5-7",
+      "8-10"
+    ],
+    "checks": {
+      "top": [
+        4,
+        7,
+        10
+      ],
+      "middle": [
+        3,
+        6,
+        9
+      ],
+      "bottom": [
+        2,
+        5,
+        8
+      ]
+    },
+    "resultBands": [
+      {
+        "min": 17,
+        "max": 20,
+        "label": "Strong"
+      },
+      {
+        "min": 10,
+        "max": 16,
+        "label": "Getting there"
+      },
+      {
+        "min": 0,
+        "max": 9,
+        "label": "Needs practice"
+      }
+    ]
+  },
+  "passThreshold": 7,
+  "learnerCopy": {
+    "description": "You lead a small team of analysts. This morning, Ryan's monthly sales forecast went to the director with wrong numbers again. In the team meeting, Jenna, a senior analyst, told Ryan his work was sloppy, in front of everyone. She is still angry and has written an email to the whole team listing his mistakes, which she wants to send before lunch. Jenna also wants your advice on Kayla, another teammate, who asked to move a client deadline and did not say why. Help Jenna decide what to do about both.",
+    "characterRole": "Senior analyst",
+    "whoYouBody": "You lead a small team of analysts. Jenna, Ryan and Kayla all report to you.",
+    "whoThemBody": "Sharp and hard-working. She wants the numbers right, and she is angry that they weren't.",
+    "entryCardBody": "Show how you'd handle an angry teammate and a teammate who may be struggling.",
+    "characterAvatar": "/arena/exp7/mc8/jenna.jpg",
+    "characterImagePack": "01-frontend/assets/jenna.jpg"
+  },
+  "mustWatchVideos": [
+    {
+      "lessonId": 41989,
+      "title": "How to Handle Emotional Reactions Professionally",
+      "competency": "managing_emotions"
+    },
+    {
+      "lessonId": 41995,
+      "title": "Showing Empathy Without Losing Authority",
+      "competency": "demonstrating_awareness"
+    }
+  ]
+}

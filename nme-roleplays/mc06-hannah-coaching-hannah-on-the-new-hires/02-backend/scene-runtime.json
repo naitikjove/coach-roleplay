@@ -1,0 +1,172 @@
+{
+  "lockVersion": "1.0.0-hannah-cert-v1-local",
+  "lockDate": "2026-11-26",
+  "id": "scene-mc6-hannah-cert",
+  "slug": "exp7-hannah-the-new-hires",
+  "title": "Coaching Hannah on the New Hires",
+  "type": "hot_seat",
+  "mode": "voice_only",
+  "primaryCharacter": "hannah",
+  "characterId": "hannah",
+  "voice": "marin",
+  "actorModel": "gpt-realtime-2.1",
+  "analyzerModel": "claude-opus-5",
+  "analyzerModelNote": "Opus same as MC1 — do not change",
+  "actorPromptFile": "hannah_mc6_cert.actor.vA.prompt.txt",
+  "analyzerPromptFile": "hannah_mc6_cert.analyzer.vA.prompt.txt",
+  "analyzerPromptFileV2": "hannah_mc6_cert.analyzer.vA.prompt.txt",
+  "scoringMetaFile": "hannah_mc6_cert.scoring_meta.json",
+  "promptVariants": {
+    "final": {
+      "actorPromptFile": "hannah_mc6_cert.actor.vA.prompt.txt",
+      "analyzerPromptFile": "hannah_mc6_cert.analyzer.vA.prompt.txt",
+      "status": "final"
+    }
+  },
+  "lessonRef": "mc6-post",
+  "lessonTitle": "Coaching and Developing Teams",
+  "lessonSlug": "coaching-and-developing-teams",
+  "sourceLessons": [
+    {
+      "beat": "A",
+      "lessonId": 41970,
+      "title": "How to Identify Strengths and Gaps in the Team",
+      "competency": "assessing_capabilities"
+    },
+    {
+      "beat": "B",
+      "lessonId": 41978,
+      "title": "How to Give Real-Time Feedback That Works",
+      "competency": "coaching_team_members"
+    },
+    {
+      "beat": "C",
+      "lessonId": 41975,
+      "title": "Promoting Peer Learning and Collaboration",
+      "competency": "sharing_knowledge"
+    }
+  ],
+  "skills": [
+    "assessing_capabilities",
+    "coaching_team_members",
+    "sharing_knowledge"
+  ],
+  "competencies": [
+    {
+      "id": "assessing_capabilities",
+      "name": "Assessing Capabilities"
+    },
+    {
+      "id": "coaching_team_members",
+      "name": "Coaching Team Members"
+    },
+    {
+      "id": "sharing_knowledge",
+      "name": "Sharing Knowledge"
+    }
+  ],
+  "turnLimits": {
+    "minLearnerTurns": 6,
+    "softMaxLearnerTurns": 14,
+    "hardMaxLearnerTurns": 18,
+    "absoluteMaxLearnerTurns": 22
+  },
+  "checklistItems": [
+    {
+      "id": "course_request",
+      "label": "Hannah plans to book a two-day course for the new hires. Decide with her what to do.",
+      "critical": true
+    },
+    {
+      "id": "welcome_new_hires",
+      "label": "Two of the six new hires have left, and two more look unhappy. Agree with Hannah what, if anything, should change for new hires.",
+      "critical": true
+    },
+    {
+      "id": "learn_from_team",
+      "label": "All four new hires on Joel’s team are still there. Decide with Hannah what to do about that.",
+      "critical": true
+    }
+  ],
+  "headlineLabels": {
+    "nailed_it": "Nailed it",
+    "solid": "Solid",
+    "try_again": "Try again"
+  },
+  "scenarioSummary": {
+    "now": "You manage the client teams at a small marketing agency. Hannah leads the account team. Six new people joined her team this year. Two have already left, and two more look unhappy. Hannah plans to book a two-day course for the new hires, and the invoice would come to you. She asked to talk to you before she does.",
+    "layers": "A the course: book it vs ask what really happens in a new hire's first week → B welcoming new hires: more in the handbook vs one real task and a day-one check-in, and why → C Joel's team: copy a checklist vs bring Joel's way to the team leads (group, demo or pairing) with a clear start."
+  },
+  "scoring": {
+    "maxScore": 30,
+    "ranges": [
+      "0-1",
+      "2-4",
+      "5-7",
+      "8-10"
+    ],
+    "checks": {
+      "top": [
+        4,
+        7,
+        10
+      ],
+      "middle": [
+        3,
+        6,
+        9
+      ],
+      "bottom": [
+        2,
+        5,
+        8
+      ]
+    },
+    "resultBands": [
+      {
+        "min": 24,
+        "max": 30,
+        "label": "Strong"
+      },
+      {
+        "min": 15,
+        "max": 23,
+        "label": "Getting there"
+      },
+      {
+        "min": 0,
+        "max": 14,
+        "label": "Needs practice"
+      }
+    ]
+  },
+  "passThreshold": 7,
+  "learnerCopy": {
+    "description": "You manage the client teams at a small marketing agency. Hannah leads the account team. Six new people joined her team this year. Two have already left, and two more look unhappy. Hannah plans to book a two-day course for the new hires, and the invoice would come to you. She asked to talk to you before she does. Help her work out what to do.",
+    "characterRole": "Leads the account team",
+    "learnerRole": "Manager",
+    "learnerCard": "You manage the client teams at a small marketing agency. Hannah and Joel each lead a team that reports to you.",
+    "whoThem": "Leads the account team. Warm and a bit rushed. Proud of her team, and worried that new people keep leaving.",
+    "characterCard": "Warm and a bit rushed. Proud of her team, and worried that new people keep leaving.",
+    "entryCardBody": "Show how you’d help a team lead whose new hires keep leaving.",
+    "characterAvatar": "/arena/exp4/characters/hannah.jpg",
+    "characterImagePack": "01-frontend/assets/hannah.jpg"
+  },
+  "mustWatchVideos": [
+    {
+      "lessonId": 41970,
+      "title": "How to Identify Strengths and Gaps in the Team",
+      "competency": "assessing_capabilities"
+    },
+    {
+      "lessonId": 41978,
+      "title": "How to Give Real-Time Feedback That Works",
+      "competency": "coaching_team_members"
+    },
+    {
+      "lessonId": 41975,
+      "title": "Promoting Peer Learning and Collaboration",
+      "competency": "sharing_knowledge"
+    }
+  ]
+}

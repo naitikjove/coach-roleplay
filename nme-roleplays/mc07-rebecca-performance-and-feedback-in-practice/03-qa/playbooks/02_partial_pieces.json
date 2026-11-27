@@ -1,0 +1,102 @@
+{
+  "id": "partial_pieces",
+  "order": 2,
+  "character": "becca",
+  "title": "Right idea, one piece missing in every beat",
+  "covers": [
+    "partial_pieces"
+  ],
+  "goal": "Give a right-but-incomplete answer in every beat and keep it that way after Rebecca's one follow-up: Zara facts only, debrief the result only, Felix what he did and what it caused but no next step, Ravi the rule only with no check.",
+  "must_hit": [],
+  "must_avoid": [
+    "Rebecca proposing an answer",
+    "Rebecca challenging a good answer",
+    "Rebecca inventing facts",
+    "ordinal signposts (First, Second...)"
+  ],
+  "max_learner_turns": 18,
+  "exit": "natural_or_end_after_settled",
+  "expected": {
+    "score_band": "any",
+    "markers": {
+      "1": "any",
+      "2": "any",
+      "3": "any",
+      "4": "any"
+    },
+    "total": [
+      16,
+      34
+    ],
+    "goals": {
+      "A": [
+        4,
+        8
+      ],
+      "B": [
+        4,
+        9
+      ],
+      "C": [
+        4,
+        8
+      ],
+      "D": [
+        4,
+        8
+      ]
+    },
+    "adherence_flags_max": 0
+  },
+  "intents": [
+    {
+      "id": "warm",
+      "when": "Rebecca opens with a greeting and a check-in",
+      "do": "Brief natural reply, then ask what she needs",
+      "examples": [
+        "Tired, but good. What do you need from me?"
+      ]
+    },
+    {
+      "id": "zara",
+      "when": "Rebecca asks what you'll say in Zara's review",
+      "do": "Facts only, no her side, no standard, and keep it that way after a follow-up",
+      "examples": [
+        "I'd go through the fourteen sponsors and that she came in on budget."
+      ]
+    },
+    {
+      "id": "debrief",
+      "when": "Rebecca asks what you'll put at the top",
+      "do": "Result only, no team work, even after a follow-up",
+      "examples": [
+        "I'd lead with how many people tried the product after the demo."
+      ]
+    },
+    {
+      "id": "felix",
+      "when": "Rebecca asks what you'll say to Felix",
+      "do": "Talk and what he did first; after a follow-up add what it caused; never add a next step",
+      "examples": [
+        "I'd talk to him and tell him he changed the approved banner.",
+        "I'd tell him the sponsor's logo got cut off and we had to reprint it."
+      ]
+    },
+    {
+      "id": "omar",
+      "when": "Rebecca asks what you'll do about Ravi",
+      "do": "Explain the rule only, no check",
+      "examples": [
+        "I'd explain to him who signs off on what."
+      ]
+    },
+    {
+      "id": "close",
+      "when": "Rebecca closes",
+      "do": "Thanks",
+      "examples": [
+        "Thanks, Rebecca."
+      ]
+    }
+  ]
+}

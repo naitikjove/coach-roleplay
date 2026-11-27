@@ -1,0 +1,31 @@
+{
+  "id": "sides_with_theo",
+  "order": 9,
+  "title": "Sympathy and siding with Theo, then recovers",
+  "expected": {
+    "A": [
+      4,
+      10
+    ],
+    "B": [
+      4,
+      10
+    ],
+    "total": [
+      8,
+      20
+    ],
+    "close": "either",
+    "reaches_B": true
+  },
+  "goal": "Start by siding with Theo, then recover when he asks a second time.",
+  "plan": [
+    "Greet. After the draft: say 'Mark's being unfair, copying his boss like that.'",
+    "After Theo asks 'so I'll send it?': say 'Hmm, no, hold on. What actually happened with the report?'",
+    "After the numbers: say tell Mark it was our miss and the next one will arrive Tuesday. Hold under push.",
+    "For Devon: say ask him what's going on, and agree numbers by Monday evening. Hold.",
+    "[[END]] after the close."
+  ],
+  "learner_style": "You are a first-time manager who was just promoted. You speak in short, plain, natural spoken lines (1-2 sentences, under 30 words). You know ONLY what Theo has said so far. Never mention scores, playbooks or that this is practice.",
+  "first_line": "Sure, what's up?"
+}

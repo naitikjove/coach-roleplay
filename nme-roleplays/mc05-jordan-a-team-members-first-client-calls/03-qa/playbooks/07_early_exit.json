@@ -1,0 +1,43 @@
+{
+  "id": "early_exit",
+  "title": "Early exit: handles the calls well, then ends the conversation",
+  "goal": "Ask what's been hard, keep the calls with Jordan, then say goodbye and end. Do not wait for the other topics.",
+  "must_hit": [
+    "Beat A done well, then says bye twice"
+  ],
+  "must_avoid": [
+    "Beats B and C"
+  ],
+  "max_learner_turns": 6,
+  "exit": "force_end",
+  "expected": {
+    "score_band": "low",
+    "sum_score_max": 12,
+    "markers": {
+      "1": "any",
+      "2": false,
+      "3": false
+    }
+  },
+  "intents": [
+    {
+      "id": "open_greet",
+      "when": "Jordan greets only (no topic yet)",
+      "do": "Short warm greeting back only. Do not ask about the work or the call yet.",
+      "examples": [
+        "Good, thanks. How are you?",
+        "Hi Jordan, doing well. What's up?"
+      ]
+    },
+    {
+      "id": "A_then_exit",
+      "when": "Jordan has explained the call",
+      "do": "Ask what's been hard, keep the calls with Jordan, then say you have to go: 'Sorry, I have to run, thanks. Bye.' and say bye again.",
+      "examples": [
+        "Before we decide, what's been hard? ... Keep running them, I'm sure you'll be fine. Sorry, I have to run. Bye."
+      ]
+    }
+  ],
+  "character": "jordan",
+  "order": 7
+}
