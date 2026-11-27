@@ -29,7 +29,7 @@ https://github.com/naitikjove/coach-roleplay/tree/main/nme-roleplays/mc06-marcus
 **Models:** actor `gpt-realtime-2.1` · voice `cedar` · analyzer **Opus same as MC1 (`claude-opus-5`) — do not change analyzer model.**
 
 **MC1 headline replacement (practice slot):**  
-`Show how you'd help a team member whose customers keep calling in again`  
+`See how you'd coach your team to grow stronger`  
 Replaces the MC1 headline "See how you'd handle your first 1:1" for this slot. **Not** the scenario title (keep **The Follow-Ups That Keep Slipping**). Do **not** label this string as "Entry card body".
 
 **Character image:** [`01-frontend/assets/marcus.jpg`](01-frontend/assets/marcus.jpg) (committed in this pack for GitHub access). App path: `/arena/exp4/characters/marcus.jpg`.

@@ -23,7 +23,7 @@
 
 ## Known gaps
 - **Portrait:** the character image is the temporary shared Rebecca avatar (`reporting-manager.png`, same as MC4), not a MC7-specific portrait. The app constants say the same.
-- **Modal headline:** MC3/MC4 packs replace the MC1 modal headline for their slot. No MC7 headline replacement has been written or locked yet, so none is specified here. Content team to supply it. The app's entry-purpose line is in `01-frontend/COPY.md` for reference.
+- **Modal headline:** replaces the MC1 modal headline for this slot with **See how you'd give feedback that improves performance** (see `01-frontend/COPY.md`).
 - **Brief path:** `briefPath` in `brief-ui.json` follows the MC3/MC4 pattern `/<lesson-slug>/practice-roleplay?step=brief` using the scene's `lessonSlug` (`how-to-manage-team-performance-and-feedback`). It was not checked against production routes.
 - **Chapter name:** the app constant names the chapter "How to Manage Team Performance and Feedback"; the local live chapter list shows MC7 under a different name ("Running Effective 1:1 Meetings" in the local test notes). Confirm the production chapter name before wiring.
 - **Scoring ranges in the scene file:** the scene JSON lists `scoring.ranges` as even bands (0, 2, 4, 6, 8, 10), while the analyzer prompt scores in ranges 0-1 / 2-4 / 5-7 / 8-10 with top/middle/bottom checks. The analyzer prompt is the source of truth; `scene-runtime.json` keeps the scene values and adds a `scoringNote`.

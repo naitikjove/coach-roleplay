@@ -25,8 +25,18 @@ You manage a small team that does work for clients. Theo reports to you.
 **Theo — Team member**  
 Capable and proud of his work. He writes the weekly report and worries about how the team looks to the client.
 
-## Entry card body
-Show how you'd handle an upset client and a teammate whose work is slipping.
+## MC1 headline replacement (practice slot)
+Shown on the MC8 practice entry card / modal purpose line.
+
+| Field | Copy |
+|---|---|
+| Eyebrow | Practice Roleplay |
+| Headline | See how you'd lead when emotions run high |
+| Subtitle | Unchanged, keep as in production |
+| Chips | Unchanged, keep as in production |
+
+- **Replaces the MC1 headline "See how you'd handle your first 1:1" for this slot.**
+- The headline is **not** the scenario title. Do **not** call this string "Entry card body".
 
 ## Character image
 - Pack (GitHub — open this): [`assets/theo.jpg`](assets/theo.jpg)

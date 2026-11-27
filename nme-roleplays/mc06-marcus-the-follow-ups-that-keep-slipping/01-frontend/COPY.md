@@ -8,7 +8,7 @@ Shown when the learner opens MC6 practice (modal / purpose line). Production may
 | Field | Copy |
 |---|---|
 | Eyebrow | Practice Roleplay |
-| Headline | Show how you'd help a team member whose customers keep calling in again |
+| Headline | See how you'd coach your team to grow stronger |
 | Subtitle | Unchanged — keep as in production |
 | Chips | Unchanged — keep as in production (Voice Roleplay \| No Preparation \| Instant Feedback) |
 

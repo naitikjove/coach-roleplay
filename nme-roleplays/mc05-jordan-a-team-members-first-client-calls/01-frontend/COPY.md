@@ -8,7 +8,7 @@ Shown on the MC5 practice entry card / modal purpose line.
 | Field | Copy |
 |---|---|
 | Eyebrow | Practice Roleplay |
-| Headline | Show how you’d help a team member who is new to client calls. |
+| Headline | See how you'd delegate work with clear expectations |
 | Subtitle | Unchanged — keep as in production |
 | Chips | Unchanged — keep as in production |
 

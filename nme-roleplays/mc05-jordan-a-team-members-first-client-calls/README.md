@@ -41,7 +41,7 @@ https://github.com/naitikjove/coach-roleplay/tree/main/nme-roleplays/mc05-jordan
 
 **Character image:** [`01-frontend/assets/jordan.jpg`](01-frontend/assets/jordan.jpg) (committed in this pack; app path `/arena/exp4/characters/jordan-v2.jpg`).
 
-**MC1 headline replacement:** *Show how you’d help a team member who is new to client calls.* (replaces the MC1 first-1:1 headline for this slot; not the scenario title).
+**MC1 headline replacement:** *See how you'd delegate work with clear expectations* (replaces the MC1 first-1:1 headline for this slot; not the scenario title).
 
 **Pronouns:** Jordan is referred to as “they” in prompt and copy.
 

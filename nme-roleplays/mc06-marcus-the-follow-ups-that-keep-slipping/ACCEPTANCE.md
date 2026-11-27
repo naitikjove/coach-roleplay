@@ -1,7 +1,7 @@
 # Acceptance — variable items only
 
 ## Frontend
-- [ ] MC1 headline replacement for this practice slot = **Show how you'd help a team member whose customers keep calling in again** (not MC1 "See how you'd handle your first 1:1"); eyebrow, subtitle, chips unchanged where that modal exists
+- [ ] MC1 headline replacement for this practice slot = **See how you'd coach your team to grow stronger** (not MC1 "See how you'd handle your first 1:1"); eyebrow, subtitle, chips unchanged where that modal exists
 - [ ] Title = **The Follow-Ups That Keep Slipping**
 - [ ] Scenario + 3 objectives + who cards = `01-frontend/COPY.md`
 - [ ] Competencies + Must Watch = `01-frontend/VIDEO_MAPPING.md` (41970, 41978, 41975)

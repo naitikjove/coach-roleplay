@@ -35,10 +35,18 @@ Rebecca has about twenty minutes before she's in with leadership. She wants to g
 ## How it works (app)
 Rebecca starts the talk. Answer her out loud, like a real one-on-one, and keep your point if she asks whether you really need all of it. When you’re done, end the conversation to get your feedback.
 
-## Entry purpose line (app)
-Practice a short one-on-one with Rebecca before mid-year reviews go to HR: what to write in Jamie's review, what the team summary should show, a call that went wrong for Chloe, and Dylan's late reports.
+## MC1 headline replacement (practice slot)
+Shown on the MC7 practice entry card / modal purpose line.
 
-> There is **no MC7 headline replacement** for the MC1 modal yet (MC3/MC4 packs have one). Content team to supply it; see ACCEPTANCE → Known gaps.
+| Field | Copy |
+|---|---|
+| Eyebrow | Practice Roleplay |
+| Headline | See how you'd give feedback that improves performance |
+| Subtitle | Unchanged, keep as in production |
+| Chips | Unchanged, keep as in production |
+
+- **Replaces the MC1 headline "See how you'd handle your first 1:1" for this slot.**
+- The headline is **not** the scenario title. Do **not** call this string "Entry card body".
 
 ## Character image
 - Pack (GitHub — open this): [`assets/rebecca.png`](assets/rebecca.png)

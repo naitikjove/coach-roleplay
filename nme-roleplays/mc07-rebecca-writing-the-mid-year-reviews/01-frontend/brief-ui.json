@@ -2,11 +2,12 @@
   "title": "Writing the Mid-Year Reviews",
   "practiceModal": {
     "eyebrow": "Practice Roleplay",
-    "headline": "not defined for MC7 yet (content team to supply)",
+    "headline": "See how you'd give feedback that improves performance",
     "subtitle": "unchanged (keep production)",
     "chips": "unchanged (keep production)",
-    "entryPurposeApp": "Practice a short one-on-one with Rebecca before mid-year reviews go to HR: what to write in Jamie's review, what the team summary should show, a call that went wrong for Chloe, and Dylan's late reports.",
-    "note": "No MC1 headline replacement exists for MC7. Not the scenario title; keep title = Writing the Mid-Year Reviews. Do not label as Entry card body.",
+    "entryPurposeApp": "See how you'd give feedback that improves performance",
+    "replacesHeadline": "See how you'd handle your first 1:1",
+    "note": "MC1 headline replacement for this practice slot only. Not the scenario title; keep title = Writing the Mid-Year Reviews. Do not label this string as Entry card body.",
     "briefPath": "/how-to-manage-team-performance-and-feedback/practice-roleplay?step=brief"
   },
   "phaseLabel": "Practice Roleplay Scenario",

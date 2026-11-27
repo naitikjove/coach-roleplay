@@ -1,7 +1,7 @@
 # Acceptance — variable items only
 
 ## Frontend
-- [ ] MC1 headline replacement for this practice slot = **Show how you’d help a team member who is new to client calls.** (not the MC1 first-1:1 headline)
+- [ ] MC1 headline replacement for this practice slot = **See how you'd delegate work with clear expectations** (not the MC1 first-1:1 headline)
 - [ ] Title = **A Team Member’s First Client Calls**
 - [ ] Scenario + about lines + 3 objectives + who cards = `01-frontend/COPY.md`
 - [ ] Competencies + Must Watch = `01-frontend/VIDEO_MAPPING.md` (41968, 41963, 41966)
