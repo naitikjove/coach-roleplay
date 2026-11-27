@@ -13,7 +13,6 @@
 | [`scene-runtime.json`](scene-runtime.json) | Scene id, voice, checklist ids, competencies, turn limits, pass threshold |
 | [`WIRING.md`](WIRING.md) | Models + API call shape |
 | [`OBJECTIVE_TRACKING.md`](OBJECTIVE_TRACKING.md) | Live objective ticks (criteria, judge output) + post-call scoring summary |
-| [`STORY_PACK.md`](STORY_PACK.md) | Design source: cast, voice rules, beats, locked fact, scoring (story bible v1) |
 
 ## Wire these server pieces
 

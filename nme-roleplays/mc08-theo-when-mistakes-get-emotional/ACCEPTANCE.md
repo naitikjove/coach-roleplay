@@ -21,7 +21,7 @@
 ## Smoke
 - [ ] Brief shows locked copy and the portrait
 - [ ] Live call opens; Theo speaks first (greeting), then the whole situation in the second message
-- [ ] Ideal answers score about 20/20; shortcuts score 0; see `03-qa/README.md` for expected bands
+- [ ] Ideal answers score about 20/20; shortcuts score 0
 - [ ] Feedback uses the existing staging shell; summary + per-skill notes fill How it went
 
 ## Known gaps (honest)

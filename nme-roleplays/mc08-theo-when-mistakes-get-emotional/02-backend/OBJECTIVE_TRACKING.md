@@ -52,4 +52,3 @@ The analyzer copy rules require analysis, not a retelling: each sentence names t
 
 ## QA evidence
 
-See [`../03-qa/README.md`](../03-qa/README.md).

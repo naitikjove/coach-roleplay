@@ -19,7 +19,7 @@
 ## Smoke
 - [ ] Brief shows locked copy
 - [ ] Live call opens; Rebecca speaks first and gives the first item; feedback uses existing staging shell
-- [ ] Ideal answers score 40/40; the playbooks in `03-qa/` behave as listed in `03-qa/README.md`
+- [ ] Ideal answers score 40/40
 
 ## Known gaps
 - **Portrait:** the character image is the temporary shared Rebecca avatar (`reporting-manager.png`, same as MC4), not a MC7-specific portrait. The app constants say the same.

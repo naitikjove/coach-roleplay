@@ -18,12 +18,11 @@ https://github.com/naitikjove/coach-roleplay/tree/main/nme-roleplays/mc07-rebecc
 |---|---|
 | **Frontend** | [`01-frontend/`](01-frontend/) — brief copy + video map only |
 | **Backend / AI** | [`02-backend/`](02-backend/) — prompts, voice, scene runtime |
-| **QA** | [`ACCEPTANCE.md`](ACCEPTANCE.md) and [`03-qa/`](03-qa/) |
+| **QA** | [`ACCEPTANCE.md`](ACCEPTANCE.md) |
 
 ```
 01-frontend/     ← variable learner copy + Must Watch table
 02-backend/      ← actor + analyzer prompts + scene-runtime.json
-03-qa/           ← QA playbooks + latest results
 ```
 
 **Models:** actor `gpt-realtime-2.1` · voice `shimmer` · analyzer **Opus same as MC1 (`claude-opus-5`) — do not change analyzer model.**

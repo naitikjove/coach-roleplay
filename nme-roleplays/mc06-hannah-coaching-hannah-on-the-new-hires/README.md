@@ -19,12 +19,11 @@ https://github.com/naitikjove/coach-roleplay/tree/main/nme-roleplays/mc06-hannah
 |---|---|
 | **Frontend** | [`01-frontend/`](01-frontend/) — brief copy + video map + character image |
 | **Backend / AI** | [`02-backend/`](02-backend/) — prompts, voice, scene runtime, story pack |
-| **QA** | [`ACCEPTANCE.md`](ACCEPTANCE.md) + [`03-qa/`](03-qa/) |
+| **QA** | [`ACCEPTANCE.md`](ACCEPTANCE.md) |
 
 ```
 01-frontend/     ← variable learner copy + Must Watch table + character image
 02-backend/      ← actor + analyzer prompts + scene-runtime.json + wiring + objective tracking
-03-qa/           ← playbooks + README
 ```
 
 **Models:** actor `gpt-realtime-2.1` · voice `marin` · analyzer **Opus same as MC1 (`claude-opus-5`) — do not change analyzer model.**

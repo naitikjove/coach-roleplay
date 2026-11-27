@@ -21,12 +21,11 @@
 ## Smoke
 - [ ] Brief shows locked copy and the character image
 - [ ] Live call opens; Marcus speaks first with the full situation; feedback uses existing staging shell
-- [ ] Ideal answers score 30/30; the QA playbooks in `03-qa/` behave as listed in `03-qa/README.md`
+- [ ] Ideal answers score 30/30
 
 ## Known gaps
 - The local scene JSON does not pin an analyzer model. "Opus (`claude-opus-5`), same as MC1" follows the MC03–MC05 pack convention and the Vercel demo config; confirm against production.
 - The objective-judge criteria in `02-backend/OBJECTIVE_TRACKING.md` are copied from the live coverage judge in the Arena app; the judge's revision number is not recorded here.
 - Lock version ends in `-local`: it is the locally locked build, not a released tag.
-- No STORY_PACK is shipped: the only story doc for Marcus (codex pack `MC6/story_pack_v4.md`) is titled "Same Callers, Again" (draft v3) and does not match the locked title, so it was left out rather than shipping a stale doc.
 - Video 41978 is titled "…Feedback that Works" here (as in the practice scene config) and "…Feedback That Works" in the certificate pack (as in that scene config); same lesson id.
-- The QA batch after 2026-11-25 has no recorded scores (see `03-qa/README.md`).
+- The QA batch after 2026-11-25 has no recorded scores.

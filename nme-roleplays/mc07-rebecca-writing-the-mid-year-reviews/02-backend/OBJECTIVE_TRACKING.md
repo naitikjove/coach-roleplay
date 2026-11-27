@@ -58,4 +58,3 @@ Headline bands (app-derived): score share maps to staging **Nailed it / Solid / 
 
 ## Playbook / QA evidence
 
-See [`../03-qa/README.md`](../03-qa/README.md).

@@ -19,7 +19,7 @@
 ## Smoke
 - [ ] Brief shows locked copy
 - [ ] Live call opens; Rebecca speaks first and gives the first item; feedback uses existing staging shell
-- [ ] Ideal answers score 40/40; the playbooks in `03-qa/` behave as listed in `03-qa/README.md`
+- [ ] Ideal answers score 40/40
 
 ## Known gaps
 - **Portrait:** the character image is the temporary shared Rebecca avatar (`reporting-manager.png`, same as MC4), not a MC7-specific portrait. The app constants say the same.
@@ -29,6 +29,6 @@
 - **Scoring ranges in the scene file:** the scene JSON lists `scoring.ranges` as even bands (0, 2, 4, 6, 8, 10), while the analyzer prompt scores in ranges 0-1 / 2-4 / 5-7 / 8-10 with top/middle/bottom checks. The analyzer prompt is the source of truth; `scene-runtime.json` keeps the scene values and adds a `scoringNote`.
 - **Analyzer model:** all MC7 QA ran on OpenAI models (actor/learner/judge gpt-4.1, analyzer gpt-5.6-terra). The Opus analyzer named here has not been run on MC7.
 - **Live voice:** no live Realtime voice call was run after the last prompt changes.
-- **Playbooks:** of 21 playbooks, only `gold_strong` (and a few spot runs listed in `03-qa/README.md`) were run on the final prompt version. The others have older-design learner intents or were not re-run.
+- **Playbooks:** of 21 playbooks, only `gold_strong` (and a few spot runs) were run on the final prompt version. The others have older-design learner intents or were not re-run.
 - **Closing recap:** the last recorded gold run noted the closing recap named only three of the four beats (Dylan dropped).
 - **Checklist ids:** objectives use `cpr_review`, `dr_summary`, `gf_chloe`, `au_dylan` from the live scene.

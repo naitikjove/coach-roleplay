@@ -21,7 +21,7 @@
 ## Smoke
 - [ ] Brief shows locked copy and the new portrait
 - [ ] Live call opens; Amara speaks first with the full situation; feedback uses existing staging shell
-- [ ] Ideal answers score 30/30; the QA playbooks in `03-qa/` behave as listed in `03-qa/README.md`
+- [ ] Ideal answers score 30/30
 
 ## Known gaps
 

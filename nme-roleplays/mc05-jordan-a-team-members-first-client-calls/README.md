@@ -18,12 +18,11 @@ https://github.com/naitikjove/coach-roleplay/tree/main/nme-roleplays/mc05-jordan
 |---|---|
 | **Frontend** | [`01-frontend/`](01-frontend/) — brief copy + video map + character image |
 | **Backend / AI** | [`02-backend/`](02-backend/) — prompts, voice, scene runtime, objective tracking |
-| **QA** | [`ACCEPTANCE.md`](ACCEPTANCE.md) + [`03-qa/`](03-qa/) |
+| **QA** | [`ACCEPTANCE.md`](ACCEPTANCE.md) |
 
 ```
 01-frontend/     ← variable learner copy + Must Watch table + assets/jordan.jpg
 02-backend/      ← actor + analyzer prompts + scene-runtime.json
-03-qa/           ← LLM-learner playbooks (addition vs MC02–MC04 packs)
 ```
 
 **Models:** actor `gpt-realtime-2.1` · voice `verse` · analyzer **Opus same as MC1 (`claude-opus-5`) — do not change analyzer model** (reasoning-effort guard in `02-backend/WIRING.md`).
